@@ -1,0 +1,12 @@
+mxt_core.ami_contact_details:
+  title: 'AMI contact details'
+  route_name: mxt_core.ami_contact_details
+  parent: system.admin_config_system
+  weight: 99
+
+mxt_core.mxt_info_form:
+  title: 'MXT Site parameters'
+  route_name: mxt_core.mxt_info_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99

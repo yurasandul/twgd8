@@ -1,0 +1,8 @@
+uuid: b1824550-950f-424c-a8bf-c0736b60877c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Country contact'
+vid: country_contact
+description: ''
+weight: 0

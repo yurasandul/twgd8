@@ -1,0 +1,49 @@
+uuid: 2c4d125e-c426-4ec1-a29c-fcc9f62e9246
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.push_message.body
+    - field.field.node.push_message.field_date
+    - field.field.node.push_message.field_language
+    - field.field.node.push_message.field_link
+    - field.field.node.push_message.field_page
+    - field.field.node.push_message.field_prayerpage
+    - field.field.node.push_message.field_prayertype
+    - field.field.node.push_message.field_sent
+    - field.field.node.push_message.field_state
+    - field.field.node.push_message.field_type
+    - node.type.push_message
+  module:
+    - text
+    - user
+id: node.push_message.teaser
+targetEntityType: node
+bundle: push_message
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date: true
+  field_language: true
+  field_link: true
+  field_page: true
+  field_prayerpage: true
+  field_prayertype: true
+  field_sent: true
+  field_state: true
+  field_type: true
+  langcode: true

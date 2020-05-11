@@ -1,0 +1,23 @@
+uuid: d33c0f28-26e1-4360-8028-a35d7b0ee50f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_questions_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - link
+id: taxonomy_term._ami_contact.field_questions_url
+field_name: field_questions_url
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'Questions URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

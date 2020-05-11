@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      fields:
+        title:
+          label: Nadpis
+        type:
+          label: 'Typ obsahu'
+          separator: ', '
+        name:
+          label: Autor
+        operations:
+          label: Operace
+      filters:
+        title:
+          expose:
+            label: Nadpis
+        type:
+          expose:
+            label: 'Typ obsahu'
+        langcode:
+          expose:
+            label: Jazyk
+    display_title: Nadřízené
+  page_1:
+    display_title: Stránka

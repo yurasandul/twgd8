@@ -1,0 +1,23 @@
+uuid: b2d545de-bd3f-413e-902e-3d39bead9d97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.spiritual_first_aid
+  module:
+    - text
+id: node.spiritual_first_aid.body
+field_name: body
+entity_type: node
+bundle: spiritual_first_aid
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

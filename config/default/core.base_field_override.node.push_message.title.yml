@@ -1,0 +1,18 @@
+uuid: 89e0cc9c-23fa-4b7c-a521-a3a8c67e635c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.push_message
+id: node.push_message.title
+field_name: title
+entity_type: node
+bundle: push_message
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains mxt_migrate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
+use Drupal\migrate\Row;
+
+/**
+ * Implements hook_help().
+ */
+function mxt_migrate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mxt_migrate module.
+    case 'help.page.mxt_migrate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('MXT Migrate plugins') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 928db17d-3216-4b26-b88f-7db4a3f6a740
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.push_message
+  module:
+    - options
+id: node.push_message.field_type
+field_name: field_type
+entity_type: node
+bundle: push_message
+label: Type
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: bible
+default_value_callback: ''
+settings: {  }
+field_type: list_string

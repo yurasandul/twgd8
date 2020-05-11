@@ -1,0 +1,136 @@
+uuid: 344926f8-b766-40d6-b288-aad409421bb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tweet_page.body
+    - field.field.node.tweet_page.field_image
+    - field.field.node.tweet_page.field_military
+    - field.field.node.tweet_page.field_references_to_church_fathe
+    - field.field.node.tweet_page.field_references_to_text
+    - field.field.node.tweet_page.field_references_to_the_popes
+    - field.field.node.tweet_page.field_slideshow
+    - field.field.node.tweet_page.field_sticky_sort_date
+    - field.field.node.tweet_page.field_subject
+    - field.field.node.tweet_page.field_tweetbox
+    - field.field.node.tweet_page.field_video
+    - node.type.tweet_page
+  module:
+    - datetime
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+    - video_embed_field
+id: node.tweet_page.default
+targetEntityType: node
+bundle: tweet_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_military:
+    weight: 111
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_references_to_church_fathe:
+    type: entity_reference_revisions_entity_view
+    weight: 107
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_references_to_text:
+    type: entity_reference_revisions_entity_view
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_references_to_the_popes:
+    type: entity_reference_revisions_entity_view
+    weight: 108
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_slideshow:
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_sticky_sort_date:
+    weight: 104
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_subject:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tweetbox:
+    weight: 109
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_video:
+    weight: 110
+    label: above
+    settings:
+      image_style: ''
+      link_image_to: ''
+    third_party_settings: {  }
+    type: video_embed_field_thumbnail
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

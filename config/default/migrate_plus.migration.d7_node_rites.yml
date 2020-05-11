@@ -1,0 +1,102 @@
+uuid: 9d57d77f-cd78-42b7-92b3-f066ee7d4730
+langcode: en
+status: true
+dependencies: {  }
+id: d7_node_rites
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (App: Rites/prayers & order of mass)'
+source:
+  plugin: d7_node_mxt
+  node_type: rites
+  no_revision: true
+process:
+  nid: tnid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  body:
+    -
+      plugin: sub_process
+      source: body
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        summary: summary
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_texts:
+    -
+      plugin: get
+      source: field_texts
+  field_taalkey:
+    -
+      plugin: get
+      source: field_taalkey
+  field_order_of_mass:
+    -
+      plugin: get
+      source: field_order_of_mass
+  field_byzantine_rites:
+    -
+      plugin: get
+      source: field_byzantine_rites
+  field_taal:
+    -
+      plugin: get
+      source: field_taal
+destination:
+  plugin: 'entity:node'
+  default_bundle: rites
+migration_dependencies:
+  required:
+    - d7_user

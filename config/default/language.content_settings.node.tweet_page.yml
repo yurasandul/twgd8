@@ -1,0 +1,18 @@
+uuid: 03db48d7-1b85-45a4-a45b-6dbbe6aaf0c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tweet_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '1'
+id: node.tweet_page
+target_entity_type_id: node
+target_bundle: tweet_page
+default_langcode: site_default
+language_alterable: false

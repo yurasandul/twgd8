@@ -1,0 +1,18 @@
+uuid: ea65f0b6-ec8b-4af4-8bcc-a231fa50b35c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.order_block
+id: block_content.order_block.info
+field_name: info
+entity_type: block_content
+bundle: order_block
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

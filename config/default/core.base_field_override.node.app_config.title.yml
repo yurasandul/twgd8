@@ -1,0 +1,18 @@
+uuid: b11e2e0f-2706-4096-911b-021568078edf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.app_config
+id: node.app_config.title
+field_name: title
+entity_type: node
+bundle: app_config
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

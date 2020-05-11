@@ -1,0 +1,19 @@
+uuid: a91becdd-f25f-49e7-870e-23096f5e38d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_email
+    - taxonomy.vocabulary.country_contact
+id: taxonomy_term.country_contact.field_email
+field_name: field_email
+entity_type: taxonomy_term
+bundle: country_contact
+label: E-Mail
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

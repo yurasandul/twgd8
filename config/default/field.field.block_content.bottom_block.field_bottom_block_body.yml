@@ -1,0 +1,21 @@
+uuid: fea0c808-9a6f-4b35-90fa-15c36f75952c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.storage.block_content.field_bottom_block_body
+  module:
+    - text
+id: block_content.bottom_block.field_bottom_block_body
+field_name: field_bottom_block_body
+entity_type: block_content
+bundle: bottom_block
+label: 'Bottom block body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

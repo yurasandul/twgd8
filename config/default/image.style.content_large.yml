@@ -1,0 +1,15 @@
+uuid: 019abaeb-f42a-4623-83d0-fe8e04e159d2
+langcode: en
+status: true
+dependencies: {  }
+name: content_large
+label: 'Content large'
+effects:
+  16fd2743-2fde-4a3f-8511-17fe38fe1fae:
+    uuid: 16fd2743-2fde-4a3f-8511-17fe38fe1fae
+    id: image_scale
+    weight: 1
+    data:
+      width: 700
+      height: null
+      upscale: false

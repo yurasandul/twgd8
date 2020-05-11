@@ -1,0 +1,84 @@
+uuid: f42ac3c6-3c0e-4337-a230-2d0d67cc7f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.testimonies.body
+    - field.field.node.testimonies.field_author
+    - field.field.node.testimonies.field_image_16_9
+    - field.field.node.testimonies.field_image_4_3
+    - field.field.node.testimonies.field_video
+    - image.style.thumbnail
+    - node.type.testimonies
+  module:
+    - image
+    - text
+    - video_embed_field
+id: node.testimonies.default
+targetEntityType: node
+bundle: testimonies
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_author:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_16_9:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_4_3:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_video:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  translation: true
+  uid: true

@@ -1,0 +1,18 @@
+uuid: f9f4341c-b63e-42f8-939e-8739b7a1b3a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: api_ami_download_questions_resource
+plugin_id: api_ami_download_questions_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

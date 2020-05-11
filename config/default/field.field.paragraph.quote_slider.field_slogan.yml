@@ -1,0 +1,19 @@
+uuid: 7e9714b3-ec3b-49e4-9cec-4a2bea239357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slogan
+    - paragraphs.paragraphs_type.quote_slider
+id: paragraph.quote_slider.field_slogan
+field_name: field_slogan
+entity_type: paragraph
+bundle: quote_slider
+label: Slogan
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

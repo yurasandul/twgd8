@@ -1,0 +1,18 @@
+uuid: db8147c6-35e9-44ac-8e18-12b36194b4a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.country_contact
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.country_contact
+target_entity_type_id: taxonomy_term
+target_bundle: country_contact
+default_langcode: site_default
+language_alterable: false

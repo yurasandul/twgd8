@@ -1,0 +1,18 @@
+uuid: bb07e8c0-1168-4830-9341-b73a3b609518
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: notifications_resource
+plugin_id: notifications_resource
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - oauth2

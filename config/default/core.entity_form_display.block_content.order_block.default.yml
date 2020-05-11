@@ -1,0 +1,195 @@
+uuid: d575d79c-653b-45a7-8d4c-a685225dd817
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.order_block
+    - field.field.block_content.order_block.field_book_title
+    - field.field.block_content.order_block.field_book_title_2
+    - field.field.block_content.order_block.field_image
+    - field.field.block_content.order_block.field_image_1
+    - field.field.block_content.order_block.field_image_2
+    - field.field.block_content.order_block.field_shop_image
+    - field.field.block_content.order_block.field_shop_image_2
+    - field.field.block_content.order_block.field_shop_link
+    - field.field.block_content.order_block.field_shop_link_2
+    - field.field.block_content.order_block.field_show_book_2
+    - field.field.block_content.order_block.field_title
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_main
+        - group_book_1
+        - group_book_2
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_main:
+      children:
+        - info
+        - field_title
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Main
+    group_book_1:
+      children:
+        - field_book_title
+        - field_image_1
+        - field_shop_image
+        - field_shop_link
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Book 1'
+    group_book_2:
+      children:
+        - field_show_book_2
+        - field_book_title_2
+        - field_image_2
+        - field_shop_image_2
+        - field_shop_link_2
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Book 2'
+id: block_content.order_block.default
+targetEntityType: block_content
+bundle: order_block
+mode: default
+content:
+  field_book_title:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_book_title_2:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 16
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_1:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_2:
+    weight: 14
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_shop_image:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_shop_image_2:
+    weight: 15
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_shop_link:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_shop_link_2:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_show_book_2:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_title:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

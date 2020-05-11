@@ -1,0 +1,184 @@
+uuid: f8adc359-2b17-48c9-a23b-c9020b8cc03a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term._ami_contact.field_ami_email
+    - field.field.taxonomy_term._ami_contact.field_ami_image
+    - field.field.taxonomy_term._ami_contact.field_ami_phone
+    - field.field.taxonomy_term._ami_contact.field_facebook_url
+    - field.field.taxonomy_term._ami_contact.field_initiatives_url
+    - field.field.taxonomy_term._ami_contact.field_instagram_url
+    - field.field.taxonomy_term._ami_contact.field_news_url
+    - field.field.taxonomy_term._ami_contact.field_questions_url
+    - field.field.taxonomy_term._ami_contact.field_site_url
+    - field.field.taxonomy_term._ami_contact.field_twg_email
+    - field.field.taxonomy_term._ami_contact.field_twg_image
+    - field.field.taxonomy_term._ami_contact.field_twg_phone
+    - field.field.taxonomy_term._ami_contact.field_twitter_url
+    - field.field.taxonomy_term._ami_contact.field_youtube_url
+    - image.style.thumbnail
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - image
+    - link
+    - path
+    - telephone
+    - text
+id: taxonomy_term._ami_contact.default
+targetEntityType: taxonomy_term
+bundle: _ami_contact
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ami_email:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_ami_image:
+    weight: 101
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_ami_phone:
+    weight: 103
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_facebook_url:
+    weight: 111
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_initiatives_url:
+    weight: 109
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_instagram_url:
+    weight: 113
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_news_url:
+    weight: 108
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_questions_url:
+    weight: 110
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_site_url:
+    weight: 107
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_twg_email:
+    weight: 105
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_twg_image:
+    weight: 104
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_twg_phone:
+    weight: 106
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_twitter_url:
+    weight: 112
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_youtube_url:
+    weight: 114
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

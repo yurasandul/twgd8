@@ -1,0 +1,21 @@
+uuid: 31a32e15-c365-4987-a574-59582a573c16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_body
+    - paragraphs.paragraphs_type.references_to_church_fathers_say
+  module:
+    - text
+id: paragraph.references_to_church_fathers_say.field_reference_body
+field_name: field_reference_body
+entity_type: paragraph
+bundle: references_to_church_fathers_say
+label: 'Reference Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

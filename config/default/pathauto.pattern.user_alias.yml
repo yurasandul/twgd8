@@ -1,0 +1,14 @@
+uuid: 6ccfb820-c2c2-4497-9075-046ed11752c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_alias
+label: 'User alias'
+type: 'canonical_entities:user'
+pattern: 'users/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

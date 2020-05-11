@@ -1,0 +1,21 @@
+uuid: e6c381e5-d4a5-4a47-843a-2ccd1d5e8b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taal
+    - node.type.app_config
+  module:
+    - options
+id: node.app_config.field_taal
+field_name: field_taal
+entity_type: node
+bundle: app_config
+label: Taal
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

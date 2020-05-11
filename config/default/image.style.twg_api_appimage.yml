@@ -1,0 +1,15 @@
+uuid: de33a945-9504-4ec5-81b8-371944ebc6ba
+langcode: en
+status: true
+dependencies: {  }
+name: twg_api_appimage
+label: 'App imagestyle'
+effects:
+  6f194810-ad14-42d4-bbe9-810afa87a0a8:
+    uuid: 6f194810-ad14-42d4-bbe9-810afa87a0a8
+    id: image_scale
+    weight: 1
+    data:
+      width: 273
+      height: 156
+      upscale: true

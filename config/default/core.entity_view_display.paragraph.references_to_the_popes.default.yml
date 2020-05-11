@@ -1,0 +1,31 @@
+uuid: 3d1b23f1-8585-4087-9368-4c0bc0dd8ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.references_to_the_popes.field_reference_body
+    - field.field.paragraph.references_to_the_popes.field_reference_heading
+    - paragraphs.paragraphs_type.references_to_the_popes
+  module:
+    - text
+id: paragraph.references_to_the_popes.default
+targetEntityType: paragraph
+bundle: references_to_the_popes
+mode: default
+content:
+  field_reference_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_reference_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

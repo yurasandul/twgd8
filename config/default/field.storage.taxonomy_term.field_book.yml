@@ -1,0 +1,33 @@
+uuid: 765fb1b8-5788-4e52-b097-9b6dd4c40c0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_book
+field_name: field_book
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Book 1'
+      label: 'Book 1'
+    -
+      value: 'Book 2'
+      label: 'Book 2'
+    -
+      value: 'Book 3'
+      label: 'Book 3'
+    -
+      value: 'Book 4'
+      label: 'Book 4'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

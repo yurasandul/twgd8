@@ -1,0 +1,18 @@
+uuid: 98014a3b-6d47-4fdc-ab31-21be51b61d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: get_twg_api_export_resource
+plugin_id: get_twg_api_export_resource
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

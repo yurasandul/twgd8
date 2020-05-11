@@ -1,0 +1,30 @@
+uuid: 7107c340-42cb-49b1-bc31-fd5884963114
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page
+    - node.type.frontpage
+    - node.type.page
+    - node.type.push_message
+id: node.push_message.field_page
+field_name: field_page
+entity_type: node
+bundle: push_message
+label: Page
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      frontpage: frontpage
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: 5c95ca14-59af-44cd-bbd5-e5c6968c5ce2
+langcode: nl
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: content_moderation_state.content_moderation_state
+target_entity_type_id: content_moderation_state
+target_bundle: content_moderation_state
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: a5cbe577-2b34-4f39-a981-07f32f3304f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_donatie
+    - node.type.app_config
+  module:
+    - text
+id: node.app_config.field_donatie
+field_name: field_donatie
+entity_type: node
+bundle: app_config
+label: Doneer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

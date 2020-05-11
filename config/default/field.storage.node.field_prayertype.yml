@@ -1,0 +1,30 @@
+uuid: 791c3b42-a8f5-495f-8ec8-1edd4e225669
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_prayertype
+field_name: field_prayertype
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: rites
+      label: Rites
+    -
+      value: order_of_mass
+      label: 'Order of Mass'
+    -
+      value: byzantine_rites
+      label: 'Byzantine Rites'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

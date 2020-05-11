@@ -1,0 +1,18 @@
+uuid: 1398ec72-46dc-4f5a-8d32-6ed28dba7fae
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.page_block
+id: block_content.page_block.info
+field_name: info
+entity_type: block_content
+bundle: page_block
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

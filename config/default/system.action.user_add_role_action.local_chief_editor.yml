@@ -1,0 +1,14 @@
+uuid: 31de41e1-61b5-474b-a92c-b8840b597b46
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.local_chief_editor
+  module:
+    - user
+id: user_add_role_action.local_chief_editor
+label: 'Add the Local chief editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: local_chief_editor

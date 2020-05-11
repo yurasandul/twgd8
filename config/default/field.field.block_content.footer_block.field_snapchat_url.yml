@@ -1,0 +1,19 @@
+uuid: 0acdcf48-dea9-47c4-bc01-cf04e7a28fe9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.storage.block_content.field_snapchat_url
+id: block_content.footer_block.field_snapchat_url
+field_name: field_snapchat_url
+entity_type: block_content
+bundle: footer_block
+label: 'Snapchat URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

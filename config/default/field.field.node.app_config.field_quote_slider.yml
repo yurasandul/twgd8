@@ -1,0 +1,31 @@
+uuid: a6b3275a-dca3-4278-b367-ba6354735f77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_slider
+    - node.type.app_config
+    - paragraphs.paragraphs_type.quote_slider
+  module:
+    - entity_reference_revisions
+id: node.app_config.field_quote_slider
+field_name: field_quote_slider
+entity_type: node
+bundle: app_config
+label: 'Quotes op de frontpage'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quote_slider: quote_slider
+    target_bundles_drag_drop:
+      quote_slider:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

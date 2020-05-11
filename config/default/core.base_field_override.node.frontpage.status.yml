@@ -1,0 +1,22 @@
+uuid: fbc52dfd-fc0c-48af-8a5b-da4687a55705
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frontpage
+id: node.frontpage.status
+field_name: status
+entity_type: node
+bundle: frontpage
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

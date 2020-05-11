@@ -1,0 +1,21 @@
+uuid: 4eb5f64f-1d00-4ed2-a77a-4a1eb94a843d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_twg_phone
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - telephone
+id: taxonomy_term._ami_contact.field_twg_phone
+field_name: field_twg_phone
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'TWG phone'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

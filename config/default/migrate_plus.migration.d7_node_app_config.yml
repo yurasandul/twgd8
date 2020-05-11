@@ -1,0 +1,181 @@
+uuid: c6310b86-6124-4aec-98a2-6deb7f9e05cf
+langcode: en
+status: true
+dependencies: {  }
+id: d7_node_app_config
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (App config)'
+source:
+  plugin: d7_node_mxt
+  node_type: app_config
+  no_revision: true
+process:
+  nid: tnid
+  langcode:
+    plugin: static_map
+    source: language
+    map:
+      en: en
+      cs: cs
+      de: de
+      es: es
+      fr: fr
+      it: it
+      nl: nl
+      pl: pl
+      pt: pt-pt
+      ro: ro
+      sk: sk
+      und: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body:
+    -
+      plugin: sub_process
+      source: body
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        summary: summary
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_de_boeken:
+    -
+      plugin: sub_process
+      source: field_de_boeken
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_donatie:
+    -
+      plugin: sub_process
+      source: field_donatie
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_over_ons:
+    -
+      plugin: sub_process
+      source: field_over_ons
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_taal: field_taal
+  field_url_donate_button: field_url_donate_button
+  field_deze_app:
+    -
+      plugin: sub_process
+      source: field_deze_app
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_quote_slider:
+    plugin: field_collection_mxt
+    source: field_quote_slider
+    paragraph_destination: quote_slider
+    field_map:
+      field_slogan: field_slogan
+      field_slogan_source: field_slogan_source
+      field_quotes: field_quotes
+      field_image:
+        source: field_image
+        mxt_plugin: migration
+        mxt_source: fid
+        migration: d7_file
+        target: target_id
+destination:
+  plugin: 'entity:node'
+  default_bundle: app_config
+migration_dependencies:
+  required:
+    - d7_user
+    - d7_file

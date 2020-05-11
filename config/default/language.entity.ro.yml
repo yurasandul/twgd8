@@ -1,0 +1,9 @@
+uuid: dfbc4821-9870-4418-acff-d756de1289ca
+langcode: en
+status: true
+dependencies: {  }
+id: ro
+label: Romanian
+direction: ltr
+weight: 10
+locked: false

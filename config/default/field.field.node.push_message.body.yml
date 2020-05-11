@@ -1,0 +1,23 @@
+uuid: 47e7448e-142b-47ca-bd24-cd1c70e2b311
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.push_message
+  module:
+    - text
+id: node.push_message.body
+field_name: body
+entity_type: node
+bundle: push_message
+label: Message
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

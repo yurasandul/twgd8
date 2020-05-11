@@ -1,0 +1,37 @@
+uuid: 4815f93b-aac7-46e4-8db9-dad7ceaa623e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.prayers.body
+    - field.field.node.prayers.field_author_origin
+    - field.field.node.prayers.field_image_16_9
+    - field.field.node.prayers.field_image_4_3
+    - node.type.prayers
+  module:
+    - text
+    - user
+id: node.prayers.teaser
+targetEntityType: node
+bundle: prayers
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_author_origin: true
+  field_image_16_9: true
+  field_image_4_3: true
+  langcode: true

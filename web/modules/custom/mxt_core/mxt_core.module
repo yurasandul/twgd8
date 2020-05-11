@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Contains mxt_core.module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
+
+const JSON_DATA_MAP = [
+  'questions' => 'tweet_page',
+  'mass' => 'rites',
+  'divine' => 'rites',
+  'catholic' => 'rites',
+
+  'testmonies' => 'testimonies',
+  'aid' => 'spiritual_first_aid',
+  'saints' => 'military_saints',
+  'mprayers' => 'prayers',
+  'pquotes' => 'papal_quotes',
+  'iquotes' => 'inspirational_quotes',
+  'homilies' => 'homilies_reflections',
+];
+
+const JSON_DATA_START_VERSION = '1.0';
+const JSON_DATA_INCREMENT_VERSION = 0.1;
+const JSON_DATA_CACHE_MAX_AGE = 86400;
+
+/**
+ * Implements hook_help().
+ */
+function mxt_core_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mxt_core module.
+    case 'help.page.mxt_core':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('MXT Core add function') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function mtx_core_jp2_sortbytitlenumber($a, $b) {
+  $a = mtx_core_jp2_converttitletosortable($a);
+  $b = mtx_core_jp2_converttitletosortable($b);
+  if ($a == $b) {
+    return 0;
+  }
+  return ($a < $b) ? -1 : 1;
+}
+
+function mtx_core_jp2_converttitletosortable($title) {
+  $title = explode(' ', $title);
+  $title = $title[0];
+  $parts = explode('.', $title);
+
+  if (isset($parts[1])) {
+    $sortable = $parts[0] . '.' . substr('00' . $parts[1], -3);
+    return $sortable;
+  }
+  else {
+    return $title;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function mxt_core_node_presave( NodeInterface $node) {
+  $type = $node->getType();
+  if ($type == 'rites' && $node->get('status')->value) {
+    $key = 'json_version__' . $type . '__' . $node->id();
+    mxt_core_set_next_version_number($key);
+    \Drupal::service('cache_tags.invalidator')->invalidateTags(['json_api:node:' . $type . ':' . $node->id()]);
+  }
+  elseif ($type == 'tweet_page' && $node->get('status')->value)  {
+    $langcode = $node->get('langcode')->value;
+    $key = 'json_version__' . $type . '__' . $langcode;
+    mxt_core_set_next_version_number($key);
+    \Drupal::service('cache_tags.invalidator')->invalidateTags(['json_api:node:' . $type]);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function mxt_core_taxonomy_term_presave(TermInterface $entity) {
+  if ($entity->get('vid')->entity->id() == 'subject') {
+    $key = 'json_version__tweet_page__' . $entity->get('langcode')->value;
+    mxt_core_set_next_version_number($key);
+    \Drupal::service('cache_tags.invalidator')->invalidateTags(['json_api:texonomy_term:subject']);
+  }
+}
+
+function mxt_core_set_next_version_number($key){
+  $version = \Drupal::state()->get($key, '1.0');
+  $new_version = number_format($version + JSON_DATA_INCREMENT_VERSION, 1);
+  \Drupal::state()->set($key, $new_version);
+}

@@ -1,0 +1,43 @@
+uuid: dc4903d1-a81a-4ad0-ac7c-688a786b33c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_slider
+    - node.type.frontpage
+    - paragraphs.paragraphs_type.quote_slider
+  module:
+    - entity_reference_revisions
+id: node.frontpage.field_quote_slider
+field_name: field_quote_slider
+entity_type: node
+bundle: frontpage
+label: 'Quote slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quote_slider: quote_slider
+    target_bundles_drag_drop:
+      quote_slider:
+        enabled: true
+        weight: 6
+      references_to_church_fathers_say:
+        weight: 7
+        enabled: false
+      references_to_text:
+        weight: 8
+        enabled: false
+      references_to_the_popes:
+        weight: 9
+        enabled: false
+      slideshow:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

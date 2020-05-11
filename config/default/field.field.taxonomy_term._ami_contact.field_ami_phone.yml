@@ -1,0 +1,21 @@
+uuid: d24fab9d-b4cb-4e50-855a-eddad0d5ba97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ami_phone
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - telephone
+id: taxonomy_term._ami_contact.field_ami_phone
+field_name: field_ami_phone
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'AMI phone'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

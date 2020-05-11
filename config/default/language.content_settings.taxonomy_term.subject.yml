@@ -1,0 +1,18 @@
+uuid: 0ad8aa19-d21a-4dca-a75f-b6bd0b924256
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.subject
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term.subject
+target_entity_type_id: taxonomy_term
+target_bundle: subject
+default_langcode: site_default
+language_alterable: false

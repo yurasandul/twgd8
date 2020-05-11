@@ -1,0 +1,21 @@
+uuid: 1de80030-99bb-4e8b-9e79-5103bbe98feb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prayerpage
+    - node.type.push_message
+  module:
+    - options
+id: node.push_message.field_prayerpage
+field_name: field_prayerpage
+entity_type: node
+bundle: push_message
+label: Tabblad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

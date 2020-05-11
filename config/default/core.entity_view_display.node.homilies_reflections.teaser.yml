@@ -1,0 +1,37 @@
+uuid: 141d98d5-7343-4c75-959d-d66ac41abe5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homilies_reflections.body
+    - field.field.node.homilies_reflections.field_author
+    - field.field.node.homilies_reflections.field_image_16_9
+    - field.field.node.homilies_reflections.field_image_4_3
+    - node.type.homilies_reflections
+  module:
+    - text
+    - user
+id: node.homilies_reflections.teaser
+targetEntityType: node
+bundle: homilies_reflections
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_author: true
+  field_image_16_9: true
+  field_image_4_3: true
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: d5200848-1dae-41bf-bf8b-1737e2a169c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.subject.field_book
+    - taxonomy.vocabulary.subject
+  module:
+    - options
+id: taxonomy_term.subject.default
+targetEntityType: taxonomy_term
+bundle: subject
+mode: default
+content:
+  field_book:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  description: true
+  langcode: true

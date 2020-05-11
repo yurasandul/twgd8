@@ -1,0 +1,22 @@
+uuid: 9fb26941-47a4-4f45-85eb-979f23d87d66
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow.status
+field_name: status
+entity_type: paragraph
+bundle: slideshow
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 69c3fbd8-3e87-4ecc-93db-accae9533065
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_body
+    - paragraphs.paragraphs_type.references_to_text
+  module:
+    - text
+id: paragraph.references_to_text.field_reference_body
+field_name: field_reference_body
+entity_type: paragraph
+bundle: references_to_text
+label: 'Reference Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

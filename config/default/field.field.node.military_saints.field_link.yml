@@ -1,0 +1,23 @@
+uuid: 8567d591-5a6f-48e5-bd91-a4f481943cfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.military_saints
+  module:
+    - link
+id: node.military_saints.field_link
+field_name: field_link
+entity_type: node
+bundle: military_saints
+label: Link
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,23 @@
+uuid: 7a164794-4e85-45d7-9485-019fb61eeead
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_another_freely_button
+    - taxonomy.vocabulary.country_contact
+  module:
+    - link
+id: taxonomy_term.country_contact.field_another_freely_button
+field_name: field_another_freely_button
+entity_type: taxonomy_term
+bundle: country_contact
+label: 'Another freely assignable button'
+description: 'Another freely assignable button: prayers, hymns, ...'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

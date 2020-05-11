@@ -1,0 +1,271 @@
+uuid: c52d8d61-26d4-413c-96f3-3fd7bcb6c5ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.rites.body
+    - field.field.node.rites.field_byzantine_rites
+    - field.field.node.rites.field_order_of_mass
+    - field.field.node.rites.field_taal
+    - field.field.node.rites.field_taalkey
+    - field.field.node.rites.field_texts
+    - node.type.rites
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_config
+        - group_orderofmass
+        - group_rites
+        - group_byzantine_rites
+        - group_other
+        - group_mass
+        - group_byzantine
+        - group_catholic_prayers
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-tabs field-group-htabs'
+        direction: horizontal
+      label: Tabs
+    group_config:
+      children:
+        - title
+        - field_taalkey
+        - field_taal
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-texts field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Config
+    group_orderofmass:
+      children:
+        - field_order_of_mass
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-orderofmass field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Order of mass'
+    group_rites:
+      children:
+        - field_texts
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-rites field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Rites and prayers'
+    group_byzantine_rites:
+      children:
+        - field_byzantine_rites
+      parent_name: group_tabs
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-byzantine-rites field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Byzantine Rite'
+    group_other:
+      children:
+        - body
+      parent_name: group_tabs
+      weight: 5
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-other field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Other
+    group_byzantine:
+      children:
+        - field_sections_byzantine
+      parent_name: group_tabs
+      weight: 7
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Byzantine
+    group_mass:
+      children:
+        - field_sections_mass
+      parent_name: group_tabs
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Mass
+    group_catholic_prayers:
+      children:
+        - field_sections_prayers
+      parent_name: group_tabs
+      weight: 8
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Catholic prayers'
+id: node.rites.default
+targetEntityType: node
+bundle: rites
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 13
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_byzantine_rites:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_order_of_mass:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_taal:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_taalkey:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_texts:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 11
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

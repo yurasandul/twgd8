@@ -1,0 +1,22 @@
+uuid: 982e4f45-d2ae-47d8-98b9-4dae622c01aa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+id: node.rites.sticky
+field_name: sticky
+entity_type: node
+bundle: rites
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

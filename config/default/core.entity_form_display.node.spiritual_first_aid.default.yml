@@ -1,0 +1,84 @@
+uuid: f4f475f2-5dcd-49b6-8d24-65bc23159cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.spiritual_first_aid.body
+    - field.field.node.spiritual_first_aid.field_author
+    - field.field.node.spiritual_first_aid.field_image_16_9
+    - field.field.node.spiritual_first_aid.field_image_4_3
+    - field.field.node.spiritual_first_aid.field_video
+    - image.style.thumbnail
+    - node.type.spiritual_first_aid
+  module:
+    - image
+    - text
+    - video_embed_field
+id: node.spiritual_first_aid.default
+targetEntityType: node
+bundle: spiritual_first_aid
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_author:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_16_9:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_4_3:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_video:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 0
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  translation: true
+  uid: true

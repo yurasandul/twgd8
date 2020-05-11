@@ -1,0 +1,21 @@
+uuid: 25a41634-b330-4605-987a-03347053ca12
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.simple_block
+    - field.storage.block_content.field_simple_block_body
+  module:
+    - text
+id: block_content.simple_block.field_simple_block_body
+field_name: field_simple_block_body
+entity_type: block_content
+bundle: simple_block
+label: 'Simple block body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: 34355253-f9e2-4deb-b0b3-046733150503
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quote_slider
+id: paragraph.quote_slider.status
+field_name: status
+entity_type: paragraph
+bundle: quote_slider
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

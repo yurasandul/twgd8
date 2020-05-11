@@ -1,0 +1,43 @@
+uuid: ff4e55f8-692f-4fb3-a54e-15033dbd68f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_references_to_text
+    - node.type.tweet_page
+    - paragraphs.paragraphs_type.references_to_text
+  module:
+    - entity_reference_revisions
+id: node.tweet_page.field_references_to_text
+field_name: field_references_to_text
+entity_type: node
+bundle: tweet_page
+label: 'The Wisdom of the Church'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      references_to_text: references_to_text
+    target_bundles_drag_drop:
+      quote_slider:
+        weight: 6
+        enabled: false
+      references_to_church_fathers_say:
+        weight: 7
+        enabled: false
+      references_to_text:
+        enabled: true
+        weight: 8
+      references_to_the_popes:
+        weight: 9
+        enabled: false
+      slideshow:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+add notification entities:
+  title: 'Create new Notification entities'
+
+administer notification entities:
+  title: 'Administer Notification entities'
+  description: 'Allow to access the administration form to configure Notification entities.'
+  restrict access: true
+
+delete notification entities:
+  title: 'Delete Notification entities'
+
+edit notification entities:
+  title: 'Edit Notification entities'
+
+view published notification entities:
+  title: 'View published Notification entities'
+
+view unpublished notification entities:
+  title: 'View unpublished Notification entities'
+

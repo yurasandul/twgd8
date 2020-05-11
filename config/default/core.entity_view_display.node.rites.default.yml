@@ -1,0 +1,76 @@
+uuid: 9118273c-1404-44a4-bcb0-2fe1cd086941
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.rites.body
+    - field.field.node.rites.field_byzantine_rites
+    - field.field.node.rites.field_order_of_mass
+    - field.field.node.rites.field_taal
+    - field.field.node.rites.field_taalkey
+    - field.field.node.rites.field_texts
+    - node.type.rites
+  module:
+    - options
+    - text
+    - user
+id: node.rites.default
+targetEntityType: node
+bundle: rites
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_byzantine_rites:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_order_of_mass:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_taal:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_taalkey:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_texts:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

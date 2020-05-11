@@ -1,0 +1,23 @@
+uuid: 9ce2d5ba-55a0-4c76-aa4e-42c6876f0a23
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.storage.block_content.field_text_display_position
+  module:
+    - options
+id: block_content.bottom_block.field_text_display_position
+field_name: field_text_display_position
+entity_type: block_content
+bundle: bottom_block
+label: 'Text display position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: top
+default_value_callback: ''
+settings: {  }
+field_type: list_string

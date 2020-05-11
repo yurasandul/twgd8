@@ -1,0 +1,23 @@
+uuid: 1f2d5911-f326-4fd9-93c1-a7c67f4ab287
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_initiatives_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - link
+id: taxonomy_term._ami_contact.field_initiatives_url
+field_name: field_initiatives_url
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'Initiatives URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

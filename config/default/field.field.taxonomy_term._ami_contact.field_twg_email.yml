@@ -1,0 +1,19 @@
+uuid: 668f040a-f085-4c0b-844d-4dba61b3838b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_twg_email
+    - taxonomy.vocabulary._ami_contact
+id: taxonomy_term._ami_contact.field_twg_email
+field_name: field_twg_email
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'TWG email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

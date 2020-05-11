@@ -1,0 +1,21 @@
+uuid: 81b800b6-8d98-4246-b9c7-07df484f2ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.push_message
+  module:
+    - datetime
+id: node.push_message.field_date
+field_name: field_date
+entity_type: node
+bundle: push_message
+label: 'Datum van versturen'
+description: 'Pushmessages worden op de ingestelde dag om 14u00 verstuurd'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

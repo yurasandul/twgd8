@@ -1,0 +1,200 @@
+uuid: 6f7a1a39-1d5a-407e-b972-0103f0af55c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.frontpage.field_blocks
+    - field.field.node.frontpage.field_highlighted_subtext
+    - field.field.node.frontpage.field_highlighted_text
+    - field.field.node.frontpage.field_quote_slider
+    - field.field.node.frontpage.field_videoblock
+    - node.type.frontpage
+  module:
+    - field_group
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_main
+        - group_highlighted
+        - group__slogan_slider
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: 'group-tabs field-group-htabs'
+      label: Tabs
+    group_main:
+      children:
+        - langcode
+        - title
+        - field_videoblock
+        - field_blocks
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-main field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Main
+    group_highlighted:
+      children:
+        - field_highlighted_text
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Highlighted
+    group__slogan_slider:
+      children:
+        - field_quote_slider
+        - field_highlighted_subtext
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-sloganslider field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: ' Slogan slider'
+id: node.frontpage.default
+targetEntityType: node
+bundle: frontpage
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_blocks:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_highlighted_subtext:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_highlighted_text:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quote_slider:
+    weight: 14
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_videoblock:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  langcode:
+    type: language_select
+    weight: 5
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

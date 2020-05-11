@@ -1,0 +1,4 @@
+mxt_core.mxt_info_tab:
+  route_name: mxt_core.mxt_info_form
+  title: MXT info
+  base_route: mxt_core.mxt_info_form

@@ -1,0 +1,15 @@
+uuid: a132a85e-d8f4-4b09-bc8e-45b328cda41e
+langcode: en
+status: true
+dependencies: {  }
+name: tweet_related_teaser
+label: 'Tweet related teaser'
+effects:
+  bb7d31a9-5c5d-4801-8c8c-62f654424b2f:
+    uuid: bb7d31a9-5c5d-4801-8c8c-62f654424b2f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 400
+      anchor: center-center

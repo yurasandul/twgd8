@@ -1,0 +1,21 @@
+uuid: 57ebb53e-1de7-432f-85fe-ae68d3d9044a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_over_ons
+    - node.type.app_config
+  module:
+    - text
+id: node.app_config.field_over_ons
+field_name: field_over_ons
+entity_type: node
+bundle: app_config
+label: '#TwGOD'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

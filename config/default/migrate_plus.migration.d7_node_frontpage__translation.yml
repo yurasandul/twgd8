@@ -1,0 +1,69 @@
+uuid: 24d02c02-5907-4617-99b9-401c509a549d
+langcode: en
+status: true
+dependencies: {  }
+id: d7_node_frontpage__translation
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Frontpage) translation'
+source:
+  plugin: d7_node_mxt
+  node_type: frontpage
+  translations: true
+  no_revision: true
+  set_field_max_items:
+    - field_quote_slider
+process:
+  nid:
+    -
+      plugin: migration
+      source: tnid
+      migration: d7_node_frontpage
+  langcode:
+    plugin: static_map
+    source: language
+    map:
+      en: en
+      cs: cs
+      de: de
+      es: es
+      fr: fr
+      it: it
+      nl: nl
+      pl: pl
+      pt: pt-pt
+      ro: ro
+      sk: sk
+      und: und
+  title: title
+  field_highlighted_subtext: field_highlighted_subtext
+  field_highlighted_text: field_highlighted_text
+  field_quote_slider:
+    plugin: field_collection_mxt
+    source: field_quote_slider
+    translations: true
+    paragraph_destination: quote_slider
+    field_map:
+      field_slogan: field_slogan
+      field_slogan_source: field_slogan_source
+      field_quotes: field_quotes
+      field_image:
+        source: field_image
+        mxt_plugin: migration
+        mxt_source: fid
+        migration: d7_file
+        target: target_id
+destination:
+  plugin: 'entity:node'
+  default_bundle: frontpage
+  translations: true
+migration_dependencies:
+  required:
+    - d7_file
+    - d7_user
+    - d7_node_frontpage

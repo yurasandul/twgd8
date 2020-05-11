@@ -1,0 +1,21 @@
+uuid: 6cb15f47-4b5a-4d80-a51c-54074a0b2968
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_book
+    - taxonomy.vocabulary.subject
+  module:
+    - options
+id: taxonomy_term.subject.field_book
+field_name: field_book
+entity_type: taxonomy_term
+bundle: subject
+label: Book
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

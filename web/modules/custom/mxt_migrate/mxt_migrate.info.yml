@@ -1,0 +1,5 @@
+name: 'MXT Migrate'
+type: module
+description: 'MXT Migrate plugins'
+core: 8.x
+package: 'Custom'

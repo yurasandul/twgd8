@@ -1,0 +1,18 @@
+uuid: fd74622c-4b12-4c3b-89d8-8d3017f95c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.spiritual_first_aid
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.spiritual_first_aid
+target_entity_type_id: node
+target_bundle: spiritual_first_aid
+default_langcode: site_default
+language_alterable: true

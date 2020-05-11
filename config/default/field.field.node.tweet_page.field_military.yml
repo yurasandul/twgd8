@@ -1,0 +1,23 @@
+uuid: 29602976-da71-4f04-a64d-699d52ea59d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_military
+    - node.type.tweet_page
+id: node.tweet_page.field_military
+field_name: field_military
+entity_type: node
+bundle: tweet_page
+label: Military
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

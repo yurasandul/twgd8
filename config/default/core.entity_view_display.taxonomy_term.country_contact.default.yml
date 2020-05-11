@@ -1,0 +1,104 @@
+uuid: d2f8f29a-97b4-4e99-99bc-a14c2feadfc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.country_contact.field_another_freely_button
+    - field.field.taxonomy_term.country_contact.field_email
+    - field.field.taxonomy_term.country_contact.field_freely_assignable_button
+    - field.field.taxonomy_term.country_contact.field_initiatives_button
+    - field.field.taxonomy_term.country_contact.field_news_button
+    - field.field.taxonomy_term.country_contact.field_phone
+    - field.field.taxonomy_term.country_contact.field_website
+    - taxonomy.vocabulary.country_contact
+  module:
+    - link
+    - text
+id: taxonomy_term.country_contact.default
+targetEntityType: taxonomy_term
+bundle: country_contact
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_another_freely_button:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_email:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_freely_assignable_button:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_initiatives_button:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_button:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_phone:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_website:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

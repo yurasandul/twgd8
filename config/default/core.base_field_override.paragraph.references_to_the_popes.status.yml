@@ -1,0 +1,22 @@
+uuid: 2e81731b-4f9a-40ad-bbc2-a2ef2336b83c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_the_popes
+id: paragraph.references_to_the_popes.status
+field_name: status
+entity_type: paragraph
+bundle: references_to_the_popes
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

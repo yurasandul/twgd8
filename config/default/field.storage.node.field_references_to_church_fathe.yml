@@ -1,0 +1,21 @@
+uuid: f193a7bf-0f89-4c0f-9f12-8970f5a3dba3
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_references_to_church_fathe
+field_name: field_references_to_church_fathe
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: f6a28d8c-ae0d-4685-a8be-c5293741c6c5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_church_fathers_say
+id: paragraph.references_to_church_fathers_say.status
+field_name: status
+entity_type: paragraph
+bundle: references_to_church_fathers_say
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

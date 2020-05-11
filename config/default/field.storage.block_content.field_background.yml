@@ -1,0 +1,51 @@
+uuid: e015c2b2-abf3-4a44-8083-3bc44f0d99d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_background
+field_name: field_background
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bg-transparent
+      label: Transparent
+    -
+      value: bg-white
+      label: White
+    -
+      value: bg-light-blue
+      label: 'Light blue'
+    -
+      value: bg-baby-blue
+      label: 'Baby blue'
+    -
+      value: bg-blue-slogan
+      label: 'Blue slogan'
+    -
+      value: bg-dark-purple
+      label: 'Dark purple'
+    -
+      value: bg-blue-purple
+      label: 'Blue Purple'
+    -
+      value: bg-purple
+      label: Purple
+    -
+      value: bg-light-purple
+      label: 'Light purple'
+    -
+      value: bg-super-light-purple
+      label: 'Super light Purple'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

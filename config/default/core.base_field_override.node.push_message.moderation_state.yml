@@ -1,0 +1,18 @@
+uuid: 54441344-f353-4183-a421-aa9ce43d9b06
+langcode: nl
+status: true
+dependencies:
+  config:
+    - node.type.push_message
+id: node.push_message.moderation_state
+field_name: moderation_state
+entity_type: node
+bundle: push_message
+label: 'Moderation state'
+description: 'The moderation state of this piece of content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

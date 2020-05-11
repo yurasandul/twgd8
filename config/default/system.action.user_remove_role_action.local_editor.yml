@@ -1,0 +1,14 @@
+uuid: b93a9c7b-c6f1-4f52-a886-de8b4eeccfad
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.local_editor
+  module:
+    - user
+id: user_remove_role_action.local_editor
+label: 'Remove the Local editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: local_editor

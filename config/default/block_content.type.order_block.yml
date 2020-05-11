@@ -1,0 +1,8 @@
+uuid: a8529687-6a92-4ef7-acba-f2644351a555
+langcode: en
+status: true
+dependencies: {  }
+id: order_block
+label: 'Order block'
+revision: 0
+description: ''

@@ -1,0 +1,18 @@
+uuid: 7ed191fc-fd82-4b0d-b295-23083aa67ea8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+id: node.rites.title
+field_name: title
+entity_type: node
+bundle: rites
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,147 @@
+uuid: ff8a0351-7b58-47d0-bd82-e9435e5258e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.field.block_content.bottom_block.field_background
+    - field.field.block_content.bottom_block.field_block_link
+    - field.field.block_content.bottom_block.field_bottom_block_body
+    - field.field.block_content.bottom_block.field_image
+    - field.field.block_content.bottom_block.field_open_new_window
+    - field.field.block_content.bottom_block.field_text_color
+    - field.field.block_content.bottom_block.field_text_display_position
+    - field.field.block_content.bottom_block.field_title
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_main
+        - group_settings
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: 'group-tabs field-group-htabs'
+      label: Tabs
+    group_main:
+      children:
+        - info
+        - field_title
+        - field_image
+        - field_bottom_block_body
+        - field_text_display_position
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-main field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Main
+    group_settings:
+      children:
+        - field_background
+        - field_text_color
+        - field_block_link
+        - field_open_new_window
+      parent_name: group_tabs
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: 'group-settings field-group-htab'
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Display
+id: block_content.bottom_block.default
+targetEntityType: block_content
+bundle: bottom_block
+mode: default
+content:
+  field_background:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_block_link:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bottom_block_body:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_open_new_window:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_text_color:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text_display_position:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

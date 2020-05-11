@@ -1,0 +1,19 @@
+uuid: 3099150f-208f-40f2-ab1d-ebd592f17bd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.storage.block_content.field_twitter_url
+id: block_content.footer_block.field_twitter_url
+field_name: field_twitter_url
+entity_type: block_content
+bundle: footer_block
+label: 'Twitter URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

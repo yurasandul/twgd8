@@ -1,0 +1,39 @@
+uuid: a9c3691a-6b20-4964-ab15-567abfe620ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.military_saints.body
+    - field.field.node.military_saints.field_image
+    - field.field.node.military_saints.field_link
+    - field.field.node.military_saints.field_url
+    - field.field.node.military_saints.field_year
+    - node.type.military_saints
+  module:
+    - text
+    - user
+id: node.military_saints.teaser
+targetEntityType: node
+bundle: military_saints
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image: true
+  field_link: true
+  field_url: true
+  field_year: true
+  langcode: true

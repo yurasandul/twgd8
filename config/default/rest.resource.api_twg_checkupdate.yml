@@ -1,0 +1,18 @@
+uuid: 0c38f137-f326-4a3b-9b41-a37bfd97e629
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: api_twg_checkupdate
+plugin_id: api_twg_checkupdate
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

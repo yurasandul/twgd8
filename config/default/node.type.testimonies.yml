@@ -1,0 +1,17 @@
+uuid: 8cf41e49-5033-4886-954a-0186a6137b29
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Testimonies
+type: testimonies
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

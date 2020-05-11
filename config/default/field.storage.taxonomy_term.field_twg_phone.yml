@@ -1,0 +1,19 @@
+uuid: 2b29c6b4-5033-46fd-95e3-2a01aad1af22
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - telephone
+id: taxonomy_term.field_twg_phone
+field_name: field_twg_phone
+entity_type: taxonomy_term
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

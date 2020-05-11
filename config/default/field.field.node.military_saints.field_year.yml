@@ -1,0 +1,19 @@
+uuid: 2f18eb42-0dad-4e96-9d8f-041ccd2fa90f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_year
+    - node.type.military_saints
+id: node.military_saints.field_year
+field_name: field_year
+entity_type: node
+bundle: military_saints
+label: Year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

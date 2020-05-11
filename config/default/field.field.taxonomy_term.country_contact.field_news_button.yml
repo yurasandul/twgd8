@@ -1,0 +1,23 @@
+uuid: 0730de77-fc84-4a21-832b-698686559f0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_news_button
+    - taxonomy.vocabulary.country_contact
+  module:
+    - link
+id: taxonomy_term.country_contact.field_news_button
+field_name: field_news_button
+entity_type: taxonomy_term
+bundle: country_contact
+label: 'News button'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

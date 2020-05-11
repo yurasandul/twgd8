@@ -1,0 +1,20 @@
+uuid: 710fdea0-dc64-434a-9010-7399a7e5a6e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+id: node.rites.uid
+field_name: uid
+entity_type: node
+bundle: rites
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

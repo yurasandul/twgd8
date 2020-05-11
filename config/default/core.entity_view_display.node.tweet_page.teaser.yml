@@ -1,0 +1,56 @@
+uuid: 3391ff9b-fa23-496f-8ea9-85b650dc4c12
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tweet_page.body
+    - field.field.node.tweet_page.field_image
+    - field.field.node.tweet_page.field_military
+    - field.field.node.tweet_page.field_references_to_church_fathe
+    - field.field.node.tweet_page.field_references_to_text
+    - field.field.node.tweet_page.field_references_to_the_popes
+    - field.field.node.tweet_page.field_slideshow
+    - field.field.node.tweet_page.field_sticky_sort_date
+    - field.field.node.tweet_page.field_subject
+    - field.field.node.tweet_page.field_tweetbox
+    - field.field.node.tweet_page.field_video
+    - node.type.tweet_page
+  module:
+    - text
+    - user
+id: node.tweet_page.teaser
+targetEntityType: node
+bundle: tweet_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_image: true
+  field_military: true
+  field_references_to_church_fathe: true
+  field_references_to_text: true
+  field_references_to_the_popes: true
+  field_slideshow: true
+  field_sticky_sort_date: true
+  field_subject: true
+  field_tweetbox: true
+  field_video: true
+  langcode: true

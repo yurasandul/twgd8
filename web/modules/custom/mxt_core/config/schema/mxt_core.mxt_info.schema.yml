@@ -1,0 +1,35 @@
+mxt_core.mxt_info:
+  type: config_object
+  label: 'MXT Site information'
+  mapping:
+    phone:
+      type: tel
+      label: 'Phone'
+    image_url:
+      type: label
+      label: 'Image URL'
+    site_url:
+      type: label
+      label: 'Site name'
+    news_url:
+      type: label
+      label: 'Site URL'
+    initiatives_url:
+      type: label
+      label: 'News URL'
+    questions_url:
+      type: label
+      label: 'Initiatives URL'
+    fb:
+      type: label
+      label: 'Facebook page name'
+    twitter:
+      type: label
+      label: 'Twitter user name'
+    instagram:
+      type: label
+      label: 'Instagram user name'
+    youtube:
+      type: label
+      label: 'Youtube channel name'
+

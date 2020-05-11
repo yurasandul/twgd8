@@ -1,0 +1,19 @@
+uuid: 0588e344-a68f-4246-83bf-46ff889cb83d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_instagram_url
+field_name: field_instagram_url
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

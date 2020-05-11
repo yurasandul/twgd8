@@ -1,0 +1,24 @@
+uuid: 6353b7ad-b9be-4def-9734-1e0c0d245a8e
+langcode: en
+status: true
+dependencies: {  }
+id: rest
+label: Rest
+weight: 6
+is_admin: null
+permissions:
+  - 'add notification entities'
+  - 'administer rest resources'
+  - 'delete notification entities'
+  - 'edit notification entities'
+  - 'restful get api_ami_download'
+  - 'restful get api_ami_download_questions_resource'
+  - 'restful get api_twg_checkupdate'
+  - 'restful get api_twg_dailyprayer'
+  - 'restful get api_twg_download'
+  - 'restful get api_twg_ows'
+  - 'restful get api_twg_twg'
+  - 'restful get get_twg_api_export_resource'
+  - 'restful post notifications_resource'
+  - 'view published notification entities'
+  - 'view unpublished notification entities'

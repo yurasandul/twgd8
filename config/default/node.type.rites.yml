@@ -1,0 +1,17 @@
+uuid: 34c213d5-f6c8-4253-981c-b62a03eb2b40
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'App: Rites/prayers & order of mass'
+type: rites
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

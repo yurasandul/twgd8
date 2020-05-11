@@ -1,0 +1,17 @@
+uuid: 413a94af-878e-4226-8887-7a7373603926
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Papal quotes (brief)'
+type: papal_quotes
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

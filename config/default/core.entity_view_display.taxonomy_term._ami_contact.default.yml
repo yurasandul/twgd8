@@ -1,0 +1,180 @@
+uuid: 6828d820-084f-4490-a0ca-3c81cc2d6496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term._ami_contact.field_ami_email
+    - field.field.taxonomy_term._ami_contact.field_ami_image
+    - field.field.taxonomy_term._ami_contact.field_ami_phone
+    - field.field.taxonomy_term._ami_contact.field_facebook_url
+    - field.field.taxonomy_term._ami_contact.field_initiatives_url
+    - field.field.taxonomy_term._ami_contact.field_instagram_url
+    - field.field.taxonomy_term._ami_contact.field_news_url
+    - field.field.taxonomy_term._ami_contact.field_questions_url
+    - field.field.taxonomy_term._ami_contact.field_site_url
+    - field.field.taxonomy_term._ami_contact.field_twg_email
+    - field.field.taxonomy_term._ami_contact.field_twg_image
+    - field.field.taxonomy_term._ami_contact.field_twg_phone
+    - field.field.taxonomy_term._ami_contact.field_twitter_url
+    - field.field.taxonomy_term._ami_contact.field_youtube_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - image
+    - link
+    - text
+id: taxonomy_term._ami_contact.default
+targetEntityType: taxonomy_term
+bundle: _ami_contact
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ami_email:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ami_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ami_phone:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_facebook_url:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_initiatives_url:
+    weight: 9
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_instagram_url:
+    weight: 13
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_news_url:
+    weight: 8
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_questions_url:
+    weight: 10
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_site_url:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_twg_email:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_twg_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_twg_phone:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_twitter_url:
+    weight: 12
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_youtube_url:
+    weight: 14
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

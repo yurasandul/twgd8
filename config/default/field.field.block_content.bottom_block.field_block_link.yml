@@ -1,0 +1,19 @@
+uuid: d053681d-4e1b-4dfc-8676-d101a6c205e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.storage.block_content.field_block_link
+id: block_content.bottom_block.field_block_link
+field_name: field_block_link
+entity_type: block_content
+bundle: bottom_block
+label: 'Block link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

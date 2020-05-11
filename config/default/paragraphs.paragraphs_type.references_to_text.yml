@@ -1,0 +1,10 @@
+uuid: 5de3b4fd-b512-4da4-b8f3-aef78cefe405
+langcode: en
+status: true
+dependencies: {  }
+id: references_to_text
+label: 'References to text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

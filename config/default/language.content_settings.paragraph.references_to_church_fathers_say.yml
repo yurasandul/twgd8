@@ -1,0 +1,18 @@
+uuid: 84df94e9-f429-4fdb-8cdf-e5642e1db5c7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_church_fathers_say
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.references_to_church_fathers_say
+target_entity_type_id: paragraph
+target_bundle: references_to_church_fathers_say
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,22 @@
+uuid: 161779f5-4548-4967-8dd2-9872a2b8a456
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.push_message
+id: node.push_message.status
+field_name: status
+entity_type: node
+bundle: push_message
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

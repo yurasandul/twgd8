@@ -1,0 +1,26 @@
+display:
+  default:
+    display_title: Principal
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtro
+          reset_button_label: Reiniciar
+          exposed_sorts_label: 'Ordenar por'
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Itens por página'
+            items_per_page_options_all_label: '- Todos -'
+            offset_label: Deslocamento
+      fields:
+        roles_target_id:
+          label: 'Grupos de utilizador'
+        operations:
+          label: Operações
+        mail:
+          separator: ', '
+  page_1:
+    display_title: Página

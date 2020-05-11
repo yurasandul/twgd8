@@ -1,0 +1,22 @@
+uuid: 92b57957-1e1f-4d4e-88ed-7b068958de0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.homilies_reflections
+id: node.homilies_reflections.promote
+field_name: promote
+entity_type: node
+bundle: homilies_reflections
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

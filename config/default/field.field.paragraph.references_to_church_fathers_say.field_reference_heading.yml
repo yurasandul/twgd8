@@ -1,0 +1,19 @@
+uuid: 771f4aae-5418-4e27-9ce6-7aec31af139b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_heading
+    - paragraphs.paragraphs_type.references_to_church_fathers_say
+id: paragraph.references_to_church_fathers_say.field_reference_heading
+field_name: field_reference_heading
+entity_type: paragraph
+bundle: references_to_church_fathers_say
+label: 'Reference Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

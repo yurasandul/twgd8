@@ -1,0 +1,18 @@
+uuid: 9f9c1134-c075-4403-b5ad-05939157f67f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Push message'
+type: push_message
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

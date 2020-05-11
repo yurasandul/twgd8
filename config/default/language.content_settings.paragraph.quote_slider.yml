@@ -1,0 +1,18 @@
+uuid: 79485e4d-fa24-4119-90a3-2dbd55de4497
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.quote_slider
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: paragraph.quote_slider
+target_entity_type_id: paragraph
+target_bundle: quote_slider
+default_langcode: site_default
+language_alterable: true

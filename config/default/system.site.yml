@@ -1,0 +1,14 @@
+uuid: c8e59d33-706d-4a14-80f3-33b99aca72aa
+name: 'Tweeting with God'
+mail: noreply@tweetingwithgod.com
+slogan: 'These are some details about the chaplaincy'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

@@ -1,0 +1,18 @@
+uuid: 2c5ce476-e40b-44ce-94e7-79e5d9a4a403
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+id: block_content.bottom_block.info
+field_name: info
+entity_type: block_content
+bundle: bottom_block
+label: 'Block description'
+description: 'A brief description of your block.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

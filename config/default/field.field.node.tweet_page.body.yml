@@ -1,0 +1,23 @@
+uuid: e60ddbf4-1d1f-469f-a5eb-b2f8c57eead3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tweet_page
+  module:
+    - text
+id: node.tweet_page.body
+field_name: body
+entity_type: node
+bundle: tweet_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

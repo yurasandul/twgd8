@@ -1,0 +1,23 @@
+uuid: cee154a6-53c2-46ff-9345-5583fd76b08f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.military_saints
+  module:
+    - text
+id: node.military_saints.body
+field_name: body
+entity_type: node
+bundle: military_saints
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

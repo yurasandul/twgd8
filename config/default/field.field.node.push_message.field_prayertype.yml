@@ -1,0 +1,21 @@
+uuid: c6cb375a-41f1-4ebd-92aa-8de629eee7c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prayertype
+    - node.type.push_message
+  module:
+    - options
+id: node.push_message.field_prayertype
+field_name: field_prayertype
+entity_type: node
+bundle: push_message
+label: Prayertype
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,10 @@
+uuid: 526a0182-2fac-423a-8e32-50c446a3c135
+langcode: en
+status: true
+dependencies: {  }
+id: quote_slider
+label: 'Quote slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

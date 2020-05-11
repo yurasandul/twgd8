@@ -1,0 +1,23 @@
+uuid: 95889f61-a017-4af9-8998-f2b732520ba9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blocks
+    - node.type.frontpage
+id: node.frontpage.field_blocks
+field_name: field_blocks
+entity_type: node
+bundle: frontpage
+label: Blocks
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

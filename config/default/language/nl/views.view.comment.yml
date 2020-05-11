@@ -1,0 +1,63 @@
+display:
+  default:
+    display_title: Hoofd
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: '‹ vorige'
+            next: 'volgende ›'
+            first: '« eerste'
+            last: 'laatste »'
+          expose:
+            items_per_page_label: 'Items per pagina'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Startpunt
+      fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Auteur
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
+        operations:
+          label: Bewerkingen
+        name_1:
+          separator: ', '
+      filters:
+        langcode:
+          expose:
+            label: Taal
+  page_unapproved:
+    display_options:
+      filters:
+        langcode:
+          expose:
+            label: Taal
+      fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Auteur
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
+        operations:
+          label: Bewerkingen
+        name_1:
+          separator: ', '

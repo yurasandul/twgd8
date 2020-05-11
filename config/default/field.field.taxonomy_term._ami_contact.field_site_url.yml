@@ -1,0 +1,23 @@
+uuid: 21233f2a-d238-427e-a05b-025e0480b887
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_site_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - link
+id: taxonomy_term._ami_contact.field_site_url
+field_name: field_site_url
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'Site URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,42 @@
+uuid: d5599f3f-dec4-4358-a23d-343f098cc0dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_state
+field_name: field_state
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: tweets
+      label: Tweets
+    -
+      value: settings
+      label: Settings
+    -
+      value: scan
+      label: 'Moodstock scan'
+    -
+      value: daily
+      label: 'Daily prayer'
+    -
+      value: page
+      label: Pages
+    -
+      value: iframe
+      label: 'External page'
+    -
+      value: prayers
+      label: Prayers
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

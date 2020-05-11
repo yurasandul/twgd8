@@ -1,0 +1,22 @@
+uuid: 66f70c99-b3c2-4a9a-a338-7f567d7fd4b9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.order_block
+id: block_content.order_block.status
+field_name: status
+entity_type: block_content
+bundle: order_block
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

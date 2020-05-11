@@ -1,0 +1,19 @@
+uuid: d2976eb2-75ac-4a66-8b32-e5a6449afd1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_heading
+    - paragraphs.paragraphs_type.references_to_text
+id: paragraph.references_to_text.field_reference_heading
+field_name: field_reference_heading
+entity_type: paragraph
+bundle: references_to_text
+label: 'Reference Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

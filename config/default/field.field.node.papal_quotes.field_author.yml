@@ -1,0 +1,19 @@
+uuid: 284d4309-3d0f-4b68-a6b6-0b9c14869406
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.papal_quotes
+id: node.papal_quotes.field_author
+field_name: field_author
+entity_type: node
+bundle: papal_quotes
+label: Author
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

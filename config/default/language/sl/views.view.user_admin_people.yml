@@ -1,0 +1,14 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Ponastavi
+      fields:
+        roles_target_id:
+          label: Vloge
+        operations:
+          label: Operacije
+  page_1:
+    display_title: Stran

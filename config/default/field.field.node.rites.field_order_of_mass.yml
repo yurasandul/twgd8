@@ -1,0 +1,19 @@
+uuid: 8e86491c-0428-4626-9bdb-745c98ef10cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order_of_mass
+    - node.type.rites
+id: node.rites.field_order_of_mass
+field_name: field_order_of_mass
+entity_type: node
+bundle: rites
+label: 'Order of mass'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

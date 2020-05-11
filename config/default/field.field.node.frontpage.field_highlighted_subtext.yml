@@ -1,0 +1,19 @@
+uuid: 31cea658-c0c0-4a63-805e-c6884de0665e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlighted_subtext
+    - node.type.frontpage
+id: node.frontpage.field_highlighted_subtext
+field_name: field_highlighted_subtext
+entity_type: node
+bundle: frontpage
+label: 'Highlighted Subtext'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

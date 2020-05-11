@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtra
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+      fields:
+        title:
+          label: Titolo
+        type:
+          label: 'Tipo di contenuto'
+          separator: ', '
+        name:
+          label: Autore
+        operations:
+          label: Operazioni
+      filters:
+        title:
+          expose:
+            label: Titolo
+        type:
+          expose:
+            label: 'Tipo di contenuto'
+        langcode:
+          expose:
+            label: Lingua
+    display_title: Principale
+  page_1:
+    display_title: Pagina

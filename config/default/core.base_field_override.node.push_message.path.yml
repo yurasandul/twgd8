@@ -1,0 +1,20 @@
+uuid: 7083abcf-d089-4e64-96b4-aba74c92b743
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.push_message
+  module:
+    - path
+id: node.push_message.path
+field_name: path
+entity_type: node
+bundle: push_message
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

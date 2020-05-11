@@ -1,0 +1,18 @@
+uuid: 4c28a7d0-c73c-4de7-80b3-664e33486a11
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.military_saints
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.military_saints
+target_entity_type_id: node
+target_bundle: military_saints
+default_langcode: site_default
+language_alterable: true

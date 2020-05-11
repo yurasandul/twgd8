@@ -1,0 +1,39 @@
+display:
+  default:
+    display_title: Principale
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtra
+          reset_button_label: Ripristina
+          exposed_sorts_label: 'Ordina per'
+          sort_asc_label: Asc
+          sort_desc_label: Disc
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+      fields:
+        filename:
+          label: Nome
+          separator: ', '
+        filemime:
+          label: 'Tipo MIME'
+      filters:
+        filemime:
+          expose:
+            label: 'Tipo MIME'
+  page_2:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Voci per pagina'
+            items_per_page_options_all_label: '- Tutto -'
+            offset_label: Scostamento
+      arguments:
+        fid:
+          exception:
+            title: Tutti

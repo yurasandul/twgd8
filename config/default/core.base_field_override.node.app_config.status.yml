@@ -1,0 +1,22 @@
+uuid: d9e8c6c9-a05b-4a90-9aa6-2ad78aba3947
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.app_config
+id: node.app_config.status
+field_name: status
+entity_type: node
+bundle: app_config
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

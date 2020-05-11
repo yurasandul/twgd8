@@ -1,0 +1,18 @@
+uuid: 842d6514-4416-46f9-836a-bfd95cf31808
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_the_popes
+id: paragraph.references_to_the_popes.created
+field_name: created
+entity_type: paragraph
+bundle: references_to_the_popes
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

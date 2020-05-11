@@ -1,0 +1,19 @@
+uuid: e431c88f-c15b-4cd1-a98f-8ee344d09302
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.spiritual_first_aid
+id: node.spiritual_first_aid.field_author
+field_name: field_author
+entity_type: node
+bundle: spiritual_first_aid
+label: Author
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

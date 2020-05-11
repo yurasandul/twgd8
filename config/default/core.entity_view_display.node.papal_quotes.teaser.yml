@@ -1,0 +1,37 @@
+uuid: cac60bf1-8e94-4d36-9099-403d714114bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.papal_quotes.body
+    - field.field.node.papal_quotes.field_author
+    - field.field.node.papal_quotes.field_image_16_9
+    - field.field.node.papal_quotes.field_image_4_3
+    - node.type.papal_quotes
+  module:
+    - text
+    - user
+id: node.papal_quotes.teaser
+targetEntityType: node
+bundle: papal_quotes
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_author: true
+  field_image_16_9: true
+  field_image_4_3: true
+  langcode: true

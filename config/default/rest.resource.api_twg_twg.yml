@@ -1,0 +1,18 @@
+uuid: 60304d14-12a5-4b88-914c-d0c44a9ac223
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: api_twg_twg
+plugin_id: api_twg_twg
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

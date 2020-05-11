@@ -1,0 +1,19 @@
+uuid: dbfdba8d-e28b-4df8-8a2e-f81665b896bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_youtube_url
+field_name: field_youtube_url
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

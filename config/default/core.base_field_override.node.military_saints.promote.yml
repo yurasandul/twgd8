@@ -1,0 +1,22 @@
+uuid: 795625b0-11ae-4b1c-8661-5dedb9c0f00c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.military_saints
+id: node.military_saints.promote
+field_name: promote
+entity_type: node
+bundle: military_saints
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

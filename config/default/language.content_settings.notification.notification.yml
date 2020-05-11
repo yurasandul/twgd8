@@ -1,0 +1,11 @@
+uuid: fa422f5d-d05a-4fe7-887c-cffcd4360491
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_notification
+id: notification.notification
+target_entity_type_id: notification
+target_bundle: notification
+default_langcode: site_default
+language_alterable: false

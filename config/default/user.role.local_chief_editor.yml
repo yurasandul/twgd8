@@ -1,0 +1,9 @@
+uuid: 53680018-0377-43b0-8c3c-b7292bb657f4
+langcode: nl
+status: true
+dependencies: {  }
+id: local_chief_editor
+label: 'Local chief editor'
+weight: 5
+is_admin: null
+permissions: {  }

@@ -1,0 +1,8 @@
+uuid: bc2fe10a-9d8f-4de5-8b85-de2b72c97134
+langcode: en
+status: true
+dependencies: {  }
+name: 'AMI contact'
+vid: _ami_contact
+description: ''
+weight: 0

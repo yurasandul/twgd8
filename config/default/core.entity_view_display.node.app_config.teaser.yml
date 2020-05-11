@@ -1,0 +1,45 @@
+uuid: 99e7f544-b6bc-4fe2-b4e5-a811e8ebb2c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.app_config.body
+    - field.field.node.app_config.field_de_boeken
+    - field.field.node.app_config.field_deze_app
+    - field.field.node.app_config.field_donatie
+    - field.field.node.app_config.field_over_ons
+    - field.field.node.app_config.field_quote_slider
+    - field.field.node.app_config.field_taal
+    - field.field.node.app_config.field_url_donate_button
+    - node.type.app_config
+  module:
+    - text
+    - user
+id: node.app_config.teaser
+targetEntityType: node
+bundle: app_config
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_de_boeken: true
+  field_deze_app: true
+  field_donatie: true
+  field_over_ons: true
+  field_quote_slider: true
+  field_taal: true
+  field_url_donate_button: true
+  langcode: true

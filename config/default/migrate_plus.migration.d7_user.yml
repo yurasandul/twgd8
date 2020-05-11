@@ -1,0 +1,97 @@
+uuid: bcff10ee-103e-4be2-b28f-690f6f123172
+langcode: en
+status: true
+dependencies: {  }
+id: d7_user
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'User accounts'
+source:
+  plugin: d7_user
+process:
+  uid:
+    -
+      plugin: get
+      source: uid
+  name:
+    -
+      plugin: get
+      source: name
+  pass:
+    -
+      plugin: get
+      source: pass
+  mail:
+    -
+      plugin: get
+      source: mail
+  created:
+    -
+      plugin: get
+      source: created
+  access:
+    -
+      plugin: get
+      source: access
+  login:
+    -
+      plugin: get
+      source: login
+  status:
+    -
+      plugin: get
+      source: status
+  timezone:
+    -
+      plugin: get
+      source: timezone
+  langcode:
+    -
+      plugin: user_langcode
+      source: entity_language
+      fallback_to_site_default: false
+  preferred_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  preferred_admin_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  init:
+    -
+      plugin: get
+      source: init
+  roles:
+    -
+      plugin: static_map
+      bypass: true
+      source: roles
+      map:
+        1: anonymous
+        2: authenticated
+        11: administrator
+        16: global_editor
+        21: local_editor
+        26: local_chief_editor
+  user_picture:
+    -
+      plugin: sub_process
+      source: picture
+      process:
+        target_id:
+          plugin: migration_lookup
+          migration: d7_file
+          source: fid
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - d7_file

@@ -1,0 +1,43 @@
+uuid: 95213af8-1312-4ba8-b164-1944f95dad26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slideshow
+    - node.type.page
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: node.page.field_slideshow
+field_name: field_slideshow
+entity_type: node
+bundle: page
+label: Slideshow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      quote_slider:
+        weight: 6
+        enabled: false
+      references_to_church_fathers_say:
+        weight: 7
+        enabled: false
+      references_to_text:
+        weight: 8
+        enabled: false
+      references_to_the_popes:
+        weight: 9
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

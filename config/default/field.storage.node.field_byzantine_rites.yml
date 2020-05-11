@@ -1,0 +1,19 @@
+uuid: ae60aa13-b49b-41f6-a8bd-4247597eb459
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_byzantine_rites
+field_name: field_byzantine_rites
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 7
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

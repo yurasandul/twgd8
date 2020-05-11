@@ -1,0 +1,14 @@
+uuid: f007f945-ac7b-48f7-a632-3756f1fadda5
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.local_editor
+  module:
+    - user
+id: user_add_role_action.local_editor
+label: 'Add the Local editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: local_editor

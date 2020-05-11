@@ -1,0 +1,17 @@
+uuid: 3fee8bab-ea3b-45c7-841a-6366f3d2211b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Inspirational quotes'
+type: inspirational_quotes
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

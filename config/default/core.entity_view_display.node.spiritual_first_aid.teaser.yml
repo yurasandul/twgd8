@@ -1,0 +1,39 @@
+uuid: f809c03c-06cc-4df5-8286-a7d6b666c94e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.spiritual_first_aid.body
+    - field.field.node.spiritual_first_aid.field_author
+    - field.field.node.spiritual_first_aid.field_image_16_9
+    - field.field.node.spiritual_first_aid.field_image_4_3
+    - field.field.node.spiritual_first_aid.field_video
+    - node.type.spiritual_first_aid
+  module:
+    - text
+    - user
+id: node.spiritual_first_aid.teaser
+targetEntityType: node
+bundle: spiritual_first_aid
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_author: true
+  field_image_16_9: true
+  field_image_4_3: true
+  field_video: true
+  langcode: true

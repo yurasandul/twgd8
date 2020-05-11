@@ -1,0 +1,19 @@
+uuid: 35f754e8-d887-4e0c-9075-e2d523e67a8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_ami_email
+    - taxonomy.vocabulary._ami_contact
+id: taxonomy_term._ami_contact.field_ami_email
+field_name: field_ami_email
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'AMI email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

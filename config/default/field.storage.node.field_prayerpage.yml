@@ -1,0 +1,42 @@
+uuid: 5a792b56-09cd-4398-85a3-812daa17250b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_prayerpage
+field_name: field_prayerpage
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 0
+      label: 'Tabblad 1'
+    -
+      value: 1
+      label: 'Tabblad 2'
+    -
+      value: 2
+      label: 'Tabblad 3'
+    -
+      value: 3
+      label: 'Tabblad 4'
+    -
+      value: 4
+      label: 'Tabblad 5'
+    -
+      value: 5
+      label: 'Tabblad 6'
+    -
+      value: 6
+      label: 'Tabblad 7'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

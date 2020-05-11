@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reset
+          exposed_sorts_label: 'Zoradiť podľa'
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položiek na stránku'
+            items_per_page_options_all_label: '- Všetko -'
+            offset_label: 'Zobraziť od'
+  page_1:
+    display_title: Stránka

@@ -1,0 +1,12 @@
+uuid: 0a0eb24a-4d84-4729-bbd4-311f847959ad
+langcode: en
+status: true
+dependencies: {  }
+id: migrate_drupal_7
+label: 'Import from Drupal 7'
+description: ''
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: migrate

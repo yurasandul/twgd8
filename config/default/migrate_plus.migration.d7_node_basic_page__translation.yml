@@ -1,0 +1,97 @@
+uuid: fac38a56-e429-4bcd-8241-c0d8f246e69a
+langcode: en
+status: true
+dependencies: {  }
+id: d7_node_basic_page__translation
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Basic Page) translation'
+source:
+  plugin: d7_node_mxt
+  node_type: basic_page
+  no_revision: true
+  translations: true
+  set_field_max_items:
+    - field_slideshow
+process:
+  nid:
+    -
+      plugin: migration
+      source: tnid
+      migration: d7_node_basic_page
+  langcode:
+    plugin: static_map
+    source: language
+    map:
+      en: en
+      cs: cs
+      de: de
+      es: es
+      fr: fr
+      it: it
+      nl: nl
+      pl: pl
+      pt: pt-pt
+      ro: ro
+      sk: sk
+      und: und
+  title:
+    -
+      plugin: default_value
+      source: title
+      default_value: '-- empty title --'
+  uid: node_uid
+  status: status
+  changed: changed
+  body:
+    -
+      plugin: sub_process
+      source: body
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        summary: summary
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_slideshow:
+    plugin: field_collection_mxt
+    source: field_slideshow
+    translations: true
+    paragraph_destination: slideshow
+    field_map:
+      field_caption: field_caption
+      field_slide_description: field_slide_description
+      field_slideshow_image:
+        source: field_slideshow_image
+        mxt_plugin: migration
+        mxt_source: fid
+        migration: d7_file
+        target: target_id
+destination:
+  plugin: 'entity:node'
+  default_bundle: page
+  translations: true
+migration_dependencies:
+  required:
+    - d7_file
+    - d7_user
+    - d7_node_basic_page

@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sorteren op'
+          sort_asc_label: Oplopend
+          sort_desc_label: Aflopend
+      fields:
+        title:
+          label: Titel
+        type:
+          label: Inhoudstype
+          separator: ', '
+        name:
+          label: Auteur
+        operations:
+          label: Bewerkingen
+      filters:
+        title:
+          expose:
+            label: Titel
+        type:
+          expose:
+            label: Inhoudstype
+        langcode:
+          expose:
+            label: Taal
+    display_title: Hoofd
+  page_1:
+    display_title: Pagina

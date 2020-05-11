@@ -1,0 +1,19 @@
+uuid: df55b9f1-a11e-4193-847d-e871760aa799
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer_block
+    - field.storage.block_content.field_facebook_url
+id: block_content.footer_block.field_facebook_url
+field_name: field_facebook_url
+entity_type: block_content
+bundle: footer_block
+label: 'Facebook URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

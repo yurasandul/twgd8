@@ -1,0 +1,10 @@
+uuid: cf952367-f6d7-4141-ae56-1a1cc05083ba
+langcode: de
+status: true
+dependencies:
+  module:
+    - mxt_notification
+id: notification.token
+label: Token
+targetEntityType: notification
+cache: true

@@ -1,0 +1,43 @@
+uuid: ee728e0f-bd55-4257-a2e4-44a0746ba191
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slideshow
+    - node.type.tweet_page
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - entity_reference_revisions
+id: node.tweet_page.field_slideshow
+field_name: field_slideshow
+entity_type: node
+bundle: tweet_page
+label: Slideshow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      slideshow: slideshow
+    target_bundles_drag_drop:
+      quote_slider:
+        weight: 6
+        enabled: false
+      references_to_church_fathers_say:
+        weight: 7
+        enabled: false
+      references_to_text:
+        weight: 8
+        enabled: false
+      references_to_the_popes:
+        weight: 9
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 10
+field_type: entity_reference_revisions

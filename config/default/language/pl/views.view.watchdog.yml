@@ -1,0 +1,33 @@
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        type:
+          label: Typ
+        name:
+          separator: ', '
+        link:
+          label: Operacje
+      filters:
+        type:
+          expose:
+            label: Typ
+  page:
+    display_title: Strona

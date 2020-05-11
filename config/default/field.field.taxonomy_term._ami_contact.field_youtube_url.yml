@@ -1,0 +1,23 @@
+uuid: 9e9a154b-874f-404f-9509-723f680d68f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_youtube_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - link
+id: taxonomy_term._ami_contact.field_youtube_url
+field_name: field_youtube_url
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'Youtube URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

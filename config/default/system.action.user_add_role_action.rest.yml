@@ -1,0 +1,14 @@
+uuid: 47d3680b-e2aa-489f-80d3-412f36f19b8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rest
+  module:
+    - user
+id: user_add_role_action.rest
+label: 'Add the Rest role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rest

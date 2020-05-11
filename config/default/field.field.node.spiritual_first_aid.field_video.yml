@@ -1,0 +1,25 @@
+uuid: f5561684-27f6-4590-a15e-d6b9ee3c7bbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.spiritual_first_aid
+  module:
+    - video_embed_field
+id: node.spiritual_first_aid.field_video
+field_name: field_video
+entity_type: node
+bundle: spiritual_first_aid
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

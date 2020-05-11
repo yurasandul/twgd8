@@ -1,0 +1,177 @@
+uuid: 3f64b7c9-8de8-4230-b3d8-8a03e7b6bede
+langcode: en
+status: true
+dependencies: {  }
+id: d7_node_tweet_page__translation
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Tweet Page) translation'
+source:
+  plugin: d7_node_mxt
+  node_type: tweet_page
+  no_revision: true
+  translations: true
+  set_field_max_items:
+    - field_slideshow
+    - field_references_to_text
+    - field_references_to_church_fathe
+    - field_references_to_the_popes
+process:
+  nid:
+    -
+      plugin: migration
+      source: tnid
+      migration: d7_node_tweet_page
+  langcode:
+    plugin: static_map
+    source: language
+    map:
+      en: en
+      cs: cs
+      de: de
+      es: es
+      fr: fr
+      it: it
+      nl: nl
+      pl: pl
+      pt: pt-pt
+      ro: ro
+      sk: sk
+      und: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  body:
+    -
+      plugin: sub_process
+      source: body
+      process:
+        value:
+          plugin: str_replace
+          source: value
+          search:
+            - 'https://www.tweetingwithgod.com/'
+            - 'http://www.tweetingwithgod.com/'
+          replace:
+            - /
+            - /
+        summary: summary
+        format:
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            plain_text: plain_text
+            filtered_html: basic_html
+            full_html: full_html
+            php_code: full_html
+  field_image:
+    -
+      plugin: sub_process
+      source: field_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_subject:
+    -
+      plugin: sub_process
+      source: field_subject
+      process:
+        target_id: tid
+  field_sticky_sort_date:
+    -
+      plugin: sub_process
+      source: field_sticky_sort_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_tweetbox:
+    -
+      plugin: get
+      source: field_tweetbox
+  field_slideshow:
+    plugin: field_collection_mxt
+    source: field_slideshow
+    translations: true
+    paragraph_destination: slideshow
+    field_map:
+      field_caption: field_caption
+      field_slide_description: field_slide_description
+      field_slideshow_image:
+        source: field_slideshow_image
+        mxt_plugin: migration
+        mxt_source: fid
+        migration: d7_file
+        target: target_id
+  field_references_to_text:
+    plugin: field_collection_mxt
+    source: field_references_to_text
+    translations: true
+    paragraph_destination: references_to_text
+    field_map:
+      field_reference_heading: field_reference_heading
+      field_reference_body:
+        source: field_reference_body
+        mxt_plugin: mapping
+        key_map: format
+        map:
+          plain_text: plain_text
+          filtered_html: basic_html
+          full_html: full_html
+          php_code: full_html
+  field_references_to_church_fathe:
+    plugin: field_collection_mxt
+    source: field_references_to_church_fathe
+    translations: true
+    paragraph_destination: references_to_church_fathers_say
+    field_map:
+      field_reference_heading: field_reference_heading
+      field_reference_body:
+        source: field_reference_body
+        mxt_plugin: mapping
+        key_map: format
+        map:
+          plain_text: plain_text
+          filtered_html: basic_html
+          full_html: full_html
+          php_code: full_html
+  field_references_to_the_popes:
+    plugin: field_collection_mxt
+    source: field_references_to_the_popes
+    translations: true
+    paragraph_destination: references_to_the_popes
+    field_map:
+      field_reference_heading: field_reference_heading
+      field_reference_body:
+        source: field_reference_body
+        mxt_plugin: mapping
+        key_map: format
+        map:
+          plain_text: plain_text
+          filtered_html: basic_html
+          full_html: full_html
+          php_code: full_html
+destination:
+  plugin: 'entity:node'
+  default_bundle: tweet_page
+  translations: true
+migration_dependencies:
+  required:
+    - d7_user
+    - d7_file
+    - d7_node_tweet_page

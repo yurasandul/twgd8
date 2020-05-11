@@ -1,0 +1,23 @@
+uuid: 0262271f-c500-4168-a21f-fa79f6437179
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_news_url
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - link
+id: taxonomy_term._ami_contact.field_news_url
+field_name: field_news_url
+entity_type: taxonomy_term
+bundle: _ami_contact
+label: 'News URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

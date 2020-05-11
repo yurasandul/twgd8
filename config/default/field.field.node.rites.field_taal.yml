@@ -1,0 +1,21 @@
+uuid: 7bd94596-6062-40a7-8111-0200ebfb0083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taal
+    - node.type.rites
+  module:
+    - options
+id: node.rites.field_taal
+field_name: field_taal
+entity_type: node
+bundle: rites
+label: Taal
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

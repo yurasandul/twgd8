@@ -1,0 +1,18 @@
+uuid: ed5234d2-9378-49d8-b4d6-3fba59f4a37b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_military
+field_name: field_military
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

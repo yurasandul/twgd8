@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtru
+          reset_button_label: Resetează
+          exposed_sorts_label: 'Sortare după'
+          sort_asc_label: Ascendent
+          sort_desc_label: Desc
+      fields:
+        title:
+          label: Titlu
+        type:
+          label: 'Tip conţinut'
+          separator: ', '
+        name:
+          label: Autor
+        operations:
+          label: Operaţii
+      filters:
+        title:
+          expose:
+            label: Titlu
+        type:
+          expose:
+            label: 'Tip conţinut'
+        langcode:
+          expose:
+            label: Limba
+    display_title: Expert
+  page_1:
+    display_title: Pagina

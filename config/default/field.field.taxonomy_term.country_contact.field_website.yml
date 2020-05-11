@@ -1,0 +1,23 @@
+uuid: 06afaf75-a835-4ec2-b486-53677ea63877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_website
+    - taxonomy.vocabulary.country_contact
+  module:
+    - link
+id: taxonomy_term.country_contact.field_website
+field_name: field_website
+entity_type: taxonomy_term
+bundle: country_contact
+label: Website
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

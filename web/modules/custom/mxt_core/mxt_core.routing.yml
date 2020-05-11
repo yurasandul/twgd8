@@ -1,0 +1,18 @@
+mxt_core.ami_contact_details:
+  path: '/admin/config/mxt_core/amicontactdetails'
+  defaults:
+    _form: '\Drupal\mxt_core\Form\AmiContactDetails'
+    _title: 'AMI contact details'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+mxt_core.mxt_info_form:
+  path: '/admin/config/mxt_core/mxt_info'
+  defaults:
+    _form: '\Drupal\mxt_core\Form\MXTInfoForm'
+    _title: 'MXT Info Form'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

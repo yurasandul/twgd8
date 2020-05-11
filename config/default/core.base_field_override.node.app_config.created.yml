@@ -1,0 +1,18 @@
+uuid: fc820993-0f1c-41ce-8ff8-70bfd4acd75e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.app_config
+id: node.app_config.created
+field_name: created
+entity_type: node
+bundle: app_config
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

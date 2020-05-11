@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      fields:
+        title:
+          label: Titel
+        type:
+          label: Inhaltstyp
+          separator: ', '
+        name:
+          label: Autor
+        operations:
+          label: Aktionen
+      filters:
+        title:
+          expose:
+            label: Titel
+        type:
+          expose:
+            label: Inhaltstyp
+        langcode:
+          expose:
+            label: Sprache
+    display_title: Master
+  page_1:
+    display_title: Seite

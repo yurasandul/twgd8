@@ -1,0 +1,8 @@
+uuid: 7e833c85-5786-4548-ad33-003f6ad9d377
+langcode: en
+status: true
+dependencies: {  }
+id: bottom_block
+label: 'Bottom block'
+revision: 0
+description: ''

@@ -1,0 +1,18 @@
+uuid: bcb03f6b-0ecf-44a5-b3a3-ae6572731096
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary._ami_contact
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: taxonomy_term._ami_contact
+target_entity_type_id: taxonomy_term
+target_bundle: _ami_contact
+default_langcode: site_default
+language_alterable: false

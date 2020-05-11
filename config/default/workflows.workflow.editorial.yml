@@ -1,0 +1,46 @@
+uuid: ff18b6cc-8d60-4366-be81-b7f90b617cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rites
+    - node.type.tweet_page
+  module:
+    - content_moderation
+_core:
+  default_config_hash: Ln7YAg2WXZ-5wn9ib-v9qOKFxF2YZLnwSKtX-V455hE
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -5
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: 0
+      from:
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 1
+      from:
+        - draft
+        - published
+  entity_types:
+    node:
+      - rites
+      - tweet_page
+  default_moderation_state: draft

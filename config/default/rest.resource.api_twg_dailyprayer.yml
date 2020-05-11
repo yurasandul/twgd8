@@ -1,0 +1,18 @@
+uuid: bdfeb82f-b44c-456b-b400-8aceb9e71e2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: api_twg_dailyprayer
+plugin_id: api_twg_dailyprayer
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

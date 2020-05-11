@@ -1,0 +1,23 @@
+uuid: 72529634-5c16-4d8e-8224-6d0d7ed2c3a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sent
+    - node.type.push_message
+id: node.push_message.field_sent
+field_name: field_sent
+entity_type: node
+bundle: push_message
+label: 'Message sent?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,39 @@
+display:
+  default:
+    display_title: Nadřízené
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Reset
+          exposed_sorts_label: 'Řadit dle'
+          sort_asc_label: Vzestupně
+          sort_desc_label: Sestupně
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      fields:
+        filename:
+          label: Jméno
+          separator: ', '
+        filemime:
+          label: 'Typ MIME'
+      filters:
+        filemime:
+          expose:
+            label: 'Typ MIME'
+  page_2:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Položek na stránku'
+            items_per_page_options_all_label: '- Vše -'
+            offset_label: Posun
+      arguments:
+        fid:
+          exception:
+            title: Vše

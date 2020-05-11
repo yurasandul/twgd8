@@ -1,0 +1,21 @@
+uuid: d6bc20ac-6be4-480a-9a00-613eecdabb34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sticky_sort_date
+    - node.type.tweet_page
+  module:
+    - datetime
+id: node.tweet_page.field_sticky_sort_date
+field_name: field_sticky_sort_date
+entity_type: node
+bundle: tweet_page
+label: 'Sticky Sort Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

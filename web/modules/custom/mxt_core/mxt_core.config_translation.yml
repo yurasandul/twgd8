@@ -1,0 +1,5 @@
+mxt_core.mxt_info_form:
+  title: 'MXT site info'
+  base_route_name: mxt_core.mxt_info_form
+  names:
+    - mxt_core.mxt_info

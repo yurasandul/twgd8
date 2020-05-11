@@ -1,0 +1,17 @@
+uuid: 0d448ee3-b756-46f2-a275-abc8d2acc3cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Military Saints'
+type: military_saints
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

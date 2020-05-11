@@ -1,0 +1,21 @@
+uuid: f823103b-af54-4cf7-af3b-6855a89e4e58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reference_body
+    - paragraphs.paragraphs_type.references_to_the_popes
+  module:
+    - text
+id: paragraph.references_to_the_popes.field_reference_body
+field_name: field_reference_body
+entity_type: paragraph
+bundle: references_to_the_popes
+label: 'Reference Body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

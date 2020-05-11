@@ -1,0 +1,21 @@
+uuid: f3027cf1-31e9-4110-8a0a-ef343efbd6db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone
+    - taxonomy.vocabulary.country_contact
+  module:
+    - telephone
+id: taxonomy_term.country_contact.field_phone
+field_name: field_phone
+entity_type: taxonomy_term
+bundle: country_contact
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

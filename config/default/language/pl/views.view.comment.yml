@@ -1,0 +1,63 @@
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      pager:
+        options:
+          tags:
+            previous: '‹ poprzednia'
+            next: 'następna ›'
+            first: '« pierwsza'
+            last: 'ostatnia »'
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+      fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
+        operations:
+          label: Operacje
+        name_1:
+          separator: ', '
+      filters:
+        langcode:
+          expose:
+            label: Język
+  page_unapproved:
+    display_options:
+      filters:
+        langcode:
+          expose:
+            label: Język
+      fields:
+        subject:
+          separator: ', '
+        uid:
+          separator: ', '
+        name:
+          label: Autor
+          separator: ', '
+        entity_id:
+          separator: ', '
+        changed:
+          separator: ', '
+        operations:
+          label: Operacje
+        name_1:
+          separator: ', '

@@ -1,0 +1,18 @@
+uuid: 6545541e-d32a-4b00-b41f-3f8be3681a21
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - serialization
+    - simple_oauth
+id: api_ami_download
+plugin_id: api_ami_download
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - oauth2

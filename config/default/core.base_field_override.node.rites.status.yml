@@ -1,0 +1,22 @@
+uuid: e31003fa-ba39-49b4-b158-8833ef8dfa0b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+id: node.rites.status
+field_name: status
+entity_type: node
+bundle: rites
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

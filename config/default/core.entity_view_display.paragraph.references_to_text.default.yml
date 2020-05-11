@@ -1,0 +1,31 @@
+uuid: 7d082396-99ff-4ca1-a2ee-9ab5ff43dc53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.references_to_text.field_reference_body
+    - field.field.paragraph.references_to_text.field_reference_heading
+    - paragraphs.paragraphs_type.references_to_text
+  module:
+    - text
+id: paragraph.references_to_text.default
+targetEntityType: paragraph
+bundle: references_to_text
+mode: default
+content:
+  field_reference_body:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_reference_heading:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

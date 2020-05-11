@@ -1,0 +1,22 @@
+uuid: 681d2b41-f1c7-49bf-9672-6cb088aed0ce
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_text
+id: paragraph.references_to_text.status
+field_name: status
+entity_type: paragraph
+bundle: references_to_text
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

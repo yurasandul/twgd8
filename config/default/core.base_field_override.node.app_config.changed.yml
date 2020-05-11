@@ -1,0 +1,18 @@
+uuid: 2bc6222e-305f-44e0-b84d-6e6e35804659
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.app_config
+id: node.app_config.changed
+field_name: changed
+entity_type: node
+bundle: app_config
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

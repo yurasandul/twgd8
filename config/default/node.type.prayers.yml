@@ -1,0 +1,17 @@
+uuid: bde3f449-9db3-49bf-b777-a7c8855eefff
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Prayers
+type: prayers
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: f1188e99-a1d1-4f03-b33c-fdeeb77d0ea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.storage.block_content.field_background
+  module:
+    - options
+id: block_content.bottom_block.field_background
+field_name: field_background
+entity_type: block_content
+bundle: bottom_block
+label: Background
+description: 'Set background colors'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

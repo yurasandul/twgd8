@@ -1,0 +1,18 @@
+uuid: 4e92b2dd-2d53-410b-8ff9-8a7cac0a48c4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+id: node.rites.changed
+field_name: changed
+entity_type: node
+bundle: rites
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

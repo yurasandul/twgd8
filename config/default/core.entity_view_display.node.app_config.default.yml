@@ -1,0 +1,90 @@
+uuid: 8d7b6e41-9e9c-4230-9809-27fe1c942eb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.app_config.body
+    - field.field.node.app_config.field_de_boeken
+    - field.field.node.app_config.field_deze_app
+    - field.field.node.app_config.field_donatie
+    - field.field.node.app_config.field_over_ons
+    - field.field.node.app_config.field_quote_slider
+    - field.field.node.app_config.field_taal
+    - field.field.node.app_config.field_url_donate_button
+    - node.type.app_config
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+    - user
+id: node.app_config.default
+targetEntityType: node
+bundle: app_config
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_de_boeken:
+    weight: 105
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_deze_app:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_donatie:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_over_ons:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_quote_slider:
+    type: entity_reference_revisions_entity_view
+    weight: 108
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_taal:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_url_donate_button:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

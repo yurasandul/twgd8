@@ -1,0 +1,25 @@
+uuid: 1f44f47e-8704-410b-8ce8-8804332144cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.tweet_page
+  module:
+    - video_embed_field
+id: node.tweet_page.field_video
+field_name: field_video
+entity_type: node
+bundle: tweet_page
+label: Video
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

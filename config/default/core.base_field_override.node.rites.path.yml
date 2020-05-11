@@ -1,0 +1,20 @@
+uuid: a5d2dbb5-973c-4190-bdbc-df0ad6db1b1a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.rites
+  module:
+    - path
+id: node.rites.path
+field_name: path
+entity_type: node
+bundle: rites
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

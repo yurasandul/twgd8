@@ -1,0 +1,21 @@
+uuid: 4c66be11-ca38-40ea-9a08-a816baa1ca97
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bottom_block
+    - field.storage.block_content.field_text_color
+  module:
+    - options
+id: block_content.bottom_block.field_text_color
+field_name: field_text_color
+entity_type: block_content
+bundle: bottom_block
+label: 'Text color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,33 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      fields:
+        title:
+          label: Tytuł
+        type:
+          label: 'Rodzaj zawartości'
+          separator: ', '
+        name:
+          label: Autor
+        operations:
+          label: Operacje
+      filters:
+        title:
+          expose:
+            label: Tytuł
+        type:
+          expose:
+            label: 'Rodzaj zawartości'
+        langcode:
+          expose:
+            label: Język
+    display_title: Główny
+  page_1:
+    display_title: Strona

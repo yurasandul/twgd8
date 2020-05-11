@@ -1,0 +1,14 @@
+uuid: 890894a4-768c-437c-a0f9-eaa80f847df6
+langcode: nl
+status: true
+dependencies:
+  config:
+    - user.role.local_chief_editor
+  module:
+    - user
+id: user_remove_role_action.local_chief_editor
+label: 'Remove the Local chief editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: local_chief_editor

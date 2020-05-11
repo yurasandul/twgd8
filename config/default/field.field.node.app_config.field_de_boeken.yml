@@ -1,0 +1,21 @@
+uuid: c822e825-a723-4d44-a94f-4bf92931634f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_de_boeken
+    - node.type.app_config
+  module:
+    - text
+id: node.app_config.field_de_boeken
+field_name: field_de_boeken
+entity_type: node
+bundle: app_config
+label: 'Over ons'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 60631a3d-b9be-413e-afe8-4eda59e6383a
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - telephone
+id: taxonomy_term.field_ami_phone
+field_name: field_ami_phone
+entity_type: taxonomy_term
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

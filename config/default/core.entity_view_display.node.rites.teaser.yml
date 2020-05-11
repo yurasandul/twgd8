@@ -1,0 +1,46 @@
+uuid: cb92ae23-7da2-4aae-865b-7a6076ba035a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.rites.body
+    - field.field.node.rites.field_byzantine_rites
+    - field.field.node.rites.field_order_of_mass
+    - field.field.node.rites.field_taal
+    - field.field.node.rites.field_taalkey
+    - field.field.node.rites.field_texts
+    - node.type.rites
+  module:
+    - text
+    - user
+id: node.rites.teaser
+targetEntityType: node
+bundle: rites
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_byzantine_rites: true
+  field_order_of_mass: true
+  field_taal: true
+  field_taalkey: true
+  field_texts: true
+  langcode: true

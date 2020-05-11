@@ -1,0 +1,18 @@
+uuid: 063e2e9e-8a31-494b-b86b-18d3272e8cc3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.references_to_church_fathers_say
+id: paragraph.references_to_church_fathers_say.created
+field_name: created
+entity_type: paragraph
+bundle: references_to_church_fathers_say
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

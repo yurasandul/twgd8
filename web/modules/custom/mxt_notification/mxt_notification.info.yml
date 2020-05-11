@@ -1,0 +1,5 @@
+name: 'MXT notification'
+type: module
+description: 'MXT Notification Entity'
+core: 8.x
+package: 'Custom'

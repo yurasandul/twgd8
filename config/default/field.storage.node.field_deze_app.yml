@@ -1,0 +1,19 @@
+uuid: 91f3d9ed-ea3f-42d2-8410-c399ef635ebf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_deze_app
+field_name: field_deze_app
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

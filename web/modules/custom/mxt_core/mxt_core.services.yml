@@ -1,0 +1,7 @@
+services:
+  logger.channel.mxt_core:
+    parent: logger.channel_base
+    arguments: ['mxt_core']
+  mxt_core.twg_api_helper:
+    class: Drupal\mxt_core\TwgApiHelper
+    arguments: ['@entity_type.manager', '@current_user']
