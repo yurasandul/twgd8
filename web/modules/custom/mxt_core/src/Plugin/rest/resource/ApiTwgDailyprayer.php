@@ -88,6 +88,26 @@ class ApiTwgDailyprayer extends ResourceBase {
       }
     }
 
+    $true_languages = [
+      'AM',
+      'AR',
+      'DE',
+      'FR',
+      'GR',
+      'IT',
+      'MG',
+      'NL',
+      'PL',
+      'PT',
+      'SP',
+      'TR',
+    ];
+
+    if (!in_array($lang, $true_languages)) {
+      $langcode = 'en';
+      $lang = 'AM';
+    }
+
     $start_date = date('Y-m-d', time());
     $dates = [];
     for ($i = 0; $i <= 6; $i++) {

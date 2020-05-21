@@ -304,7 +304,7 @@ class TwgApiHelper {
     $parts = explode(' ', $title);
     if (is_numeric($parts[0])) {
       $return = [
-        'number' => $parts[0],
+        'number' => $this->weightTweet($parts[0]),
         'text' => trim(mb_substr($title, mb_strlen($parts[0]))),
       ];
     }
@@ -492,7 +492,6 @@ class TwgApiHelper {
             ->condition('field_military', 0)
             ->condition('field_military', NULL, 'IS NULL');
           $query->condition($orGroup);
-          // $query->condition('field_military', [NULL, 1], 'IN');
         }
 
         $nids = $query->execute();
@@ -511,6 +510,8 @@ class TwgApiHelper {
             $langcode);
 
           $content = $this->transformLangcode($node_translation->get('body')->value, $langcode);
+          $short_codes_content = $this->parseShortCodes($content);
+          $short_codes_content['content'] = $this->prepareLinkTweetContent($short_codes_content['content']);
 
           $tweet = [
             'id' => $node_translation->id(),
@@ -520,15 +521,15 @@ class TwgApiHelper {
             'thumbnail' => $uri ? ImageStyle::load('tweet_related_teaser')
               ->buildUrl($uri) : '',
             'title' => $this->getPartsFromTitle($node_translation->label())['text'],
-            'content' => $this->prepareTweetContent($content),
             'tweet_text' => $node_translation->get('field_tweetbox')->value,
             'is_daily_hidden' => FALSE,
             'church_father' => $this->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode),
             'pope_say' => $this->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode),
-            'video' => $this->getVideoData($node_translation, 'field_video'),
             'wisdom' => $wisdom,
             'related' => $this->getSubjectRelated($node, $nids, $langcode),
           ];
+
+          $tweet += $short_codes_content;
 
           $tweets[] = $tweet;
         }
@@ -648,7 +649,7 @@ class TwgApiHelper {
       // Sorting tweets in subject.
       $sort_tweet = [];
       foreach ($subject['tweets'] as $index_tweets => $tweet) {
-        $sort_tweet[strval($index_tweets)] = number_format($this->weightTweet($tweet['number']), 2);
+        $sort_tweet[strval($index_tweets)] = number_format($tweet['number'], 2);
       }
       asort($sort_tweet);
       $sort_tweet_data = [];
@@ -717,7 +718,7 @@ class TwgApiHelper {
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function prepareTweetContent($source_text) {
+  public function prepareLinkTweetContent($source_text) {
     $html = new DOMDocument();
 
     $html->loadHTML('<?xml encoding="UTF-8">' . $source_text);
@@ -870,6 +871,14 @@ class TwgApiHelper {
     if (!\Drupal::service('path.validator')->isValid($uri)) {
       return NULL;
     }
+
+    try {
+      $params = Url::fromUri("internal:" . $uri)->getRouteParameters();
+    }
+    catch (\Exception $e) {
+      return NULL;
+    }
+
     $params = Url::fromUri("internal:" . $uri)->getRouteParameters();
     if (!isset($params['node'])) {
       return NULL;
@@ -915,6 +924,101 @@ class TwgApiHelper {
     $doc->encoding = 'UTF-8';
     $doc->appendChild($doc->importNode($element, TRUE));
     return $doc->saveHTML($doc->documentElement);
+  }
+
+  /**
+   * Parsing shortcodes.
+   *
+   * @param string $content
+   *   Content.
+   *
+   * @return array
+   *   Data array.
+   */
+  public function parseShortCodes($content) {
+    // QTip shortcodes.
+    $data = $this->parseShortCodesQtip($content);
+    $return = $data;
+
+    // Youtube link.
+    $data = $this->parseYoutube($return['content']);
+    $return += $data;
+
+    return $return;
+  }
+
+  /**
+   * Parse youtube link.
+   *
+   * @param string $content
+   *   Content.
+   *
+   * @return array
+   *   Data array.
+   */
+  public function parseYoutube($content) {
+    $html = new DOMDocument();
+    $html->loadHTML('<?xml encoding="UTF-8">' . $content);
+
+    $iframes = $html->getElementsByTagName('iframe');
+    if (!$iframes->length) {
+      return ['content' => $content];
+    }
+
+    $video = [];
+    foreach ($iframes as $iframe) {
+      $link = $iframe->getAttribute("src");
+      if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $link, $match)) {
+        $video[] = [
+          'link' => $link,
+          'image' => 'http://img.youtube.com/vi/' . $match[1] . '/sddefault.jpg',
+        ];
+        $iframe->parentNode->removeChild($iframe);
+        $html->saveHtml();
+      }
+    }
+
+    $elements = $html->getElementsByTagName('body');
+    $content = ($this->getInnerHtml($elements->item(0)));
+
+    $data = [
+      'content' => $content,
+      'video' => $video,
+    ];
+    return $data;
+  }
+
+  /**
+   * Parse shortcode "qtip".
+   *
+   * @param string $content
+   *   Content.
+   *
+   * @return array
+   *   Data array.
+   */
+  public function parseShortCodesQtip($content) {
+    preg_match_all("/\[qtip:(.*?)\]/", $content, $matches);
+    $tips = [];
+    if (empty($matches[0])) {
+      return [
+        'content' => $content,
+      ];
+    }
+
+    foreach ($matches[0] as $index => $short_cod) {
+      $qtip_parts = explode('|', $matches[1][$index]);
+      if (count($qtip_parts) > 1) {
+        $link = '<a href="t' . $index . '"><b>' . $qtip_parts[0] . '</b></a>';
+        $content = str_replace($matches[0][$index], $link, $content);
+        $tips[] = $qtip_parts[1];
+      }
+    }
+
+    return [
+      'content' => $content,
+      'tip' => $tips,
+    ];
   }
 
 }

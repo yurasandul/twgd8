@@ -15,6 +15,8 @@ url:
     pt-pt: pt-pt
     ro: ro
     sl: sl
+    lt: lt
+    hr: hr
   domains:
     en: ''
     cs: ''
@@ -28,6 +30,8 @@ url:
     pt-pt: ''
     ro: ''
     sl: ''
+    lt: ''
+    hr: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

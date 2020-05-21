@@ -64,7 +64,7 @@ class ApiTwgOws extends ResourceBase {
 
     // NID About Online With Saints.
     $langcode = $this->twgApiHelper->prepareLangcode($langcode);
-    $nid = 12497;
+    $nid = 12764;
     $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
 
     $response = (new ModifiedResourceResponse($output, 200));

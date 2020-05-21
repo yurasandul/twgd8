@@ -42,6 +42,8 @@ process:
       pt: pt-pt
       ro: ro
       sk: sk
+      lt: lt
+      hr: hr
       und: und
   title: title
   uid: node_uid

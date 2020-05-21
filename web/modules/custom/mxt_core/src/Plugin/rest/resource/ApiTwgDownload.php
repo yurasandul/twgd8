@@ -496,6 +496,8 @@ class ApiTwgDownload extends ResourceBase {
             ], $langcode);
 
           $content = $this->twgApiHelper->transformLangcode($node_translation->get('body')->value, $langcode);
+          $short_codes_content = $this->twgApiHelper->parseShortCodes($content);
+          $short_codes_content['content'] = $this->twgApiHelper->prepareLinkTweetContent($short_codes_content['content']);
 
           $tweet = [
             'id' => $node_translation->id(),
@@ -505,15 +507,14 @@ class ApiTwgDownload extends ResourceBase {
             'thumbnail' => $uri ? ImageStyle::load('tweet_related_teaser')
               ->buildUrl($uri) : '',
             'title' => $this->twgApiHelper->getPartsFromTitle($node_translation->label())['text'],
-            'content' => $this->twgApiHelper->prepareTweetContent($content),
             'tweet_text' => $node_translation->get('field_tweetbox')->value,
             'is_daily_hidden' => FALSE,
             'wisdom' => $wisdom,
             'church_father' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode)),
             'pope_say' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode)),
-            'video' => $this->twgApiHelper->getVideoData($node_translation, 'field_video'),
             'related' => $this->twgApiHelper->getSubjectRelated($node, $nids, $langcode),
           ];
+          $tweet += $short_codes_content;
 
           $tweets[] = $tweet;
         }
