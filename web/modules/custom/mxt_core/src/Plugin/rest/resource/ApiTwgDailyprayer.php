@@ -129,6 +129,8 @@ class ApiTwgDailyprayer extends ResourceBase {
           'fr_text' => 'content=FR&type=reading',
           'ps_title' => 'content=PS&type=reading_lt',
           'ps_text' => 'content=PS&type=reading',
+          'sr_title' => 'content=SR&type=reading_lt',
+          'sr_text' => 'content=SR&type=reading',
           'gsp_title' => 'content=GSP&type=reading_lt',
           'gsp_text' => 'content=GSP&type=reading',
         ];
@@ -165,6 +167,13 @@ class ApiTwgDailyprayer extends ResourceBase {
             ],
           ],
         ];
+        if (!empty(strip_tags($texts['sr_text']))) {
+          $output_day["readings"][] = [
+            'type' => 'act_second',
+            'title' => $texts['sr_title'] ? strip_tags($texts['sr_title']) : '',
+            'detail' => $texts['sr_text'] ? strip_tags($texts['sr_text']) : '',
+          ];
+        }
 
         if (!array_search(FALSE, $texts)) {
           \Drupal::cache()->set($cid_day, $output_day, (time() + 86400));

@@ -168,6 +168,7 @@ process:
           filtered_html: basic_html
           full_html: full_html
           php_code: full_html
+  moderation_state: moderation_state
 destination:
   plugin: 'entity:node'
   default_bundle: tweet_page

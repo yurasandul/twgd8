@@ -120,6 +120,7 @@ class NodeMXT extends NodeD7 {
         $values[] = [
           'value' => '',
           'revision_id' => '',
+          'index' => $i,
         ];
       }
     }
@@ -153,6 +154,24 @@ class NodeMXT extends NodeD7 {
     $query->groupBy('n.language');
     $results = $query->execute()->fetchAll();
     return max(array_column($results, 'count'));
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function prepareRow(Row $row) {
+    // If the item is published, we should set the content moderation state to
+    // active.
+    if ($row->get('status') == 1) {
+      $state = 'published';
+    }
+    else {
+      $state = 'draft';
+    }
+    // Set the Moderation State on the source for processing.
+    $row->setSourceProperty('moderation_state', $state);
+
+    return parent::prepareRow($row);
   }
 
 }

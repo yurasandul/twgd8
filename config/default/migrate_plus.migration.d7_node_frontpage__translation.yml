@@ -39,6 +39,8 @@ process:
       pt: pt-pt
       ro: ro
       sk: sk
+      lt: lt
+      hr: hr
       und: und
   title: title
   field_highlighted_subtext: field_highlighted_subtext

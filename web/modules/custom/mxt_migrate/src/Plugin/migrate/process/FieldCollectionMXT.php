@@ -26,7 +26,12 @@ class FieldCollectionMXT extends ProcessPluginBase {
     if (isset($this->configuration["translations"])) {
       $list_values = $row->get($destination_property);
       $list_values = array_column($list_values, 'value');
-      $index = array_search($value['value'], $list_values);;
+      if (isset($value['index'])) {
+        $index = $value['index'];
+      }
+      else {
+        $index = array_search($value['value'], $list_values);;
+      }
 
       $node = Node::load($row->getDestinationProperty('nid'));
       $paragraphs = $node->get($destination_property)->referencedEntities();

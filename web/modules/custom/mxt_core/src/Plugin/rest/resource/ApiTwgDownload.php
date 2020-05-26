@@ -233,18 +233,28 @@ class ApiTwgDownload extends ResourceBase {
           $text_elements = $p_elements;
           ksort($text_elements);
 
-          $output['name'] = array_shift($h1_elements);
+          $output = [
+            'name' => array_shift($h1_elements),
+          ];
           $h2_offsets = array_keys($h2_elements);
           if ($h2_elements) {
+            $items = [];
             foreach ($h2_elements as $index => $subtitle) {
               $offset_index = array_search($index, $h2_offsets) + 1;
               $end = ($offset_index <= count($h2_elements) - 1) ? $h2_offsets[$offset_index] : 0;
-              $output['sub_sections'][] = [
+
+              $tweet_number = preg_replace('/[^0-9.]/', '', $this->getElementByRange($h6_elements, $index, $end));
+              $subsection_item = [
                 'title' => $subtitle,
-                'tweet_no' => preg_replace('/[^0-9.]/', '', $this->getElementByRange($h6_elements, $index, $end)),
                 'details' => $this->getElementByRange($text_elements, $index, $end),
               ];
+              if (is_numeric($tweet_number)) {
+                $subsection_item['tweet_no'] = $tweet_number;
+              }
+              $items[] = $subsection_item;
             }
+
+            $output['sub_sections'] = $items;
           }
           else {
             $output['sub_sections'][] = [
@@ -332,6 +342,7 @@ class ApiTwgDownload extends ResourceBase {
           $h2_offsets = array_keys($h2_elements);
           $sub_sect = [];
           if ($h2_elements) {
+            $output['sub_sections'] = [];
             foreach ($h2_elements as $index => $subtitle) {
               $offset_index = array_search($index, $h2_offsets) + 1;
               $end = ($offset_index <= count($h2_elements) - 1) ? $h2_offsets[$offset_index] : 0;

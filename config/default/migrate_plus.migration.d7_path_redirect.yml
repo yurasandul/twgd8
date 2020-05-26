@@ -32,4 +32,15 @@ process:
   status_code: status_code
 destination:
   plugin: 'entity:redirect'
-migration_dependencies: null
+migration_dependencies:
+  required:
+    - d7_node_rites
+    - d7_node_app_config
+    - d7_node_push_message
+    - d7_node_basic_page
+    - d7_node_frontpage
+    - d7_node_tweet_page
+    - d7_node_basic_page__translation
+    - d7_node_frontpage__translation
+    - d7_node_tweet_page__translation
+    - d7_url_alias

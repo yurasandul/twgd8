@@ -94,6 +94,7 @@ process:
     -
       plugin: get
       source: field_taal
+  moderation_state: moderation_state
 destination:
   plugin: 'entity:node'
   default_bundle: rites
