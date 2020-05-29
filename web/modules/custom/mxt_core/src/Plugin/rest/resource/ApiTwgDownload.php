@@ -253,11 +253,10 @@ class ApiTwgDownload extends ResourceBase {
               }
               $items[] = $subsection_item;
             }
-
             $output['sub_sections'] = $items;
           }
           else {
-            $output['sub_sections'][] = [
+            $output['sub_sections'] = [
               'title' => '',
               'tweet_no' => $this->getElementByRange($h6_elements, 0, 0),
               'details' => $this->getElementByRange($text_elements, 0, 0),
@@ -265,10 +264,9 @@ class ApiTwgDownload extends ResourceBase {
           }
         }
         else {
-          $output['sub_sections'][] = [
-            'title' => $this->t('ERROR: Not valid HTML'),
-            'tweet_no' => '',
-            'details' => [],
+          $output = [
+            'name' => $this->t('ERROR: Not valid HTML'),
+            'sub_sections' => [],
           ];
         }
         $sections_data[] = $output;
@@ -353,15 +351,15 @@ class ApiTwgDownload extends ResourceBase {
             }
           }
           else {
-            $output['sub_sections'][] = [
+            $output['sub_sections'] = [
               'title' => '',
               'details' => $this->getElementByRange($text_elements, 0, 0),
             ];
           }
         }
         else {
-          $output['sub_sections'][] = [
-            'title' => $this->t('ERROR: Not valid HTML'),
+          $output = [
+            'name' => $this->t('ERROR: Not valid HTML'),
             'details' => [],
           ];
         }
@@ -491,6 +489,7 @@ class ApiTwgDownload extends ResourceBase {
           ->condition('type', 'tweet_page')
           ->condition('langcode', $langcode)
           ->condition('field_subject', $term->id())
+          ->condition( 'status', 1)
           ->sort('nid', 'ASC')
           ->execute();
 
