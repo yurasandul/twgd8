@@ -61,6 +61,8 @@ class NodeMXT extends NodeD7 {
       $query->condition('n.type', $this->configuration['node_type']);
     }
 
+//$query->condition('n.nid', [451, 12845, 12846], 'IN');
+
     return $query;
   }
 
@@ -153,7 +155,8 @@ class NodeMXT extends NodeD7 {
     $query->addExpression('COUNT(n.language)', 'count');
     $query->groupBy('n.language');
     $results = $query->execute()->fetchAll();
-    return max(array_column($results, 'count'));
+    $data = array_column($results, 'count');
+    return empty($data) ? 0 : max(array_column($results, 'count'));
   }
 
   /**

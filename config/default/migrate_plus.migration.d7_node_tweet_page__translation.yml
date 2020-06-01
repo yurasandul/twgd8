@@ -28,23 +28,30 @@ process:
       source: tnid
       migration: d7_node_tweet_page
   langcode:
-    plugin: static_map
-    source: language
-    map:
-      en: en
-      cs: cs
-      de: de
-      es: es
-      fr: fr
-      it: it
-      nl: nl
-      pl: pl
-      pt: pt-pt
-      ro: ro
-      sk: sk
-      lt: lt
-      hr: hr
-      und: und
+    -
+      plugin: skip_on_value
+      equals: true
+      source: language
+      method: row
+      value: und
+    -
+      plugin: static_map
+      source: language
+      map:
+        en: en
+        cs: cs
+        de: de
+        es: es
+        fr: fr
+        it: it
+        nl: nl
+        pl: pl
+        pt: pt-pt
+        ro: ro
+        sk: sk
+        lt: lt
+        hr: hr
+        und: und
   title: title
   uid: node_uid
   status: status
