@@ -173,7 +173,7 @@ class ApiTwgDailyprayer extends ResourceBase {
             'title' => $texts['sr_title'] ? strip_tags($texts['sr_title']) : '',
             'detail' => $texts['sr_text'] ? strip_tags($texts['sr_text']) : '',
           ];
-          array_splice($output_day['readings'], 1, 0, [$act_seccond]);
+          array_splice($output_day['readings'], 2, 0, [$act_seccond]);
         }
 
         if (!array_search(FALSE, $texts)) {
