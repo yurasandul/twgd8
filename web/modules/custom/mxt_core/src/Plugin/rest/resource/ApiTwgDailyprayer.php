@@ -168,11 +168,12 @@ class ApiTwgDailyprayer extends ResourceBase {
           ],
         ];
         if (!empty(strip_tags($texts['sr_text']))) {
-          $output_day["readings"][] = [
+          $act_seccond = [
             'type' => 'act_second',
             'title' => $texts['sr_title'] ? strip_tags($texts['sr_title']) : '',
             'detail' => $texts['sr_text'] ? strip_tags($texts['sr_text']) : '',
           ];
+          array_splice($output_day['readings'], 1, 0, [$act_seccond]);
         }
 
         if (!array_search(FALSE, $texts)) {
