@@ -256,11 +256,11 @@ class ApiTwgDownload extends ResourceBase {
             $output['sub_sections'] = $items;
           }
           else {
-            $output['sub_sections'] = [
+            $output['sub_sections'] = [[
               'title' => '',
               'tweet_no' => $this->getElementByRange($h6_elements, 0, 0),
               'details' => $this->getElementByRange($text_elements, 0, 0),
-            ];
+            ]];
           }
         }
         else {
@@ -351,10 +351,10 @@ class ApiTwgDownload extends ResourceBase {
             }
           }
           else {
-            $output['sub_sections'] = [
+            $output['sub_sections'] = [[
               'title' => '',
               'details' => $this->getElementByRange($text_elements, 0, 0),
-            ];
+            ]];
           }
         }
         else {
