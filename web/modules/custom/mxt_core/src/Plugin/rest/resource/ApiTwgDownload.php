@@ -360,7 +360,7 @@ class ApiTwgDownload extends ResourceBase {
         else {
           $output = [
             'name' => $this->t('ERROR: Not valid HTML'),
-            'details' => [],
+            'sub_sections' => [],
           ];
         }
         $sections_data[] = $output;
