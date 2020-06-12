@@ -227,6 +227,8 @@ class ApiTwgDownload extends ResourceBase {
           $html->loadHTML('<?xml encoding="UTF-8">' . $source_text);
 
           $h1_elements = $this->getTagByAttr($html, 'h1', 'lang', $langcode);
+          $h1_elements_other = $this->getTagByAttr($html, 'h1', 'lang', $langcode, TRUE, TRUE);
+
           $h2_elements = $this->getTagByAttr($html, 'h2', 'lang', $langcode);
           $h6_elements = $this->getTagByAttr($html, 'h6', 'lang', $langcode);
           $p_elements = $this->getTagByAttr($html, 'p', '', '', FALSE);
@@ -236,21 +238,27 @@ class ApiTwgDownload extends ResourceBase {
           $output = [
             'name' => array_shift($h1_elements),
           ];
+          foreach ($h1_elements_other as $index_lang => $h1_element_other) {
+            $output['name_' . $index_lang] = $h1_element_other;
+          }
+
           $h2_offsets = array_keys($h2_elements);
           if ($h2_elements) {
             $items = [];
             foreach ($h2_elements as $index => $subtitle) {
               $offset_index = array_search($index, $h2_offsets) + 1;
               $end = ($offset_index <= count($h2_elements) - 1) ? $h2_offsets[$offset_index] : 0;
-
               $tweet_number = preg_replace('/[^0-9.]/', '', $this->getElementByRange($h6_elements, $index, $end));
-              $subsection_item = [
-                'title' => $subtitle,
-                'details' => $this->getElementByRange($text_elements, $index, $end),
-              ];
+
+              $title_neighbors = $this->getTagNeighbors($html, 'h2', 'lang', $index, 'title_');
+              $subsection_item = [];
+              $subsection_item['title'] = $subtitle;
+              $subsection_item += $title_neighbors;
               if (is_numeric($tweet_number)) {
                 $subsection_item['tweet_no'] = $tweet_number;
               }
+              $subsection_item['details'] = $this->getElementByRange($text_elements, $index, $end);
+
               $items[] = $subsection_item;
             }
             $output['sub_sections'] = $items;
@@ -329,25 +337,36 @@ class ApiTwgDownload extends ResourceBase {
           $html = new DOMDocument();
           $html->loadHTML('<?xml encoding="UTF-8">' . $source_text);
           $h1_elements = $this->getTagByAttr($html, 'h1', 'lang', $langcode);
+          $h1_elements_other = $this->getTagByAttr($html, 'h1', 'lang', $langcode, TRUE, TRUE);
+
           $h2_elements = $this->getTagByAttr($html, 'h2', 'lang', $langcode);
+
           $h6_elements = $this->getTagByAttr($html, 'h6', 'lang', $langcode, FALSE);
           $p_elements = $this->getTagByAttr($html, 'p', '', '', FALSE);
           $text_elements = $h6_elements + $p_elements;
           ksort($text_elements);
 
           $output['name'] = array_shift($h1_elements);
+          foreach ($h1_elements_other as $index_lang => $h1_element_other) {
+            $output['name_' . $index_lang] = $h1_element_other;
+          }
+
           $text = [];
           $h2_offsets = array_keys($h2_elements);
-          $sub_sect = [];
+
           if ($h2_elements) {
             $output['sub_sections'] = [];
             foreach ($h2_elements as $index => $subtitle) {
               $offset_index = array_search($index, $h2_offsets) + 1;
               $end = ($offset_index <= count($h2_elements) - 1) ? $h2_offsets[$offset_index] : 0;
-              $output['sub_sections'][] = [
-                'title' => $subtitle,
-                'details' => $this->getElementByRange($text_elements, $index, $end),
-              ];
+
+              $title_neighbors = $this->getTagNeighbors($html, 'h2', 'lang', $index, 'title_');
+              $sub_sect = [];
+              $sub_sect['title'] = $subtitle;
+              $sub_sect += $title_neighbors;
+              $sub_sect['details'] = $this->getElementByRange($text_elements, $index, $end);
+
+              $output['sub_sections'][] = $sub_sect;
             }
           }
           else {
@@ -419,20 +438,77 @@ class ApiTwgDownload extends ResourceBase {
    *   Attribute value.
    * @param bool $inner
    *   TRUE if innerHTML (default), FALSE - outerHTML.
+   * @param bool $list_other
+   *   FALSE if selected language (default), TRUE - other language.
    *
    * @return array
    *   Array of string.
    */
-  private function getTagByAttr(DOMDocument $html, $tag, $attr = '', $value_attr = '', $inner = TRUE) {
+  private function getTagByAttr(DOMDocument $html, $tag, $attr = '', $value_attr = '', $inner = TRUE, $list_other = FALSE) {
     $tags = $html->getElementsByTagName($tag);
     $tags->encoding = 'UTF-8';
     $output = [];
+    $other = [];
     foreach ($tags as $tag) {
       if ((empty($attr) && empty($value_attr)) ||
         (!empty($attr) && empty($value_attr) && $tag->hasAttribute($attr)) ||
         (!empty($attr) && !empty($value_attr) && $tag->hasAttribute($attr) && $tag->getAttribute($attr) == $value_attr)) {
         $output[$tag->getLineNo()] = $inner ? htmlspecialchars_decode($this->twgApiHelper->getInnerHtml($tag)) : htmlspecialchars_decode($this->twgApiHelper->getOuterHtml($tag));
       }
+      elseif ($tag->hasAttribute($attr) && ($tag->getAttribute($attr) != $value_attr)) {
+        $other[$tag->getAttribute($attr)] = $inner ? htmlspecialchars_decode($this->twgApiHelper->getInnerHtml($tag)) : htmlspecialchars_decode($this->twgApiHelper->getOuterHtml($tag));
+      }
+    }
+    return !$list_other ? $output : $other;
+  }
+
+  /**
+   * Get brather tags from html string.
+   *
+   * @param \DOMDocument $html
+   *   HTML string.
+   * @param string $tag
+   *   Tag name.
+   * @param string $attr
+   *   Attribute name
+   * @param int $source
+   *   Source number line.
+   * @param string $prefix
+   *   Prefix array key.
+   *
+   * @return array
+   *   Return array data.
+   */
+  private function getTagNeighbors(DOMDocument $html, $tag, $attr, $source, $prefix = '') {
+    $tags = $html->getElementsByTagName($tag);
+    $tags->encoding = 'UTF-8';
+    $output = [];
+    $list = [];
+    $neighbors = [];
+    foreach ($tags as $tag) {
+      $line = $tag->getLineNo();
+      if ($attr_value = $tag->getAttribute($attr)) {
+        $list[$line] = $tag;
+      }
+    }
+    for($i = $source - 1; $i >= 1; $i--) {
+      if (isset($list[$i])) {
+        $neighbors[] = $list[$i];
+      }
+      else {
+        break;
+      }
+    }
+    for($i = $source + 1; $i <= 10000; $i++) {
+      if (isset($list[$i])) {
+        $neighbors[] = $list[$i];
+      }
+      else {
+        break;
+      }
+    }
+    foreach ($neighbors as $neighbor) {
+      $output[$prefix . $neighbor->getAttribute($attr)] = htmlspecialchars_decode($this->twgApiHelper->getInnerHtml($neighbor));
     }
     return $output;
   }
