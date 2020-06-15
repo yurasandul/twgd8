@@ -6,7 +6,14 @@ dependencies:
     - field.storage.node.field_image_4_3
     - node.type.inspirational_quotes
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      file: file
+      alt: '0'
+      title: '0'
 id: node.inspirational_quotes.field_image_4_3
 field_name: field_image_4_3
 entity_type: node
@@ -14,7 +21,7 @@ bundle: inspirational_quotes
 label: 'Image 4:3'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
