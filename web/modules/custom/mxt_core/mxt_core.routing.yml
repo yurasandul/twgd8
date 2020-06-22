@@ -16,3 +16,10 @@ mxt_core.mxt_info_form:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+mxt_core.copy_translation_form:
+  path: '/admin/content/copy-translation'
+  defaults:
+    _form: '\Drupal\mxt_core\Form\CopyTranslationForm'
+    _title: 'Copy Translation'
+  requirements:
+    _access: 'TRUE'

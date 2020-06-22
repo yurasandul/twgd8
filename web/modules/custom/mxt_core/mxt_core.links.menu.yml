@@ -10,3 +10,9 @@ mxt_core.mxt_info_form:
   description: 'A description for the menu entry'
   parent: system.admin_config_system
   weight: 99
+
+mxt_core.copy_translation_form:
+  title: 'Copy Translation'
+  route_name: mxt_core.copy_translation_form
+  parent: system.admin_content
+  weight: 99
