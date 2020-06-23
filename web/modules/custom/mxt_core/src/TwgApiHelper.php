@@ -723,6 +723,8 @@ class TwgApiHelper {
 
     $html->loadHTML('<?xml encoding="UTF-8">' . $source_text);
 
+    $link_to_delete = [];
+
     /** @var \DOMElement $link */
     foreach ($html->getElementsByTagName('a') as $link) {
       $old_link = $link->getAttribute("href");
@@ -734,10 +736,15 @@ class TwgApiHelper {
           $link->setAttribute('href', $number);
         }
         else {
-          $link->parentNode->removeChild($link);
+          $link_to_delete[] = $link;
         }
       }
     }
+
+    for($i = count($link_to_delete); $i > 0; $i--) {
+      $link_to_delete[$i-1]->parentNode->removeChild($link_to_delete[$i-1]);
+    }
+
     $html->saveHtml();
     $elements = $html->getElementsByTagName('body');
 
