@@ -1,0 +1,9 @@
+label: 'Recent comments'
+display:
+  default:
+    display_options:
+      title: 'Recent comments'
+  block_1:
+    display_title: Block
+    display_options:
+      block_description: 'Recent comments'

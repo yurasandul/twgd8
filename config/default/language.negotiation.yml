@@ -17,6 +17,12 @@ url:
     sl: sl
     lt: lt
     hr: hr
+    de-at: de-at
+    nl-be: nl-be
+    fr-be: fr-be
+    it-it: it-it
+    nl-nl: nl-nl
+    en-gb: en-gb
   domains:
     en: ''
     cs: ''
@@ -32,6 +38,12 @@ url:
     sl: ''
     lt: ''
     hr: ''
+    de-at: ''
+    nl-be: ''
+    fr-be: ''
+    it-it: ''
+    nl-nl: ''
+    en-gb: ''
 selected_langcode: site_default
 _core:
   default_config_hash: uEePITI9tV6WqzmsTb7MfPCi5yPWXSxAN1xeLcYFQbM

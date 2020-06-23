@@ -1,0 +1,9 @@
+uuid: 4ef6c916-c3ba-44e7-88a6-4439385d88c0
+langcode: en
+status: true
+dependencies: {  }
+id: de-at
+label: 'Austria - German'
+direction: ltr
+weight: 14
+locked: false

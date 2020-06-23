@@ -1,0 +1,9 @@
+uuid: 37a1b947-7e95-4569-99a8-c973646e6851
+langcode: en
+status: true
+dependencies: {  }
+id: nl-nl
+label: 'Netherlands - Dutch'
+direction: ltr
+weight: 18
+locked: false

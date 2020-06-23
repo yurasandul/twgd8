@@ -1,0 +1,11 @@
+label: 'Recent content'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reset
+      title: 'Recent content'
+      use_more_text: More
+  block_1:
+    display_title: Block

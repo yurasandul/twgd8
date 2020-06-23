@@ -1,0 +1,9 @@
+uuid: 73a4cca4-3ff6-4447-8c6d-bc610255631d
+langcode: en
+status: true
+dependencies: {  }
+id: it-it
+label: 'Italy - Italian'
+direction: ltr
+weight: 17
+locked: false
