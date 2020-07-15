@@ -62,7 +62,10 @@ class ApiTwgTwg extends ResourceBase {
 
     // NID About Tweeting With God.
     $langcode = $this->twgApiHelper->prepareLangcode($langcode);
-    $nid = 12765;
+
+    $config = \Drupal::service('config.factory')->getEditable('mxt_core.ami_contact_details');
+    $nid = $config->get('node_twg_ows') ?? 12765;
+
     $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
 
     $response = (new ModifiedResourceResponse($output, 200));

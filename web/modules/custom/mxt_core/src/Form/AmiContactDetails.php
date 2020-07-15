@@ -77,6 +77,27 @@ class AmiContactDetails extends ConfigFormBase {
       '#title' => $this->t('Contact'),
       '#default_value' => $config->get('contact'),
     ];
+
+    $form['rest'] = [
+      '#type' => 'details',
+      '#title' => t('Data for endpoints'),
+      '#open' => TRUE,
+    ];
+
+    $form['rest']['node_twg_ows'] = [
+      '#type'          => 'textfield',
+      '#title'         => t('Node ID for "/api/twg/v1/ows/{langcode}"'),
+      '#default_value' => $config->get('node_twg_ows'),
+      '#maxlength' => 10,
+    ];
+
+    $form['rest']['node_twg_twg'] = [
+      '#type'          => 'textfield',
+      '#title'         => t('Node ID for "/api/twg/v1/twg/{langcode}"'),
+      '#default_value' => $config->get('node_twg_twg'),
+      '#maxlength' => 10,
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -92,6 +113,8 @@ class AmiContactDetails extends ConfigFormBase {
       ->set('member_title', $form_state->getValue('member_title'))
       ->set('member_url', $form_state->getValue('member_url'))
       ->set('contact', $form_state->getValue('contact')['value'])
+      ->set('node_twg_ows', $form_state->getValue('node_twg_ows'))
+      ->set('node_twg_twg', $form_state->getValue('node_twg_twg'))
       ->save();
   }
 

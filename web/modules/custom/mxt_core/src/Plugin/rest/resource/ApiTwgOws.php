@@ -64,7 +64,10 @@ class ApiTwgOws extends ResourceBase {
 
     // NID About Online With Saints.
     $langcode = $this->twgApiHelper->prepareLangcode($langcode);
-    $nid = 12764;
+
+    $config = \Drupal::service('config.factory')->getEditable('mxt_core.ami_contact_details');
+    $nid = $config->get('node_twg_ows') ?? 12764;
+
     $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
 
     $response = (new ModifiedResourceResponse($output, 200));
