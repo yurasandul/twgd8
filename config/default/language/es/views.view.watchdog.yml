@@ -21,6 +21,8 @@ display:
       fields:
         type:
           label: Tipo
+        timestamp:
+          label: Fecha
         name:
           separator: ', '
         link:

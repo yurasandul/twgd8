@@ -20,6 +20,8 @@ display:
       fields:
         type:
           label: Typ
+        timestamp:
+          label: Dátum
         name:
           separator: ', '
         link:

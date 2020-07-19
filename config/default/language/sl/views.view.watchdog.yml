@@ -8,6 +8,8 @@ display:
       fields:
         type:
           label: Tip
+        timestamp:
+          label: Datum
         link:
           label: Operacije
       filters:

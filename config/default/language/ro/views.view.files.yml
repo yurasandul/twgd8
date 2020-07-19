@@ -21,6 +21,8 @@ display:
           separator: ', '
         filemime:
           label: 'Tip MIME'
+        filesize:
+          label: Mărime
       filters:
         filemime:
           expose:

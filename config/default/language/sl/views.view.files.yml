@@ -10,6 +10,8 @@ display:
           label: Ime
         filemime:
           label: 'MIME type'
+        filesize:
+          label: Velikost
       filters:
         filemime:
           expose:

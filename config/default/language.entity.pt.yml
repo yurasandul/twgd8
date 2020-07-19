@@ -1,0 +1,9 @@
+uuid: 3aa450d5-255b-4785-a2b1-e680f5939425
+langcode: en
+status: true
+dependencies: {  }
+id: pt
+label: 'Portugese (international)'
+direction: ltr
+weight: 23
+locked: false

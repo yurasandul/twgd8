@@ -21,6 +21,8 @@ display:
       fields:
         type:
           label: Tipo
+        timestamp:
+          label: Data
         name:
           separator: ', '
         link:

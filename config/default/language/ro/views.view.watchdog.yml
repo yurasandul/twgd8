@@ -21,6 +21,8 @@ display:
       fields:
         type:
           label: Tip
+        timestamp:
+          label: Data
         name:
           separator: ', '
         link:

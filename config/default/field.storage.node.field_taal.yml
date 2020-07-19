@@ -39,6 +39,9 @@ settings:
       value: ast
       label: Asturian
     -
+      value: de-at
+      label: 'Austria - German'
+    -
       value: av
       label: Avar
     -
@@ -53,6 +56,12 @@ settings:
     -
       value: be
       label: Belarusian
+    -
+      value: nl-be
+      label: 'Belgium - Dutch'
+    -
+      value: fr-be
+      label: 'Belgium - French'
     -
       value: bg
       label: Bulgarian
@@ -127,7 +136,7 @@ settings:
       label: English
     -
       value: en-gb
-      label: 'English, British'
+      label: 'United Kingdom - English'
     -
       value: eo
       label: Esperanto
@@ -233,6 +242,9 @@ settings:
     -
       value: it
       label: Italian
+    -
+      value: it-it
+      label: 'Italy - Italian'
     -
       value: iu
       label: Inuktitut
@@ -356,6 +368,9 @@ settings:
     -
       value: nl
       label: Dutch
+    -
+      value: nl-nl
+      label: 'Netherlands - Dutch'
     -
       value: nb
       label: 'Norwegian Bokmål'

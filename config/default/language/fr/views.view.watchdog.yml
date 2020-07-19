@@ -21,6 +21,8 @@ display:
       fields:
         type:
           label: Type
+        timestamp:
+          label: Date
         name:
           separator: ', '
         link:

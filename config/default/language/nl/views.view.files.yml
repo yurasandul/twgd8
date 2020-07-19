@@ -21,6 +21,8 @@ display:
           separator: ', '
         filemime:
           label: MIME-type
+        filesize:
+          label: Grootte
       filters:
         filemime:
           expose:

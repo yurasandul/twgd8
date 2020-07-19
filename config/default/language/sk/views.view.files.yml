@@ -20,6 +20,8 @@ display:
           separator: ', '
         filemime:
           label: 'MIME typ'
+        filesize:
+          label: Veľkosť
       filters:
         filemime:
           expose:

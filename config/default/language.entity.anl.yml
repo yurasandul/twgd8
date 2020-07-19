@@ -1,0 +1,9 @@
+uuid: 2005f1dd-9cd3-4dff-ae2e-d4225b8fa0e4
+langcode: en
+status: true
+dependencies: {  }
+id: anl
+label: 'a new language'
+direction: ltr
+weight: 22
+locked: false
