@@ -2,7 +2,6 @@ label: Korisnici
 description: 'Pronađite i upravljajte korisnicima vaše mrežne lokacije.'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -28,8 +27,6 @@ display:
           label: 'Zadnji pristup'
         operations:
           label: Operacije
-        mail:
-          separator: ', '
       filters:
         status:
           group_info:

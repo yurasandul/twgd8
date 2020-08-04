@@ -15,7 +15,6 @@ display:
           label: Naziv
         type:
           label: 'Vrsta sadržaja'
-          separator: ', '
         name:
           label: Autor
         status:
@@ -44,7 +43,6 @@ display:
       empty:
         area_text_custom:
           content: 'Nema sadržaja.'
-    display_title: Master
   page_1:
     display_options:
       menu:

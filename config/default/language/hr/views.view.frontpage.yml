@@ -8,6 +8,5 @@ display:
           exposed_sorts_label: 'Rasporedi po'
           sort_asc_label: Uzlazno
           sort_desc_label: Silazno
-    display_title: Master
   page_1:
     display_title: Stranica

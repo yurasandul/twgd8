@@ -64,7 +64,7 @@ class ApiTwgTwg extends ResourceBase {
     $langcode = $this->twgApiHelper->prepareLangcode($langcode);
 
     $config = \Drupal::service('config.factory')->getEditable('mxt_core.ami_contact_details');
-    $nid = $config->get('node_twg_ows') ?? 12765;
+    $nid = $config->get('node_twg_twg') ?? 12765;
 
     $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
 

@@ -1,0 +1,22 @@
+name: TWG theme
+type: theme
+description: 'TWG (Cog Sub-theme)'
+core: 8.x
+base theme: cog
+libraries:
+  - twg/fonts
+  - twg/fontawesome
+  - twg/global_styles
+regions:
+  header: Header
+  pre_content: 'Pre content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: 'Post content'
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2020-03-17
+version: '8.x-1.15'
+project: 'cog'
+datestamp: 1584454091

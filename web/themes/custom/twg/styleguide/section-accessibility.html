@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Living Style Guide</title>
+
+  <meta name="description" content="">
+  <meta name="generator" content="kss-node">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="kss-assets/kss.css">
+  <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/style-guide-only/kss-only.css">
+
+</head>
+<body id="kss-node" >
+
+<div class="kss-sidebar kss-style">
+  <header class="kss-header">
+    <h1 class="kss-doc-title">Living Style Guide</h1>
+  </header>
+  <nav class="kss-nav" aria-label="Style Guide">
+    <ul class="kss-nav__menu">
+      <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="./">
+          <span class="kss-nav__ref">0</span
+          ><span class="kss-nav__name">Overview</span>
+        </a>
+      </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-accessibility.html">
+          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Accessibility</span>
+        </a>
+                  <ul class="kss-nav__menu-child">
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-forms">
+                <span class="kss-nav__ref ">1.1</span
+                ><span class="kss-nav__name">Accessible Forms</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-forms-checkboxesradio">
+                <span class="kss-nav__ref kss-nav__ref-child">1.1.1</span
+                ><span class="kss-nav__name">Checkboxes and Radio Buttons</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-forms-search">
+                <span class="kss-nav__ref kss-nav__ref-child">1.1.2</span
+                ><span class="kss-nav__name">Search</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-forms-textinputsareas">
+                <span class="kss-nav__ref kss-nav__ref-child">1.1.3</span
+                ><span class="kss-nav__name">Text Inputs and Textareas</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-general">
+                <span class="kss-nav__ref ">1.2</span
+                ><span class="kss-nav__name">General</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-general-buttons">
+                <span class="kss-nav__ref kss-nav__ref-child">1.2.1</span
+                ><span class="kss-nav__name">Buttons</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-general-colors">
+                <span class="kss-nav__ref kss-nav__ref-child">1.2.2</span
+                ><span class="kss-nav__name">Colors</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-accessibility.html#kssref-accessibility-general-link_focus">
+                <span class="kss-nav__ref kss-nav__ref-child">1.2.3</span
+                ><span class="kss-nav__name">Link Focus</span>
+              </a>
+            </li>
+                    </ul>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-base.html">
+          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Base</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-components.html">
+          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Components</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-form.html">
+          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Form</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-layout.html">
+          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Layout</span>
+        </a>
+              </li>
+          <li class="kss-nav__menu-item">
+        <a class="kss-nav__menu-link" href="section-states.html">
+          <span class="kss-nav__ref">6</span><span class="kss-nav__name">States</span>
+        </a>
+              </li>
+        </ul>
+  </nav>
+</div>
+<main class="kss-main" aria-label="content">
+<article>
+
+  
+          <div id="kssref-accessibility" class="kss-section kss-section--depth-1 ">
+      <div class="kss-style">
+                <h1 class="kss-title kss-title--level-1">
+          <a class="kss-title__permalink" href="#kssref-accessibility">
+            <span class="kss-title__ref">
+              1
+              <span class="kss-title__permalink-hash">
+                accessibility
+              </span>
+            </span>
+            Accessibility
+          </a>
+        </h1>
+
+        
+                  <div class="kss-description">
+            <p>These sample components are largely based off http://a11y-style-guide.com/style-guide/ by cehfisher.
+It is encouraged that no matter how big or small that you <a href="https://github.com/cehfisher/a11y-style-guide">contribute to the project</a></p>
+
+          </div>
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>styles.scss</code>, line 14
+        </div>
+          </div>
+          <section id="kssref-accessibility-forms" class="kss-section kss-section--depth-2 ">
+      <div class="kss-style">
+                <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-accessibility-forms">
+            <span class="kss-title__ref">
+              1.1
+              <span class="kss-title__permalink-hash">
+                accessibility.forms
+              </span>
+            </span>
+            Accessible Forms
+          </a>
+        </h2>
+
+        
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 3
+        </div>
+          </section>
+          <section id="kssref-accessibility-forms-checkboxesradio" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-forms-checkboxesradio">
+            <span class="kss-title__ref">
+              1.1.1
+              <span class="kss-title__permalink-hash">
+                accessibility.forms.checkboxesradio
+              </span>
+            </span>
+            Checkboxes and Radio Buttons
+          </a>
+        </h3>
+
+                  <p class="kss-toolbar">
+                          <a href="#kssref-accessibility-forms-checkboxesradio" data-kss-fullscreen="kssref-accessibility-forms-checkboxesradio">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-accessibility-forms-checkboxesradio.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+                        <a href="#kssref-accessibility-forms-checkboxesradio" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-accessibility-forms-checkboxesradio" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+        
+                  <div class="kss-description">
+            <ul>
+<li>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons.
+The <code>&lt;legend&gt;</code> provides a description for the grouping.</li>
+<li>Some assistive technology reads the legend text for each fieldset,
+so it should be brief and descriptive. This helps someone using assistive technology to understand
+the question they are answering with the group of radio buttons or checkboxes.</li>
+<li>WAI-ARIA provides a grouping role that functions similarly to fieldset and legend.
+In option #2 the div element has role=group to indicate that the contained elements are members of a group
+and the aria-labelledby attribute references the id for text that will serve as the label for the group.
+<strong>Note:</strong> This method is not supported by all browser/AT devices.</li>
+</ul>
+          </div>
+        
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          
+          <div class="kss-modifier__example">
+            <fieldset>
+  <legend>Radio Buttons Fieldset:</legend>
+  <input type="radio" id="radio1" class="radio" name="radio_button" value="radio_1">
+  <label for="radio1">Radio 1</label>
+  <input type="radio" id="radio2" class="radio" name="radio_button" value="radio_2">
+  <label for="radio2">Radio 2</label>
+  <input type="radio" id="radio3" class="radio" name="radio_button" value="radio_3">
+  <label for="radio3">Radio 3</label>
+  <input type="radio" id="radio-disabled" class="radio" name="radio_button" value="radio_4" disabled>
+  <label for="radio-disabled">Radio Disabled</label>
+</fieldset>
+
+<div role="group" aria-labelledby="radio-identifier">
+  <p id="radio-identifier">Radio Buttons using group roles and aria-labelledby</p>
+  <input type="radio" id="group-radio1" class="radio" name="radio_button" value="radio_1">
+  <label for="group-radio1">Radio 1</label>
+  <input type="radio" id="group-radio2" class="radio" name="radio_button" value="radio_2">
+  <label for="group-radio2">Radio 2</label>
+  <input type="radio" id="group-radio3" class="radio" name="radio_button" value="radio_3">
+  <label for="group-radio3">Radio 3</label>
+  <input type="radio" id="group-radio-disabled" class="radio" name="radio_button" value="radio_4" disabled>
+  <label for="group-radio-disabled">Radio Disabled</label>
+</div>
+
+<fieldset>
+  <legend>Checkboxes:</legend>
+  <input type="checkbox" id="checkbox1" class="checkbox" name="checkboxes" value="check_1">
+  <label for="checkbox1">Checkbox 1</label>
+  <input type="checkbox" id="checkbox2" class="checkbox" name="checkboxes" value="check_2">
+  <label for="checkbox2">Checkbox 2</label>
+  <input type="checkbox" id="checkbox3" class="checkbox" name="checkboxes" value="check_3">
+  <label for="checkbox3">Checkbox 3</label>
+  <input type="checkbox" id="checkbox-disabled" class="checkbox" name="checkboxes" value="check_4" disabled>
+  <label for="checkbox-disabled">Checkbox Disabled</label>
+</fieldset>
+
+<div role="group" aria-labelledby="checkbox-identifier">
+  <p id="checkbox-identifier">Radio Buttons using group roles and aria-labelledby</p>
+  <input type="checkbox" id="group-checkbox1" class="checkbox" name="checkboxes" value="check_1">
+  <label for="group-checkbox1">Checkbox 1</label>
+  <input type="checkbox" id="group-checkbox2" class="checkbox" name="checkboxes" value="check_2">
+  <label for="group-checkbox2">Checkbox 2</label>
+  <input type="checkbox" id="group-checkbox3" class="checkbox" name="checkboxes" value="check_3">
+  <label for="group-checkbox3">Checkbox 3</label>
+  <input type="checkbox" id="group-checkbox-disabled" class="checkbox" name="checkboxes" value="check_4" disabled>
+  <label for="group-checkbox-disabled">Checkbox Disabled</label>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+                  </div>
+                  <details class="kss-markup kss-style">
+            <summary>
+                              Markup: <code>accessibility/accessible_checks_radios.twig</code>
+                          </summary>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Radio Buttons Fieldset:<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio1"</span>&gt;</span>Radio 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio2"</span>&gt;</span>Radio 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio3"</span>&gt;</span>Radio 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-disabled"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_4"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"radio-disabled"</span>&gt;</span>Radio Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"radio-identifier"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"radio-identifier"</span>&gt;</span>Radio Buttons using group roles and aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-radio1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-radio1"</span>&gt;</span>Radio 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-radio2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-radio2"</span>&gt;</span>Radio 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-radio3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-radio3"</span>&gt;</span>Radio 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-radio-disabled"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"radio_button"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"radio_4"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-radio-disabled"</span>&gt;</span>Radio Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Checkboxes:<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox1"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox2"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox3"</span>&gt;</span>Checkbox 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-disabled"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_4"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"checkbox-disabled"</span>&gt;</span>Checkbox Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"group"</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">"checkbox-identifier"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"checkbox-identifier"</span>&gt;</span>Radio Buttons using group roles and aria-labelledby<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-checkbox1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-checkbox1"</span>&gt;</span>Checkbox 1<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-checkbox2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_2"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-checkbox2"</span>&gt;</span>Checkbox 2<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-checkbox3"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_3"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-checkbox3"</span>&gt;</span>Checkbox 3<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"group-checkbox-disabled"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"checkboxes"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"check_4"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"group-checkbox-disabled"</span>&gt;</span>Checkbox Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+          </details>
+              
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 7
+        </div>
+          </section>
+          <section id="kssref-accessibility-forms-search" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-forms-search">
+            <span class="kss-title__ref">
+              1.1.2
+              <span class="kss-title__permalink-hash">
+                accessibility.forms.search
+              </span>
+            </span>
+            Search
+          </a>
+        </h3>
+
+                  <p class="kss-toolbar">
+                          <a href="#kssref-accessibility-forms-search" data-kss-fullscreen="kssref-accessibility-forms-search">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-accessibility-forms-search.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+                        <a href="#kssref-accessibility-forms-search" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-accessibility-forms-search" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+        
+                  <div class="kss-description">
+            <ul>
+<li>Wrap search components in a parent element role="search" to increase their discoverability
+to assistive technologies</li>
+<li>Whenever possible, use the label element to explicitly associate text with form elements.
+The for attribute of the label must exactly match the id of the form control.</li>
+<li>Some form fields do not need explicit label elements, when next to a button with descriptive
+text. Ex. search field next to a button labeled search. In these cases you should still have a
+label in the markup, but you can hide it visually.</li>
+<li>Note that placeholders are not recognized by all assistive technologies, and thus are not
+adequate replacements for appropriate labeling. Additionally, assistive technologies that do
+announce placeholders will read the placeholder first, then the input's label and then type
+of input. So be sure not to repeat an input's label as its placeholder, otherwise it will
+be announced multiple times.</li>
+<li>In the below examples, option 1 is a normal label, option 2 is a visually hidden label, and option 3 uses aria-label.</li>
+</ul>
+          </div>
+        
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          
+          <div class="kss-modifier__example">
+            <div role="search">
+  <label for="search_1" style="display: block;">Search the site:</label>
+  <input type="search" name="search" id="search_1" class="search-form__input" />
+  <button type="submit"><span class="visuallyhidden">Perform</span>Search</button>
+</div>
+
+<div role="search">
+  <label for="search_2" class="visuallyhidden">Search the site</label>
+  <input type="search" name="search" id="search_2" class="search-form__input" placeholder="search for..." />
+  <button type="submit"><span class="visuallyhidden">Perform</span>Search</button>
+</div>
+
+<div role="search">
+  <input type="search" name="search" aria-label="Search">
+  <button type="submit"><span class="visuallyhidden">Perform</span>Search</button>
+</div>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+                  </div>
+                  <details class="kss-markup kss-style">
+            <summary>
+                              Markup: <code>accessibility/accessible_search.twig</code>
+                          </summary>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"search_1"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: block;"</span>&gt;</span>Search the site:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search_1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-form__input"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visuallyhidden"</span>&gt;</span>Perform<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"search_2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visuallyhidden"</span>&gt;</span>Search the site<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"search_2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"search-form__input"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"search for..."</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visuallyhidden"</span>&gt;</span>Perform<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"search"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Search"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visuallyhidden"</span>&gt;</span>Perform<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>Search<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span></code></pre>
+          </details>
+              
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 60
+        </div>
+          </section>
+          <section id="kssref-accessibility-forms-textinputsareas" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-forms-textinputsareas">
+            <span class="kss-title__ref">
+              1.1.3
+              <span class="kss-title__permalink-hash">
+                accessibility.forms.textinputsareas
+              </span>
+            </span>
+            Text Inputs and Textareas
+          </a>
+        </h3>
+
+                  <p class="kss-toolbar">
+                          <a href="#kssref-accessibility-forms-textinputsareas" data-kss-fullscreen="kssref-accessibility-forms-textinputsareas">
+                <span class="kss-toolbar__tooltip">Toggle full screen</span>
+                <svg focusable="false" aria-hidden="true" class="off" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M64 0v26l-10-10-12 12-6-6 12-12-10-10zM28 42l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+                <svg focusable="false" aria-hidden="true" class="on" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <path class="kss-toolbar__icon-fill" d="M28 36v26l-10-10-12 12-6-6 12-12-10-10zM64 6l-12 12 10 10h-26v-26l10 10 12-12z"></path>
+                </svg>
+              </a>
+              <a href="item-accessibility-forms-textinputsareas.html" target="_blank">
+                <span class="kss-toolbar__tooltip">Open in new window</span>
+                <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                  <rect x="0" y="20" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M40,64l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="0" y="20" width="40" height="10"/>
+                  <rect x="24" y="0" width="40" height="44" fill="#fff"/>
+                  <path class="kss-toolbar__icon-fill" d="M64,44l-40,0l0,-44l40,0l0,44Zm-36,-40l0,36l32,0l0,-36l-32,0Z"/>
+                  <rect class="kss-toolbar__icon-fill" x="24" y="0" width="40" height="10"/>
+                </svg>
+              </a>
+                        <a href="#kssref-accessibility-forms-textinputsareas" data-kss-guides="true">
+              <span class="kss-toolbar__tooltip">Toggle example guides</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <rect class="kss-toolbar__icon-fill" x="5" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="35" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="21" width="5" height="9"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="5" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="0" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="5" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="54" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="49" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="5" y="49" width="5" height="15"/>
+                <rect class="kss-toolbar__icon-fill" x="0" y="54" width="15" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="35" y="54" width="9" height="5"/>
+                <rect class="kss-toolbar__icon-fill" x="20" y="54" width="9" height="5"/>
+              </svg>
+            </a>
+            <a href="#kssref-accessibility-forms-textinputsareas" data-kss-markup="true">
+              <span class="kss-toolbar__tooltip">Toggle HTML markup</span>
+              <svg focusable="false" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 64 64">
+                <path class="kss-toolbar__icon-fill" d="M37.555,46.239l6.103,6.103l20.342,-20.342l-20.342,-20.342l-6.103,6.103l14.24,14.239l-14.24,14.239Z"/>
+                <path class="kss-toolbar__icon-fill" d="M26.445,17.761l-6.103,-6.103l-20.342,20.342l20.342,20.342l6.103,-6.103l-14.24,-14.239l14.24,-14.239Z"/>
+              </svg>
+            </a>
+          </p>
+        
+                  <div class="kss-description">
+            <ul>
+<li>Keep it simple - screen readers do not support multiple labels that are linked to the same form element.</li>
+<li>Placeholder text does not count as a label.</li>
+<li>Use labels for every input and make the for="" and id="" values match. IDs must be unique
+on each page, only one label can be associated to each unique form element.</li>
+<li>Make required fields obvious by using an indicator - border color change, asterisk, description text, etc.</li>
+<li>Fields with error validation should have aria-describedby to insure that the associated field level error
+message is read by assistive technology. If the error message has an id="my-error-message",
+then the input should have aria-describedby="my-error-message".</li>
+</ul>
+          </div>
+        
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          
+          <div class="kss-modifier__example">
+            <form>
+  <label for="first-name">First Name</label>
+  <input id="first-name" type="text" name="textfield">
+  <label for="last-name" class="required-field">Last Name</label>
+  <input id="last-name" type="text" name="textfield" aria-describedby="error-message" required>
+  <div id="error-message" class="visuallyhidden">This field is required.</div>
+  <label for="address">Enter your street address</label>
+  <textarea id="address" name="addresstext"></textarea>
+  <input type="submit" value="Submit">
+</form>
+            <div class="kss-modifier__example-footer"></div>
+          </div>
+
+                  </div>
+                  <details class="kss-markup kss-style">
+            <summary>
+                              Markup: <code>accessibility/accessible_textinputs_textareas.twig</code>
+                          </summary>
+            <pre class="hljs"><code class="language-twig"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"first-name"</span>&gt;</span>First Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"first-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"textfield"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"last-name"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"required-field"</span>&gt;</span>Last Name<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"last-name"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"textfield"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"error-message"</span> <span class="hljs-attr">required</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"error-message"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"visuallyhidden"</span>&gt;</span>This field is required.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"address"</span>&gt;</span>Enter your street address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"address"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"addresstext"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Submit"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></span></code></pre>
+          </details>
+              
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 25
+        </div>
+          </section>
+          <section id="kssref-accessibility-general" class="kss-section kss-section--depth-2 ">
+      <div class="kss-style">
+                <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-accessibility-general">
+            <span class="kss-title__ref">
+              1.2
+              <span class="kss-title__permalink-hash">
+                accessibility.general
+              </span>
+            </span>
+            General
+          </a>
+        </h2>
+
+        
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 82
+        </div>
+          </section>
+          <section id="kssref-accessibility-general-buttons" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-general-buttons">
+            <span class="kss-title__ref">
+              1.2.1
+              <span class="kss-title__permalink-hash">
+                accessibility.general.buttons
+              </span>
+            </span>
+            Buttons
+          </a>
+        </h3>
+
+        
+                  <div class="kss-description">
+            <ul>
+<li>A <code>&lt;button&gt;</code> tag does not need anything special to work. Use <code>&lt;button&gt;</code>
+when you can, but it is possible to use other elements as long as you add role="button" and add JavaScript
+to replicate the button functionality. </li>
+<li>Just like links, you can add class="visuallyhidden" with descriptive text to give more context to
+the button's purpose.</li>
+<li>If a button contains an <code>&lt;img&gt;</code> element, make sure to set its alt attribute. If it
+contains an icon, use aria-label to describe the icon instead.</li>
+You can use <code>&lt;input type="image"&gt;</code> to make a graphical button. It takes a src and
+alt attribute just like traditional images.</li>
+<li>Button states are important, not just button styling! If you are only toggling classes to visually
+manage state of your components, you are likely not appropriately conveying that state to users of
+assistive technologies.</li>
+          </div>
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 86
+        </div>
+          </section>
+          <section id="kssref-accessibility-general-colors" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-general-colors">
+            <span class="kss-title__ref">
+              1.2.2
+              <span class="kss-title__permalink-hash">
+                accessibility.general.colors
+              </span>
+            </span>
+            Colors
+          </a>
+        </h3>
+
+        
+                  <div class="kss-description">
+            <ul>
+<li>Avoid using color <em>only</em> to communicate information. In the case of links, use another identifier
+such as bold or underline to indicate a link verses using color alone.</li>
+<li>Some users have difficulty reading text if there is too little contrast between foreground and background.
+To meet Level AA, text must have a contrast ratio of at least 4.5:1 (or 3:1 for large text). In order to meet
+the guidelines at the stricter Level AAA, the contrast ratio must be at least 7:1 (or 4.5:1 for large text).</li>
+</ul>
+          </div>
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 105
+        </div>
+          </section>
+          <section id="kssref-accessibility-general-link_focus" class="kss-section kss-section--depth-3 ">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-accessibility-general-link_focus">
+            <span class="kss-title__ref">
+              1.2.3
+              <span class="kss-title__permalink-hash">
+                accessibility.general.link_focus
+              </span>
+            </span>
+            Link Focus
+          </a>
+        </h3>
+
+        
+                  <div class="kss-description">
+            <ul>
+<li>Do not set your site's link focus to <code>outline: none</code>. Never. Ever.</li>
+<li>If you have multiple form fields on your site or you see the dreaded <code>outline: none</code> in your base code, you can reset the browser defaults by adding the code:
+<pre> a:focus {
+  outline: auto 2px Highlight; // for non-webkit browsers
+  outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+}</pre></li>
+<li>Of course you can create your own focus styles to match your theme or to make the default browser styles more prominent, just make sure they are visible by tabbing and obvious to your users.</li>
+</ul>
+          </div>
+        
+        
+              </div>
+
+      
+              <div class="kss-source kss-style">
+          Source: <code>accessibility/_accessibility.scss</code>, line 117
+        </div>
+          </section>
+  </article>
+</main>
+
+<!-- SCRIPTS -->
+<script src="kss-assets/kss.js"></script>
+<script src="kss-assets/scrollspy.js"></script>
+<script src="kss-assets/kss-fullscreen.js"></script>
+<script src="kss-assets/kss-guides.js"></script>
+<script src="kss-assets/kss-markup.js"></script>
+<script>
+  var spy = new ScrollSpy('#kss-node', {
+    nav: '.kss-nav__menu-child > li > a',
+    className: 'is-in-viewport'
+  });
+  var kssFullScreen = new KssFullScreen({
+    idPrefix: 'kss-fullscreen-',
+    bodyClass: 'kss-fullscreen-mode',
+    elementClass: 'is-fullscreen'
+  });
+  var kssGuides = new KssGuides({
+    bodyClass: 'kss-guides-mode'
+  });
+  var kssMarkup = new KssMarkup({
+    bodyClass: 'kss-markup-mode',
+    detailsClass: 'kss-markup'
+  });
+</script>
+
+
+
+
+<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
+</body>
+</html>

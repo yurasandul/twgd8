@@ -1,37 +1,8 @@
-label: Files
 display:
   default:
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filter
-          reset_button_label: Reset
       fields:
         filename:
           label: Name
-        filemime:
-          label: 'MIME type'
         filesize:
           label: Size
-        status:
-          label: Status
-        count:
-          label: 'Used in'
-      filters:
-        filemime:
-          expose:
-            label: 'MIME type'
-        status:
-          expose:
-            label: Status
-      title: Files
-  page_1:
-    display_options:
-      menu:
-        title: Files
-  page_2:
-    display_options:
-      arguments:
-        fid:
-          exception:
-            title: All

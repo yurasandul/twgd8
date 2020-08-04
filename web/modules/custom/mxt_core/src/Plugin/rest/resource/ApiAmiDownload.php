@@ -187,7 +187,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'img_url' => $img_uri ? file_create_url($img_uri) : '',
@@ -224,7 +224,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'img_url' => $img_uri ? file_create_url($img_uri) : '',
@@ -261,7 +261,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'img_url' => $img_uri ? file_create_url($img_uri) : '',
@@ -298,7 +298,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'img_url' => $img_uri ? file_create_url($img_uri) : '',
@@ -327,6 +327,7 @@ class ApiAmiDownload extends ResourceBase {
       ->condition('type', $type)
       ->condition('langcode', $langcode)
       ->condition('status', 1)
+      ->sort('created', 'DESC')
       ->execute();
     return $nids;
   }
@@ -394,7 +395,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'video_url' => $node_translation->get('field_video')->value,
@@ -432,7 +433,7 @@ class ApiAmiDownload extends ResourceBase {
 
       $return[] = [
         'id' => $node_translation->id(),
-        'created_at' => date('Y-M-D\TH:i:s.u', $node_translation->get('created')->value),
+        'created_at' => date('Y-m-d\TH:i:s.u\Z', $node_translation->get('created')->value),
         'title' => $node_translation->label(),
         'details' => $node_translation->get('body')->value,
         'video_url' => $node_translation->get('field_video')->value,

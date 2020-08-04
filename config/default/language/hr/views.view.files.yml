@@ -1,7 +1,6 @@
 label: Datoteke
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -13,7 +12,6 @@ display:
       fields:
         filename:
           label: Naziv
-          separator: ', '
         filemime:
           label: 'MIME vrsta'
         filesize:

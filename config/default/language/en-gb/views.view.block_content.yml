@@ -1,17 +1,6 @@
 display:
   default:
     display_options:
-      exposed_form:
-        options:
-          reset_button_label: Reset
       fields:
-        info:
-          label: 'Block description'
         operations:
           label: Operations
-      filters:
-        info:
-          expose:
-            label: 'Block description'
-  page_1:
-    display_title: Page
