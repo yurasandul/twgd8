@@ -1,3 +1,5 @@
+label: Contenuto
+description: 'Trova e gestisci contenuti.'
 display:
   default:
     display_options:
@@ -8,6 +10,13 @@ display:
           exposed_sorts_label: 'Ordina per'
           sort_asc_label: Asc
           sort_desc_label: Disc
+      pager:
+        options:
+          tags:
+            previous: '‹ Precedente'
+            next: 'Seguente ›'
+            first: '« Prima'
+            last: 'Ultima »'
       fields:
         title:
           label: Titolo
@@ -16,6 +25,13 @@ display:
           separator: ', '
         name:
           label: Autore
+        status:
+          label: Stato
+          settings:
+            format_custom_true: Pubblicato
+            format_custom_false: 'Non pubblicato'
+        changed:
+          label: Aggiornato
         operations:
           label: Operazioni
       filters:
@@ -25,9 +41,27 @@ display:
         type:
           expose:
             label: 'Tipo di contenuto'
+        status:
+          expose:
+            label: Stato
+          group_info:
+            group_items:
+              1:
+                title: Pubblicato
+              2:
+                title: 'Non pubblicato'
         langcode:
           expose:
             label: Lingua
+      title: Contenuto
+      empty:
+        area_text_custom:
+          content: 'Nessun contenuto disponibile.'
     display_title: Principale
   page_1:
+    display_options:
+      menu:
+        title: Contenuto
+      tab_options:
+        title: Contenuto
     display_title: Pagina

@@ -1,9 +1,11 @@
+label: Comentarios
 display:
   default:
     display_title: Máster
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicar
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
@@ -20,7 +22,10 @@ display:
             items_per_page_options_all_label: '- Todo -'
             offset_label: Desplazamiento
       fields:
+        comment_bulk_form:
+          action_title: Acción
         subject:
+          label: Asunto
           separator: ', '
         uid:
           separator: ', '
@@ -28,25 +33,49 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Enviado en'
           separator: ', '
         changed:
+          label: Actualizado
           separator: ', '
         operations:
           label: Operaciones
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Asunto
         langcode:
           expose:
             label: Idioma
-  page_unapproved:
+      title: Comentarios
+      empty:
+        area_text_custom:
+          content: 'No hay comentarios disponibles.'
+      use_more_text: más
+  page_published:
+    display_title: 'Comentarios publicados'
     display_options:
+      menu:
+        title: Comentarios
+  page_unapproved:
+    display_title: 'Comentarios sin aprobar'
+    display_options:
+      menu:
+        title: 'Comentarios sin aprobar'
       filters:
+        subject:
+          expose:
+            label: Asunto
         langcode:
           expose:
             label: Idioma
       fields:
+        comment_bulk_form:
+          action_title: Acción
         subject:
+          label: Asunto
           separator: ', '
         uid:
           separator: ', '
@@ -54,8 +83,10 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Enviado en'
           separator: ', '
         changed:
+          label: Actualizado
           separator: ', '
         operations:
           label: Operaciones

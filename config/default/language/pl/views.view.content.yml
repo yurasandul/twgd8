@@ -1,3 +1,5 @@
+label: Zawartość
+description: 'Wyszukiwanie i zarządzanie zawartością.'
 display:
   default:
     display_options:
@@ -8,6 +10,13 @@ display:
           exposed_sorts_label: 'Sortuj po'
           sort_asc_label: Rosnąco
           sort_desc_label: Malejąco
+      pager:
+        options:
+          tags:
+            previous: '‹ Poprzednia'
+            next: 'Następna ›'
+            first: '« Pierwsza'
+            last: 'Ostatnia »'
       fields:
         title:
           label: Tytuł
@@ -16,6 +25,13 @@ display:
           separator: ', '
         name:
           label: Autor
+        status:
+          label: Status
+          settings:
+            format_custom_true: Opublikowane
+            format_custom_false: Nieopublikowany
+        changed:
+          label: Uaktualniono
         operations:
           label: Operacje
       filters:
@@ -25,9 +41,27 @@ display:
         type:
           expose:
             label: 'Rodzaj zawartości'
+        status:
+          expose:
+            label: Status
+          group_info:
+            group_items:
+              1:
+                title: Opublikowane
+              2:
+                title: Nieopublikowany
         langcode:
           expose:
             label: Język
+      title: Zawartość
+      empty:
+        area_text_custom:
+          content: 'Brak zawartości.'
     display_title: Główny
   page_1:
+    display_options:
+      menu:
+        title: Zawartość
+      tab_options:
+        title: Zawartość
     display_title: Strona

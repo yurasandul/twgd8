@@ -1,9 +1,0 @@
-uuid: 01d2b94e-ad92-451a-aba4-20e6a3e3d949
-langcode: en
-status: true
-dependencies: {  }
-id: smh
-label: 'testing lang'
-direction: ltr
-weight: 21
-locked: false

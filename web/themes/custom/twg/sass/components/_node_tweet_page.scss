@@ -1,0 +1,327 @@
+// Home page teaser
+.node--type-tweet-page.node--view-mode-homepage-teaser {
+  margin-bottom: $base-bottom-margin;
+
+  .field-name-field-image {
+
+    @include inside-arrow-bottom();
+    overflow: hidden;
+
+    img {
+      @include zoom-init($image-hover-zoom--duration);
+      width: 100%;
+
+      &:hover {
+        @include zoom-exec($image-hover-zoom--x, $image-hover-zoom--y);
+      }
+    }
+  }
+
+  h1 {
+    @extend %big-blue-heading;
+    margin: 0;
+
+    &:before {
+      @include icons-sprite-bird;
+    }
+
+    a {
+      @extend %big-blue-heading;
+    }
+  }
+
+  .node-social-stats {
+    display: none;
+
+    .likes {
+      display: inline-block;
+      line-height: 29px;
+      margin-right: 10px;
+
+      &:before {
+        @include icons-sprite-likes;
+        display: inline-block;
+        margin-right: 8px;
+        content: '';
+        float: left;
+      }
+    }
+
+    .views {
+      display: inline-block;
+      line-height: 29px;
+
+      &:before {
+        @include icons-sprite-likes;
+        margin-right: 8px;
+        content: '';
+        float: left;
+      }
+    }
+  }
+
+  .float-next-to-image {
+    padding: $base-bottom-margin $mobile-gutter 0;
+    position: relative;
+  }
+
+  .field-name-field-subject {
+    @extend %red-subject;
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint($large) {
+    .field-name-field-image,
+    .float-next-to-image {
+      width: 50%;
+      float: left;
+    }
+
+    .field-name-field-image {
+      @include inside-arrow-right();
+    }
+
+    .float-next-to-image {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @include breakpoint($large) {
+    .node-social-stats {
+      display: block;
+    }
+
+    h1 {
+      position: relative;
+      padding-top: 33px;
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: -5px;
+        content: '';
+      }
+    }
+  }
+
+  .views-row-last & {
+    margin-bottom: (2 * $base-bottom-margin);
+  }
+
+  .views-row-3 &,
+  .views-row-4 & {
+    display: none;
+
+    h1 {
+      padding-top: 0;
+
+      &:before {
+        @include icons-sprite-bird-small;
+        content: none;
+      }
+    }
+
+    .node-social-stats {
+      display: none;
+    }
+
+    @include breakpoint($large) {
+      display: block;
+
+      .field-name-field-image {
+        width: 25%;
+      }
+
+      .float-next-to-image {
+        width: 75%;
+      }
+
+      h1 {
+        padding-top: 30px;
+
+        &:before {
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+//    Node full display
+.node--type-tweet-page.node--view-mode-full {
+  .field--name-field-image {
+    margin-bottom: 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    padding-left: $content-title-gutter;
+    position: relative;
+    margin-bottom: 0;
+
+    &:before {
+      @include icons-sprite-bird-small();
+      position: absolute;
+      top: 10px;
+      left: 0;
+      content: '';
+    }
+  }
+
+  h2 {
+    &.reference-header {
+      @extend %heading-large;
+      @extend %font-helvetica-neue-57;
+      font-weight: bold;
+      margin-bottom: $base-bottom-margin;
+    }
+  }
+
+  .field--name-field-subject {
+    @extend %font-ubuntu;
+    padding-left: $content-title-gutter;
+    color: $blue-darkest;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .field--name-body {
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .field-name-field-reference-heading {
+    cursor: pointer;
+  }
+
+  .field--name-field-reference-body {
+    p {
+      display: block;
+      cursor: pointer;
+
+      &.preview {
+        display: none;
+      }
+    }
+
+    &.closed {
+      p, ul, ol, blockquote {
+        display: none;
+      }
+      p.preview {
+        display: block;
+
+        &:after {
+          display: inline-block;
+          content: '...';
+          color: $blue-darkest;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($large) {
+    h1 {
+      padding-left: $content-title-gutter--desktop;
+      &:before {
+        @include icons-sprite-bird();
+      }
+    }
+
+    .field--name-field-subject {
+      padding-left: $content-title-gutter--desktop;
+    }
+  }
+}
+
+.tweetbox {
+  background-color: $blue;
+
+  border-radius: 15px;
+  width: 299px;
+  height: 137px;
+  box-sizing: border-box;
+  padding: 29px 20px 20px 72px;
+  @extend %font-ubuntu;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 20px auto;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    @include icons-sprite-bird-white();
+    left: 20px;
+    top: 32px;
+  }
+
+}
+
+// Normal teaser, shown in 'related tweets' section under a tweet
+.node--type-tweet-page.node--view-mode-teaser {
+  margin-bottom: $base-bottom-margin;
+
+  .field--name-field-image {
+    @include inside-arrow-right(white, 10px);
+    width: 33.3%;
+    float: left;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    img {
+      @include zoom-init($image-hover-zoom--duration);
+      width: 100%;
+
+      &:hover {
+        @include zoom-exec($image-hover-zoom--x, $image-hover-zoom--y);
+      }
+    }
+  }
+
+  .float-next-to-image {
+    width: 66.6%;
+    float: left;
+    padding-left: 10px;
+  }
+
+  h2 {
+    @extend %big-blue-heading;
+    margin: 0;
+    padding-top: 20px;
+    position: relative;
+
+    &:before {
+      @include icons-sprite-bird-small();
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    a {
+      @extend %big-blue-heading;
+      text-decoration: none;
+    }
+  }
+
+  .field--name-field-subject {
+    @extend %red-subject;
+    padding-left: 0;
+  }
+}
+
+.block-views-blocktwg-related-pages-block-related-tweets {
+  h2 {
+    font-size: 30px;
+    line-height: 44px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}

@@ -12,10 +12,15 @@ display:
           label: 'MIME type'
         filesize:
           label: Velikost
+        status:
+          label: Stanje
       filters:
         filemime:
           expose:
             label: 'MIME type'
+        status:
+          expose:
+            label: Stanje
   page_2:
     display_options:
       arguments:

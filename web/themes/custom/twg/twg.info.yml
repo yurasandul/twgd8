@@ -7,13 +7,17 @@ libraries:
   - twg/fonts
   - twg/fontawesome
   - twg/global_styles
+  - twg/twg_main_js
 regions:
   header: Header
   pre_content: 'Pre content'
+  front_top: 'Frontpage Top content'
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
   post_content: 'Post content'
+  bottom_blocks: Bottom Blocks
+  footer_menu: Footer Menu
   footer: Footer
 
 # Information added by Drupal.org packaging script on 2020-03-17

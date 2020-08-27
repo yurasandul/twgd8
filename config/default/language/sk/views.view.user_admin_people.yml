@@ -1,3 +1,5 @@
+label: Používatelia
+description: 'Nájsť a spravovať ľudí, ktorí sú aktívni na vašich stránkach.'
 display:
   default:
     display_options:
@@ -10,16 +12,59 @@ display:
           sort_desc_label: Zostupne
       pager:
         options:
+          tags:
+            previous: '‹ Predchádzajúci'
+            next: Ďalej
+            first: '« Prvý'
+            last: Koniec
           expose:
             items_per_page_label: 'Položiek na stránku'
             items_per_page_options_all_label: '- Všetko -'
             offset_label: 'Zobraziť od'
       fields:
+        name:
+          label: 'Používateľské meno'
+        status:
+          label: Stav
+          settings:
+            format_custom_true: Aktívny
+            format_custom_false: Blokovaný
         roles_target_id:
           label: 'Kategórie používateľov'
+        created:
+          label: 'Členom už'
+        access:
+          label: 'Posledný prístup'
         operations:
           label: Operácie
         mail:
           separator: ', '
+      filters:
+        status:
+          group_info:
+            label: Stav
+            group_items:
+              1:
+                title: Aktívny
+              2:
+                title: Blokovaný
+        roles_target_id:
+          expose:
+            label: 'Kategória používateľov'
+        permission:
+          expose:
+            label: Oprávnenie
+      title: Používatelia
+      empty:
+        area_text_custom:
+          content: 'Nie sú dostupný žiadni používatelia.'
+      use_more_text: viac
   page_1:
     display_title: Stránka
+    display_options:
+      menu:
+        title: Zoznam
+        description: 'Nájsť a spravovať ľudí, ktorí sú aktívni na vašich stránkach.'
+      tab_options:
+        title: Používatelia
+        description: 'Spravovať používateľské účty, kategórie používateľov a oprávnení.'

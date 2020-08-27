@@ -1,0 +1,194 @@
+.inspirational-quote {
+
+  @extend %font-ubuntu;
+
+  background: $blue-darkest;
+  color: $white;
+  padding: 22px $mobile-gutter;
+
+  .field--name-field-highlighted-text,
+  .field--name-field-highlighted-subtext {
+    display: block;
+    position: relative;
+  }
+
+  .field--name-field-highlighted-text {
+    @extend %heading-large;
+    font-style: normal;
+    margin-bottom: 30px;
+    padding-left: 20px;
+
+
+    &:before {
+      content: '#';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .field--name-field-highlighted-subtext {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  @include breakpoint($large) {
+    padding: 34px 40px;
+
+    .field--name-field-highlighted-subtext {
+      text-align: right;
+    }
+  }
+
+  @include breakpoint($large) {
+    padding: 46px 40px;
+
+    .field--name-field-highlighted-text {
+      font-size: 30px;
+      line-height: 34px;
+      padding-left: 26px;
+    }
+  }
+}
+
+.front-all-tweets {
+  a {
+    @extend %font-ubuntu;
+    @extend %heading-large;
+    background: $purple;
+    color: white;
+    display: block;
+    padding: 22px 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:after {
+      content: '>';
+      display: inline-block;
+      margin-left: 7px;
+    }
+
+    &:hover {
+      background: $purple-light;
+    }
+  }
+}
+
+.field-name-dynamic-block-fieldnode-front-page-quote-logan-slider {
+  background: $blue-darkest;
+
+  .flexslider {
+    margin-bottom: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  @include breakpoint($large) {
+    margin-bottom: ($base-bottom-margin * 2);
+  }
+}
+
+blockquote.top-slogan {
+
+  @extend %font-ubuntu;
+
+  background: $blue-darkest;
+  color: $white;
+  display: block;
+  padding: 20px $mobile-gutter 20px ($mobile-gutter+10);
+  margin-left: 0;
+  border-left: 0;
+  font-style: normal;
+
+  .field--name-field-slogan {
+    @extend %heading-large;
+    margin: 0;
+    color: $white;
+    &.quotes {
+      &:before {
+        content: '\201C';
+        position: absolute;
+        left: 10px;
+      }
+
+      &:after {
+        content: '\201D';
+        display: inline-block;
+      }
+    }
+  }
+
+  .field--name-field-slogan-source {
+    font-size: 12px;
+    font-style: normal;
+  }
+
+  @include breakpoint($large) {
+
+    padding: 35px ($desktop-gutter * 3) 35px ($desktop-gutter * 4);
+
+    .field--name-field-slogan {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    .field--name-field-slogan {
+      &.quotes:before {
+        left: 45px;
+      }
+    }
+  }
+}
+
+.region-front-top {
+  @extend .clearfix;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 25px;
+
+  @include breakpoint($up-sm) {
+    flex-direction: row;
+  }
+  > div {
+    width: 100%;
+    overflow: hidden;
+    @extend .clearfix;
+
+    @include breakpoint($up-sm) {
+      width: 50%;
+    }
+  }
+
+  .block--type--bottom-block {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+  }
+  p {
+    margin: 0 0 0 0;
+  }
+
+  .responsive-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.col-2 > div {
+    @include breakpoint($up-sm) {
+      width: 50%;
+    }
+  }
+
+}

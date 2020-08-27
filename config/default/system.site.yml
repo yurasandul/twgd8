@@ -3,9 +3,9 @@ name: 'Tweeting with God'
 mail: noreply@tweetingwithgod.com
 slogan: 'These are some details about the chaplaincy'
 page:
-  403: ''
-  404: ''
-  front: /node
+  403: /node/11
+  404: /node/11
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

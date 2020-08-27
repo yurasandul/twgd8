@@ -13,9 +13,9 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  *
  * @RestResource(
  *   id = "api_twg_twg",
- *   label = @Translation("Api twg twg"),
+ *   label = @Translation("Api twg-cmc twg"),
  *   uri_paths = {
- *     "canonical" = "/api/twg/v1/twg/{langcode}"
+ *     "canonical" = "/api/{code}/v1/twg/{langcode}"
  *   }
  * )
  */
@@ -55,7 +55,7 @@ class ApiTwgTwg extends ResourceBase {
    * @return \Drupal\rest\ModifiedResourceResponse
    *   The HTTP response object.
    */
-  public function get($langcode) {
+  public function get($code, $langcode) {
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
@@ -66,7 +66,12 @@ class ApiTwgTwg extends ResourceBase {
     $config = \Drupal::service('config.factory')->getEditable('mxt_core.ami_contact_details');
     $nid = $config->get('node_twg_twg') ?? 12765;
 
-    $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
+    if (!in_array($code, ['twg', 'cmc'])) {
+      $output = ['Error url parameters'];
+    }
+    else {
+      $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
+    }
 
     $response = (new ModifiedResourceResponse($output, 200));
     $response->headers->set('Content-Length', strlen(Json::encode($output)));

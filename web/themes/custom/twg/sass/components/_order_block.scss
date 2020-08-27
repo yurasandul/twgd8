@@ -1,0 +1,37 @@
+.block--type--order-block {
+  background: $purple;
+  color: $white;
+  text-align: center;
+
+  .order-book-image {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: $base-bottom-margin;
+  }
+
+  h2, h3 {
+    @extend %font-helvetica-neue-57;
+    color: $white;
+
+    font-size: 28px;
+    line-height: 32px;
+    text-align: left;
+    padding-top: 6px;
+
+    a {
+      @extend %font-helvetica-neue-57;
+      color: $white;
+      text-decoration: none;
+      font-weight: normal;
+    }
+  }
+
+  .order-button {
+    float: left;
+    max-width: 145px; // otherwise there is no more space for the button to float
+  }
+}

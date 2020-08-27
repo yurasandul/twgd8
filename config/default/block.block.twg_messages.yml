@@ -1,0 +1,22 @@
+uuid: a54d3151-5b09-4ddb-bfb4-bd1e6e33dd5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - twg
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: twg_messages
+theme: twg
+region: pre_content
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -24,7 +24,7 @@ mode: default
 content:
   field_book_title:
     weight: 2
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -32,7 +32,7 @@ content:
     region: content
   field_book_title_2:
     weight: 7
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -40,7 +40,7 @@ content:
     region: content
   field_image:
     weight: 10
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -49,25 +49,37 @@ content:
     region: content
   field_image_1:
     weight: 3
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: shop_image
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_shop_link
+        advanced: {  }
+        token: ''
     type: image
     region: content
   field_image_2:
     weight: 8
-    label: above
+    label: hidden
     settings:
-      image_style: ''
+      image_style: shop_image
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_shop_link_2
+        advanced: {  }
+        token: ''
     type: image
     region: content
   field_shop_image:
     weight: 4
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -76,7 +88,7 @@ content:
     region: content
   field_shop_image_2:
     weight: 11
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -85,7 +97,7 @@ content:
     region: content
   field_shop_link:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -93,7 +105,7 @@ content:
     region: content
   field_shop_link_2:
     weight: 9
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -101,7 +113,7 @@ content:
     region: content
   field_show_book_2:
     weight: 6
-    label: above
+    label: hidden
     settings:
       format: default
       format_custom_false: ''
@@ -111,7 +123,7 @@ content:
     region: content
   field_title:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

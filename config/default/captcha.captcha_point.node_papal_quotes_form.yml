@@ -1,0 +1,7 @@
+uuid: 8904758d-d03b-41f0-8a9d-ded7d57cef59
+langcode: en
+status: false
+dependencies: {  }
+formId: node_papal_quotes_form
+captchaType: default
+label: null

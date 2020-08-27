@@ -1,0 +1,15 @@
+settings:
+  default_submit_button_label: Invia
+  default_reset_button_label: Ripristina
+  default_wizard_start_label: Inizio
+  default_wizard_confirmation_label: Completo
+  default_wizard_toggle_show_label: 'Mostra tutti'
+  default_preview_next_button_label: Anteprima
+  default_preview_label: Anteprima
+  default_draft_button_label: 'Salva bozza'
+  default_draft_saved_message: 'Inserimento salvato. Puoi tornare al form più tardi i valori attualmente inseriti saranno recuperati.'
+  dialog_options:
+    normal:
+      title: Normale
+element:
+  default_more_title: Altro

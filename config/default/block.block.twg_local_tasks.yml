@@ -1,0 +1,22 @@
+uuid: 80515d20-e8a2-47e3-927e-51a83afd27db
+langcode: en
+status: true
+dependencies:
+  theme:
+    - twg
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: twg_local_tasks
+theme: twg
+region: content
+weight: -10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

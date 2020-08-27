@@ -1,9 +1,12 @@
+label: Arhivă
 display:
   default:
     display_title: Expert
     display_options:
+      title: 'Arhivă lunară'
       exposed_form:
         options:
+          submit_button: Aplicare
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Bloc
   page_1:
     display_title: Pagina

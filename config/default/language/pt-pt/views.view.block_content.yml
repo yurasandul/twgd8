@@ -4,12 +4,16 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicar
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
         options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Seguinte ›'
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -19,6 +23,8 @@ display:
           separator: ', '
         type:
           separator: ', '
+        changed:
+          label: Atualizado
         operations:
           label: Operações
   page_1:

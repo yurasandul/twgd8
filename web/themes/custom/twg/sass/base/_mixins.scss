@@ -1,0 +1,217 @@
+// @file
+// Custom sass mixins
+//
+// Define the custom mixins for your project here.
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+@mixin animation($animateFunction, $duration: 1s, $delay: 0, $count: 1) {
+	-webkit-animation: $animateFunction $duration;
+	-moz-animation: $animateFunction $duration;
+	-ms-animation: $animateFunction $duration;
+	animation: $animateFunction $duration;
+
+	@if $delay > 0 {
+		-webkit-animation-delay: #{$delay};
+		-moz-animation-delay: #{$delay};
+		-ms-animation-delay: #{$delay};
+		animation-delay: #{$delay};
+	}
+
+	@if $count != 1 {
+		-webkit-animation-iteration-count: #{$count};
+		-moz-animation-iteration-count: #{$count};
+		-ms-animation-iteration-count: #{$count};
+		animation-iteration-count: #{$count};
+	}
+}
+
+@mixin inside-arrow-bottom($color: white, $size: 16px) {
+	position: relative;
+	background: $color;
+	&:after {
+		display: block;
+		bottom: 0;
+		top: auto;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-bottom-color: $color;
+		border-width: $size;
+		margin: 0 0 0 (-1 * $size);
+	}
+}
+
+@mixin inside-arrow-right($color: white, $size: 16px) {
+	position: relative;
+	background: $color;
+	&:after {
+		display: block;
+		top: 50%;
+		bottom: auto;
+		right: 0;
+		left: auto;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border: solid transparent;
+		border-right-color: $color;
+		border-width: $size;
+		margin: (-1 * $size) 0 0 0;
+	}
+}
+
+@mixin zoom-init($duration: 250ms, $function: ease-out) {
+	transform: scale(1);
+	transition-timing-function: $function;
+	transition-duration: $duration;
+}
+
+@mixin zoom-exec($x: 1.08, $y: 1.08) {
+	transform: scale($x, $y);
+}
+
+
+@mixin get_sprite_image() {
+  background-image: url("../images/icons-s8428879d15.png");
+  background-repeat: no-repeat;
+}
+
+@mixin icons-sprite-bird() {
+  @include get_sprite_image();
+  background-position: 0 -573px;
+  height: 19px;
+  width: 35px;
+}
+
+@mixin icons-sprite-bird-white() {
+  @include get_sprite_image();
+  background-position: 0 -432px;
+  height: 19px;
+  width: 35px;
+}
+
+@mixin icons-sprite-likes() {
+  @include get_sprite_image();
+  background-position: 0 -534px;
+  height: 29px;
+  width: 37px;
+}
+
+@mixin icons-sprite-search() {
+  @include get_sprite_image();
+  background-position: 0 -84px;
+  height: 18px;
+  width: 18px;
+}
+
+@mixin icons-sprite-bird-small() {
+  @include get_sprite_image();
+  background-position: 0 -731px;
+  height: 14px;
+  width: 28px;
+}
+
+@mixin icons-sprite-arrow-left-dark() {
+  @include get_sprite_image();
+  background-position: 0 -821px;
+  height: 22px;
+  width: 13px;
+  left: 12px;
+}
+
+@mixin icons-sprite-arrow-left-white() {
+  @include get_sprite_image();
+  background-position: 0 -755px;
+  height: 23px;
+  width: 15px;
+}
+
+@mixin icons-sprite-arrow-right-dark() {
+  @include get_sprite_image();
+  background-position: 0 -853px;
+  height: 22px;
+  width: 13px;
+  left: 15px;
+}
+
+@mixin icons-sprite-arrow-right-white() {
+  @include get_sprite_image();
+  background-position: 0 -788px;
+  height: 23px;
+  width: 15px;
+}
+
+
+
+
+
+
+// Because we cannot include sprites in media queries
+// due to not able to nest @include-statements,
+// We use this mixin to force it.
+// From: https://gist.github.com/dfadler/3105369
+//
+// http://compass-style.org/reference/compass/helpers/sprites/
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+
+	//http://compass-style.org/reference/compass/helpers/sprites/#sprite-file
+	$sprite-image: sprite-file($map, $sprite);
+	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-url
+	$sprite-map: sprite-url($map);
+	// http://compass-style.org/reference/compass/helpers/sprites/#sprite-position
+	$sprite-position: sprite-position($map, $sprite);
+	// Returns background
+	background: $sprite-map $sprite-position $repeat;
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $height == true {
+		// Gets the height of the sprite-image
+		$sprite-height: image-height($sprite-image);
+		// Returns the height
+		height: $sprite-height;
+	}
+
+	// http://compass-style.org/reference/compass/helpers/image-dimensions/
+	// Checks to see if the user wants height returned
+	@if $width == true {
+		// Gets the height of the sprite-image
+		$sprite-width: image-width($sprite-image);
+		// Returns the width
+		width: $sprite-width;
+	}
+}

@@ -1,0 +1,7 @@
+tips:
+  views-ui-format:
+    label: 'Výstupný formát'
+  views-ui-fields:
+    label: Polia
+  views-ui-preview:
+    label: Náhľad

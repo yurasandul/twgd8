@@ -4,3 +4,4 @@ display:
       exposed_form:
         options:
           reset_button_label: Ponastavi
+      use_more_text: Več

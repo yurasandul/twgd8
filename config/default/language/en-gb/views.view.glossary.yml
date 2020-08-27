@@ -9,9 +9,5 @@ display:
           label: Title
         name:
           label: Author
-        changed:
-          label: 'Last update'
-  attachment_1:
-    display_title: Attachment
   page_1:
     display_title: Page

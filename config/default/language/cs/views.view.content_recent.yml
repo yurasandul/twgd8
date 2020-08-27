@@ -1,9 +1,11 @@
+label: 'Nový obsah'
 display:
   default:
     display_title: Nadřízené
     display_options:
       exposed_form:
         options:
+          submit_button: Použít
           reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
@@ -11,3 +13,10 @@ display:
       fields:
         changed:
           separator: ', '
+      title: 'Nový obsah'
+      empty:
+        area_text_custom:
+          content: 'Žádný obsah není k dispozici.'
+      use_more_text: Více
+  block_1:
+    display_title: Blok

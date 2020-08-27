@@ -1,0 +1,25 @@
+uuid: f808985f-990c-4aea-8278-899e94c4542e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bottom_block:5a3cf533-dffa-43e6-9e08-d2a30aa68188'
+  module:
+    - block_content
+  theme:
+    - twg
+id: papal_blessing
+theme: twg
+region: bottom_blocks
+weight: 0
+provider: null
+plugin: 'block_content:5a3cf533-dffa-43e6-9e08-d2a30aa68188'
+settings:
+  id: 'block_content:5a3cf533-dffa-43e6-9e08-d2a30aa68188'
+  label: 'Papal blessing'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

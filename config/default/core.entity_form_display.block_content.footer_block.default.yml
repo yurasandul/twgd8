@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.footer_block
-    - field.field.block_content.footer_block.body
     - field.field.block_content.footer_block.field_facebook_url
     - field.field.block_content.footer_block.field_footer_body
     - field.field.block_content.footer_block.field_instagram_url
@@ -19,16 +18,6 @@ targetEntityType: block_content
 bundle: footer_block
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 3
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   field_facebook_url:
     weight: 4
     settings:

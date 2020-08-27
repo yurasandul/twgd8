@@ -14,14 +14,64 @@ dependencies:
     - field.field.node.tweet_page.field_subject
     - field.field.node.tweet_page.field_tweetbox
     - field.field.node.tweet_page.field_video
+    - flexslider.optionset.field_slideshow
+    - image.style.tweet_full
     - node.type.tweet_page
   module:
-    - datetime
+    - ds
     - entity_reference_revisions
+    - flexslider_fields
     - image
     - text
     - user
-    - video_embed_field
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+        - field_subject
+        - body
+        - field_tweetbox
+        - field_slideshow
+        - field_references_to_text
+        - field_references_to_church_fathe
+        - field_references_to_the_popes
+        - 'dynamic_block_field:node-tweet_page_related_pages_'
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+      'dynamic_block_field:node-tweet_page_related_pages_':
+        plugin_id: 'dynamic_block_field:node-tweet_page_related_pages_'
+        weight: 9
+        label: hidden
+        formatter: default
 id: node.tweet_page.default
 targetEntityType: node
 bundle: tweet_page
@@ -30,107 +80,212 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 3
     settings: {  }
     third_party_settings: {  }
-    region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+    region: ds_content
   field_image:
-    weight: 103
-    label: above
+    weight: 0
+    label: hidden
     settings:
-      image_style: ''
+      image_style: tweet_full
       image_link: ''
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: image
-    region: content
-  field_military:
-    weight: 111
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
+    region: ds_content
   field_references_to_church_fathe:
     type: entity_reference_revisions_entity_view
-    weight: 107
+    weight: 7
     label: above
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
-    region: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: reference-header
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
   field_references_to_text:
     type: entity_reference_revisions_entity_view
-    weight: 106
+    weight: 6
     label: above
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
-    region: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: reference-header
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
   field_references_to_the_popes:
     type: entity_reference_revisions_entity_view
-    weight: 108
+    weight: 8
     label: above
     settings:
       view_mode: default
       link: ''
-    third_party_settings: {  }
-    region: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: h2
+            fi-cl: reference-header
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    region: ds_content
   field_slideshow:
-    weight: 105
-    label: above
+    weight: 5
+    label: hidden
     settings:
       view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
-  field_sticky_sort_date:
-    weight: 104
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
+      optionset: field_slideshow
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: flexslider_entity
+    region: ds_content
   field_subject:
-    weight: 102
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      link: true
-    third_party_settings: {  }
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: entity_reference_label
-    region: content
+    region: ds_content
   field_tweetbox:
-    weight: 109
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: tweetbox
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: basic_string
-    region: content
-  field_video:
-    weight: 110
-    label: above
-    settings:
-      image_style: ''
-      link_image_to: ''
-    third_party_settings: {  }
-    type: video_embed_field_thumbnail
-    region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+    region: ds_content
 hidden:
+  content_moderation_control: true
+  field_military: true
+  field_sticky_sort_date: true
+  field_video: true
   langcode: true
+  links: true

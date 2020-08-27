@@ -1,3 +1,5 @@
+label: Inhoud
+description: 'Inhoud zoeken en beheren'
 display:
   default:
     display_options:
@@ -8,6 +10,13 @@ display:
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
           sort_desc_label: Aflopend
+      pager:
+        options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+            first: '« Eerste'
+            last: 'Laatste »'
       fields:
         title:
           label: Titel
@@ -16,6 +25,13 @@ display:
           separator: ', '
         name:
           label: Auteur
+        status:
+          label: Status
+          settings:
+            format_custom_true: Gepubliceerd
+            format_custom_false: 'Niet gepubliceerd'
+        changed:
+          label: Bijgewerkt
         operations:
           label: Bewerkingen
       filters:
@@ -25,9 +41,27 @@ display:
         type:
           expose:
             label: Inhoudstype
+        status:
+          expose:
+            label: Status
+          group_info:
+            group_items:
+              1:
+                title: Gepubliceerd
+              2:
+                title: 'Niet gepubliceerd'
         langcode:
           expose:
             label: Taal
+      title: Inhoud
+      empty:
+        area_text_custom:
+          content: 'Geen inhoud beschikbaar.'
     display_title: Hoofd
   page_1:
+    display_options:
+      menu:
+        title: Inhoud
+      tab_options:
+        title: Inhoud
     display_title: Pagina

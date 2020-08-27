@@ -1,0 +1,25 @@
+uuid: 1d2c5cb7-d6a1-4881-b08b-70a3d4df1c3e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bottom_block:dc9061f0-7126-4e29-bee7-25a67ce3d633'
+  module:
+    - block_content
+  theme:
+    - twg
+id: order_other_languages
+theme: twg
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:dc9061f0-7126-4e29-bee7-25a67ce3d633'
+settings:
+  id: 'block_content:dc9061f0-7126-4e29-bee7-25a67ce3d633'
+  label: 'Order other languages'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

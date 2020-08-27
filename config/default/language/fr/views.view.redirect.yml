@@ -56,9 +56,6 @@ display:
                 title: '305 Utilise un Proxy'
               7:
                 title: '307 Redirection Temporaire'
-        language:
-          expose:
-            label: 'Langue initiale'
       title: Rediriger
   page_1:
     display_title: Page

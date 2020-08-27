@@ -1,0 +1,15 @@
+uuid: 0a062566-0996-4a18-830a-4102eac3ef5d
+langcode: en
+status: true
+dependencies: {  }
+name: tweet_full
+label: 'Tweet full'
+effects:
+  4c663408-ffbb-477a-9e54-c0b42b440b97:
+    uuid: 4c663408-ffbb-477a-9e54-c0b42b440b97
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 700
+      height: 300
+      anchor: center-center

@@ -1,0 +1,42 @@
+#block-main-navigation-level-2 {
+
+  display: none; // dont show on mobile
+
+  .menu {
+    @extend .clearfix;
+
+    margin: 0 0 $base-bottom-margin 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline;
+
+      a {
+        @extend %font-helvetica-neue-77;
+
+        font-weight: bold;
+        display: inline-block;
+        color: $blue--menu;
+        padding: 14px 16px;
+        text-decoration: none;
+        float: left;
+
+        &.is-active,
+        &:hover {
+          background: $blue--footer;
+          color: white;
+        }
+      }
+
+      //&.active a {
+      //  background: $blue--footer;
+      //  color: white;
+      //}
+    }
+  }
+
+  @include breakpoint($up-sm) {
+    display: block;
+  }
+}

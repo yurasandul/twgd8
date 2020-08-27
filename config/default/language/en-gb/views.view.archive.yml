@@ -4,7 +4,5 @@ display:
       exposed_form:
         options:
           reset_button_label: Reset
-  block_1:
-    display_title: Block
   page_1:
     display_title: Page

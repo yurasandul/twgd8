@@ -1,3 +1,5 @@
+label: Watchdog
+description: 'Mesaje recente din jurnal'
 display:
   default:
     display_title: Expert
@@ -19,11 +21,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Pictogramă
+        severity:
+          label: Gravitate
         type:
           label: Tip
         timestamp:
           label: Data
+        message:
+          label: Mesaj
         name:
+          label: Utilizator
           separator: ', '
         link:
           label: Operaţii
@@ -31,5 +40,13 @@ display:
         type:
           expose:
             label: Tip
+        severity:
+          expose:
+            label: Gravitate
+      title: 'Mesaje recente din jurnal'
+      empty:
+        area:
+          admin_label: 'Nu este disponibil niciun mesaj log.'
+          content: 'Nu este disponibil niciun mesaj log.'
   page:
     display_title: Pagina

@@ -1,9 +1,12 @@
+label: Archivo
 display:
   default:
     display_title: Máster
     display_options:
+      title: 'Archivo mensual'
       exposed_form:
         options:
+          submit_button: Aplicar
           reset_button_label: Restablecer
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Bloque
   page_1:
     display_title: Página

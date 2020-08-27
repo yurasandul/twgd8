@@ -12,6 +12,7 @@ dependencies:
     - field.field.block_content.bottom_block.field_text_color
     - field.field.block_content.bottom_block.field_text_display_position
     - field.field.block_content.bottom_block.field_title
+    - image.style.block_background
   module:
     - image
     - options
@@ -22,38 +23,38 @@ bundle: bottom_block
 mode: default
 content:
   field_background:
-    weight: 5
-    label: above
+    weight: 3
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_block_link:
-    weight: 7
-    label: above
+    weight: 5
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_bottom_block_body:
-    weight: 3
-    label: above
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_image:
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      image_style: ''
+      image_style: block_background
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_open_new_window:
-    weight: 8
+    weight: 6
     label: above
     settings:
       format: default
@@ -63,26 +64,34 @@ content:
     type: boolean
     region: content
   field_text_color:
-    weight: 6
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_text_display_position:
-    weight: 4
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title:
-    weight: 2
-    label: above
+    weight: 0
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  langcode: true
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+hidden: {  }

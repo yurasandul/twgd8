@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block
+    - block_content
     - node
 id: node.field_blocks
 field_name: field_blocks
 entity_type: node
 type: entity_reference
 settings:
-  target_type: block
+  target_type: block_content
 module: core
 locked: false
 cardinality: 2

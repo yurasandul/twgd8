@@ -1,3 +1,4 @@
+label: Dateien
 display:
   default:
     display_title: Master
@@ -11,6 +12,9 @@ display:
           sort_desc_label: Absteigend
       pager:
         options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
@@ -23,18 +27,54 @@ display:
           label: MIME-Typ
         filesize:
           label: Größe
+        status:
+          label: Status
+          settings:
+            format_custom_false: Temporär
+            format_custom_true: Dauerhaft
+        created:
+          label: Upload-Datum
+        changed:
+          label: Änderungsdatum
+        count:
+          label: 'Verwendet in'
+          format_plural_string: !!binary MSBTdGVsbGUDQGNvdW50IFN0ZWxsZW4=
       filters:
+        filename:
+          expose:
+            label: Dateiname
         filemime:
           expose:
             label: MIME-Typ
+        status:
+          expose:
+            label: Status
+      title: Dateien
+      empty:
+        area_text_custom:
+          content: 'Keine Dateien verfügbar'
+  page_1:
+    display_options:
+      menu:
+        title: Dateien
   page_2:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+      fields:
+        entity_label:
+          label: Entität
+        type:
+          label: Entitätstyp
+        count:
+          label: 'Anzahl der Verwendung'
       arguments:
         fid:
           exception:

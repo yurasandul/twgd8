@@ -11,6 +11,11 @@ display:
           sort_desc_label: Malejąco
       pager:
         options:
+          tags:
+            previous: '‹ Poprzednia'
+            next: 'Następna ›'
+            first: '« Pierwsza'
+            last: 'Ostatnia »'
           expose:
             items_per_page_label: 'Elementów na stronę'
             items_per_page_options_all_label: '- Wszystko -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: Uaktualniono
           separator: ', '
         operations:
           label: Operacje

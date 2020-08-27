@@ -11,6 +11,11 @@ display:
           sort_desc_label: Disc
       pager:
         options:
+          tags:
+            previous: '‹ Precedente'
+            next: 'Seguente ›'
+            first: '« Prima'
+            last: 'Ultima »'
           expose:
             items_per_page_label: 'Voci per pagina'
             items_per_page_options_all_label: '- Tutto -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: Aggiornato
           separator: ', '
         operations:
           label: Operazioni

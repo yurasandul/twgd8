@@ -11,6 +11,11 @@ display:
           sort_desc_label: Aflopend
       pager:
         options:
+          tags:
+            previous: '‹ Vorige'
+            next: 'Volgende ›'
+            first: '« Eerste'
+            last: 'Laatste »'
           expose:
             items_per_page_label: 'Items per pagina'
             items_per_page_options_all_label: '- Alle -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: Bijgewerkt
           separator: ', '
         operations:
           label: Bewerkingen

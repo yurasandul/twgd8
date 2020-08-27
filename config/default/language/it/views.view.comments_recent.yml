@@ -1,3 +1,13 @@
+label: 'Commenti recenti'
 display:
   default:
     display_title: Principale
+    display_options:
+      title: 'Commenti recenti'
+      empty:
+        area_text_custom:
+          content: 'Nessun commento disponibile.'
+  block_1:
+    display_title: Blocco
+    display_options:
+      block_description: 'Commenti recenti'

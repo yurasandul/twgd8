@@ -1,14 +1,22 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
       fields:
         type:
           label: Type
         timestamp:
           label: Date
+        name:
+          label: User
         link:
           label: Operations
       filters:
         type:
           expose:
             label: Type
+  page:
+    display_title: Page

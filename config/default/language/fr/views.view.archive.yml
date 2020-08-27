@@ -1,9 +1,12 @@
+label: Archiver
 display:
   default:
     display_title: Maître
     display_options:
+      title: 'Archive mensuelle'
       exposed_form:
         options:
+          submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Bloc
   page_1:
     display_title: Page

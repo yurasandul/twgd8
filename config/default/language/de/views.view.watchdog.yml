@@ -1,3 +1,5 @@
+label: Systemprotokoll
+description: 'Aktuelle Protokollnachrichten'
 display:
   default:
     display_title: Master
@@ -19,11 +21,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Symbol
+        severity:
+          label: Schweregrad
         type:
           label: Typ
         timestamp:
           label: Datum
+        message:
+          label: Nachricht
         name:
+          label: Benutzer
           separator: ', '
         link:
           label: Aktionen
@@ -31,5 +40,13 @@ display:
         type:
           expose:
             label: Typ
+        severity:
+          expose:
+            label: Schweregrad
+      title: 'Aktuelle Protokollnachrichten'
+      empty:
+        area:
+          admin_label: 'Keine Protokollnachrichten verfügbar.'
+          content: 'Keine Protokollnachrichten verfügbar.'
   page:
     display_title: Seite

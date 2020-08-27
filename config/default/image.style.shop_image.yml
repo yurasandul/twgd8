@@ -1,0 +1,15 @@
+uuid: b8d9156a-ffc9-4b0a-a5f6-d5bb4ea678e4
+langcode: en
+status: true
+dependencies: {  }
+name: shop_image
+label: 'Shop image'
+effects:
+  3a8126e6-a5fe-4962-b884-fa1643c54e88:
+    uuid: 3a8126e6-a5fe-4962-b884-fa1643c54e88
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 147
+      height: 147
+      anchor: center-center

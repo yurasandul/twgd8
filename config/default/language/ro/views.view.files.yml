@@ -1,3 +1,4 @@
+label: Fişiere
 display:
   default:
     display_title: Expert
@@ -11,6 +12,9 @@ display:
           sort_desc_label: Desc
       pager:
         options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Următor ›'
           expose:
             items_per_page_label: 'Elemente pe pagină'
             items_per_page_options_all_label: '- Toate -'
@@ -23,18 +27,56 @@ display:
           label: 'Tip MIME'
         filesize:
           label: Mărime
+        status:
+          label: Stare
+          settings:
+            format_custom_false: Temporar
+            format_custom_true: Permanent
+        created:
+          label: 'Data încărcării'
+        changed:
+          label: 'Data modificării'
+        count:
+          label: 'Utilizat în'
+          format_plural_string: !!binary MSBsb2MDQGNvdW50IGxvY3VyaQM=
       filters:
+        filename:
+          expose:
+            label: 'Nume fişier'
         filemime:
           expose:
             label: 'Tip MIME'
+        status:
+          expose:
+            label: Stare
+      title: Fişiere
+      empty:
+        area_text_custom:
+          content: 'Nu sunt fișiere disponibile.'
+  page_1:
+    display_options:
+      menu:
+        title: Fişiere
   page_2:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Următor ›'
           expose:
             items_per_page_label: 'Elemente pe pagină'
             items_per_page_options_all_label: '- Toate -'
             offset_label: Decalaj
+      fields:
+        entity_label:
+          label: Entitate
+        type:
+          label: 'Tip de entitate'
+        module:
+          label: 'Înregistrare modul'
+        count:
+          label: 'Număr de utilizări'
       arguments:
         fid:
           exception:

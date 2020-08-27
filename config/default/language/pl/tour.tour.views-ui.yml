@@ -1,0 +1,7 @@
+tips:
+  views-ui-format:
+    label: 'Format wyjściowy'
+  views-ui-fields:
+    label: Pola
+  views-ui-preview:
+    label: Podgląd

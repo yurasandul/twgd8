@@ -19,11 +19,16 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Ícone
         type:
           label: Tipo
         timestamp:
           label: Data
+        message:
+          label: Mensagem
         name:
+          label: Utilizador
           separator: ', '
         link:
           label: Operações
@@ -31,5 +36,9 @@ display:
         type:
           expose:
             label: Tipo
+      empty:
+        area:
+          admin_label: 'Não há mensagens no registo.'
+          content: 'Não há mensagens no registo.'
   page:
     display_title: Página

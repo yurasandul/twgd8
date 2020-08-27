@@ -1,0 +1,123 @@
+.optionset-field-slideshow {
+
+	background: $blue--slideshow;
+	position: relative;
+	margin-bottom: $base-bottom-margin;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding-top: 11px;
+
+	.flex-control-paging {
+		height: 7px;
+		display: inline-block;
+//		float: right;
+		margin: 10px 10px 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+
+    li {
+      margin: 0;
+    }
+
+		a {
+			display: inline-block;
+			width: 7px;
+			height: 7px;
+			background: $slideshow-pager;
+			margin-left: 1px;
+      border-radius: 0;
+      //overflow: hidden;
+      text-indent: 9999px;
+
+			&.flex-active {
+				background: $slideshow-pager--active;
+			}
+		}
+	}
+
+  .flex-direction-nav {
+
+    position: absolute;
+    bottom: 42%;
+    z-index: 9;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      &.flex-nav-next {
+        float: right;
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-indent: -9999em;
+      background: $slideshow-control-bg;
+
+      width: 40px;
+      height: 40px;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 9px;
+      }
+
+      &.flex-prev {
+      	&:after {
+      		@include icons-sprite-arrow-left-dark;
+      		left: 12px;
+      	}
+      	&:hover:after {
+      		@include icons-sprite-arrow-left-white;
+      	}
+      }
+
+      &.flex-next {
+      	float: right;
+        text-indent: 9999em;
+      	&:after {
+      		@include icons-sprite-arrow-right-dark;
+      		left: 15px;
+      	}
+      	&:hover:after {
+      		@include icons-sprite-arrow-right-white;
+      	}
+      }
+
+      &:hover {
+        background: $slideshow-control-bg--active;
+      }
+    }
+  }
+
+
+
+
+
+  .field-slideshow-caption {
+		@extend %font-helvetica-neue-77;
+		@extend %heading-large;
+		color: $slideshow-caption;
+		padding:  ($mobile-gutter + 10) $mobile-gutter;
+	}
+
+	.field-slideshow-slide {
+		img {
+			width: 100%;
+		}
+	}
+
+	.field-slideshow-description {
+		padding: $mobile-gutter;
+		color: $slideshow-caption;
+	}
+
+}

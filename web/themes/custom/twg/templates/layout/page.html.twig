@@ -1,4 +1,4 @@
-<div {{ attributes.setAttribute('id', 'pg__c') }}>
+<div {{ attributes.setAttribute('id', 'page') }}>
 
   <!-- ______________________ HEADER _______________________ -->
   <header id="header">
@@ -11,6 +11,8 @@
     </div>
   </header>
   <!-- /header -->
+
+  <div id="header-placeholder"></div>
 
   <!-- ______________________ Pre content _______________________ -->
   {% if page.pre_content %}
@@ -34,6 +36,10 @@
       <!-- /sidebar-first -->
 
       <section id="content">
+
+        {% if page.front_top %}
+          <div class="front-top">{{ page.front_top }}</div>
+        {% endif %}
 
         {% if breadcrumb or title or messages or tabs or action_links %}
           <div id="content-header">
@@ -97,6 +103,26 @@
     </div>
   {% endif %}
 
+  <!-- ______________________ BOTTOM BLOCKS _______________________ -->
+
+  {% if page.bottom_blocks %}
+    <div id="bottom-blocks">
+      <div class="cog--mq mq-bottom-blocks">
+        {{ page.bottom_blocks }}
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- ______________________ FOOTER MENU _______________________ -->
+
+  {% if page.footer_menu %}
+    <div id="footer-menu">
+      <div class="cog--mq mq-footer-menu">
+        {{ page.footer_menu }}
+      </div>
+    </div>
+  {% endif %}
+
   <!-- ______________________ FOOTER _______________________ -->
 
   {% if page.footer %}
@@ -105,7 +131,6 @@
         {{ page.footer }}
       </div>
     </footer>
-    <!-- /footer -->
   {% endif %}
 
 </div>

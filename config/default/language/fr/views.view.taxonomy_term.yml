@@ -1,9 +1,11 @@
+label: 'Terme de taxonomie'
 display:
   default:
     display_title: Maître
     display_options:
       exposed_form:
         options:
+          submit_button: Appliquer
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           sort_asc_label: Asc
@@ -21,5 +23,7 @@ display:
         tid:
           exception:
             title: Tout
+  feed_1:
+    display_title: Flux
   page_1:
     display_title: Page

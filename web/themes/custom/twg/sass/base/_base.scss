@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: $body_font;
   font-size: 1em;
@@ -16,43 +20,36 @@ body {
 // Markup: headlines.twig
 //
 // Style guide: base.headlines
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $heading;
-  font-weight: 500;
-  font-family: $heading_font;
-  padding: 0 0 0.3em;
-  margin: 0;
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
 }
 
 h1 {
-  font-size: 250%;
-  line-height: 165%;
+  @extend %font-helvetica-neue-57;
+  font-size: 30px;
+  line-height: 36px;
+  color: $large-header-color;
+
+  @include breakpoint($large) {
+    font-size: 38px;
+    line-height: 44px;
+  }
 }
 
 h2 {
-  font-size: 210%;
-  line-height: 145%;
+  @extend %font-ubuntu;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: $large-header-color;
 }
 
 h3 {
-  font-size: 180%;
-  line-height: 145%;
-}
-
-h4 {
-  font-size: 170%;
-  line-height: 145%;
-}
-
-h5,
-h6 {
-  font-size: 140%;
-  line-height: 145%;
+  @extend %font-ubuntu;
+  color: $blue-darkest;
+  margin-bottom: 0;
 }
 
 body .menu-item {
@@ -64,29 +61,51 @@ body .menu-item {
 // Markup: text.twig
 //
 // Style guide: base.text
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-  color: $link;
-  cursor: inherit;
+//a,
+//a:link,
+//a:visited {
+//  text-decoration: none;
+//  color: $link;
+//  cursor: pointer;
+//
+//  &:hover {
+//    //color: $dark-gray;
+//    text-decoration: underline;
+//  }
+//}
 
-  &:hover {
-    color: $dark-gray;
-    text-decoration: underline;
+a {
+  color: $blue-darkest;
+  text-decoration: underline;
+
+  &[name] {
+    display: inline;
+    padding-top: 70px;
   }
 }
 
-body p {
-  margin: 3px 0 10px;
+
+body {
+  background: url("../images/clouds-home.jpg?1508422021") no-repeat bottom;
 }
+
+p {
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: $base-bottom-margin;
+  color: $main-text-color;
+}
+
 
 // Responsive Images
 img,
 svg {
   max-width: 100%;
   height: auto;
+  width: auto;
+  display: block;
 }
+
 
 // Blockquote & Pre
 //
@@ -101,6 +120,7 @@ blockquote {
   &:last-child {
     margin-bottom: 0;
   }
+  margin: 0;
 }
 
 pre {
@@ -121,43 +141,56 @@ pre {
 //
 // Style guide: base.lists
 
-// OL items
-ol {
-  padding: 0 0 0 10px;
-  margin: 0 0 10px;
+//// OL items
+//ol {
+//  padding: 0 0 0 10px;
+//  margin: 0 0 10px;
+//
+//  li {
+//    margin: 4px 0;
+//    padding: 0;
+//  }
+//}
+//
+//ol ol {
+//  padding: 0 0 0 22.5px;
+//}
+//
+//ol ol ol {
+//  padding: 0 0 0 22.5px;
+//}
+//
+//// UL items
+//ul {
+//  padding: 0;
+//  margin: 0;
+//
+//  li {
+//    margin: 4px 0;
+//    padding: 0;
+//  }
+//}
+//
+//ul ul {
+//  padding: 0 0 0 22.5px;
+//}
+//
+//ul ul ul {
+//  padding: 0 0 0 22.5px;
+//}
+//
+//figure {
+//  margin: 0;
+//}
 
-  li {
-    margin: 4px 0;
-    padding: 0;
-  }
+menu, ol, ul {
+  padding: 0 0 0 30px;
+}
+dl, menu, ol, ul {
+  margin: 1.5em 0;
 }
 
-ol ol {
-  padding: 0 0 0 22.5px;
-}
 
-ol ol ol {
-  padding: 0 0 0 22.5px;
-}
-
-// UL items
-ul {
-  padding: 0 0 0 10px;
-  margin: 0 0 10px;
-
-  li {
-    margin: 4px 0;
-    padding: 0;
-  }
-}
-
-ul ul {
-  padding: 0 0 0 22.5px;
-}
-
-ul ul ul {
-  padding: 0 0 0 22.5px;
-}
 // Tables
 //
 // Markup: table.twig
@@ -192,5 +225,29 @@ table {
     background-color: $off-white;
     border-top: 1px solid $off-white;
     border-bottom: 1px solid $off-white;
+  }
+}
+
+// Define paddings for pages:
+// A gutter between the content area and the sidebar
+// Should not exist on the homepage, and more
+.not-front #content {
+  padding: 0 $mobile-content-gutter;
+
+  .content-text {
+    // This creates an intentional double padding (including the one on #content)
+    padding: 0 $mobile-content-gutter;
+  }
+
+  @include breakpoint($large) {
+    padding: 0 (1.5 * $desktop-gutter);
+
+    .content-text {
+      padding: 0;
+    }
+  }
+
+  @include breakpoint($large) {
+    padding: 0 (2 * $desktop-gutter) 0 $desktop-gutter;
   }
 }

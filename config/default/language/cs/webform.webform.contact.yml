@@ -1,0 +1,4 @@
+title: Kontakt
+settings:
+  confirmation_message: 'Vaše zpráva byla odeslána.'
+elements: "name:\n  '#title': Jméno\n  '#placeholder': 'Tvoje jméno a příjmení'\nemail:\n  '#placeholder': 'Tvoje e-mailová adresa'\nmessage:\n  '#title': Zpráva\n  '#placeholder': 'Napiš, co byste nám chtěl/a sdělit. Please send us your message in English.'\nactions:\n  '#submit__label': Odeslat\n"

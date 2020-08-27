@@ -1,0 +1,25 @@
+uuid: 08b659ff-7198-4a0d-a12d-410519d85953
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:simple_block:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
+  module:
+    - block_content
+  theme:
+    - twg
+id: all_tweets_helper
+theme: twg
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
+settings:
+  id: 'block_content:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
+  label: 'All tweets helper'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

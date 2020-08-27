@@ -1,0 +1,214 @@
+#bottom-blocks {
+  @extend .clearfix;
+}
+
+.region-bottom-blocks {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($up-sm) {
+    flex-direction: row;
+  }
+  > div {
+    width: 100%;
+    overflow: hidden;
+    @extend .clearfix;
+
+    @include breakpoint($up-sm) {
+      width: 33.33%;
+    }
+
+  }
+  .block {
+    h2.block-title {
+      display: none;
+    }
+  }
+}
+
+.block--type--bottom-block {
+  $bottom-block-height: 240px;
+  font-family: $helvetica_cn;
+
+  &.bg-transparent {
+    background-color: transparent;
+  }
+
+  &.bg-white {
+    background-color: $white;
+  }
+
+  &.bg-light-blue {
+    background-color: $blue-light;
+  }
+
+  &.bg-dark-purple {
+    background-color: $purple-dark;
+  }
+
+  &.bg-blue-purple {
+    background-color: $blue-purple;
+  }
+
+  &.bg-purple {
+    background-color: $purple;
+  }
+
+  &.bg-blue-slogan {
+    background-color: $blue--slogan;
+  }
+
+  &.bg-baby-blue {
+    background-color: $baby-blue;
+  }
+
+  &.bg-light-purple {
+    background-color: $light-purple;
+  }
+
+  &.bg-super-light-purple {
+    background-color: $super-light-purple;
+  }
+
+  &.font-purple {
+    color: $purple-dark;
+  }
+
+  &.font-black {
+    color: black;
+  }
+
+  &.font-white {
+    color: $white;
+  }
+
+  &.font-blue {
+    color: $blue-darkest;
+  }
+
+  &.contains-image {
+    padding: 0;
+    .text-content {
+      padding: (2 * $mobile-gutter) $mobile-gutter;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+
+      // Different markup when text display mode is set differently
+      &.bottom .field--name-field-bottom-block-body {
+        display: block;
+        background: $bottom-block--caption;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 4px $mobile-gutter;
+        max-height: 50px;
+        width: 100%;
+
+        p, h2, h3 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-family: $HelveticaNeueW02-57Cn;
+    font-size: 26px;
+    line-height: 32px;
+    color: inherit;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-family: $roboto;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoint($up-sm) {
+    &.contains-image {
+      height: $bottom-block-height;
+    }
+    .field--name-field-image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 1;
+
+      img {
+        width: 342px;
+        position: relative;
+        left: -50%;
+        max-width: none;
+      }
+    }
+  }
+
+  @include breakpoint($large) {
+    padding: (2 * $desktop-gutter) $desktop-gutter;
+    &.contains-image {
+      height: $bottom-block-height;
+
+      .text-content {
+        padding: (2 * $desktop-gutter) $desktop-gutter;
+
+        &.bottom .field-name-field-bottom-block-body {
+          padding: 4px $desktop-gutter;
+        }
+      }
+    }
+
+    .field--name-field-image {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: 1;
+
+      img {
+        width: 342px;
+        position: relative;
+        left: -50%;
+        max-width: none;
+      }
+    }
+  }
+
+}
+
+.block--type--basic {
+  iframe {
+    position: relative;
+    width: 100%;
+
+    @include breakpoint($up-sm) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }
+}
+
+#block-download-app {
+  .field--name-field-bottom-block-body {
+    p {
+      font-size: 15px;
+    }
+  }
+}

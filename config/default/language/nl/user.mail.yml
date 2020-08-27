@@ -1,0 +1,2 @@
+register_admin_created:
+  subject: 'Er is een account voor u aangemaakt voor [site:name]'

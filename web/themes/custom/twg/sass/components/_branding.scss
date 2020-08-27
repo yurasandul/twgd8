@@ -1,18 +1,30 @@
-.region-branding {
-  .block-system-menublock ul.menu {
-    @extend .no-ul-list;
-  }
-}
+#block-twg-branding {
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  display: inline-block;
+  z-index: 1;
 
-.site-branding-text {
-  padding: 30px 10px 10px;
-  font-size: 135%;
-}
-// logo values
-div.site-branding a.logo {
-  width: 105px;
-  display: block;
-  padding: 5px 5px 0;
-  float: left;
-  margin-bottom: 5px;
+  @include breakpoint($up-sm) {
+    top: 18px;
+    left: 34px;
+  }
+
+  @include breakpoint($large) {
+    left: 45px;
+  }
+  a {
+    display: inline-block;
+  }
+  img {
+    width: 64px;
+
+    @include breakpoint($up-sm) {
+      width: 106px;
+    }
+
+    @include breakpoint($large) {
+      width: 130px;
+    }
+  }
 }

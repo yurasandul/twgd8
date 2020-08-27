@@ -14,7 +14,7 @@ display:
         options:
           tags:
             previous: '‹ předchozí'
-            next: další
+            next: 'následující ›'
             first: '« první'
             last: 'poslední »'
           expose:
@@ -51,9 +51,6 @@ display:
                 title: '305 Use Proxy'
               7:
                 title: '307 Temporary Redirect'
-        language:
-          expose:
-            label: 'Původní jazyk'
       title: Redirect
   page_1:
     display_title: Stránka

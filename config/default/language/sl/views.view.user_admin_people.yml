@@ -6,9 +6,28 @@ display:
           submit_button: Filter
           reset_button_label: Ponastavi
       fields:
+        name:
+          label: 'Uporabniško ime'
+        status:
+          label: Stanje
+          settings:
+            format_custom_true: Aktiven
         roles_target_id:
           label: Vloge
         operations:
           label: Operacije
+      filters:
+        status:
+          group_info:
+            label: Stanje
+            group_items:
+              1:
+                title: Aktiven
+        permission:
+          expose:
+            label: Dovoljenje
   page_1:
     display_title: Stran
+    display_options:
+      menu:
+        title: Seznam

@@ -1,0 +1,131 @@
+.live-page-search--form {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+		position: relative;
+
+		&:after {
+			@include icons-sprite-search;
+			content: '';
+			display: block;
+			position: absolute;
+			right: 9px;
+			top: 6px;
+		}
+	}
+
+	.live-page-input {
+		border: $search-border 1px solid;
+		padding: 5px 30px 5px 10px;
+		width: 100%;
+		background: $search-bg;
+
+		&:focus {
+			border-color: $search-border--active;
+			outline: none;
+		}
+	}
+
+	&.turns-sticky.sticky {
+		padding: 1px 8px 5px 8px;
+		background: white;
+	}
+
+	@include breakpoint($large) {
+		&.sticky {
+			padding-right: (8px + 23px);
+		}
+	}
+}
+
+.view-twg-all-tweets {
+	margin-bottom: $base-bottom-margin;
+
+	h3 {
+		@extend %font-helvetica-neue-57;
+		font-weight: bold;
+		font-size: 26px;
+		line-height: 44px;
+		color: black;
+		margin-top: $base-bottom-margin;
+
+		a.book-link {
+			color: $blue;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 16px;
+			float: right;
+			margin-top: 18px;
+			text-decoration: none;
+		}
+	}
+
+	.live-page-search {
+		a {
+			@extend %font-ubuntu;
+			text-decoration: none;
+			color: $blue;
+
+			.h {
+				color: $blue-darkest;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.all-tweets-search {
+	background: $blue-light;
+	padding: 20px;
+	color: $grey-darker;
+
+	.all-tweets-search--header {
+		@extend %font-helvetica-neue-57;
+		font-size: 26px;
+		line-height: 30px;
+		margin-bottom: $base-bottom-margin;
+	}
+	form {
+    @extend .clearfix;
+	}
+
+	.form-search {
+		@extend .content-search-input;
+	}
+
+	.form-submit {
+		@extend .content-search-submit;
+	}
+}
+
+// Own stuff
+.content-search-input,
+.content-search-submit {
+  float: left;
+  border: $search-border 1px solid;
+  height: 40px;
+}
+
+.content-search-input {
+  width: 80%;
+  background: white;
+  border-right: none;
+  padding: 0 10px;
+
+  &:focus {
+    border-color: $search-border--active;
+    outline: none;
+  }
+}
+.content-search-submit {
+  @extend %font-ubuntu;
+  width: 20%;
+  border-left: none;
+  background: $blue-darkest;
+  color: white;
+
+  &:hover {
+    background: $blue--footer;
+  }
+}

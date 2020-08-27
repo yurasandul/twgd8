@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicar
           reset_button_label: Reiniciar
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
@@ -11,3 +12,4 @@ display:
       fields:
         changed:
           separator: ', '
+      use_more_text: Mais

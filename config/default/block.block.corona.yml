@@ -1,0 +1,31 @@
+uuid: b89f90d8-cdf3-4769-9dbc-a7e3f2c161f3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:simple_block:b87a3348-b771-49fd-8060-c794a55b3cee'
+  module:
+    - block_content
+    - system
+  theme:
+    - twg
+id: corona
+theme: twg
+region: content
+weight: -11
+provider: null
+plugin: 'block_content:b87a3348-b771-49fd-8060-c794a55b3cee'
+settings:
+  id: 'block_content:b87a3348-b771-49fd-8060-c794a55b3cee'
+  label: Corona
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

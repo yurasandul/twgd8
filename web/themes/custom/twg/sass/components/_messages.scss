@@ -3,8 +3,6 @@
   margin: 15px 0;
   border: 1px solid white;
 
-  @include borderradius();
-
   @extend .tmp-shadow;
 
   ol {

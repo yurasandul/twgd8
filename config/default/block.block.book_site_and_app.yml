@@ -1,0 +1,25 @@
+uuid: 3760ee04-2b7b-4672-803a-307ebc3183b2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bottom_block:aa7a12ba-04cf-469e-9884-429c18b3814d'
+  module:
+    - block_content
+  theme:
+    - twg
+id: book_site_and_app
+theme: twg
+region: bottom_blocks
+weight: 0
+provider: null
+plugin: 'block_content:aa7a12ba-04cf-469e-9884-429c18b3814d'
+settings:
+  id: 'block_content:aa7a12ba-04cf-469e-9884-429c18b3814d'
+  label: 'Book, site and app'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

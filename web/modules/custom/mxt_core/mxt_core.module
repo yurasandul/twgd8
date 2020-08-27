@@ -103,3 +103,17 @@ function mxt_core_set_next_version_number($key){
   $new_version = number_format($version + JSON_DATA_INCREMENT_VERSION, 1);
   \Drupal::state()->set($key, $new_version);
 }
+
+/**
+ * Implements hook_theme().
+ */
+function mxt_core_theme() {
+  return [
+    'frontpage_top_blocks' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

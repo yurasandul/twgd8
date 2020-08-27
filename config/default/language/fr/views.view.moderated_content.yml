@@ -11,6 +11,11 @@ display:
           sort_desc_label: Desc
       pager:
         options:
+          tags:
+            previous: '‹ Précédent'
+            next: 'Suivant ›'
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
             items_per_page_label: 'Éléments par page'
             items_per_page_options_all_label: '- Tout -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: 'Mis à jour'
           separator: ', '
         operations:
           label: Actions

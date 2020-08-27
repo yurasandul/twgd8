@@ -1,9 +1,11 @@
+label: Komentarze
 display:
   default:
     display_title: Główny
     display_options:
       exposed_form:
         options:
+          submit_button: Zastosuj
           reset_button_label: Resetuj
           exposed_sorts_label: 'Sortuj po'
           sort_asc_label: Rosnąco
@@ -20,7 +22,10 @@ display:
             items_per_page_options_all_label: '- Wszystko -'
             offset_label: Przesunięcie
       fields:
+        comment_bulk_form:
+          action_title: Akcja
         subject:
+          label: Tytuł
           separator: ', '
         uid:
           separator: ', '
@@ -28,25 +33,49 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Odpowiedź do'
           separator: ', '
         changed:
+          label: Uaktualniono
           separator: ', '
         operations:
           label: Operacje
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Tytuł
         langcode:
           expose:
             label: Język
-  page_unapproved:
+      title: Komentarze
+      empty:
+        area_text_custom:
+          content: 'Brak dostępnych komentarzy.'
+      use_more_text: więcej
+  page_published:
+    display_title: 'Opublikowane komentarze'
     display_options:
+      menu:
+        title: Komentarze
+  page_unapproved:
+    display_title: 'Niezatwierdzone komentarze'
+    display_options:
+      menu:
+        title: 'Niezatwierdzone komentarze'
       filters:
+        subject:
+          expose:
+            label: Tytuł
         langcode:
           expose:
             label: Język
       fields:
+        comment_bulk_form:
+          action_title: Akcja
         subject:
+          label: Tytuł
           separator: ', '
         uid:
           separator: ', '
@@ -54,8 +83,10 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Odpowiedź do'
           separator: ', '
         changed:
+          label: Uaktualniono
           separator: ', '
         operations:
           label: Operacje

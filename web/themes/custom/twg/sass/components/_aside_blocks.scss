@@ -6,12 +6,16 @@
 //
 // Style guide: components.block
 aside .block {
-  @extend .blocked-style;
-
-  margin-bottom: 25px;
-
-  h2 {
-    font-size: 175%;
-    color: $dark-gray;
+  //@extend .blocked-style;
+  &.block--type--order-block,
+  &.block--type--bottom-block {
+    padding: 32px;
+    &.no-image {
+      height: auto;
+    }
   }
+  //h2 {
+  //  font-size: 175%;
+  //  color: $dark-gray;
+  //}
 }

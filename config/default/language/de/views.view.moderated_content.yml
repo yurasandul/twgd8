@@ -11,6 +11,11 @@ display:
           sort_desc_label: Absteigend
       pager:
         options:
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
+            first: '« Anfang'
+            last: 'Ende »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen

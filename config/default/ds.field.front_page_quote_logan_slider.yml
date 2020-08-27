@@ -1,0 +1,11 @@
+id: front_page_quote_logan_slider
+label: 'Front page quote logan slider'
+ui_limit: 'frontpage|*'
+properties:
+  block: 'views_block:twg_content_sliders-frontpage_slogan'
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

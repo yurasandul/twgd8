@@ -25,7 +25,6 @@ body {
 }
 
 form .form-item {
-  padding: 0 0 7px;
 
   &.form-type-textarea {
     padding-bottom: 0;
@@ -67,4 +66,14 @@ form details.js-form-wrapper {
 .js[dir="rtl"] input.form-autocomplete.ui-autocomplete-loading {
   background-position: 0% center;
   background-repeat: no-repeat;
+}
+
+.block {
+  position: relative;
+}
+
+.block-local-tasks-block {
+  .contextual {
+    display: none;
+  }
 }

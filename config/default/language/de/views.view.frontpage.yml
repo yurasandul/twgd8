@@ -1,8 +1,10 @@
+label: Startseite
 display:
   default:
     display_options:
       exposed_form:
         options:
+          submit_button: Anwenden
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -13,6 +15,13 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+          tags:
+            previous: '‹ Vorherige Seite'
+            next: 'Nächste Seite ›'
+            first: '« Anfang'
+            last: 'Ende »'
     display_title: Master
+  feed_1:
+    display_title: Newsfeed
   page_1:
     display_title: Seite

@@ -1,3 +1,5 @@
+label: Stróż
+description: 'Ostatnie wpisy dziennika'
 display:
   default:
     display_title: Główny
@@ -19,11 +21,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Ikona
+        severity:
+          label: Priorytet
         type:
           label: Typ
         timestamp:
           label: Data
+        message:
+          label: Wiadomość
         name:
+          label: Użytkownik
           separator: ', '
         link:
           label: Operacje
@@ -31,5 +40,13 @@ display:
         type:
           expose:
             label: Typ
+        severity:
+          expose:
+            label: Priorytet
+      title: 'Ostatnie wpisy dziennika'
+      empty:
+        area:
+          admin_label: 'Brak wiadomości w dzienniku.'
+          content: 'Brak wiadomości w dzienniku.'
   page:
     display_title: Strona

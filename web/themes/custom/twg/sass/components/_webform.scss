@@ -1,0 +1,43 @@
+.webform-client-form {
+  form {
+    @extend .clearfix;
+  }
+  label {
+    display: inline-block;
+    width: 120px;
+    margin-right: 0;
+    padding-right: 5px;
+  }
+  .form-text,
+  .form-textarea {
+    border: $search-border 1px solid;
+    background: $search-bg;
+    padding: 4px 10px;
+
+    &:focus {
+      border-color: $search-border--active;
+      outline: none;
+    }
+  }
+  .form-submit {
+    @extend .content-search-submit;
+    width: 150px;
+  }
+
+  @include breakpoint($up-sm) {
+    .form-submit {
+      margin-left: 125px;
+    }
+  }
+
+  .form-item-captcha-response {
+    label {
+      display: inline-block;
+      width: auto;
+    }
+    #edit-captcha-response {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+}

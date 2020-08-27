@@ -1,0 +1,7 @@
+uuid: ebbf51f1-38d9-4183-8706-066a46d2c099
+langcode: en
+status: false
+dependencies: {  }
+formId: node_prayers_form
+captchaType: default
+label: null

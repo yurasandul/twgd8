@@ -1,9 +1,12 @@
+label: Archivio
 display:
   default:
     display_title: Principale
     display_options:
+      title: 'Archivio mensile'
       exposed_form:
         options:
+          submit_button: Applica
           reset_button_label: Ripristina
           exposed_sorts_label: 'Ordina per'
           sort_asc_label: Asc
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Blocco
   page_1:
     display_title: Pagina

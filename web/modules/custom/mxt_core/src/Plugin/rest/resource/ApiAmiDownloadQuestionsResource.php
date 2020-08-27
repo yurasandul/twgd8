@@ -15,7 +15,7 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  *   id = "api_ami_download_questions_resource",
  *   label = @Translation("Api ami download questions resource"),
  *   uri_paths = {
- *     "canonical" = "/api/ami/v1/download/questions/{langcode}/{suffix}"
+ *     "canonical" = "/api/cmc/v1/download/questions/{langcode}/{suffix}"
  *   }
  * )
  */

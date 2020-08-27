@@ -14,3 +14,10 @@ global_styles:
   css:
     theme:
       css/styles.css: {}
+
+twg_main_js:
+  js:
+    js/twg.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

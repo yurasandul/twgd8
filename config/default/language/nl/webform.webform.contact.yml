@@ -1,0 +1,4 @@
+title: Contact
+settings:
+  confirmation_message: 'Uw bericht is verzonden.'
+elements: "name:\n  '#title': Naam\n  '#placeholder': 'Hoe heet je?'\nemail:\n  '#placeholder': 'Wat is je e-mailadres?'\nmessage:\n  '#title': Bericht\n  '#placeholder': 'We zijn benieuwd naar je bericht!'\nactions:\n  '#submit__label': Versturen\n"

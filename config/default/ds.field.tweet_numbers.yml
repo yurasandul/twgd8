@@ -1,0 +1,11 @@
+id: tweet_numbers
+label: 'Tweet numbers'
+ui_limit: 'frontpage|*'
+properties:
+  block: tweet_numbers_info
+  use_block_title: false
+  add_block_wrappers: false
+type: block
+type_label: 'Block field'
+entities:
+  node: node

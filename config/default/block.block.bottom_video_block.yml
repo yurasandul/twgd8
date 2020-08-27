@@ -1,0 +1,25 @@
+uuid: f0f7bd12-7b5f-484a-a860-7af0715a5e85
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:05f53275-8a85-4869-84db-b86586ab4dbe'
+  module:
+    - block_content
+  theme:
+    - twg
+id: bottom_video_block
+theme: twg
+region: bottom_blocks
+weight: 0
+provider: null
+plugin: 'block_content:05f53275-8a85-4869-84db-b86586ab4dbe'
+settings:
+  id: 'block_content:05f53275-8a85-4869-84db-b86586ab4dbe'
+  label: 'Bottom video block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

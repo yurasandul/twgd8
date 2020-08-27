@@ -1,3 +1,5 @@
+label: Surveillance
+description: 'Entrées récentes du journal'
 display:
   default:
     display_title: Maître
@@ -19,11 +21,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Icône
+        severity:
+          label: Importance
         type:
           label: Type
         timestamp:
           label: Date
+        message:
+          label: Message
         name:
+          label: Utilisateur
           separator: ', '
         link:
           label: Actions
@@ -31,5 +40,13 @@ display:
         type:
           expose:
             label: Type
+        severity:
+          expose:
+            label: Importance
+      title: 'Entrées récentes du journal'
+      empty:
+        area:
+          admin_label: 'Aucune entrée du journal n''est disponible.'
+          content: 'Aucune entrée du journal n''est disponible.'
   page:
     display_title: Page

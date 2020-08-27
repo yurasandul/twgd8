@@ -1,3 +1,13 @@
+label: 'Comentarios recientes'
 display:
   default:
     display_title: Máster
+    display_options:
+      title: 'Comentarios recientes'
+      empty:
+        area_text_custom:
+          content: 'No hay comentarios disponibles.'
+  block_1:
+    display_title: Bloque
+    display_options:
+      block_description: 'Comentarios recientes'

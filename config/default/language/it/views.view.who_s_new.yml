@@ -1,10 +1,18 @@
+label: 'Nuovi utenti'
 display:
   default:
     display_title: Principale
     display_options:
       exposed_form:
         options:
+          submit_button: Applica
           reset_button_label: Ripristina
           exposed_sorts_label: 'Ordina per'
           sort_asc_label: Asc
           sort_desc_label: Disc
+      title: 'Nuovi utenti'
+  block_1:
+    display_title: 'Nuovi utenti'
+    display_options:
+      block_description: 'Nuovi utenti'
+      block_category: Utente

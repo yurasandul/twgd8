@@ -1,0 +1,27 @@
+uuid: 86a88238-f4fc-4823-be77-bb5b86049f83
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - twg
+id: main_navigation_mobile
+theme: twg
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation mobile'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+  only_translated_labels: 0
+  only_translated_content: 0
+visibility: {  }

@@ -14,7 +14,7 @@ bundle: bottom_block
 label: 'Text display position'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: top

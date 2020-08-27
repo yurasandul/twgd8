@@ -12,7 +12,7 @@ bundle: order_block
 label: 'Show book 2'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0

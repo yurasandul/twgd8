@@ -1,0 +1,25 @@
+uuid: 70196034-f2a6-4133-a72e-65357068b5ea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:order_block:669116ef-2c07-4cbc-b5ef-d0820308be30'
+  module:
+    - block_content
+  theme:
+    - twg
+id: order_block
+theme: twg
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:669116ef-2c07-4cbc-b5ef-d0820308be30'
+settings:
+  id: 'block_content:669116ef-2c07-4cbc-b5ef-d0820308be30'
+  label: 'Order block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

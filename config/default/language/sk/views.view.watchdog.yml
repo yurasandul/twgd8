@@ -1,3 +1,5 @@
+label: Watchdog
+description: 'Nedávne záznamy logu'
 display:
   default:
     display_options:
@@ -18,11 +20,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Ikona
+        severity:
+          label: Závažnosť
         type:
           label: Typ
         timestamp:
           label: Dátum
+        message:
+          label: Správa
         name:
+          label: Používateľ
           separator: ', '
         link:
           label: Operácie
@@ -30,5 +39,13 @@ display:
         type:
           expose:
             label: Typ
+        severity:
+          expose:
+            label: Závažnosť
+      title: 'Nedávne záznamy logu'
+      empty:
+        area:
+          admin_label: 'Nie sú k dispozícii žiadne správy v zázname.'
+          content: 'Nie sú k dispozícii žiadne správy v zázname.'
   page:
     display_title: Stránka

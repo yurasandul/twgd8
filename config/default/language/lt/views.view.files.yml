@@ -30,6 +30,7 @@ display:
           label: 'Keitimo data'
         count:
           label: Naudojama
+          format_plural_string: !!binary QGNvdW50IHZpZXRhA0Bjb3VudCB2aWV0b3MD
       filters:
         filename:
           expose:

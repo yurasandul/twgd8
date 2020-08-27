@@ -1,3 +1,4 @@
+label: File
 display:
   default:
     display_title: Principale
@@ -11,6 +12,9 @@ display:
           sort_desc_label: Disc
       pager:
         options:
+          tags:
+            previous: '‹ Precedente'
+            next: 'Seguente ›'
           expose:
             items_per_page_label: 'Voci per pagina'
             items_per_page_options_all_label: '- Tutto -'
@@ -23,18 +27,54 @@ display:
           label: 'Tipo MIME'
         filesize:
           label: Dimensione
+        status:
+          label: Stato
+          settings:
+            format_custom_false: Temporaneo
+            format_custom_true: Permanente
+        created:
+          label: 'Data di caricamento'
+        changed:
+          label: 'Data di ultima modifica'
+        count:
+          label: 'Usato in'
+          format_plural_string: !!binary MSBsdW9nbwNAY291bnQgbHVvZ2hp
       filters:
+        filename:
+          expose:
+            label: 'Nome file'
         filemime:
           expose:
             label: 'Tipo MIME'
+        status:
+          expose:
+            label: Stato
+      title: File
+      empty:
+        area_text_custom:
+          content: 'Nessun file disponibile.'
+  page_1:
+    display_options:
+      menu:
+        title: File
   page_2:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Precedente'
+            next: 'Seguente ›'
           expose:
             items_per_page_label: 'Voci per pagina'
             items_per_page_options_all_label: '- Tutto -'
             offset_label: Scostamento
+      fields:
+        entity_label:
+          label: Entità
+        type:
+          label: 'Tipo di entità'
+        count:
+          label: 'Contatore di utilizzo'
       arguments:
         fid:
           exception:

@@ -11,6 +11,11 @@ display:
           sort_desc_label: Sestupně
       pager:
         options:
+          tags:
+            previous: '‹ Předchozí'
+            next: 'Další ›'
+            first: '« První'
+            last: 'Poslední »'
           expose:
             items_per_page_label: 'Položek na stránku'
             items_per_page_options_all_label: '- Vše -'
@@ -28,6 +33,7 @@ display:
         moderation_state:
           separator: ', '
         changed:
+          label: Aktualizováno
           separator: ', '
         operations:
           label: Operace

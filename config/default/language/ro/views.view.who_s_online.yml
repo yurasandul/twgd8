@@ -4,7 +4,18 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicare
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
           sort_desc_label: Desc
+      filters:
+        access:
+          expose:
+            label: 'Ultima accesare'
+            description: 'Un utilizator este considerat online pe această durată de timp după ultima accesare a unei pagini din sit.'
+      title: 'Cine e online'
+  who_s_online_block:
+    display_title: 'Cine e online'
+    display_options:
+      block_description: 'Cine e online'

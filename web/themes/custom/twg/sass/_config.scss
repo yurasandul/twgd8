@@ -3,6 +3,7 @@
 $white: #fff;
 $red: #ee696c;
 $yellow: #e8ed57;
+$blue: #009bd8;
 // b&w colors as placeholders
 $blk: #000;
 $dark-gray: lighten($blk, 20%);
@@ -11,20 +12,106 @@ $light-gray: lighten($blk, 70%);
 $lighter-gray: lighten($blk, 90%);
 $off-white: lighten($blk, 97%);
 
+// Colors
+$white: #ffffff;
+$red: #cd1719;
+$purple: #65447c;
+$purple-light: #704a8b;
+$purple-dark: #362783;
+$grey-dark: #666666;
+$grey-darker: #444444;
+
+// Extra block bg colors:
+$blue-purple: #232B8C;
+$baby-blue: #8FCBFF;
+$light-purple: #A68BCE;
+$super-light-purple: #E7E9FF;
+
+
+$blue-light: #d9effd;
+$blue: #31b2ea;
+$blue-darker: #0395cf;
+$blue-darkest: #009bd8;
+
+$blue--slogan: #3C9CDA;
+$blue--footer: #38bbf0;
+$blue--slideshow: #ecf7fe;
+$blue--menu: #0395cf;
+$blue--twitter: #e8f1f8;
+
+$menu-border-color: #cccccc;
+
+// Content
+$main-text-color: #111111;
+$large-header-color: #232323;
+$bottom-block--caption: rgba(255, 255, 255, 0.8);
+
+// Slideshow
+$slideshow-pager: #4a4a49;
+$slideshow-pager--active: $blue-darkest;
+$slideshow-caption: #4a4a49;
+$slideshow-control-bg: rgba(255, 255, 255, 0.8);
+$slideshow-control-bg--active: $blue--footer;
+
+// Search form
+$search-container-bg: rgba(255, 255, 255, 0.8);
+$search-border: #d8e0e2;
+$search-border--active: #44c0f9;
+$search-bg: #f6f8f9;
+
+
+
+
 // Utility color variables ///////////////
 $heading: $dark-gray;
 $link: $med-gray;
 
 // Fonts ///////////////
-$opensans: 'Open Sans';
-$poppins: 'Poppins';
-$heading_font: $opensans;
-$body_font: $poppins;
+$helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif;
+$helvetica_cn: 'Roboto Condensed', sans-serif;
+$georgia:  Georgia,"Times New Roman","DejaVu Serif",serif;
+
+//$helvetica: 'Roboto', sans-serif;
+//$georgia: 'Roboto Condensed', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$roboto_cn: 'Roboto Condensed', sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+$ubuntu_cn: 'Ubuntu Condensed', sans-serif;
+
+
+$heading_font: $helvetica;
+$body_font: $georgia;
+
+//$HelveticaNeueW02-57Cn: $georgia;
+$HelveticaNeueW02_57Cn: $helvetica_cn;
+
+%font-ubuntu {
+  font-family: $ubuntu;
+}
+
+%font-helvetica-neue {
+  font-family: $roboto;
+}
+%font-helvetica-neue-57 {
+  font-family: $HelveticaNeueW02_57Cn;
+  font-style: italic;
+}
+%font-helvetica-neue-75 {
+  font-family: $roboto;
+  font-weight: bold;
+}
+%font-helvetica-neue-77 {
+  font-family: $roboto;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
 
 // Susy config ///////////////
 $susy: (
   columns: 12, // The number of columns in your grid
-  gutters: 1/4, // The size of a gutter in relation to a single column
+  gutters: 0, // The size of a gutter in relation to a single column
 );
 
 // Breakpoints & MQ's ///////////////
@@ -36,7 +123,25 @@ $up-sm: $screen $small-max + 1;
 $medium: $screen $small-max + 1 $medium-max;
 $large: $screen $medium-max + 1;
 
-// EXAMPLE FOR MQ REFERENCES =>
+
+$mobile-gutter: 12px; // mostly for homepage
+$mobile-content-gutter: 7px; // mostly for content pages
+
+$desktop-gutter: 16px; // single unit for paddings used all over
+
+$content-title-gutter: 42px; // Used for titles in content pages
+$content-title-gutter--desktop: 57px;
+$base-bottom-margin: 20px; // Used for bottom margins of <p> and headings in content
+
+$language-switcher-shadow: rgba(51, 51, 51, 0.25);
+
+$image-hover-zoom--x: 1.20; // When hovering over an image of a tweet teaser, zoom in
+$image-hover-zoom--y: 1.20;
+$image-hover-zoom--duration: 250ms; // duration of the zooming
+
+// Cookie notice
+$cookie-bg: rgba(25, 25, 25, 0.75);
+
 
 /*
 body {
@@ -94,10 +199,39 @@ body {
 }
 
 .blocked-style {
-  border: 1px solid $white;
+  //border: 1px solid $white;
   padding: 12px;
-  border-radius: 5px;
+  //border-radius: 5px;
   background: $off-white;
 
-  @extend .tmp-shadow;
+  //@extend .tmp-shadow;
+}
+
+.clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+%heading-large {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+%big-blue-heading {
+  @extend %font-helvetica-neue-57;
+  font-size: 24px;
+  line-height: 28px;
+  text-decoration: none;
+  color: $blue;
+}
+
+%red-subject {
+  @extend %font-ubuntu;
+  color: $red !important;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
 }

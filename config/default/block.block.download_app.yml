@@ -1,0 +1,31 @@
+uuid: 7b463388-d35e-4e97-a2a2-e3703a31f8c3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bottom_block:364a024f-dc5a-4b30-bc6f-b92f19432972'
+  module:
+    - block_content
+    - system
+  theme:
+    - twg
+id: download_app
+theme: twg
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:364a024f-dc5a-4b30-bc6f-b92f19432972'
+settings:
+  id: 'block_content:364a024f-dc5a-4b30-bc6f-b92f19432972'
+  label: 'Download app'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/1626
+    negate: true
+    context_mapping: {  }

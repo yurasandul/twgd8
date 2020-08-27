@@ -1,0 +1,7 @@
+uuid: b2a71ee4-f1c1-469e-b073-3cc2d06e367f
+langcode: en
+status: false
+dependencies: {  }
+formId: node_inspirational_quotes_form
+captchaType: default
+label: null

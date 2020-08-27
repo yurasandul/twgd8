@@ -1,9 +1,12 @@
+label: Archief
 display:
   default:
     display_title: Hoofd
     display_options:
+      title: 'Maandelijks archief'
       exposed_form:
         options:
+          submit_button: Toepassen
           reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Blok
   page_1:
     display_title: Pagina

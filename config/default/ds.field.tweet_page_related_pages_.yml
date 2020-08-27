@@ -1,0 +1,11 @@
+id: tweet_page_related_pages_
+label: 'Tweet page (related pages)'
+ui_limit: tweet_page|default
+properties:
+  block: 'views_block:twg_related_pages-block_related_tweets'
+  use_block_title: true
+  add_block_wrappers: true
+type: block
+type_label: 'Block field'
+entities:
+  node: node

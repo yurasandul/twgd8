@@ -1,9 +1,11 @@
+label: 'Neuester Inhalt'
 display:
   default:
     display_title: Master
     display_options:
       exposed_form:
         options:
+          submit_button: Anwenden
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -11,3 +13,10 @@ display:
       fields:
         changed:
           separator: ', '
+      title: 'Neuester Inhalt'
+      empty:
+        area_text_custom:
+          content: 'Kein Inhalt verfügbar.'
+      use_more_text: Zusätzlich
+  block_1:
+    display_title: Block

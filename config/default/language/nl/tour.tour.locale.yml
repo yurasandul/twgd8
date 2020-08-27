@@ -1,0 +1,6 @@
+label: Vertaling
+tips:
+  locale-search:
+    label: Zoeken
+  locale-translate:
+    label: Vertalen

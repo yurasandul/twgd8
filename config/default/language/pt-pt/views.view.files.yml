@@ -11,6 +11,9 @@ display:
           sort_desc_label: Desc
       pager:
         options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Seguinte ›'
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
@@ -19,22 +22,30 @@ display:
         filename:
           label: Nome
           separator: ', '
-        filemime:
-          label: 'Tipo MIME'
         filesize:
           label: Tamanho
+        status:
+          label: Estado
+        changed:
+          label: 'Data alterada'
       filters:
-        filemime:
+        status:
           expose:
-            label: 'Tipo MIME'
+            label: Estado
   page_2:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Seguinte ›'
           expose:
             items_per_page_label: 'Itens por página'
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
+      fields:
+        type:
+          label: 'Tipo de entidade'
       arguments:
         fid:
           exception:

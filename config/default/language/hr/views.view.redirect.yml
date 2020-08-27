@@ -1,5 +1,6 @@
 display:
   default:
+    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -18,6 +19,7 @@ display:
       fields:
         redirect_source__path:
           label: Od
+          separator: ', '
         created:
           label: Stvoreno
       filters:

@@ -1,0 +1,25 @@
+uuid: e1ac5291-3c24-44f2-8a37-949b070ea3c3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bottom_block:e8667259-a39b-43d5-98b7-465ff28f758e'
+  module:
+    - block_content
+  theme:
+    - twg
+id: mailing_list
+theme: twg
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:e8667259-a39b-43d5-98b7-465ff28f758e'
+settings:
+  id: 'block_content:e8667259-a39b-43d5-98b7-465ff28f758e'
+  label: Mailinglist
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

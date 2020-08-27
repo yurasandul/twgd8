@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: bottom_block
 label: 'Bottom block'
-revision: 0
+revision: 1
 description: ''

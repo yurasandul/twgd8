@@ -1,0 +1,7 @@
+tips:
+  views-ui-format:
+    label: 'Formatul de ieşire'
+  views-ui-fields:
+    label: Câmpuri
+  views-ui-preview:
+    label: Previzualizare

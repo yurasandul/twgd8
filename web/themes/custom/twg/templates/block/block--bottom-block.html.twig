@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - module: The module that provided this block plugin.
+ *   - cache: The cache settings.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    text_color|clean_class,
+    background|clean_class,
+    image_class,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.field_image is defined %}
+      {{ content.field_image }}
+      {% if content.field_block_link | render %}
+
+        <a href="{{ content['#block_content'].field_block_link.value }}" class="text-content {{ text_display_mode }}">
+          <h3>{{ content['#block_content'].field_title.value }}</h3>
+          {% if content.field_bottom_block_body is defined %}
+            {{ content.field_bottom_block_body }}
+          {% endif %}
+        </a>
+
+      {% else %}
+        <h3>{{ content['#block_content'].field_title.value }}</h3>
+        {% if content.field_bottom_block_body is defined %}
+          {{ content.field_bottom_block_body }}
+        {% endif %}
+      {% endif %}
+    {% else %}
+
+      <section class="text-content">
+        {% if content.field_block_link is defined %}
+          <h3><a href="{{ content['#block_content'].field_block_link.value }}">{{ content['#block_content'].field_title.value }}</a></h3>
+        {% else %}
+          <h3>{{ content['#block_content'].field_title.value }}</h3>
+        {% endif %}
+
+        {% if content.field_bottom_block_body is defined %}
+          {{ content.field_bottom_block_body }}
+        {% endif %}
+      </section>
+
+
+    {% endif %}
+  {% endblock %}
+</div>

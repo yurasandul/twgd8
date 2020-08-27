@@ -15,42 +15,108 @@ dependencies:
     - field.field.node.tweet_page.field_subject
     - field.field.node.tweet_page.field_tweetbox
     - field.field.node.tweet_page.field_video
+    - image.style.tweet_related_teaser
     - node.type.tweet_page
   module:
-    - text
+    - ds
+    - field_group
+    - image
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - group_right_wrapper
+        - node_title
+        - field_subject
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 6
+        label: hidden
+        formatter: default
+  field_group:
+    group_right_wrapper:
+      children:
+        - node_title
+        - field_subject
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      region: ds_content
+      format_settings:
+        id: ''
+        classes: float-next-to-image
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Right wrapper'
 id: node.tweet_page.teaser
 targetEntityType: node
 bundle: tweet_page
 mode: teaser
 content:
-  body:
+  field_image:
+    type: image
+    weight: 0
+    region: ds_content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  content_moderation_control:
-    weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+      image_style: tweet_related_teaser
+      image_link: content
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+  field_subject:
+    type: entity_reference_label
+    weight: 7
+    region: ds_content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
-  field_image: true
+  body: true
+  content_moderation_control: true
   field_military: true
   field_references_to_church_fathe: true
   field_references_to_text: true
   field_references_to_the_popes: true
   field_slideshow: true
   field_sticky_sort_date: true
-  field_subject: true
   field_tweetbox: true
   field_video: true
   langcode: true
+  links: true

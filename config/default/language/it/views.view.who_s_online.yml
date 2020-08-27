@@ -4,7 +4,18 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Applica
           reset_button_label: Ripristina
           exposed_sorts_label: 'Ordina per'
           sort_asc_label: Asc
           sort_desc_label: Disc
+      filters:
+        access:
+          expose:
+            label: 'Ultimo accesso'
+            description: 'Un utente è considerato on-line per questo tempo dopo la sua ultima visita di una pagina.'
+      title: 'Utenti on-line'
+  who_s_online_block:
+    display_title: 'Utenti on-line'
+    display_options:
+      block_description: 'Utenti on-line'

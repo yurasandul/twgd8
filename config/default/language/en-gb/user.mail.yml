@@ -1,2 +1,0 @@
-register_admin_created:
-  subject: 'An administrator created an account for you at [site:name]'

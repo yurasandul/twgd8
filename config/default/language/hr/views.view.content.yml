@@ -15,9 +15,11 @@ display:
           label: Naziv
         type:
           label: 'Vrsta sadržaja'
+          separator: ', '
         name:
           label: Autor
         status:
+          label: Status
           settings:
             format_custom_true: Objavljeno
         changed:
@@ -32,6 +34,8 @@ display:
           expose:
             label: 'Vrsta sadržaja'
         status:
+          expose:
+            label: Status
           group_info:
             group_items:
               1:
@@ -43,6 +47,7 @@ display:
       empty:
         area_text_custom:
           content: 'Nema sadržaja.'
+    display_title: Master
   page_1:
     display_options:
       menu:

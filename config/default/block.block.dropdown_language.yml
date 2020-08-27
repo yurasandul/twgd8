@@ -1,0 +1,21 @@
+uuid: 30665372-3bc7-4c41-a706-8b198c9755a9
+langcode: en
+status: true
+dependencies:
+  module:
+    - dropdown_language
+  theme:
+    - twg
+id: dropdown_language
+theme: twg
+region: header
+weight: -3
+provider: null
+plugin: 'dropdown_language:language_interface'
+settings:
+  id: 'dropdown_language:language_interface'
+  label: 'Dropdown Language'
+  provider: dropdown_language
+  label_display: '0'
+  labels: null
+visibility: {  }

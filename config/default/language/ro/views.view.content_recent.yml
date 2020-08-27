@@ -1,9 +1,11 @@
+label: 'Conținut recent'
 display:
   default:
     display_title: Expert
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicare
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
@@ -11,3 +13,10 @@ display:
       fields:
         changed:
           separator: ', '
+      title: 'Conținut recent'
+      empty:
+        area_text_custom:
+          content: 'Nu este conţinut disponibil.'
+      use_more_text: 'Mai multe'
+  block_1:
+    display_title: Bloc

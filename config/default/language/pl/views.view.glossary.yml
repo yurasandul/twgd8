@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Zastosuj
           reset_button_label: Resetuj
           exposed_sorts_label: 'Sortuj po'
           sort_asc_label: Rosnąco
@@ -22,5 +23,9 @@ display:
           label: Tytuł
         name:
           label: Autor
+        changed:
+          label: 'Ostatnia aktualizacja'
+  attachment_1:
+    display_title: Załącznik
   page_1:
     display_title: Strona

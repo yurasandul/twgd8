@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - block_content.type.footer_block
-    - field.field.block_content.footer_block.body
     - field.field.block_content.footer_block.field_facebook_url
     - field.field.block_content.footer_block.field_footer_body
     - field.field.block_content.footer_block.field_instagram_url
@@ -19,31 +18,24 @@ targetEntityType: block_content
 bundle: footer_block
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_facebook_url:
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_footer_body:
-    weight: 6
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_instagram_url:
     weight: 3
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -51,23 +43,15 @@ content:
     region: content
   field_snapchat_url:
     weight: 4
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_title:
-    weight: 7
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_twitter_url:
-    weight: 2
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -75,11 +59,12 @@ content:
     region: content
   field_youtube_url:
     weight: 5
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
 hidden:
+  field_title: true
   langcode: true

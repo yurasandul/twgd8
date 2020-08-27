@@ -1,25 +1,107 @@
 // Primary Tabs
 //
+/* Primary tabs. */
+.block-local-tasks-block ul {
+  @extend %tabs;
+
+  li {
+    background: $blue-darkest;
+    margin: 0 3px 6px 0;
+    a {
+      color: white;
+    }
+  }
+
+}
+
+.tabs-primary__tab.is-active {
+  @extend .tabs-primary__tab;
+  background-color: $blue--footer;
+}
+
+// We use 3 placeholder styles to prevent @extend from going selector crazy.
+%tabs-primary__tab-link {
+  letter-spacing: 1px;
+  padding: 0 1em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+%tabs-primary__tab-link-is-hover {
+}
+%tabs-primary__tab-link-is-active {
+}
+
+a.tabs-primary__tab-link {
+  @extend %tabs-primary__tab-link;
+
+  &:hover,
+  &:focus {
+//    @extend %tabs-primary__tab-link-is-hover;
+  }
+  &:active {
+//    @extend %tabs-primary__tab-link-is-active;
+  }
+}
+a.tabs-primary__tab-link.is-active {
+//  @extend %tabs-primary__tab-link;
+//  @extend %tabs-primary__tab-link-is-active;
+}
+
+/**
+ * Tabs.
+ */
+
+/* Basic positioning styles shared by primary and secondary tabs. */
+%tabs {
+//  @include clearfix;
+//  @include legacy-pie-clearfix;
+  /* IE 9 and earlier don't understand gradients. */
+  list-style: none;
+//  margin: rhythm(1) 0;
+  padding: 0;
+  //white-space: nowrap;
+
+  // Added to make the 'Duplicate content' tab float into place
+  display: inline;
+}
+%tabs__tab {
+  float: left; /* LTR */
+  margin: 0;
+}
+%tabs__tab-link {
+  display: block;
+//  @include adjust-leading-to(1);
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
 // Simple tabs styling.
 //
 // Markup: tabs.twig
 //
 // Style guide: components.tabs
 .block-tabs {
-  margin: 1.5em 0;
+  margin: 0.2em 0;
 
   ul {
     display: block;
     padding-left: 0;
-    border-bottom: 1px solid $light-gray;
+    margin: 0;
+//    border-bottom: 1px solid $light-gray;
 
     li {
       display: inline-block;
 
       a {
         margin: 0;
-        padding: 0.4em;
+        padding: 0.4em 0.8em;
         text-decoration: none;
+        &.is-active {
+          background: $blue--footer;
+        }
       }
     }
   }

@@ -1,0 +1,10 @@
+uuid: 1b2f98e6-b17f-4655-8e76-97a0047b7770
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.homepage_teaser
+label: 'Homepage Teaser'
+targetEntityType: node
+cache: true

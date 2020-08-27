@@ -1,0 +1,15 @@
+uuid: b90ddc95-b551-4780-a5c9-c19d6ff023a0
+langcode: en
+status: true
+dependencies: {  }
+name: content_small
+label: 'Content small'
+effects:
+  7239f317-cf3c-445c-b3e2-7093ddd068aa:
+    uuid: 7239f317-cf3c-445c-b3e2-7093ddd068aa
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: true

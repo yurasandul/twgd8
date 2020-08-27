@@ -1,0 +1,64 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Reset
+      fields:
+        created:
+          label: Created
+        view_webform_submission:
+          label: Operations
+          text: view
+      arguments:
+        in_draft:
+          exception:
+            title: All
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        locked:
+          label: Locked
+        created:
+          label: Created
+        operations:
+          label: Operations
+      filters:
+        locked:
+          expose:
+            label: Locked
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        locked:
+          label: Locked
+        created:
+          label: Created
+        view_webform_submission:
+          label: Operations
+          text: view
+        edit_webform_submission:
+          label: Operations
+          text: edit
+      filters:
+        locked:
+          expose:
+            label: Locked
+  embed_review:
+    display_options:
+      fields:
+        locked:
+          label: Locked
+        created:
+          label: Created
+        view_webform_submission:
+          label: Operations
+          text: view
+      filters:
+        locked:
+          expose:
+            label: Locked

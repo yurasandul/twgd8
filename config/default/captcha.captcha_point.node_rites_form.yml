@@ -1,0 +1,7 @@
+uuid: 603aba82-b7a5-4e56-b1fd-96145a640e3a
+langcode: en
+status: false
+dependencies: {  }
+formId: node_rites_form
+captchaType: default
+label: null

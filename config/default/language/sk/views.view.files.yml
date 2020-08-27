@@ -1,3 +1,4 @@
+label: Súbory
 display:
   default:
     display_options:
@@ -10,6 +11,9 @@ display:
           sort_desc_label: Zostupne
       pager:
         options:
+          tags:
+            previous: '‹ Predchádzajúci'
+            next: Ďalej
           expose:
             items_per_page_label: 'Položiek na stránku'
             items_per_page_options_all_label: '- Všetko -'
@@ -22,18 +26,51 @@ display:
           label: 'MIME typ'
         filesize:
           label: Veľkosť
+        status:
+          label: Stav
+          settings:
+            format_custom_false: Dočasne
+            format_custom_true: Natrvalo
+        created:
+          label: 'Dátum nahrania'
+        changed:
+          label: 'Dátum zmeny'
+        count:
+          label: 'Použité v'
       filters:
+        filename:
+          expose:
+            label: 'Názov súboru'
         filemime:
           expose:
             label: 'MIME typ'
+        status:
+          expose:
+            label: Stav
+      title: Súbory
+      empty:
+        area_text_custom:
+          content: 'Žiadne súbory nie sú dostupné.'
+  page_1:
+    display_options:
+      menu:
+        title: Súbory
   page_2:
     display_options:
       pager:
         options:
+          tags:
+            previous: '‹ Predchádzajúci'
+            next: Ďalej
           expose:
             items_per_page_label: 'Položiek na stránku'
             items_per_page_options_all_label: '- Všetko -'
             offset_label: 'Zobraziť od'
+      fields:
+        entity_label:
+          label: Entita
+        type:
+          label: 'Typ entity'
       arguments:
         fid:
           exception:

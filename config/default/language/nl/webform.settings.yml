@@ -1,0 +1,16 @@
+settings:
+  default_submit_button_label: Indienen
+  default_reset_button_label: Reset
+  default_wizard_prev_button_label: '< Vorige'
+  default_wizard_start_label: Begin
+  default_wizard_confirmation_label: Voltooid
+  default_preview_next_button_label: Voorbeeldweergave
+  default_preview_prev_button_label: '< Vorige'
+  default_preview_label: Voorbeeldweergave
+  default_draft_button_label: 'Conceptversie opslaan'
+  default_draft_saved_message: 'Inzending opgeslagen. U kunt op een later tijdstip naar dit formulier terugkeren waarbij de huidige waardes zullen worden hersteld.'
+  dialog_options:
+    normal:
+      title: Normaal
+element:
+  default_more_title: Meer

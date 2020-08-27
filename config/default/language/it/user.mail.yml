@@ -1,0 +1,2 @@
+register_admin_created:
+  subject: 'Un amministratore ha creato un profilo utente per te su [site:name]'

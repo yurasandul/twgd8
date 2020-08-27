@@ -4,7 +4,18 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Použít
           reset_button_label: Reset
           exposed_sorts_label: 'Řadit dle'
           sort_asc_label: Vzestupně
           sort_desc_label: Sestupně
+      filters:
+        access:
+          expose:
+            label: 'Poslední přístup'
+            description: 'Uživatel se považuje za online po tuto dobu od posledního zobrazení stránky.'
+      title: 'Kdo je online'
+  who_s_online_block:
+    display_title: 'Kdo je online'
+    display_options:
+      block_description: 'Kdo je online'

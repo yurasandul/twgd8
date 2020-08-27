@@ -1,0 +1,6 @@
+label: Traducere
+tips:
+  locale-search:
+    label: Căutare
+  locale-translate:
+    label: Traduce

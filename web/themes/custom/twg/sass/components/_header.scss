@@ -1,11 +1,464 @@
-// Header Main Menu
-//
-// Header menus styling for main nav
-//
-// Markup: header.twig
-//
-// Style guide: components.header
-
-.region-header {
-  @include region-spacer($light-gray);
+#header-region {
+  min-height: 50px;
+  .region-header {
+    position: relative;
+    @extend .clearfix;
+  }
 }
+
+.not-front {
+  #header, #header-placeholder {
+    @include breakpoint($up-sm) {
+      height: 104px;
+    }
+    @include breakpoint($large) {
+      height: 122px;
+    }
+  }
+  .sticky {
+    #header {
+      @include breakpoint($up-sm) {
+        height: 67px;
+      }
+      @include breakpoint($large) {
+        height: 67px;
+      }
+    }
+  }
+}
+
+#block-twg-main-menu {
+  display: none;
+  @include breakpoint($up-sm) {
+    display: block;
+  }
+  padding-left: 138px;
+  @include breakpoint($large) {
+    padding-left: 190px;
+  }
+   .menu {
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    ul {
+      display: none;
+    }
+
+    li {
+      margin: 0;
+      list-style: none;
+      display: inline-block;
+      margin: 0 -2px;
+
+      a {
+        font-weight: bold;
+        font-size: 16px;
+        width: 100%;
+        color: $blue--menu;
+        padding: 0 16px;
+        text-decoration: none;
+        text-align: center;
+        line-height: 82px;
+        font-family: $HelveticaNeueW02_57Cn;
+
+        &.is-active,
+        &:hover {
+          background-color: $blue--footer;
+          color: white;
+        }
+
+        @include breakpoint($up-sm) {
+          display: inline-block;
+        }
+
+        @include breakpoint($large) {
+          font-size: 21px;
+          line-height: 100px;
+        }
+      }
+
+      &.is-active a {
+        background-color: $blue--footer;
+        color: white;
+      }
+
+    }
+  }
+}
+
+#block-twg-search {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 50px;
+  width: 0;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.8);
+  padding: 20px;
+
+  @include breakpoint($up-sm) {
+    background: white;
+    padding: 0;
+    right: 85px;
+    top: 29px;
+    width: 0;
+  }
+
+  @include breakpoint($large) {
+    right: 19px;
+    top: 37px;
+    width: 210px;
+  }
+
+  .inner-search {
+    position: relative;
+  }
+
+  form {
+    margin: 0;
+
+    .form-item {
+      padding: 0;
+      margin: 0;
+
+      input {
+        margin-bottom: 0;
+        width: 100%;
+        height: 28px;
+        padding: 0;
+        border: none;
+        @include breakpoint($large) {
+          padding: 0 5px;
+          border: #d8e0e2 1px solid;
+        }
+      }
+    }
+
+    .form-actions input {
+      display: none;
+    }
+  }
+
+  .contextual .trigger {
+    display: none;
+  }
+  &.open {
+    width: 100%;
+    z-index:1;
+
+    @include breakpoint($up-sm) {
+      width: 210px;
+    }
+
+    form input {
+      padding: 0 5px;
+      border: #d8e0e2 1px solid;
+    }
+  }
+}
+
+#block-dropdown-language {
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 52px;
+  @extend %font-helvetica-neue;
+
+  @include breakpoint($up-sm) {
+    top: 30px;
+    right: 15px;
+  }
+
+  @include breakpoint($large) {
+    top: 10px;
+    right: 15px;
+  }
+
+  .contextual {
+    display: none;
+  }
+
+  .active-language {
+    font-size: 13px;
+    color: $blue--menu;
+    cursor: pointer;
+    .name {
+      display: none;
+      @include breakpoint($large) {
+        display: inline;
+      }
+    }
+    .key {
+      text-transform: uppercase;
+      font-size: 17px;
+      @include breakpoint($large) {
+        display: none;
+      }
+    }
+  }
+
+  .dropbutton-arrow {
+    color: $blue--menu;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .dropbutton-toggle {
+    width: 3em;
+    button {
+      background: none;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+
+  .dropbutton-wrapper.open {
+
+    .dropdown-language-item {
+      background: white;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .dropbutton-toggle {
+      height: 25px;
+    }
+
+    .language-link {
+      background-color: white;
+      display: block;
+      width: 100%;
+      padding: 0 10px;
+      color: black;
+      font-size: 14px;
+      text-decoration: none;
+      font-family: $helvetica;
+      .key {
+        display: none;
+      }
+    }
+
+    span.language-link {
+      color: $blue--menu;
+    }
+
+    a.language-link {
+      &:hover {
+        background-color: $blue;
+        color: white;
+      }
+    }
+  }
+}
+
+.mobile-menu-opener {
+  position: absolute;
+  top: 18px;
+  right: 143px;
+  width: 22px;
+  height: 15px;
+  background-image: url("../images/icons-s8428879d15.png");
+  background-repeat: no-repeat;
+  background-position: 0 -461px;
+
+  @include breakpoint($up-sm) {
+    display: none;
+  }
+}
+
+.search-opener {
+  background-image: url(../images/icons-s8428879d15.png);
+  background-repeat: no-repeat;
+  background-position: 0 -84px;
+  height: 18px;
+  width: 18px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  right: 26px;
+  top: 17px;
+
+  @include breakpoint($up-sm) {
+    right: 93px;
+    top: 34px;
+  }
+
+  @include breakpoint($large) {
+    right: 26px;
+    top: 42px;
+  }
+
+}
+
+#block-main-navigation-mobile {
+  position: absolute;
+  display: none;
+
+  .menu {
+    padding: 0;
+  }
+
+  .menu {
+    list-style: none;
+    li {
+      margin: 0;
+      a {
+        font-weight: bold;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        border-bottom: #cccccc 1px solid;
+        color: #0395cf;
+        padding: 16px;
+        text-decoration: none;
+        font-family: $HelveticaNeueW02_57Cn;
+
+        &:hover,
+        &.active,
+        &.active-trail {
+          background: #38bbf0;
+          color: white;
+          border-bottom-color: white;
+
+        }
+      }
+      &.expanded {
+        > a:after {
+          background-repeat: no-repeat;
+          background-position: 0 -486px;
+          height: 6px;
+          width: 12px;
+          content: '';
+          display: inline-block;
+          margin-left: 6px;
+          padding-bottom: 2px;
+          background-image: url("../images/icons-s8428879d15.png");
+        }
+        > a:hover:after {
+          background-position: 0 -502px;
+        }
+        > .menu {
+          display: none;
+        }
+      }
+      &.expanded.open {
+        > a {
+          background: #38bbf0;
+          color: white;
+          &:after {
+            background-position: 0 -518px;
+          }
+        }
+      }
+    }
+  }
+
+  .expanded .menu li {
+    border-left: #38bbf0 20px solid;
+    padding-left: 5px;
+  }
+
+
+  &.open {
+    display: block;
+    top: 50px;
+    right: 0;
+    width: 90%;
+    background: rgba(255,255,255,0.95);
+    z-index: 5;
+  }
+
+  @include breakpoint($up-sm) {
+    display: none !important;
+  }
+}
+
+#header-placeholder {
+  display: none;
+  height: 50px;
+  @include breakpoint($up-sm) {
+    height: 82px;
+  }
+  @include breakpoint($large) {
+    height: 100px;
+  }
+
+}
+
+.sticky {
+  #header-placeholder {
+    display: block;
+  }
+
+  #header {
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 10;
+  }
+
+  //#header {
+  //  width: 106px;
+  //  z-index: 12;
+  //}
+
+  @include breakpoint($up-sm) {
+    //.mq-header {
+    //  height: 67px;
+    //  position: relative;
+    //}
+
+    #block-twg-main-menu {
+      .menu li a {
+        line-height: 67px;
+      }
+    }
+
+    // We correct the original top-values by subtracting 6 pixels
+    #block-twg-branding {
+      top: 6px;
+    }
+    #block-twg-search {
+      top: 22px;
+    }
+    .search-opener {
+      top: 26px;
+    }
+    #block-dropdown-language {
+    top: -1px;
+    }
+
+    //.language-switcher-locale-url,
+    //.block-search {
+    //  top: 19px;
+    //}
+    //#block-menu-menu-navigation-helpers a {
+    //  top: 24px;
+    //}
+    //.language-switcher-popup {
+    //  top: 54px;
+    //}
+  }
+
+  //@include at-breakpoint(full) {
+  //  .language-switcher-locale-url {
+  //    top: -5px;
+  //  }
+  //  .language-switcher-popup {
+  //    top: 26px;
+  //  }
+  //  #logo {
+  //    top: 9px;
+  //  }
+  //}
+}
+

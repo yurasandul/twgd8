@@ -7,6 +7,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_preprocess_html().
@@ -68,6 +69,7 @@ function twg_preprocess_block(&$variables) {
       $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--bundle-' . $bundle_class);
       $variables['attributes']['data-bundle-class'] = $bundle_class;
     }
+    $variables['attributes']['class'][] = 'block--type--' . $bundle_class;
   }
 }
 
@@ -133,9 +135,109 @@ function twg_form_node_form_alter(&$form, FormStateInterface $form_state) {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_preprocess_HOOK().
  */
-function twg_form_search_block_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $qwe =1;
-//  $form["actions"]["submit"]['#access'] = FALSE;
+function twg_preprocess_links__dropbutton__dropdown_language(&$variables) {
+  foreach ($variables['links'] as $key => &$link) {
+    $new_title = Markup::create('<span class="name">' . $link['link']['#title'] . '</span><span class="key">' . $key . '</span>');
+    $link['link']['#title'] = $new_title;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_block__main_navigation_mobile(&$variables) {
+  $qwe = 1;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_menu__main(&$variables) {
+  foreach ($variables["items"] as &$item) {
+    if ($item['is_expanded']) {
+      $item['attributes']->addClass('expanded');
+    }
+    else {
+      $item['attributes']->addClass('is_leaf');
+    }
+    foreach ($item['below'] as $item_second_lvel) {
+      if ($item_second_lvel['in_active_trail']) {
+        $item['attributes']->addClass('is-active');
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function twg_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_block__bottom_block(&$variables) {
+  $block = $variables['content']['#block_content'];
+  $text_color = !$block->get('field_text_color')->isEmpty() ? $block->get('field_text_color')->value : '';
+  $background = !$block->get('field_background')->isEmpty() ? $block->get('field_background')->value : '';
+  $text_display_mode = !$block->get('field_text_display_position')->isEmpty() ? $block->get('field_text_display_position')->value : 'top';
+
+  $image_class = !$block->get('field_image')->isEmpty() ? 'contains-image' : 'no-image';
+  $new_window = !$block->get('field_open_new_window')->isEmpty() ? $block->get('field_open_new_window')->value : '';
+
+  $variables['text_color'] = $text_color;
+  $variables['background'] = $background;
+  $variables['text_display_mode'] = $text_display_mode;
+  $variables['new_window'] = $new_window;
+  $variables['image_class'] = $image_class;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_paragraph__quote_slider__default(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  if (!$paragraph->get('field_quotes')->isEmpty() && ($paragraph->get('field_quotes')->value == 1)) {
+    $variables["content"]["field_slogan"]["#attributes"]['class'][] = 'quotes';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_region__front_top(&$variables) {
+  if (isset($variables["elements"]["frontpage_top_block_2"]["content"]) && isset($variables["elements"]["frontpage_top_block_1"]["content"])) {
+    $variables['attributes']['class'][] = 'col-2';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_captcha(&$variables) {
+  $variables['element']['#description_display'] = 'before';
+  $qwe = 1;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_form_element(&$variables) {
+//  dsm($variables);
+
+}
+
+function twg_theme_suggestions_form_element_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#id'])) {
+    $suggestions[] = 'form_element__' . $variables['element']['#name'];
+  }
+//  kint($suggestions);
+//  kint($variables);
 }

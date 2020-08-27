@@ -1,3 +1,4 @@
+label: Conteúdo
 display:
   default:
     display_options:
@@ -8,6 +9,13 @@ display:
           exposed_sorts_label: 'Ordenar por'
           sort_asc_label: Asc
           sort_desc_label: Desc
+      pager:
+        options:
+          tags:
+            previous: '‹ Anterior'
+            next: 'Seguinte ›'
+            first: '« Primeira'
+            last: 'Última »'
       fields:
         title:
           label: Título
@@ -16,6 +24,12 @@ display:
           separator: ', '
         name:
           label: Autor
+        status:
+          label: Estado
+          settings:
+            format_custom_true: Publicado
+        changed:
+          label: Atualizado
         operations:
           label: Operações
       filters:
@@ -25,9 +39,22 @@ display:
         type:
           expose:
             label: 'Tipo de conteúdo'
+        status:
+          expose:
+            label: Estado
+          group_info:
+            group_items:
+              1:
+                title: Publicado
         langcode:
           expose:
             label: Idioma
+      title: Conteúdo
     display_title: Principal
   page_1:
+    display_options:
+      menu:
+        title: Conteúdo
+      tab_options:
+        title: Conteúdo
     display_title: Página

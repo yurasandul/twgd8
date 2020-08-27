@@ -1,0 +1,7 @@
+tips:
+  views-ui-format:
+    label: 'Formato di output'
+  views-ui-fields:
+    label: Campi
+  views-ui-preview:
+    label: Anteprima

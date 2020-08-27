@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Toepassen
           reset_button_label: Reset
           exposed_sorts_label: 'Sorteren op'
           sort_asc_label: Oplopend
@@ -22,5 +23,9 @@ display:
           label: Titel
         name:
           label: Auteur
+        changed:
+          label: 'Laatst bijgewerkt'
+  attachment_1:
+    display_title: Bijlage
   page_1:
     display_title: Pagina

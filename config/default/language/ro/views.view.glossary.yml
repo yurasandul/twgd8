@@ -4,6 +4,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicare
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
@@ -22,5 +23,9 @@ display:
           label: Titlu
         name:
           label: Autor
+        changed:
+          label: 'Ultima actualizare'
+  attachment_1:
+    display_title: Ataşament
   page_1:
     display_title: Pagina

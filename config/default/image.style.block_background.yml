@@ -1,0 +1,15 @@
+uuid: 172f85d4-c342-4da9-94ce-f3d06dfb2935
+langcode: en
+status: true
+dependencies: {  }
+name: block_background
+label: 'Block background'
+effects:
+  688dec50-45d0-4172-b729-198f5d6ba689:
+    uuid: 688dec50-45d0-4172-b729-198f5d6ba689
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 539
+      anchor: center-center

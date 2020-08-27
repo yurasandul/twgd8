@@ -1,0 +1,26 @@
+uuid: c7ab3294-7a20-4bc8-8582-036e09d67905
+langcode: en
+status: true
+dependencies:
+  module:
+    - mxt_core
+    - system
+  theme:
+    - twg
+id: frontpage_top_block_1
+theme: twg
+region: front_top
+weight: 0
+provider: null
+plugin: front_page_top_blocks_1
+settings:
+  id: front_page_top_blocks_1
+  label: 'Front page top blocks 1'
+  provider: mxt_core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

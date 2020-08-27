@@ -1,9 +1,11 @@
+label: 'Ostatnie treści'
 display:
   default:
     display_title: Główny
     display_options:
       exposed_form:
         options:
+          submit_button: Zastosuj
           reset_button_label: Resetuj
           exposed_sorts_label: 'Sortuj po'
           sort_asc_label: Rosnąco
@@ -11,3 +13,10 @@ display:
       fields:
         changed:
           separator: ', '
+      title: 'Ostatnie treści'
+      empty:
+        area_text_custom:
+          content: 'Brak zawartości.'
+      use_more_text: Więcej
+  block_1:
+    display_title: Blok

@@ -1,9 +1,12 @@
+label: Archiwizuj
 display:
   default:
     display_title: Główny
     display_options:
+      title: 'Archiwum miesięczne'
       exposed_form:
         options:
+          submit_button: Zastosuj
           reset_button_label: Resetuj
           exposed_sorts_label: 'Sortuj po'
           sort_asc_label: Rosnąco
@@ -17,5 +20,7 @@ display:
           tags:
             previous: ‹‹
             next: ››
+  block_1:
+    display_title: Blok
   page_1:
     display_title: Strona

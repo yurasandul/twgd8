@@ -1,0 +1,25 @@
+uuid: 8476a808-3b57-4784-95cb-ae3b1bb6b106
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:footer_block:a2976e62-c9b1-4d7d-afca-c95f6037e9d1'
+  module:
+    - block_content
+  theme:
+    - twg
+id: footer_block
+theme: twg
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:a2976e62-c9b1-4d7d-afca-c95f6037e9d1'
+settings:
+  id: 'block_content:a2976e62-c9b1-4d7d-afca-c95f6037e9d1'
+  label: 'Footer block '
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

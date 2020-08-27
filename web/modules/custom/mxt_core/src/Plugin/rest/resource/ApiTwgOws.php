@@ -13,9 +13,9 @@ use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
  *
  * @RestResource(
  *   id = "api_twg_ows",
- *   label = @Translation("Api twg ows"),
+ *   label = @Translation("Api twg-cmc ows"),
  *   uri_paths = {
- *     "canonical" = "/api/twg/v1/ows/{langcode}"
+ *     "canonical" = "/api/{code}/v1/ows/{langcode}"
  *   }
  * )
  */
@@ -55,7 +55,7 @@ class ApiTwgOws extends ResourceBase {
    * @return \Drupal\rest\ModifiedResourceResponse
    *   The HTTP response object.
    */
-  public function get($langcode) {
+  public function get($code, $langcode) {
     // You must to implement the logic of your REST Resource here.
     // Use current user after pass authentication to validate access.
     if (!$this->currentUser->hasPermission('access content')) {
@@ -68,7 +68,12 @@ class ApiTwgOws extends ResourceBase {
     $config = \Drupal::service('config.factory')->getEditable('mxt_core.ami_contact_details');
     $nid = $config->get('node_twg_ows') ?? 12764;
 
-    $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
+    if (!in_array($code, ['twg', 'cmc'])) {
+      $output = ['Error url parameters'];
+    }
+    else {
+      $output = $this->twgApiHelper->twgApiAbout($nid, $langcode);
+    }
 
     $response = (new ModifiedResourceResponse($output, 200));
     $response->headers->set('Content-Length', strlen(Json::encode($output)));

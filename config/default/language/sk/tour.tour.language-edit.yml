@@ -1,3 +1,5 @@
 tips:
   language-edit-langcode:
     label: 'Kód jazyka'
+  language-edit-label:
+    label: 'Názov jazyka'

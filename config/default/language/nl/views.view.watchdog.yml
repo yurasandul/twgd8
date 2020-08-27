@@ -1,3 +1,5 @@
+label: Watchdog
+description: 'Recente logberichten'
 display:
   default:
     display_title: Hoofd
@@ -19,11 +21,18 @@ display:
             previous: ‹‹
             next: ››
       fields:
+        nothing:
+          admin_label: Pictogram
+        severity:
+          label: Ernst
         type:
           label: Type
         timestamp:
           label: Datum
+        message:
+          label: Bericht
         name:
+          label: Gebruiker
           separator: ', '
         link:
           label: Bewerkingen
@@ -31,5 +40,13 @@ display:
         type:
           expose:
             label: Type
+        severity:
+          expose:
+            label: Ernst
+      title: 'Recente logberichten'
+      empty:
+        area:
+          admin_label: 'Geen logberichten beschikbaar.'
+          content: 'Geen logberichten beschikbaar.'
   page:
     display_title: Pagina

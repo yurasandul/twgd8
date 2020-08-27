@@ -1,9 +1,11 @@
+label: Kommentare
 display:
   default:
     display_title: Master
     display_options:
       exposed_form:
         options:
+          submit_button: Anwenden
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -20,7 +22,10 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
@@ -28,25 +33,49 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Erstellt in'
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache
-  page_unapproved:
+      title: Kommentare
+      empty:
+        area_text_custom:
+          content: 'Keine Kommentare verfügbar.'
+      use_more_text: mehr
+  page_published:
+    display_title: 'Veröffentlichte Kommentare'
     display_options:
+      menu:
+        title: Kommentare
+  page_unapproved:
+    display_title: 'Nicht freigegebene Kommentare'
+    display_options:
+      menu:
+        title: 'Nicht freigegebene Kommentare'
       filters:
+        subject:
+          expose:
+            label: Betreff
         langcode:
           expose:
             label: Sprache
       fields:
+        comment_bulk_form:
+          action_title: Aktion
         subject:
+          label: Betreff
           separator: ', '
         uid:
           separator: ', '
@@ -54,8 +83,10 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Erstellt in'
           separator: ', '
         changed:
+          label: Aktualisiert
           separator: ', '
         operations:
           label: Aktionen

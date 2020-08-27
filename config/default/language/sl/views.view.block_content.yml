@@ -5,6 +5,8 @@ display:
         options:
           reset_button_label: Ponastavi
       fields:
+        changed:
+          label: Posodobljeno
         operations:
           label: Operacije
   page_1:

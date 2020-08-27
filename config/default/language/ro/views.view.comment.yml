@@ -1,9 +1,11 @@
+label: Comentarii
 display:
   default:
     display_title: Expert
     display_options:
       exposed_form:
         options:
+          submit_button: Aplicare
           reset_button_label: Resetează
           exposed_sorts_label: 'Sortare după'
           sort_asc_label: Ascendent
@@ -20,7 +22,10 @@ display:
             items_per_page_options_all_label: '- Toate -'
             offset_label: Decalaj
       fields:
+        comment_bulk_form:
+          action_title: Acțiune
         subject:
+          label: Subiect
           separator: ', '
         uid:
           separator: ', '
@@ -28,25 +33,49 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Publicat în'
           separator: ', '
         changed:
+          label: Actualizat
           separator: ', '
         operations:
           label: Operaţii
         name_1:
           separator: ', '
       filters:
+        subject:
+          expose:
+            label: Subiect
         langcode:
           expose:
             label: Limba
-  page_unapproved:
+      title: Comentarii
+      empty:
+        area_text_custom:
+          content: 'Nu sunt comentarii disponibile.'
+      use_more_text: 'mai multe'
+  page_published:
+    display_title: 'Comentarii publicate'
     display_options:
+      menu:
+        title: Comentarii
+  page_unapproved:
+    display_title: 'Comentarii neaprobate'
+    display_options:
+      menu:
+        title: 'Comentarii neaprobate'
       filters:
+        subject:
+          expose:
+            label: Subiect
         langcode:
           expose:
             label: Limba
       fields:
+        comment_bulk_form:
+          action_title: Acțiune
         subject:
+          label: Subiect
           separator: ', '
         uid:
           separator: ', '
@@ -54,8 +83,10 @@ display:
           label: Autor
           separator: ', '
         entity_id:
+          label: 'Publicat în'
           separator: ', '
         changed:
+          label: Actualizat
           separator: ', '
         operations:
           label: Operaţii
