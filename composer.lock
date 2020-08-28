@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f2d9670e65bfabbba7bcfb7318db0da",
+    "content-hash": "5a06fd1d0cf98e2d7aef74a546ee7682",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3549,6 +3549,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Add flexslider support for any (multi-valued) entity reference field": "https://www.drupal.org/files/issues/2020-08-02/3086080-14.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
