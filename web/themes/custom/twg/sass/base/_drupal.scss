@@ -77,3 +77,39 @@ form details.js-form-wrapper {
     display: none;
   }
 }
+
+/**
+ * Pager.
+ */
+
+/* A list of page numbers when more than 1 page of content is available. */
+.pager
+.pager__items {
+  clear: both;
+  padding: 0;
+  text-align: center;
+}
+ul.pager__items {
+  list-style: none;
+}
+
+%pager__item {
+  display: inline;
+  padding: 0 0.5em;
+  list-style-type: none;
+  background-image: none;
+}
+
+.pager__item,      /* A list item containing a page number in the list of pages. */
+.pager__item--first,     /* The first page's list item. */
+.pager__item--previous,  /* The previous page's list item. */
+.pager__item--next,      /* The next page's list item. */
+.pager__item--last,      /* The last page's list item. */
+.pager-ellipsis { /* A concatenation of several list items using an ellipsis. */
+  @extend %pager__item;
+}
+
+.pager__item.is-active {
+  @extend %pager__item;
+  font-weight: bold;
+}

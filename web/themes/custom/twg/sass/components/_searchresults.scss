@@ -1,0 +1,33 @@
+#search-form {
+
+	@extend .clearfix;
+
+  .search-help-link,
+	label {
+    display: none;
+		//@extend %element-invisible;
+	}
+	.form-search {
+		@extend .content-search-input;
+	}
+	.form-submit {
+		@extend .content-search-submit;
+	}
+  margin-bottom: 1em;
+}
+
+.search-results {
+	padding-left: 0;
+
+	.title {
+		@extend %font-helvetica-neue-77;
+		@extend %heading-large;
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.search-info {
+		display: none;
+	}
+}
