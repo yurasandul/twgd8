@@ -81,6 +81,7 @@ class ApiTwgDailyprayer extends ResourceBase {
 
     $convertlangs = [
       'EN' => 'AM',
+      'ES' => 'SP',
     ];
     foreach ($convertlangs as $from => $to) {
       if ($lang == $from) {
@@ -142,7 +143,7 @@ class ApiTwgDailyprayer extends ResourceBase {
           if ($copyright_start !== FALSE) {
             $part = substr($part, 0, $copyright_start);
           }
-          $texts[$key] = $part;
+          $texts[$key] = $this->fixText($part, $langcode);
         }
 
         $output_day = [
@@ -189,6 +190,37 @@ class ApiTwgDailyprayer extends ResourceBase {
       'daily_prayers' => $output,
     ];
     return $data;
+  }
+
+  private function fixText($text, $langcode) {
+    $text_to_clean = [
+      'de' => [
+        'Auszug aus der liturgischen Übersetzung der Bibel<br />Um jeden Morgen das Evangelium per E-Mail zu bekommen melden Sie sich an:<a href="http://evangeliumtagfuertag.org" target="_blank">evangeliumtagfuertag.org</a>',
+      ],
+      'fr' => [
+        'Extrait de la Traduction Liturgique de la Bible - © AELF, Paris<br />- Service offert par l\'Evangile au Quotidien -',
+        'Pour recevoir tous les matins l\'Évangile par courriel, <a href="http://levangileauquotidien.org" target="_blank">levangileauquotidien.org</a>',
+      ],
+      'it' => [
+        'Traduzione liturgica della Bibbia<br />Per ricevere il Vangelo ogni mattina per e-mail, iscrivetevi : <a href="http://vangelodelgiorno.org" target="_blank">vangelodelgiorno.org</a>',
+      ],
+      'nl' => [
+        'Bron : Petrus Canisius bijbelvertaling & vernieuwingen<br />Om de bijbellezingen iedere morgen in Uw mailbox te ontvangen, kunt u zich hier inschrijven : <a href="http://dagelijksevangelie.org" target="_blank">dagelijksevangelie.org</a>',
+      ],
+      'pl' => [
+        'Fragment liturgicznego tłumaczenia Biblii Tysiąclecia, &copy; Wydawnictwo Pallottinum<br />By codziennie mogli Państwo otrzymywać tekst Ewangelii, prosimy się zarejestrować :  <a href="http://ewangelia.org" target="_blank">ewangelia.org</a>',
+      ],
+      'pt' => [
+        'Da Bíblia Sagrada - Edição dos Franciscanos Capuchinhos - www.capuchinhos.org<br />Para receber todas as manhã o Evangelho por correio electrónico, inscreva-se:<a href="http://evangelhoquotidiano.org" target="_blank">evangelhoquotidiano.org</a>',
+      ],
+    ];
+    if (!isset($text_to_clean[$langcode])) {
+      return $text;
+    }
+    foreach ($text_to_clean[$langcode] as $find_str) {
+      $text = str_replace(stripcslashes($find_str),'', $text);
+    }
+    return $text;
   }
 
 }
