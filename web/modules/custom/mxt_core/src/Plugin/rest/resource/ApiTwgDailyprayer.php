@@ -213,6 +213,10 @@ class ApiTwgDailyprayer extends ResourceBase {
       'pt' => [
         'Da Bíblia Sagrada - Edição dos Franciscanos Capuchinhos - www.capuchinhos.org<br />Para receber todas as manhã o Evangelho por correio electrónico, inscreva-se:<a href="http://evangelhoquotidiano.org" target="_blank">evangelhoquotidiano.org</a>',
       ],
+      'es' => [
+        'Extraído de la Biblia: Libro del Pueblo de Dios.<br />Para recibir cada mañana el Evangelio por correo electrónico, registrarse: <a href="http://evangeliodeldia.org" target="_blank">evangeliodeldia.org</a>',
+      ],
+
     ];
     if (!isset($text_to_clean[$langcode])) {
       return $text;
