@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:bottom_block:364a024f-dc5a-4b30-bc6f-b92f19432972'
   module:
     - block_content
-    - system
   theme:
     - twg
 id: download_app
@@ -23,9 +22,4 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility:
-  request_path:
-    id: request_path
-    pages: /node/1626
-    negate: true
-    context_mapping: {  }
+visibility: {  }

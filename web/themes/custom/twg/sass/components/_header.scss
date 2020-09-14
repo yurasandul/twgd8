@@ -401,9 +401,13 @@
 
   #header {
     position: fixed;
-    background: white;
+    background: transparent;
     width: 100%;
     z-index: 10;
+
+    .mq-header {
+      background: white;
+    }
   }
 
   //#header {

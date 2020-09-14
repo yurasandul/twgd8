@@ -168,7 +168,7 @@ class ApiTwgDailyprayer extends ResourceBase {
             ],
           ],
         ];
-        if (!empty(strip_tags($texts['sr_text']))) {
+        if (!empty(strip_tags($texts['sr_text'])) && strip_tags($texts['sr_text']) != "\r" . PHP_EOL) {
           $act_seccond = [
             'type' => 'act_second',
             'title' => $texts['sr_title'] ? strip_tags($texts['sr_title']) : '',

@@ -125,3 +125,16 @@ function mxt_core_query_search_node_search_alter(Drupal\Core\Database\Query\Alte
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $query->condition('n.langcode', $language, '=');
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function mxt_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form_ids = [
+    'node_push_message_edit_form',
+    'node_push_message_form',
+  ];
+  if (in_array($form_id, $form_ids) && !in_array('administrator', \Drupal::currentUser()->getRoles())) {
+    $form['field_sent']['#access'] = FALSE;
+  }
+}

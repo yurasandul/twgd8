@@ -23,3 +23,12 @@ mxt_core.copy_translation_form:
     _title: 'Copy Translation'
   requirements:
     _access: 'TRUE'
+mxt_core.ait_google_cloud_message_form:
+  path: '/admin/config/mxt_core/aitgooglecloudmessage'
+  defaults:
+    _form: '\Drupal\mxt_core\Form\AITGoogleCloudMessageForm'
+    _title: 'AITGoogleCloudMessageForm'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

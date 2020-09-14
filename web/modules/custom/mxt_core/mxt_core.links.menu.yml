@@ -16,3 +16,9 @@ mxt_core.copy_translation_form:
   route_name: mxt_core.copy_translation_form
   parent: system.admin_content
   weight: 99
+mxt_core.ait_google_cloud_message_form:
+  title: 'AITGoogleCloudMessageForm'
+  route_name: mxt_core.ait_google_cloud_message_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
