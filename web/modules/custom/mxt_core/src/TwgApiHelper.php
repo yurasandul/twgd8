@@ -1004,7 +1004,7 @@ class TwgApiHelper {
    * @return array
    *   Data array.
    */
-  public function parseShortCodesQtip($content) {
+  public function parseShortCodesQtip($content, $jq_ui_tooltip = FALSE) {
     preg_match_all("/\[qtip:(.*?)\]/", $content, $matches);
     $tips = [];
     if (empty($matches[0])) {
@@ -1016,7 +1016,12 @@ class TwgApiHelper {
     foreach ($matches[0] as $index => $short_cod) {
       $qtip_parts = explode('|', $matches[1][$index]);
       if (count($qtip_parts) > 1) {
-        $link = '<a href="t' . $index . '"><b>' . $qtip_parts[0] . '</b></a>';
+        if ($jq_ui_tooltip) {
+          $link = '<a href="#" title="' . $qtip_parts[1] . '" onclick="return false">' . $qtip_parts[0] . '</a>';
+        }
+        else {
+          $link = '<a href="t' . $index . '"><b>' . $qtip_parts[0] . '</b></a>';
+        }
         $content = str_replace($matches[0][$index], $link, $content);
         $tips[] = $qtip_parts[1];
       }
@@ -1026,6 +1031,217 @@ class TwgApiHelper {
       'content' => $content,
       'tip' => $tips,
     ];
+  }
+
+  public function aitGcmGetNodes($today = NULL) {
+    if (!$today) {
+      $today = date('Y-m-d');
+    }
+
+    $query = $this->nodeStorage->getQuery();
+    $nids = $query->condition('type', 'push_message')
+      ->condition('status', 1)
+      ->condition('field_date', $today . '%', 'LIKE')
+      ->execute();
+
+    $nodes = [];
+    foreach ($this->nodeStorage->loadMultiple($nids) as $node) {
+      if (!(!$node->get('field_sent')->isEmpty() && $node->get('field_sent')->value == 1)) {
+        $nodes[] = $node;
+      }
+    }
+
+    return $nodes;
+  }
+
+  public function aitGcmSendNotificationNode(Node $node) {
+    $nid = $node->id();
+    $title = $node->getTitle();
+    $message = !$node->get('body')->isEmpty() ? $node->get('body')->value : '';
+    $lang = $node->get('field_language')->value;
+    $state = $node->get('field_state')->value;
+
+    $channel = '/topics/' . $lang;
+    $params = [];
+
+    switch ($state) {
+      case 'prayers':
+        $params = [
+          'kind' => $node->get('field_prayertype')->value,
+          'page' => $node->get('field_prayerpage')->value,
+        ];
+        break;
+
+      case 'iframe':
+        $params = [
+          'url' => $node->get('field_link')->url->value()
+        ];
+        break;
+
+      case 'page':
+        /** @var \Drupal\node\Entity\Node $pagenode */
+        $pagenode = $node->get('field_page')->entity;
+        $params = [
+          'key' => $pagenode->alias
+        ];
+        break;
+    }
+
+    $data = [
+      'state' => [
+      'name' => $state,
+        'params' => $params
+      ]
+    ];
+
+    // Set status of the node as 'sent'
+    $node->set('field_sent', 1);
+    $node->save();
+
+    // Send the actual message using the GCM
+    return $this->aitGcmSendMessage($title, $message, $data, $channel);
+  }
+
+  public function aitGcmSendMessage($title, $message, $data, $channel = 0) {
+    if (!$channel) {
+      \Drupal::logger('push')->error('Failed to send push message because no channel was selected (%title)',
+        [
+          '%title' => $title,
+        ]);
+      return FALSE;
+    }
+
+    $config = \Drupal::configFactory()->getEditable('mxt_core.ait_google_cloud_message');
+
+    $logUsingMail = (bool) $config->get('ait_gcm_log_mail');
+    $logMailAddress = $config->get('ait_gcm_log_address');
+
+    $fields = [];
+    $fields['priority'] = 'high';
+    $fields['collapse_key'] = 'TweetingWithGod';
+
+    // Android pushing
+    $fields['data'] = $data;
+    $fields['data']['title'] = $title;
+    $fields['data']['message'] = $message;
+    $fields['data']['content-available'] = 1;
+    $fields['data']['icon'] = 'pushicon';
+    $fields['data']['iconColor'] = '#31b2ea';
+    $fields['data']['image'] = 'www/assets/images/icon-push.png';
+    $fields['data']['vibrationPattern'] = [50, 150, 50, 150, 50, 200];
+    $fields['data']['ledColor'] = [0, 49, 178, 234];
+    $sub_channel = str_replace('/topics/', '/topics/android-', $channel);
+    $fields['to'] = $sub_channel;
+
+    $androidResult = $this->aitGcmSendMessageCore($fields);
+
+    $logInfo = [
+      'channel' => $sub_channel,
+      'title' => $title,
+      'message' => $message,
+      'platform' => 'android'
+    ];
+    if ($androidResult !== FALSE) {
+      \Drupal::messenger()->addStatus('Push message successfully sent to ' . $sub_channel . ' (' . $title . ')');
+      \Drupal::logger('push')->error('Push message sent to %channel titled "%title" with message: %msg', [
+        '%id' => $androidResult->message_id,
+        '%channel' => $sub_channel,
+        '%msg' => $message,
+        '%title' => $title
+      ]);
+
+      if ($logUsingMail) {
+        $logInfo['message_id'] = $androidResult->message_id;
+        \Drupal::service('plugin.manager.mail')->mail('ait_gcm', 'success', $logMailAddress, 'nl', $logInfo, NULL, TRUE);
+      }
+    }
+    else {
+      \Drupal::messenger()->addError(t('Push message FAILED to sent to ' . $sub_channel . ' (' . $title . ')'));
+      \Drupal::logger('push')->error('Failed to send push message to %channel titled "%title" with message: %msg', [
+        '%channel' => $sub_channel,
+        '%msg' => $message,
+        '%title' => $title
+      ]);
+      if ($logUsingMail) {
+        \Drupal::service('plugin.manager.mail')->mail('ait_gcm', 'failed', $logMailAddress, 'nl', $logInfo, NULL, TRUE);
+      }
+    }
+
+    // iOS pushing
+    $sub_channel = str_replace('/topics/', '/topics/ios-', $channel);
+    $fields['to'] = $sub_channel;
+    $fields['notification'] = [
+      'title' => $title,
+      'body' => $message,
+      'sound' => 'default',
+      'badge' => '1'
+    ];
+    $fields['data'] = $data;
+    $fields['data']['content-available'] = 1;
+
+    $iosResult = $this->aitGcmSendMessageCore($fields);
+
+    $logInfo = [
+      'channel' => $sub_channel,
+      'title' => $title,
+      'message' => $message,
+      'platform' => 'ios'
+    ];
+    if ($iosResult !== FALSE) {
+      \Drupal::messenger()->addStatus('Push message successfully sent to ' . $sub_channel . ' (' . $title . ')');
+      \Drupal::logger('push')->error('Push message sent to %channel (ID: %id) titled "%title" with message: %msg', [
+        '%id' => $androidResult->message_id,
+        '%channel' => $sub_channel,
+        '%msg' => $message,
+        '%title' => $title
+      ]);
+
+      $logInfo['message_id'] = $iosResult->message_id;
+
+      if ($logUsingMail) {
+        \Drupal::service('plugin.manager.mail')->mail('ait_gcm', 'success', $logMailAddress, 'nl', $logInfo, NULL, TRUE);
+      }
+    }
+    else {
+      \Drupal::messenger()->addError(t('Push message FAILED to sent to ' . $sub_channel . ' (' . $title . ')'));
+      \Drupal::logger('push')->error('Failed to send push message to %channel titled "%title" with message: %msg', [
+        '%channel' => $sub_channel,
+        '%msg' => $message,
+        '%title' => $title
+      ]);
+      if ($logUsingMail) {
+        \Drupal::service('plugin.manager.mail')->mail('ait_gcm', 'failed', $logMailAddress, 'nl', $logInfo, NULL, TRUE);
+      }
+    }
+
+    return $androidResult && $iosResult;
+  }
+
+  public function aitGcmSendMessageCore($fields) {
+    $config = \Drupal::configFactory()->getEditable('mxt_core.ait_google_cloud_message');
+
+    $headers = [
+      'Authorization: key=' . $config->get('ait_gcm_api_key'),
+      'Content-Type: application/json'
+    ];
+
+    $ch = curl_init();
+//    curl_setopt($ch, CURLOPT_URL, 'https://gcm-http.googleapis.com/gcm/send');
+    curl_setopt($ch, CURLOPT_URL, 'https://fcm.googleapis.com/fcm/send');
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+    $result = curl_exec($ch);
+    $statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($statusCode == 200) {
+      return json_decode($result);
+    }
+
+    return FALSE;
   }
 
 }

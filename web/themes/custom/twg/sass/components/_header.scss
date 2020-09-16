@@ -394,6 +394,18 @@
 
 }
 
+.mq-header {
+  height: 50px;
+  background: white;
+
+  @include breakpoint($up-sm) {
+    height: 82px;
+  }
+  @include breakpoint($large) {
+    height: 100px;
+  }
+}
+
 .sticky {
   #header-placeholder {
     display: block;
@@ -406,20 +418,15 @@
     z-index: 10;
 
     .mq-header {
-      background: white;
+      height: 50px;
+      @include breakpoint($up-sm) {
+        height: 67px;
+      }
+
     }
   }
 
-  //#header {
-  //  width: 106px;
-  //  z-index: 12;
-  //}
-
   @include breakpoint($up-sm) {
-    //.mq-header {
-    //  height: 67px;
-    //  position: relative;
-    //}
 
     #block-twg-main-menu {
       .menu li a {
@@ -438,31 +445,13 @@
       top: 26px;
     }
     #block-dropdown-language {
-    top: -1px;
+      top: 21px;
+      @include breakpoint($large) {
+        top: -1px;
+      }
     }
 
-    //.language-switcher-locale-url,
-    //.block-search {
-    //  top: 19px;
-    //}
-    //#block-menu-menu-navigation-helpers a {
-    //  top: 24px;
-    //}
-    //.language-switcher-popup {
-    //  top: 54px;
-    //}
   }
 
-  //@include at-breakpoint(full) {
-  //  .language-switcher-locale-url {
-  //    top: -5px;
-  //  }
-  //  .language-switcher-popup {
-  //    top: 26px;
-  //  }
-  //  #logo {
-  //    top: 9px;
-  //  }
-  //}
 }
 

@@ -1,4 +1,11 @@
 title: Contatto
+elements: "name:\n  '#title': Nome\n  '#placeholder': 'Il tuo nome'\nemail:\n  '#placeholder': 'Il tuo indirizzo e-mail'\nmessage:\n  '#title': Messaggio\n  '#placeholder': 'Dicci che cosa vorresti condividere con noi'\nactions:\n  '#submit__label': Invia\n"
 settings:
   confirmation_message: 'Il messaggio è stato inviato.'
-elements: "name:\n  '#title': Nome\n  '#placeholder': 'Il tuo nome'\nemail:\n  '#placeholder': 'Il tuo indirizzo e-mail'\nmessage:\n  '#title': Messaggio\n  '#placeholder': 'Dicci che cosa vorresti condividere con noi'\nactions:\n  '#submit__label': Invia\n"
+handlers:
+  email_confirmation:
+    settings:
+      subject: 'My message to Tweeting with God'
+  email_notification:
+    settings:
+      subject: 'My message to Tweeting with God'

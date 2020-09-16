@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a06fd1d0cf98e2d7aef74a546ee7682",
+    "content-hash": "b1a5d93b7c4538f0a33fddce839b03dd",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3097,6 +3097,63 @@
             "time": "2020-02-01T19:51:15+00:00"
         },
         {
+            "name": "drupal/crop",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/crop.git",
+                "reference": "8.x-2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/crop-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "c03541907d59874ca8a81f574258f6c0de8cbdc8"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.1",
+                    "datestamp": "1585251827",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "woprrr",
+                    "homepage": "https://www.drupal.org/user/858604"
+                }
+            ],
+            "description": "Provides storage and API for image crops.",
+            "homepage": "https://www.drupal.org/project/crop",
+            "support": {
+                "source": "https://git.drupalcode.org/project/crop",
+                "issues": "https://www.drupal.org/project/issues/crop"
+            }
+        },
+        {
             "name": "drupal/ctools",
             "version": "3.4.0",
             "source": {
@@ -3589,6 +3646,82 @@
             }
         },
         {
+            "name": "drupal/image_widget_crop",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/image_widget_crop.git",
+                "reference": "8.x-2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/image_widget_crop-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "20f9e98bd6503699576ada6f4fd4c9fd06686361"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/crop": "^1.0 || ^2.0"
+            },
+            "require-dev": {
+                "drupal/crop": "*",
+                "drupal/ctools": "3.x-dev",
+                "drupal/entity_browser": "1.x-dev",
+                "drupal/file_entity": "*",
+                "drupal/inline_entity_form": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.3",
+                    "datestamp": "1585408029",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Mallet",
+                    "homepage": "https://github.com/woprrr",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "phenaproxima",
+                    "homepage": "https://www.drupal.org/user/205645"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                },
+                {
+                    "name": "woprrr",
+                    "homepage": "https://www.drupal.org/user/858604"
+                }
+            ],
+            "description": "Provides an interface for using the features of the Crop API.",
+            "homepage": "https://www.drupal.org/project/image_widget_crop",
+            "keywords": [
+                "Crop",
+                "Drupal",
+                "Drupal Media"
+            ],
+            "support": {
+                "source": "https://www.drupal.org/project/image_widget_crop",
+                "issues": "https://www.drupal.org/project/issues/image_widget_crop",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/inline_responsive_images",
             "version": "2.1.0",
             "source": {
@@ -3694,6 +3827,53 @@
             "homepage": "https://www.drupal.org/project/linked_field",
             "support": {
                 "source": "https://git.drupalcode.org/project/linked_field"
+            }
+        },
+        {
+            "name": "drupal/linkit",
+            "version": "4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/linkit.git",
+                "reference": "8.x-4.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.3.zip",
+                "reference": "8.x-4.3",
+                "shasum": "e624ea2f18a6100b76a8337e24f7c08df6e2235e"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-4.3",
+                    "datestamp": "1490205830",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Emil Stjerneman",
+                    "homepage": "https://stjerneman.com",
+                    "email": "emil@stjerneman.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Linkit - Enriched linking experience",
+            "homepage": "http://drupal.org/project/linkit",
+            "support": {
+                "source": "http://cgit.drupalcode.org/linkit",
+                "issues": "http://drupal.org/project/linkit"
             }
         },
         {

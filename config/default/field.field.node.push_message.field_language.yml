@@ -13,7 +13,7 @@ entity_type: node
 bundle: push_message
 label: Language
 description: ''
-required: false
+required: true
 translatable: false
 default_value:
   -

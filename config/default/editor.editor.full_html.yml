@@ -15,6 +15,19 @@ settings:
     rows:
       -
         -
+          name: Document
+          items:
+            - Cut
+            - Paste
+            - Copy
+            - PasteText
+            - PasteFromWord
+            - SpecialChar
+        -
+          name: Styles
+          items:
+            - Styles
+        -
           name: Formatting
           items:
             - Bold
@@ -25,36 +38,51 @@ settings:
             - '-'
             - RemoveFormat
         -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
           name: Lists
           items:
             - BulletedList
             - NumberedList
         -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalImage
-            - Table
-            - HorizontalRule
-        -
           name: 'Block Formatting'
           items:
             - Format
         -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+            - Outdent
+            - Indent
+      -
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - DrupalMediaLibrary
+            - Table
+            - HorizontalRule
+        -
           name: Tools
           items:
+            - Maximize
             - ShowBlocks
             - Source
+        -
+          name: Linking
+          items:
+            - Linkit
+            - DrupalLink
+            - DrupalUnlink
   plugins:
     language:
       language_list: un
     stylescombo:
       styles: ''
+    linkit:
+      linkit_profile: ckeditor
 image_upload:
   status: true
   scheme: public

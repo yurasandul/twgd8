@@ -1,2 +1,9 @@
 title: Contacto
 elements: "name:\n  '#title': Nome\n  '#placeholder': 'Seu nome'\nemail:\n  '#placeholder': 'Seu endereço de e-mail'\nmessage:\n  '#title': Mensagem\n  '#placeholder': 'Escreva aqui o que você gostaria de compartilhar conosco.'\nactions:\n  '#submit__label': Submit\n"
+handlers:
+  email_confirmation:
+    settings:
+      subject: 'My message to Tweeting with God'
+  email_notification:
+    settings:
+      subject: 'My message to Tweeting with God'

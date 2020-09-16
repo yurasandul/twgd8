@@ -27,8 +27,15 @@ mxt_core.ait_google_cloud_message_form:
   path: '/admin/config/mxt_core/aitgooglecloudmessage'
   defaults:
     _form: '\Drupal\mxt_core\Form\AITGoogleCloudMessageForm'
-    _title: 'AITGoogleCloudMessageForm'
+    _title: 'AIT Google Cloud Message Settings'
   requirements:
     _permission: 'access administration pages'
   options:
     _admin_route: TRUE
+mxt_core.ait_gcm:
+  path: '/admin/config/content/ait_gcm/test'
+  defaults:
+    _form: '\Drupal\mxt_core\Form\AitGcm'
+    _title: 'Ait Gcm Test'
+  requirements:
+    _access: 'TRUE'

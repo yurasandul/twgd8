@@ -2,9 +2,12 @@ uuid: 15c904bb-5917-4db1-9509-4c5975b4fe8b
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
   module:
     - editor
     - inline_responsive_images
+    - media
 _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
 name: 'Full HTML'
@@ -60,16 +63,21 @@ filters:
     settings:
       image_style_block_background: '1'
       image_style_content_large: '1'
+      image_style_content_small: '0'
+      image_style_crop_thumbnail: '0'
       image_style_flexslider_full: '1'
       image_style_flexslider_thumbnail: '1'
       image_style_large: '1'
+      image_style_linkit_result_thumbnail: '0'
       image_style_max_1300x1300: '1'
       image_style_max_2600x2600: '1'
       image_style_max_325x325: '1'
       image_style_max_650x650: '1'
+      image_style_media_library: '0'
       image_style_medium: '1'
       image_style_shop_image: '1'
       image_style_thumbnail: '1'
+      image_style_tweet_full: '0'
       image_style_tweet_related_teaser: '1'
       image_style_tweet_teaser: '1'
       image_style_twg_api_appimage: '1'
@@ -98,3 +106,18 @@ filters:
     weight: -42
     settings:
       filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: media_library
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        remote_video: remote_video
+        video: video
+      allowed_view_modes:
+        default: default

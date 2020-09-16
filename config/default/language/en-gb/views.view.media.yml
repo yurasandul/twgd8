@@ -1,0 +1,32 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+      fields:
+        media_bulk_form:
+          action_title: Action
+        bundle:
+          label: Type
+        uid:
+          label: Author
+        status:
+          label: Status
+          settings:
+            format_custom_true: Published
+        operations:
+          label: Operations
+      filters:
+        bundle:
+          expose:
+            label: Type
+        status:
+          group_info:
+            group_items:
+              1:
+                title: Published
+        langcode:
+          expose:
+            label: Language

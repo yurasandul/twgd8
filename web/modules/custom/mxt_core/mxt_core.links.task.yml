@@ -2,3 +2,11 @@ mxt_core.mxt_info_tab:
   route_name: mxt_core.mxt_info_form
   title: MXT info
   base_route: mxt_core.mxt_info_form
+mxt_core.ait_gcm_form:
+  route_name: mxt_core.ait_google_cloud_message_form
+  title: AIT GCM Settings
+  base_route: mxt_core.ait_google_cloud_message_form
+mxt_core.ait_gcm_form_test:
+  route_name: mxt_core.ait_gcm
+  title: AIT GCM Test
+  base_route: mxt_core.ait_google_cloud_message_form

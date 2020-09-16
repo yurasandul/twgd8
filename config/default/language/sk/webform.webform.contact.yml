@@ -1,4 +1,11 @@
 title: Kontakt
+elements: "name:\n  '#title': Meno\n  '#placeholder': 'Tvoje meno'\nemail:\n  '#placeholder': 'Tvoja e-mailová adresa'\nmessage:\n  '#title': Správa\n  '#placeholder': 'Povedz nám, čo máš na srdci.'\nactions:\n  '#submit__label': Odoslať\n"
 settings:
   confirmation_message: 'Vaša správa bola odoslaná.'
-elements: "name:\n  '#title': Meno\n  '#placeholder': 'Tvoje meno'\nemail:\n  '#placeholder': 'Tvoja e-mailová adresa'\nmessage:\n  '#title': Správa\n  '#placeholder': 'Povedz nám, čo máš na srdci.'\nactions:\n  '#submit__label': Odoslať\n"
+handlers:
+  email_confirmation:
+    settings:
+      subject: 'My message to Tweeting with God'
+  email_notification:
+    settings:
+      subject: 'My message to Tweeting with God'

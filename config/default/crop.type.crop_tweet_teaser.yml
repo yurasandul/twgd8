@@ -1,0 +1,12 @@
+uuid: cb7703f1-703d-4588-a5e8-7f7b296496ef
+langcode: en
+status: true
+dependencies: {  }
+id: crop_tweet_teaser
+label: 'Crop tweet teaser'
+description: ''
+aspect_ratio: '600:340'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

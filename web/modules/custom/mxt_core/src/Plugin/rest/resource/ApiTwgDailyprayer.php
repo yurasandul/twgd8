@@ -153,26 +153,26 @@ class ApiTwgDailyprayer extends ResourceBase {
           'readings' => [
             [
               'type' => 'act',
-              'title' => $texts['fr_title'] ? strip_tags($texts['fr_title']) : '',
-              'detail' => $texts['fr_text'] ? strip_tags($texts['fr_text']) : '',
+              'title' => $texts['fr_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['fr_title']) : '',
+              'detail' => $texts['fr_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['fr_text']) : '',
             ],
             [
               'type' => 'psalm',
-              'title' => $texts['ps_title'] ? strip_tags($texts['ps_title']) : '',
-              'detail' => $texts['ps_text'] ? strip_tags($texts['ps_text']) : '',
+              'title' => $texts['ps_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['ps_title']) : '',
+              'detail' => $texts['ps_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['ps_text']) : '',
             ],
             [
               'type' => 'gospel',
-              'title' => $texts['gsp_title'] ? strip_tags($texts['gsp_title']) : '',
-              'detail' => $texts['gsp_text'] ? strip_tags($texts['gsp_text']) : '',
+              'title' => $texts['gsp_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['gsp_title']) : '',
+              'detail' => $texts['gsp_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['gsp_text']) : '',
             ],
           ],
         ];
-        if (!empty(strip_tags($texts['sr_text'])) && strip_tags($texts['sr_text']) != "\r" . PHP_EOL) {
+        if (!empty(strip_tags($texts['sr_text'])) && str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_text']) != "<br /><br />") {
           $act_seccond = [
             'type' => 'act_second',
-            'title' => $texts['sr_title'] ? strip_tags($texts['sr_title']) : '',
-            'detail' => $texts['sr_text'] ? strip_tags($texts['sr_text']) : '',
+            'title' => $texts['sr_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_title']) : '',
+            'detail' => $texts['sr_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_text']) : '',
           ];
           array_splice($output_day['readings'], 2, 0, [$act_seccond]);
         }

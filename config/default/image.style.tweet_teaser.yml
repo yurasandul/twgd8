@@ -1,15 +1,25 @@
 uuid: fe8c1219-fb7d-4f4b-8211-f97c960d2b21
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.crop_tweet_teaser
+  module:
+    - crop
 name: tweet_teaser
 label: 'Tweet teaser'
 effects:
-  616b76ab-a9bb-4f35-abaa-e68b1f3f7343:
-    uuid: 616b76ab-a9bb-4f35-abaa-e68b1f3f7343
-    id: image_scale_and_crop
-    weight: 1
+  9647a169-0e7c-474f-8886-cf870a359d4a:
+    uuid: 9647a169-0e7c-474f-8886-cf870a359d4a
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: crop_tweet_teaser
+  b9e18e4e-1987-4b61-bc98-2370b0469aa3:
+    uuid: b9e18e4e-1987-4b61-bc98-2370b0469aa3
+    id: image_scale
+    weight: -8
     data:
       width: 600
       height: 340
-      anchor: center-center
+      upscale: true

@@ -1,0 +1,12 @@
+uuid: b99fe301-aa60-48d1-bd4d-e7fb2d5a7fce
+langcode: en
+status: true
+dependencies: {  }
+id: crop_tweet_full
+label: 'Crop tweet full'
+description: ''
+aspect_ratio: '700:300'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

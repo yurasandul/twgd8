@@ -1,0 +1,25 @@
+uuid: 65c89e7a-81fc-4c65-bac3-81996dcfc858
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ckeditor
+label: ckeditor
+description: ''
+attributes:
+  title:
+    id: title
+    weight: -9
+    settings:
+      automatic_title: true
+matchers:
+  0c83a802-955f-4dbf-86cb-644167ede151:
+    uuid: 0c83a802-955f-4dbf-86cb-644167ede151
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: ''
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: false

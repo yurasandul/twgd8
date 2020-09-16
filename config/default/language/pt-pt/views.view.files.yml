@@ -28,6 +28,8 @@ display:
           label: Estado
         changed:
           label: 'Data alterada'
+        count:
+          label: 'Utilizado em'
       filters:
         status:
           expose:
@@ -44,6 +46,8 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       fields:
+        entity_label:
+          label: Entidade
         type:
           label: 'Tipo de entidade'
       arguments:

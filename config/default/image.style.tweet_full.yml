@@ -1,15 +1,25 @@
 uuid: 0a062566-0996-4a18-830a-4102eac3ef5d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - crop.type.crop_tweet_full
+  module:
+    - crop
 name: tweet_full
 label: 'Tweet full'
 effects:
-  4c663408-ffbb-477a-9e54-c0b42b440b97:
-    uuid: 4c663408-ffbb-477a-9e54-c0b42b440b97
-    id: image_scale_and_crop
-    weight: 1
+  8e095240-6ed6-435b-b2d1-6448d27079b1:
+    uuid: 8e095240-6ed6-435b-b2d1-6448d27079b1
+    id: image_scale
+    weight: 3
     data:
       width: 700
       height: 300
-      anchor: center-center
+      upscale: true
+  ca77f638-6246-439f-ae8e-d7c9056c7a23:
+    uuid: ca77f638-6246-439f-ae8e-d7c9056c7a23
+    id: crop_crop
+    weight: 2
+    data:
+      crop_type: crop_tweet_full

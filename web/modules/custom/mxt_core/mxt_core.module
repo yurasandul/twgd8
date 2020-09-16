@@ -138,3 +138,66 @@ function mxt_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
     $form['field_sent']['#access'] = FALSE;
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mxt_core_preprocess_views_view_unformatted__twg_all_tweets__page_1(&$variables) {
+  $sort_array = [];
+  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  /** @var \Drupal\mxt_core\TwgApiHelper $twg_api_helper */
+  $twg_api_helper = \Drupal::service('mxt_core.twg_api_helper');
+
+  foreach ($variables['rows'] as $index => $row) {
+    $node = $row["content"]["#row"]->_entity->getTranslation($langcode);
+    $sort_array[(string) $index] = number_format($twg_api_helper->getPartsFromTitle($node->getTitle())['number'], 2);
+  }
+  asort($sort_array);
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mxt_core_preprocess_views_view__twg_all_tweets__page_1(&$variables) {
+  $groups_weight = [];
+  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  /** @var \Drupal\mxt_core\TwgApiHelper $twg_api_helper */
+  $twg_api_helper = \Drupal::service('mxt_core.twg_api_helper');
+
+  foreach ($variables['rows'] as $group_index => $row) {
+    $sort_array[$group_index] = [];
+    $group = [];
+    $weight = 0;
+    foreach ($row['#rows'] as $node_index => $node_row) {
+      $node = $node_row["#row"]->_entity->getTranslation($langcode);
+      $group[$node_index] = number_format($twg_api_helper->getPartsFromTitle($node->getTitle())['number'], 2);
+      $weight += $twg_api_helper->getPartsFromTitle($node->getTitle())['number'];
+    }
+    asort($group);
+    $groups_weight[(string) $group_index] = $weight / count($group);
+    $group_sort = [];
+    foreach ($group as $node_index => $node_number) {
+      $group_sort[$node_index] = $row['#rows'][$node_index];
+    }
+    $variables['rows'][$group_index]["#rows"] = $group_sort;
+  }
+  asort($groups_weight);
+  $old_result = $variables['rows'];
+  $variables['rows'] = [];
+  foreach ($groups_weight as $key => $weight) {
+    $variables['rows'][] = $old_result[$key];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mxt_core_preprocess_field__node__body__tweet_page(&$variables) {
+  /** @var \Drupal\mxt_core\TwgApiHelper $twg_api_helper */
+  $twg_api_helper = \Drupal::service('mxt_core.twg_api_helper');
+
+  $text = $variables['items'][0]['content']['#text'] ?? '';
+
+  $data = $twg_api_helper->parseShortCodesQtip($text, TRUE);
+  $variables['items'][0]['content']['#text'] = $data['content'];
+}
