@@ -160,10 +160,11 @@ function twg_preprocess_menu__main(&$variables) {
       $item['attributes']->addClass('expanded');
     }
     else {
-      $item['attributes']->addClass('is_leaf');
+      $item['attributes']->addClass('is-leaf');
     }
-    foreach ($item['below'] as $item_second_lvel) {
-      if ($item_second_lvel['in_active_trail']) {
+    foreach ($item['below'] as $item_second_level) {
+      $item_second_level['attributes']->addClass('is-leaf');
+      if ($item_second_level['in_active_trail']) {
         $item['attributes']->addClass('is-active');
       }
     }
@@ -258,4 +259,11 @@ function twg_preprocess_field__node__tweet_page(&$variables) {
     $variables['items'] = [];
     $variables['label_hidden'] = TRUE;
   }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_input__search(&$variables) {
+  $variables['attributes']['type'] = 'custom-search';
 }
