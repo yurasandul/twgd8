@@ -1,0 +1,28 @@
+uuid: ba1ff72e-7172-4a09-ad53-2e64377d00e3
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - mxt_core
+  theme:
+    - twg
+id: tweet_pager
+theme: twg
+region: content
+weight: -11
+provider: null
+plugin: tweet_pager_block
+settings:
+  id: tweet_pager_block
+  label: 'Tweet pager block'
+  provider: mxt_core
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      tweet_page: tweet_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

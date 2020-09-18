@@ -1,0 +1,151 @@
+.block-tweet-pager {
+
+}
+
+// Other stuff outside the node, but on the node page
+.tweet-navigation {
+
+  margin-bottom: 20px;
+  .tweet-navigation-inner-wrapper {
+    position: relative;
+  }
+
+  a {
+    @extend %font-helvetica-neue-75;
+    font-size: 20px;
+    display: inline-block;
+    background-color: $blue-darkest;
+    line-height: 42px;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+
+    &:hover {
+      background: $blue--footer;
+    }
+  }
+
+  .tweet-navigation--arrows {
+    float: right;
+
+    a {
+      float: left;
+      margin-left: 1px;
+
+      text-indent: -9999em;
+      width: 42px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 9px;
+      }
+
+      // Remove redundant a-tags
+      &[rel] {
+        display: none;
+      }
+    }
+
+    .freepager-previous {
+      display: inline-block;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      a:after {
+        @include icons-sprite-arrow-left-white;
+        left: 13px;
+      }
+    }
+
+    .freepager-next {
+      display: inline-block;
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      a:after {
+        @include icons-sprite-arrow-right-white;
+        left: 15px;
+      }
+    }
+  }
+}
+
+.tweet-navigation--arrows {
+  height: 42px;
+  overflow: hidden;
+
+  .preview {
+    position: absolute;
+    top: 0;
+    left: 118px;
+    display: none;
+    width: calc( 100% - 210px );
+    height: 42px;
+    overflow: hidden;
+    background: $search-bg;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: $grey-dark;
+    @extend %font-ubuntu;
+
+    .preview--prevnext {
+      color: $blue-darkest;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+  .tweet-navigation-item {
+    &:hover {
+      .preview {
+        display: block;
+      }
+    }
+  }
+}
+
+
+//.tweet-navigation--preview {
+//  .preview--unit {
+//    @extend %font-ubuntu;
+//    background: $search-bg;
+//    display: none;
+//    font-weight: bold;
+//    font-size: 16px;
+//    line-height: 18px;
+//    color: $grey-dark;
+//    padding: 0 10px;
+//    height: 42px;
+//    overflow: hidden;
+//    max-width: calc( 100% - 120px );
+//    //margin-left: 124px;
+//
+//    &.open {
+//      display: block;
+//    }
+//
+//    .preview--prevnext {
+//      color: $blue-darkest;
+//      display: inline-block;
+//      margin-right: 5px;
+//    }
+//  }
+//}
+
+#tweet-navigation--dummy {
+  display: none;
+  &.open {
+    .logged-out & {
+      display: block;
+    }
+  }
+}

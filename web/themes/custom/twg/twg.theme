@@ -230,3 +230,32 @@ function twg_theme_suggestions_form_element_alter(array &$suggestions, array $va
     $suggestions[] = 'form_element__' . $variables['element']['#name'];
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function twg_preprocess_field__node__tweet_page(&$variables) {
+  $field_names = [
+    'field_references_to_the_popes',
+    'field_references_to_church_fathe',
+    'field_references_to_text',
+  ];
+  if (!in_array($variables['field_name'], $field_names)) {
+    return;
+  }
+  $display = FALSE;
+  $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  foreach ($variables['items'] as $item) {
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+    $paragraph = $item['content']['#paragraph'];
+    $translated = $paragraph->getTranslation($langcode);
+
+    if (!$translated->get('field_reference_body')->isEmpty() || !$translated->get('field_reference_heading')->isEmpty()) {
+      $display = true;
+    }
+  }
+  if (!$display) {
+    $variables['items'] = [];
+    $variables['label_hidden'] = TRUE;
+  }
+}

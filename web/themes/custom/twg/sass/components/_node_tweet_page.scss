@@ -199,6 +199,16 @@
     cursor: pointer;
   }
 
+  .field--type-entity-reference-revisions {
+    .field__label {
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-family: $ubuntu_cn;
+    }
+  }
+
   .field--name-field-reference-body {
     p {
       display: block;

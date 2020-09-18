@@ -1143,7 +1143,7 @@ class TwgApiHelper {
     ];
     if ($androidResult !== FALSE) {
       \Drupal::messenger()->addStatus('Push message successfully sent to ' . $sub_channel . ' (' . $title . ')');
-      \Drupal::logger('push')->error('Push message sent to %channel titled "%title" with message: %msg', [
+      \Drupal::logger('push')->info('Push message sent to %channel titled "%title" with message: %msg', [
         '%id' => $androidResult->message_id,
         '%channel' => $sub_channel,
         '%msg' => $message,
@@ -1189,7 +1189,7 @@ class TwgApiHelper {
     ];
     if ($iosResult !== FALSE) {
       \Drupal::messenger()->addStatus('Push message successfully sent to ' . $sub_channel . ' (' . $title . ')');
-      \Drupal::logger('push')->error('Push message sent to %channel (ID: %id) titled "%title" with message: %msg', [
+      \Drupal::logger('push')->info('Push message sent to %channel (ID: %id) titled "%title" with message: %msg', [
         '%id' => $androidResult->message_id,
         '%channel' => $sub_channel,
         '%msg' => $message,

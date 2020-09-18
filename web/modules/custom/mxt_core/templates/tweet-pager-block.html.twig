@@ -1,0 +1,32 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+    'clear-both',
+    'tweet-navigation',
+    'turns-sticky',
+] %}
+<div{{ attributes.addClass(classes) }} data-stickydummyid="tweet-navigation--dummy">
+  <div class="tweet-navigation-inner-wrapper">
+    {{ content.all }}
+    <div class="tweet-navigation--arrows">
+      <span class="tweet-navigation-item freepager-previous">
+        {{ content.prev.url }}
+        <div class="preview"><span class="preview--prevnext">{{ 'Previous' | t }}:</span><span class="preview--title">{{ content.prev.title }}</div>
+      </span>
+      <span class="tweet-navigation-item freepager-next">
+        {{ content.next.url }}
+        <div class="preview"><span class="preview--prevnext">{{ 'Next' | t }}:</span><span class="preview--title">{{ content.next.title }}</div>
+      </span>
+    </div>
+  </div>
+</div>
+
+<section id="tweet-navigation--dummy" class="sticky-dummy"> </section>

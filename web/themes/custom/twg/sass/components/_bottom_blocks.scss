@@ -121,7 +121,7 @@
   }
 
   h3 {
-    font-family: $HelveticaNeueW02-57Cn;
+    font-family: $ubuntu_cn;
     font-size: 26px;
     line-height: 32px;
     color: inherit;
@@ -161,7 +161,7 @@
   }
 
   @include breakpoint($large) {
-    padding: (2 * $desktop-gutter) $desktop-gutter;
+    padding: (2 * $desktop-gutter) (2 * $desktop-gutter);
     &.contains-image {
       height: $bottom-block-height;
 

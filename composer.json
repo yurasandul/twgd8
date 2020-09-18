@@ -136,6 +136,9 @@
         "patches": {
             "drupal/flexslider": {
                 "Add flexslider support for any (multi-valued) entity reference field": "https://www.drupal.org/files/issues/2020-08-02/3086080-14.patch"
+            },
+            "drupal/core": {
+                "Admin toolbar should always be rendered in the admin language (if set)": "https://www.drupal.org/files/issues/2020-08-25/2313309-67.patch"
             }
         }
     }

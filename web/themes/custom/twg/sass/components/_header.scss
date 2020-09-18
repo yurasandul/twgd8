@@ -36,10 +36,11 @@
   @include breakpoint($large) {
     padding-left: 190px;
   }
-   .menu {
+  .menu {
     list-style: none;
     margin-bottom: 0;
     margin-top: 0;
+    padding-left: 0;
 
     ul {
       display: none;
@@ -69,20 +70,19 @@
         }
 
         @include breakpoint($up-sm) {
-          display: inline-block;
-        }
+        display: inline-block;
+      }
 
         @include breakpoint($large) {
-          font-size: 21px;
-          line-height: 100px;
-        }
+        font-size: 21px;
+        line-height: 100px;
+      }
       }
 
       &.is-active a {
         background-color: $blue--footer;
         color: white;
       }
-
     }
   }
 }
@@ -452,6 +452,25 @@
     }
 
   }
-
 }
 
+.turns-sticky.sticky {
+  .logged-out & {
+    position: fixed;
+    //  top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: white;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    @include breakpoint($large) {
+      padding-left: 0;
+      padding-right: 32px;
+      width: 666.66667px;
+      left: auto;
+      top: 67px;
+    }
+  }
+}

@@ -119,10 +119,10 @@ class ApiTwgDailyprayer extends ResourceBase {
     $output = [];
     foreach ($dates as $time => $date) {
       $cid_day = basename(__FILE__, '.module') . ':' . 'json__dailyprayer__day_' . $date . '__' . $langcode;
-      if ($cache = \Drupal::cache()->get($cid_day)) {
-        $output_day = $cache->data;
-      }
-      else {
+//      if ($cache = \Drupal::cache()->get($cid_day)) {
+//        $output_day = $cache->data;
+//      }
+//      else {
         $url = 'http://feed.evangelizo.org/v2/reader.php?date=' . $date . '&lang=' . $lang;
         $parts = [
           'liturgic' => 'content=FR&type=liturgic_t',
@@ -177,10 +177,10 @@ class ApiTwgDailyprayer extends ResourceBase {
           array_splice($output_day['readings'], 2, 0, [$act_seccond]);
         }
 
-        if (!array_search(FALSE, $texts)) {
-          \Drupal::cache()->set($cid_day, $output_day, (time() + 86400));
-        }
-      }
+//        if (!array_search(FALSE, $texts)) {
+//          \Drupal::cache()->set($cid_day, $output_day, (time() + 86400));
+//        }
+//      }
 
       $output[] = $output_day;
     }

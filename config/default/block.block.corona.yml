@@ -12,7 +12,7 @@ dependencies:
 id: corona
 theme: twg
 region: content
-weight: -11
+weight: -12
 provider: null
 plugin: 'block_content:b87a3348-b771-49fd-8060-c794a55b3cee'
 settings:

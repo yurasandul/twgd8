@@ -10,7 +10,7 @@ dependencies:
 id: frontpage_top_block_1
 theme: twg
 region: front_top
-weight: 0
+weight: -13
 provider: null
 plugin: front_page_top_blocks_1
 settings:

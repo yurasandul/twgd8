@@ -32,7 +32,6 @@
         return true;
       });
 
-
       // On tweet pages, references need to be able to fold out using JS
       $('.node--type-tweet-page .field--name-field-reference-body').once('makeBodyTeaser').each(function() {
         $(this).addClass('closed');
@@ -82,7 +81,6 @@
   };
 
   Drupal.behaviors.live_search = {
-
     data: {},
     dataCounter: 0,
     itemSelector: '.live-page-search a',
@@ -187,5 +185,63 @@
       }
     }
   };
+
+  Drupal.behaviors.sticky_subheader = {
+    stickySelector: '.turns-sticky',
+    dummyDataAttribute: 'data-stickydummyid',
+    originalOffsetAttribute: 'data-originalOffset',
+
+    attach: function(context, settings) {
+      var self = this;
+
+      // Apparantly there is no real method of attaching something to the
+      // window.load event using Drupal Javascript behaviors.
+      // I'll just do it inside the attach function (which is basically a window.ready() handler.
+      //$(window).load(function() {
+
+        var qwe = $(self.stickySelector);
+
+        // calculate initial offset for elements that stick to the header.
+        // So we know when to make them sticky and when to make them static again.
+        $(self.stickySelector).each(function() {
+          var current = $(this);
+          var dummy = $('#' + $(this).attr(self.dummyDataAttribute));
+          var originalOffset = current.offset().top;
+          current.attr(self.originalOffsetAttribute, originalOffset);
+          dummy.css('height', current.height());
+          dummy.css('margin-top', current.css('margin-top'));
+          dummy.css('margin-bottom', current.css('margin-bottom'));
+        });
+
+        $(window).scroll(self, self.scrollHandler);
+      //});
+    },
+
+    scrollHandler: function(obj) {
+      var self = obj.data;
+      $(self.stickySelector).each(function() {
+        var current = $(this);
+        var dummy = $('#' + $(this).attr(self.dummyDataAttribute));
+        var originalOffset = current.attr(self.originalOffsetAttribute);
+        var offsetToCheck = originalOffset - stickyMenuHeight;
+        var currentScroll = $(window).scrollTop();
+        var currentSticky = current.hasClass('sticky');
+
+        if($(window).innerWidth() < desktopMinimum) {
+          offsetToCheck = originalOffset - mobileMenuHeight;
+        }
+
+        if(currentScroll >= offsetToCheck && !currentSticky) {
+          dummy.addClass('open');
+          current.addClass('sticky');
+        }
+        else if(currentScroll < offsetToCheck && currentSticky) {
+          current.removeClass('sticky');
+          dummy.removeClass('open');
+        }
+      });
+    }
+  };
+
 
 })(jQuery, Drupal);
