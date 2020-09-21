@@ -113,33 +113,54 @@
   }
 }
 
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
 
-//.tweet-navigation--preview {
-//  .preview--unit {
-//    @extend %font-ubuntu;
-//    background: $search-bg;
-//    display: none;
-//    font-weight: bold;
-//    font-size: 16px;
-//    line-height: 18px;
-//    color: $grey-dark;
-//    padding: 0 10px;
-//    height: 42px;
-//    overflow: hidden;
-//    max-width: calc( 100% - 120px );
-//    //margin-left: 124px;
-//
-//    &.open {
-//      display: block;
-//    }
-//
-//    .preview--prevnext {
-//      color: $blue-darkest;
-//      display: inline-block;
-//      margin-right: 5px;
-//    }
-//  }
-//}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 350px;
+  background: #009bd8;
+  color: white;
+  font-family: $ubuntu_cn;
+  font-size: 14px;
+  line-height: 20px;
+  border: none;
+  padding: 5px 9px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -175px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #009bd8 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
 
 #tweet-navigation--dummy {
   display: none;

@@ -45,7 +45,14 @@ class TweetPagerBlock extends BlockBase implements ContainerFactoryPluginInterfa
    * {@inheritdoc}
    */
   public function build() {
+    /** @var \Drupal\node\Entity\Node $current_node */
     if (!$current_node = \Drupal::routeMatch()->getParameter('node')) {
+      return [];
+    }
+
+    $current_state = node_revision_load($current_node->getRevisionId())->get('moderation_state')->getValue()[0]['value'];
+    if ($current_state != 'published') {
+      \Drupal::messenger()->addStatus('This is unpublished revision.');
       return [];
     }
 

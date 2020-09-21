@@ -71,6 +71,7 @@ display:
           label: 'Typ encji'
         count:
           label: 'Ilość wystąpień'
+          format_plural_string: !!binary MQNAY291bnQDQGNvdW50
       arguments:
         fid:
           exception:

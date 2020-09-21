@@ -1017,7 +1017,8 @@ class TwgApiHelper {
       $qtip_parts = explode('|', $matches[1][$index]);
       if (count($qtip_parts) > 1) {
         if ($jq_ui_tooltip) {
-          $link = '<a href="#" title="' . $qtip_parts[1] . '" onclick="return false">' . $qtip_parts[0] . '</a>';
+//          $link = '<a href="#" class="tooltip" title="' . $qtip_parts[1] . '" onclick="return false">' . $qtip_parts[0] . '</a>';
+          $link = '<a href="#" class="tooltip" onclick="return false">' . $qtip_parts[0] . '<span class="tooltiptext">' . $qtip_parts[1] . '</span></a>';
         }
         else {
           $link = '<a href="t' . $index . '"><b>' . $qtip_parts[0] . '</b></a>';

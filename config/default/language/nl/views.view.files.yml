@@ -75,6 +75,7 @@ display:
           label: Entiteitstype
         count:
           label: Gebruiksfrequentie
+          format_plural_string: !!binary MQNAY291bnQ=
       arguments:
         fid:
           exception:

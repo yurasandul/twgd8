@@ -15,7 +15,7 @@ display:
         options:
           tags:
             previous: '‹ Předchozí'
-            next: 'Další ›'
+            next: 'Následující ›'
             first: '« První'
             last: 'Poslední »'
           expose:
@@ -23,6 +23,8 @@ display:
             items_per_page_options_all_label: '- Vše -'
             offset_label: Posun
       fields:
+        user_bulk_form:
+          label: 'Hromadná aktualizace'
         name:
           label: 'Uživatelské jméno'
         status:

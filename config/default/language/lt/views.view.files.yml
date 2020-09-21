@@ -63,6 +63,7 @@ display:
           label: 'Registruojantis modulis'
         count:
           label: 'Naudojimų kiekis'
+          format_plural_string: !!binary QGNvdW50IANAY291bnQDQGNvdW50
       arguments:
         fid:
           exception:

@@ -75,6 +75,7 @@ display:
           label: 'Type d''entité'
         count:
           label: 'Nombre d''utilisations'
+          format_plural_string: !!binary MQNAY291bnQ=
       arguments:
         fid:
           exception:

@@ -1,0 +1,31 @@
+uuid: 439c152b-fc26-4955-9d20-4759c4a04915
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c523d207-9103-48bf-938a-7ec9827ed1d7'
+  module:
+    - block_content
+    - system
+  theme:
+    - twg
+id: search_no_results
+theme: twg
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:c523d207-9103-48bf-938a-7ec9827ed1d7'
+settings:
+  id: 'block_content:c523d207-9103-48bf-938a-7ec9827ed1d7'
+  label: 'Search - no results'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/search/node*'
+    negate: false
+    context_mapping: {  }

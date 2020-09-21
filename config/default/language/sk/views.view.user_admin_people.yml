@@ -22,6 +22,8 @@ display:
             items_per_page_options_all_label: '- Všetko -'
             offset_label: 'Zobraziť od'
       fields:
+        user_bulk_form:
+          label: 'Hromadná aktualizácia'
         name:
           label: 'Používateľské meno'
         status:

@@ -13,3 +13,5 @@ display:
         changed:
           separator: ', '
       use_more_text: Mais
+  block_1:
+    display_title: Bloco

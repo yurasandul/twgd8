@@ -24,7 +24,7 @@ display:
             offset_label: Startpunt
       fields:
         user_bulk_form:
-          label: 'Massaal bijwerken'
+          label: Bulk-update
         name:
           label: Gebruikersnaam
         status:

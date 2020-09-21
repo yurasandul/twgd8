@@ -16,7 +16,7 @@ display:
             previous: '‹ anterior'
             next: 'siguiente ›'
             first: '« primero'
-            last: 'última »'
+            last: 'último »'
           expose:
             items_per_page_label: 'Elementos por página'
             items_per_page_options_all_label: '- Todo -'

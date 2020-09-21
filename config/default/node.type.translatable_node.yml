@@ -1,0 +1,20 @@
+uuid: 145c0938-1ddc-4567-8bae-21e74020f6ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: qpa1vm0E_MZWFKw7IamLcCxkhXXc6PGctwH_fW6pmgg
+name: 'Translatable node'
+type: translatable_node
+description: 'Content type for translatable content.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -13,7 +13,7 @@ display:
         options:
           tags:
             previous: '‹ Předchozí'
-            next: 'Další ›'
+            next: 'Následující ›'
             first: '« První'
             last: 'Poslední »'
           expose:

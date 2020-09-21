@@ -21,6 +21,8 @@ display:
             items_per_page_options_all_label: '- Todos -'
             offset_label: Deslocamento
       fields:
+        user_bulk_form:
+          label: 'Atualização em massa'
         name:
           label: 'Nome de utilizador'
         status:

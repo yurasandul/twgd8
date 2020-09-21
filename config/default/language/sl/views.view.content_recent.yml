@@ -5,3 +5,5 @@ display:
         options:
           reset_button_label: Ponastavi
       use_more_text: Več
+  block_1:
+    display_title: Blok

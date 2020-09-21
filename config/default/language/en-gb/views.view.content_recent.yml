@@ -5,3 +5,5 @@ display:
         options:
           reset_button_label: Reset
       use_more_text: More
+  block_1:
+    display_title: Block

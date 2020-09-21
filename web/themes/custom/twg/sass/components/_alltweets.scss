@@ -28,7 +28,7 @@
 	}
 
 	&.turns-sticky.sticky {
-		padding: 1px 8px 5px 8px;
+		padding: 0 8px 5px 8px;
 		background: white;
 	}
 
@@ -39,11 +39,22 @@
 	}
 }
 
+.sticky-dummy {
+  display: none;
+  &.open {
+    display: block;
+  }
+}
+
+summary[aria-controls="edit-advanced"] {
+  display: none;
+}
+
 .view-twg-all-tweets {
 	margin-bottom: $base-bottom-margin;
-
 	h3 {
-		@extend %font-helvetica-neue-57;
+		//@extend %font-helvetica-neue-57;
+    font-family: $HelveticaNeueW02_57Cn;
 		font-weight: bold;
 		font-size: 26px;
 		line-height: 44px;
@@ -82,6 +93,7 @@
 
 	.all-tweets-search--header {
 		@extend %font-helvetica-neue-57;
+    font-style: normal;
 		font-size: 26px;
 		line-height: 30px;
 		margin-bottom: $base-bottom-margin;

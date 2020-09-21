@@ -1,0 +1,11 @@
+uuid: dcf9671a-5b40-49dd-b339-13646d2c1dfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_tweet_teaser
+id: crop.crop_tweet_teaser
+target_entity_type_id: crop
+target_bundle: crop_tweet_teaser
+default_langcode: site_default
+language_alterable: false

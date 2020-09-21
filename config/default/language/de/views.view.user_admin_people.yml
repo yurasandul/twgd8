@@ -23,6 +23,8 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
+        user_bulk_form:
+          label: Massenaktualisierung
         name:
           label: Benutzername
         status:

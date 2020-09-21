@@ -119,10 +119,10 @@ class ApiTwgDailyprayer extends ResourceBase {
     $output = [];
     foreach ($dates as $time => $date) {
       $cid_day = basename(__FILE__, '.module') . ':' . 'json__dailyprayer__day_' . $date . '__' . $langcode;
-//      if ($cache = \Drupal::cache()->get($cid_day)) {
-//        $output_day = $cache->data;
-//      }
-//      else {
+      if ($cache = \Drupal::cache()->get($cid_day)) {
+        $output_day = $cache->data;
+      }
+      else {
         $url = 'http://feed.evangelizo.org/v2/reader.php?date=' . $date . '&lang=' . $lang;
         $parts = [
           'liturgic' => 'content=FR&type=liturgic_t',
@@ -153,34 +153,34 @@ class ApiTwgDailyprayer extends ResourceBase {
           'readings' => [
             [
               'type' => 'act',
-              'title' => $texts['fr_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['fr_title']) : '',
-              'detail' => $texts['fr_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['fr_text']) : '',
+              'title' => $texts['fr_title'] ?? '',
+              'detail' => $texts['fr_text'] ?? '',
             ],
             [
               'type' => 'psalm',
-              'title' => $texts['ps_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['ps_title']) : '',
-              'detail' => $texts['ps_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['ps_text']) : '',
+              'title' => $texts['ps_title'] ?? '',
+              'detail' => $texts['ps_text'] ?? '',
             ],
             [
               'type' => 'gospel',
-              'title' => $texts['gsp_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['gsp_title']) : '',
-              'detail' => $texts['gsp_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['gsp_text']) : '',
+              'title' => $texts['gsp_title'] ?? '',
+              'detail' => $texts['gsp_text'] ?? '',
             ],
           ],
         ];
-        if (!empty(strip_tags($texts['sr_text'])) && str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_text']) != "<br /><br />") {
+        if (!empty(strip_tags($texts['sr_text'])) && $texts['sr_text'] != "<br />\r\n") {
           $act_seccond = [
             'type' => 'act_second',
-            'title' => $texts['sr_title'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_title']) : '',
-            'detail' => $texts['sr_text'] ? str_replace(["\r\n", "\r", "\n"], "<br />", $texts['sr_text']) : '',
+            'title' => $texts['sr_title'] ?? '',
+            'detail' => $texts['sr_text'] ?? '',
           ];
           array_splice($output_day['readings'], 2, 0, [$act_seccond]);
         }
 
-//        if (!array_search(FALSE, $texts)) {
-//          \Drupal::cache()->set($cid_day, $output_day, (time() + 86400));
-//        }
-//      }
+        if (!array_search(FALSE, $texts)) {
+          \Drupal::cache()->set($cid_day, $output_day, (time() + 86400));
+        }
+      }
 
       $output[] = $output_day;
     }

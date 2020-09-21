@@ -18,7 +18,7 @@ display:
             offset_label: Posun
           tags:
             previous: '‹ Předchozí'
-            next: 'Další ›'
+            next: 'Následující ›'
             first: '« První'
             last: 'Poslední »'
       fields:

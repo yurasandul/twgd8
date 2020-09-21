@@ -5,6 +5,13 @@ display:
         options:
           submit_button: Filter
           reset_button_label: Reset
+      pager:
+        options:
+          tags:
+            previous: '‹ previous'
+            next: 'next ›'
+            first: '« first'
+            last: 'last »'
       fields:
         created:
           label: Created

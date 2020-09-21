@@ -75,6 +75,7 @@ display:
           label: 'Tipo de entidad'
         count:
           label: 'Conteo de usos'
+          format_plural_string: !!binary MQNAY291bnQ=
       arguments:
         fid:
           exception:

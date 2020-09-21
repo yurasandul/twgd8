@@ -23,6 +23,8 @@ display:
             items_per_page_options_all_label: '- Tutto -'
             offset_label: Scostamento
       fields:
+        user_bulk_form:
+          label: 'Aggiornamento di massa'
         name:
           label: 'Nome utente'
         status:

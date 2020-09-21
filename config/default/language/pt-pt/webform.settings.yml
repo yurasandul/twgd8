@@ -4,5 +4,8 @@ settings:
   default_wizard_confirmation_label: Concluída
   default_preview_next_button_label: Pré-visualizar
   default_preview_label: Pré-visualizar
+  dialog_options:
+    normal:
+      title: Normal
 element:
   default_more_title: Mais

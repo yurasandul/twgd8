@@ -60,6 +60,7 @@
         "drupal/restui": "^1.17",
         "drupal/semanticviews": "^2.3",
         "drupal/simple_oauth": "^4.4",
+        "drupal/tmgmt": "^1.11",
         "drupal/translatable_menu_link_uri": "^1.2",
         "drupal/twig_tweak": "^2.6",
         "drupal/video_embed_field": "^2.2",
