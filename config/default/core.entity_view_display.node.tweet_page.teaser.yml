@@ -51,6 +51,16 @@ third_party_settings:
         weight: 6
         label: hidden
         formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_group:
     group_right_wrapper:
       children:

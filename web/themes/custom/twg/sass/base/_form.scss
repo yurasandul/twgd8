@@ -205,20 +205,12 @@ form input {
     transition: auto;
   }
 
-  &:hover {
-//    background-color: $light-gray;
-  }
 }
 
 .form-item {
   margin: 1.5em 0;
 }
 
-//.form-required:after {
-//  width: 7px;
-//  height: 7px;
-//  background-size: 7px 7px;
-//}
 .form-required:after {
   display: inline-block;
   width: 6px;
@@ -229,4 +221,13 @@ form input {
   background-image: url(../../../../core/misc/icons/ee0000/required.svg);
   background-repeat: no-repeat;
   background-size: 6px 6px;
+}
+
+.dropbutton-arrow {
+  border-width: 0.5em 0.23333em 0;
+  top: 51%;
+}
+
+.js .dropbutton-multiple .dropbutton-widget {
+  padding-right: 29px;
 }

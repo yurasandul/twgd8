@@ -205,9 +205,14 @@
       line-height: 28px;
       font-weight: bold;
       margin-bottom: 20px;
-      font-family: $ubuntu_cn;
+      font-family: $roboto_cn;
     }
   }
+
+  .field--name-field-reference-heading {
+
+  }
+
 
   .field--name-field-reference-body {
     p {
@@ -318,6 +323,7 @@
     a {
       @extend %big-blue-heading;
       text-decoration: none;
+      font-style: normal;
     }
   }
 
@@ -333,5 +339,13 @@
     line-height: 44px;
     margin-top: 0;
     margin-bottom: 20px;
+  }
+}
+
+
+.block-views-blocktwg-related-pages-block-related-tweets {
+  h2 {
+    font-family: $ubuntu_cn;
+    font-family: $roboto_cn;
   }
 }
