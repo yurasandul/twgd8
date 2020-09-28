@@ -91,6 +91,7 @@ class TweetPagerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     $build = [];
     $build['#theme'] = 'tweet_pager_block';
     $build['#content'] = $content;
+    $build['#cache']['max-age'] = 0;
     return $build;
   }
 

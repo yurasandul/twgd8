@@ -146,6 +146,41 @@ function mxt_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function mxt_core_form_dropdown_language_config_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $config = \Drupal::configFactory()->getEditable('mxt_core.dropdown_language');
+  $default_values = $config->get('selected_language');
+
+  $options = [];
+  foreach (\Drupal::languageManager()->getLanguages() as $langcode => $language) {
+    $options[$langcode] = $language->getName();
+  }
+  $form['selected_language'] = [
+    '#type' => 'checkboxes',
+    '#title' => t('Language in "Dropdown Language"'),
+    '#options' => $options,
+    '#default_value' => $default_values,
+    '#multiple' => TRUE,
+  ];
+  $form['#submit'][] = 'mxt_core_form_dropdown_language_config_submit';
+}
+
+/**
+ * Custom submit for "form_dropdown_language_config".
+ *
+ * @param array $form
+ *   Array form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   FormState Obj.
+ */
+function mxt_core_form_dropdown_language_config_submit(&$form, FormStateInterface $form_state) {
+  $selected_language = $form_state->getValue('selected_language');
+  $config = \Drupal::configFactory()->getEditable('mxt_core.dropdown_language');
+  $config->set('selected_language', $selected_language)->save();
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function mxt_core_preprocess_views_view_unformatted__twg_all_tweets__page_1(&$variables) {
@@ -206,4 +241,21 @@ function mxt_core_preprocess_field__node__body__tweet_page(&$variables) {
 
   $data = $twg_api_helper->parseShortCodesQtip($text, TRUE);
   $variables['items'][0]['content']['#text'] = $data['content'];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mxt_core_preprocess_block__dropdown_language(&$variables) {
+  $config = \Drupal::configFactory()->getEditable('mxt_core.dropdown_language');
+  $enabled_values = $config->get('selected_language');
+  $languages = $variables['content']['dropdown-language']['switch-language']['#links'];
+
+  $links = [];
+  foreach ($enabled_values as $key => $values) {
+    if (($values !== 0) && isset($languages[$key])) {
+      $links[$key] = $languages[$key];
+    }
+  }
+  $variables['content']['dropdown-language']['switch-language']['#links'] = $links;
 }

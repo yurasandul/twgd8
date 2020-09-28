@@ -136,13 +136,36 @@
     }
 
     .form-actions input {
-      display: none;
+      cursor: pointer;
+      background-color: #f6f8f9;
+      background-image: url(../images/icons-s8428879d15.png);
+      background-repeat: no-repeat;
+      background-position: 3px -81px;
+      position: absolute;
+      border: none;
+      top: 2px;
+      right: 2px;
+      font-size: 0;
+      height: 24px;
+      width: 26px;
     }
   }
 
   .contextual .trigger {
     display: none;
   }
+
+  form input[type=submit] {
+    border: none;
+    @include breakpoint($up-sm) {
+      border: none;
+      display: none;
+    }
+    @include breakpoint($large) {
+      display: block
+    }
+  }
+
 
   &.open {
     width: 100%;
@@ -157,7 +180,20 @@
     form input {
       padding: 0 5px;
       border: #d8e0e2 1px solid;
+      &[type=submit] {
+        @include breakpoint($up-sm) {
+          border: none;
+        }
+      }
     }
+
+    form input[type=submit] {
+      border: none;
+      @include breakpoint($up-sm) {
+        display: block;
+      }
+    }
+
   }
 }
 
@@ -227,7 +263,6 @@
       background: white;
       border: 1px solid #eeeeee;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-
     }
 
     .dropbutton-toggle {
@@ -277,13 +312,14 @@
 }
 
 .search-opener {
+  background-color: white;
   background-image: url(../images/icons-s8428879d15.png);
   background-repeat: no-repeat;
   background-position: 0 -84px;
-  height: 18px;
-  width: 18px;
+  height: 19px;
+  width: 20px;
   border: none;
-  background-color: transparent;
+  //background-color: transparent;
   position: absolute;
   z-index: 2;
   cursor: pointer;
@@ -291,13 +327,20 @@
   top: 17px;
 
   @include breakpoint($up-sm) {
-    right: 93px;
+    right: 91px;
     top: 34px;
+  }
+
+  &.open {
+    @include breakpoint($up-sm) {
+      display: none;
+    }
   }
 
   @include breakpoint($large) {
     right: 26px;
     top: 42px;
+    display: none;
   }
 
 }

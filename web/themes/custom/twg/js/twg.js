@@ -11,7 +11,8 @@
 
       $(".search-opener").once('searchToggler').click(function (e) {
         $('.search-block-form').toggleClass('open');
-        $('#block-main-navigation-mobile').removeClass('open')
+        $('#block-main-navigation-mobile').removeClass('open');
+        $(".search-opener").toggleClass('open');
       });
 
       $(".mobile-menu-opener").once('mobileMenuOpener').click(function (e) {
