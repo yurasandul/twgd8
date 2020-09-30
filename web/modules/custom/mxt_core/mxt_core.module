@@ -250,11 +250,10 @@ function mxt_core_preprocess_block__dropdown_language(&$variables) {
   $config = \Drupal::configFactory()->getEditable('mxt_core.dropdown_language');
   $enabled_values = $config->get('selected_language');
   $languages = $variables['content']['dropdown-language']['switch-language']['#links'];
-
   $links = [];
-  foreach ($enabled_values as $key => $values) {
-    if (($values !== 0) && isset($languages[$key])) {
-      $links[$key] = $languages[$key];
+  foreach ($languages as $key => $language) {
+    if (isset($enabled_values[$key]) && ($enabled_values[$key] !== 0) ) {
+      $links[$key] = $language;
     }
   }
   $variables['content']['dropdown-language']['switch-language']['#links'] = $links;

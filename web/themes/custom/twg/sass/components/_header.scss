@@ -197,6 +197,17 @@
   }
 }
 
+.dropbutton-multiple .dropbutton .secondary-action {
+  display: none;
+}
+.js .dropbutton-widget .dropbutton {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
 #block-dropdown-language {
   display: inline-block;
   position: absolute;
