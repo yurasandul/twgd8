@@ -22,6 +22,7 @@
 	.title {
 		@extend %font-helvetica-neue-77;
 		@extend %heading-large;
+    font-style: normal;
 		a {
 			text-decoration: none;
 		}
@@ -30,4 +31,9 @@
 	.search-info {
 		display: none;
 	}
+
+  ol {
+    list-style: none;
+    padding: 0;
+  }
 }

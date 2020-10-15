@@ -5,6 +5,7 @@
  * Contains mxt_core.module.
  */
 
+use Drupal\Core\Database\Query\AlterableInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -130,6 +131,7 @@ function mxt_core_theme() {
 function mxt_core_query_search_node_search_alter(Drupal\Core\Database\Query\AlterableInterface $query) {
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   $query->condition('n.langcode', $language, '=');
+  $query->condition('n.type', ['tweet_page', 'page'], 'IN');
 }
 
 /**

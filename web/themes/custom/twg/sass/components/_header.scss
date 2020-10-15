@@ -157,6 +157,7 @@
 
   form input[type=submit] {
     border: none;
+    display: none;
     @include breakpoint($up-sm) {
       border: none;
       display: none;
@@ -181,6 +182,7 @@
       padding: 0 5px;
       border: #d8e0e2 1px solid;
       &[type=submit] {
+        display: block;
         @include breakpoint($up-sm) {
           border: none;
         }
