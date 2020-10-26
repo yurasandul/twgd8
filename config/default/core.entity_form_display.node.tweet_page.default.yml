@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tweet_page.body
     - field.field.node.tweet_page.field_image
+    - field.field.node.tweet_page.field_is_dayly_hidden
     - field.field.node.tweet_page.field_military
     - field.field.node.tweet_page.field_references_to_church_fathe
     - field.field.node.tweet_page.field_references_to_text
@@ -49,6 +50,7 @@ third_party_settings:
       children:
         - langcode
         - title
+        - field_is_dayly_hidden
         - field_subject
         - field_military
         - field_image
@@ -70,7 +72,7 @@ third_party_settings:
       children:
         - field_slideshow
       parent_name: group_tabs
-      weight: 2
+      weight: 3
       format_type: tab
       region: content
       format_settings:
@@ -84,7 +86,7 @@ third_party_settings:
       children:
         - field_references_to_text
       parent_name: group_tabs
-      weight: 3
+      weight: 4
       format_type: tab
       region: content
       format_settings:
@@ -173,6 +175,13 @@ content:
     third_party_settings: {  }
     type: image_widget_crop
     region: content
+  field_is_dayly_hidden:
+    weight: 10
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_military:
     weight: 12
     settings:
@@ -241,7 +250,7 @@ content:
     type: datetime_default
     region: content
   field_subject:
-    weight: 10
+    weight: 11
     settings:
       match_operator: CONTAINS
       match_limit: 10

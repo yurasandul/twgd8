@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.tweet_page.body
     - field.field.node.tweet_page.field_image
+    - field.field.node.tweet_page.field_is_dayly_hidden
     - field.field.node.tweet_page.field_military
     - field.field.node.tweet_page.field_references_to_church_fathe
     - field.field.node.tweet_page.field_references_to_text
@@ -100,6 +101,16 @@ content:
             classes: {  }
     type: image
     region: ds_content
+  field_is_dayly_hidden:
+    weight: 9
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_references_to_church_fathe:
     type: entity_reference_revisions_entity_view
     weight: 7

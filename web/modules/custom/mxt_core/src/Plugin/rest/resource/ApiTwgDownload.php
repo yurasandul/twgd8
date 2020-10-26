@@ -594,7 +594,7 @@ class ApiTwgDownload extends ResourceBase {
               ->buildUrl($uri) : '',
             'title' => $this->twgApiHelper->getPartsFromTitle($node_translation->label())['text'],
             'tweet_text' => $node_translation->get('field_tweetbox')->value,
-            'is_daily_hidden' => FALSE,
+            'is_daily_hidden' => $this->twgApiHelper->getIsDaylyHidden($node_translation),
             'wisdom' => $wisdom,
             'church_father' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode)),
             'pope_say' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode)),

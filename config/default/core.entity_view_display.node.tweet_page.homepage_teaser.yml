@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.homepage_teaser
     - field.field.node.tweet_page.body
     - field.field.node.tweet_page.field_image
+    - field.field.node.tweet_page.field_is_dayly_hidden
     - field.field.node.tweet_page.field_military
     - field.field.node.tweet_page.field_references_to_church_fathe
     - field.field.node.tweet_page.field_references_to_text
@@ -154,6 +155,7 @@ content:
 hidden:
   body: true
   content_moderation_control: true
+  field_is_dayly_hidden: true
   field_military: true
   field_references_to_church_fathe: true
   field_references_to_text: true

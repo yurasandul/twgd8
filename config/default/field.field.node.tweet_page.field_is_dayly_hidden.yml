@@ -1,0 +1,28 @@
+uuid: 4f3240ec-9e26-4b20-a016-4e642dbfa79d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_dayly_hidden
+    - node.type.tweet_page
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tweet_page.field_is_dayly_hidden
+field_name: field_is_dayly_hidden
+entity_type: node
+bundle: tweet_page
+label: 'Is dayly hidden'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

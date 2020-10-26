@@ -522,7 +522,7 @@ class TwgApiHelper {
               ->buildUrl($uri) : '',
             'title' => $this->getPartsFromTitle($node_translation->label())['text'],
             'tweet_text' => $node_translation->get('field_tweetbox')->value,
-            'is_daily_hidden' => FALSE,
+            'is_daily_hidden' => $this->getIsDaylyHidden($node_translation),
             'church_father' => $this->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode),
             'pope_say' => $this->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode),
             'wisdom' => $wisdom,
@@ -555,6 +555,15 @@ class TwgApiHelper {
       'ver' => \Drupal::state()->get($version_key, '1.0'),
       'sections' => $output_sort,
     ];
+  }
+
+  function getIsDaylyHidden(Node $node) {
+    if ($node->hasField('field_is_dayly_hidden') &&
+      !$node->get('field_is_dayly_hidden')->isEmpty() &&
+      $node->get('field_is_dayly_hidden')->value == true) {
+      return TRUE;
+    }
+    return FALSE;
   }
 
   /**
