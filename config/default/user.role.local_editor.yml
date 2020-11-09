@@ -6,4 +6,5 @@ id: local_editor
 label: 'Local editor'
 weight: 4
 is_admin: null
-permissions: {  }
+permissions:
+  - 'display eu cookie compliance popup'

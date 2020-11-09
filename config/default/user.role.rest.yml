@@ -10,6 +10,7 @@ permissions:
   - 'add notification entities'
   - 'administer rest resources'
   - 'delete notification entities'
+  - 'display eu cookie compliance popup'
   - 'edit notification entities'
   - 'restful get api_ami_download'
   - 'restful get api_ami_download_questions_resource'

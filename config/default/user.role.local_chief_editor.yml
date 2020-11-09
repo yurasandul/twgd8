@@ -6,4 +6,5 @@ id: local_chief_editor
 label: 'Local chief editor'
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'display eu cookie compliance popup'

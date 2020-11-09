@@ -3,12 +3,41 @@ langcode: en
 status: true
 dependencies:
   module:
+    - language
     - node
 id: content
 label: Content
 type: 'canonical_entities:node'
 pattern: 'content/[node:title]'
-selection_criteria: {  }
+selection_criteria:
+  6374906d-a733-4ace-a1cb-5aaad0854f21:
+    id: language
+    langcodes:
+      en: en
+      cs: cs
+      de: de
+      es: es
+      fr: fr
+      it: it
+      nl: nl
+      pl: pl
+      sk: sk
+      ro: ro
+      sl: sl
+      lt: lt
+      hr: hr
+      de-at: de-at
+      nl-be: nl-be
+      fr-be: fr-be
+      it-it: it-it
+      nl-nl: nl-nl
+      en-gb: en-gb
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 6374906d-a733-4ace-a1cb-5aaad0854f21
 selection_logic: and
 weight: 0
-relationships: {  }
+relationships:
+  'node:langcode:language':
+    label: Language

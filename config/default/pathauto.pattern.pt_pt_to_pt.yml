@@ -1,0 +1,35 @@
+uuid: 9d715e97-9123-4ab5-a529-4084159275b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: pt_pt_to_pt
+label: 'PT-PT to PT'
+type: 'canonical_entities:node'
+pattern: '/pt/content/[node:title]'
+selection_criteria:
+  67bc54b2-4074-4a9e-a7a0-bc00e98cccad:
+    id: node_type
+    bundles:
+      about: about
+      frontpage: frontpage
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 67bc54b2-4074-4a9e-a7a0-bc00e98cccad
+  94948e52-989d-438d-a149-14e52c6cda07:
+    id: language
+    langcodes:
+      pt-pt: pt-pt
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 94948e52-989d-438d-a149-14e52c6cda07
+selection_logic: and
+weight: -5
+relationships:
+  'node:langcode:language':
+    label: Language

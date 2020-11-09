@@ -6,4 +6,27 @@ id: global_editor
 label: 'Global editor'
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'administer content translation'
+  - 'create content translations'
+  - 'delete content translations'
+  - 'translate _ami_contact taxonomy_term'
+  - 'translate about node'
+  - 'translate any entity'
+  - 'translate block_content'
+  - 'translate country_contact taxonomy_term'
+  - 'translate frontpage node'
+  - 'translate homilies_reflections node'
+  - 'translate inspirational_quotes node'
+  - 'translate menu_link_content'
+  - 'translate military_saints node'
+  - 'translate page node'
+  - 'translate papal_quotes node'
+  - 'translate paragraph'
+  - 'translate prayers node'
+  - 'translate spiritual_first_aid node'
+  - 'translate subject taxonomy_term'
+  - 'translate testimonies node'
+  - 'translate translatable_node node'
+  - 'translate tweet_page node'
+  - 'update content translations'
