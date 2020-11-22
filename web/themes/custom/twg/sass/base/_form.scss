@@ -231,3 +231,9 @@ form input {
 .js .dropbutton-multiple .dropbutton-widget {
   padding-right: 29px;
 }
+
+
+input[type="checkbox"] {
+  margin: 0;
+  appearance: auto;
+}
