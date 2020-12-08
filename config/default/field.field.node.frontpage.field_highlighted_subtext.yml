@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_highlighted_subtext
     - node.type.frontpage
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: node.frontpage.field_highlighted_subtext
 field_name: field_highlighted_subtext
 entity_type: node

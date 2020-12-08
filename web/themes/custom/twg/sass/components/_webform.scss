@@ -22,11 +22,12 @@
   .form-submit {
     @extend .content-search-submit;
     width: 150px;
+    float: none !important;
   }
 
   @include breakpoint($up-sm) {
     .form-submit {
-      margin-left: 125px;
+      //margin-left: 125px;
     }
   }
 

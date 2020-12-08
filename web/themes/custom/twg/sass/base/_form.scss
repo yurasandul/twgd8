@@ -27,7 +27,10 @@ textarea {
   font-size: 0.875em;
   margin: 0 0 1em;
   padding: 4px 8px;
-  width: auto;
+  width: 100%;
+  @include breakpoint($large) {
+    width: auto;
+  }
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
   border: #d8e0e2 1px solid;
@@ -172,7 +175,10 @@ input[type="url"] {
   font-size: 0.875em;
   padding: 4px 8px;
   height: 2.3125em;
-  width: auto;
+  width: 100%;
+  @include breakpoint($large) {
+    width: auto;
+  }
   box-sizing: border-box;
   //transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
   border: #d8e0e2 1px solid;

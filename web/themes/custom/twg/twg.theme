@@ -249,6 +249,9 @@ function twg_preprocess_field__node__tweet_page(&$variables) {
   foreach ($variables['items'] as $item) {
     /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
     $paragraph = $item['content']['#paragraph'];
+    if (!$paragraph->hasTranslation($langcode)) {
+      continue;
+    }
     $translated = $paragraph->getTranslation($langcode);
 
     if (!$translated->get('field_reference_body')->isEmpty() || !$translated->get('field_reference_heading')->isEmpty()) {
