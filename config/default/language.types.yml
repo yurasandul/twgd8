@@ -13,10 +13,10 @@ negotiation:
       language-selected: -14
     method_weights:
       language-url: -20
+      language-browser: -19
       language-content-entity: -18
       language-session: -17
       language-user: -16
-      language-browser: -19
       language-interface: -15
       language-selected: -14
   language_url:
@@ -30,11 +30,11 @@ negotiation:
       language-browser: -18
       language-selected: -15
     method_weights:
-      language-user-admin: -20
       language-url: -19
+      language-user-admin: -20
+      language-browser: -18
       language-session: -17
       language-user: -16
-      language-browser: -18
       language-selected: -15
 _core:
   default_config_hash: dqouFqVseNJNvEjsoYKxbinFOITuCxYhi4y2OTNQP_8
