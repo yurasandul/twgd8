@@ -74,7 +74,9 @@ class TweetPagerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     }
 
     asort($nodes);
-    $pager_ids = $this->getPrevNext($nodes, $current_node->id());
+    if (empty($pager_ids = $this->getPrevNext($nodes, $current_node->id()))) {
+      return [];
+    }
 
     $content = [];
     foreach ($pager_ids as $index => $id) {
@@ -95,8 +97,11 @@ class TweetPagerBlock extends BlockBase implements ContainerFactoryPluginInterfa
     return $build;
   }
 
-  protected function getPrevNext($array, $key)
-  {
+  protected function getPrevNext($array, $key) {
+    if (!isset($array[$key])) {
+      return [];
+    }
+
     $keys = array_keys($array); //every element of aKeys is obviously unique
     $indices = array_flip($keys); //so array can be flipped without risk
     $i = $indices[$key]; //index of key in aKeys
