@@ -10,7 +10,7 @@ dependencies:
 id: facebook_comments
 theme: twg
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: facebook_comments
 settings:

@@ -30,7 +30,7 @@
 #block-twg-main-menu {
   display: none;
   @include breakpoint($up-sm) {
-    display: block;
+    display: inline-block;
   }
   padding-left: 138px;
   @include breakpoint($large) {

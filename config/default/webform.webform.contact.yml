@@ -115,9 +115,9 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
-  confirmation_title: ''
-  confirmation_message: 'Your message has been sent.'
+  confirmation_type: page
+  confirmation_title: 'Message sended'
+  confirmation_message: "<p>Thank you for your message!&nbsp;</p>\r\n\r\n<p>We will do our best to respond to you as soon as possible.</p>\r\n\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -67px; top: -20px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>"
   confirmation_url: '<front>'
   confirmation_attributes: {  }
   confirmation_back: true

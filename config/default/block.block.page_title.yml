@@ -1,0 +1,25 @@
+uuid: 43f009a2-178a-4cdf-a68c-7708d33c43ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - twg
+id: page_title
+theme: twg
+region: content
+weight: -13
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /tweets
+    negate: false
+    context_mapping: {  }

@@ -1,23 +1,23 @@
-uuid: 439c152b-fc26-4955-9d20-4759c4a04915
+uuid: a5208e17-4607-4ada-a21a-4c7535174a11
 langcode: en
-status: false
+status: true
 dependencies:
   content:
-    - 'block_content:basic:c523d207-9103-48bf-938a-7ec9827ed1d7'
+    - 'block_content:simple_block:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
   module:
     - block_content
     - system
   theme:
     - twg
-id: search_no_results
+id: all_tweetshelper
 theme: twg
 region: content
-weight: -4
+weight: -12
 provider: null
-plugin: 'block_content:c523d207-9103-48bf-938a-7ec9827ed1d7'
+plugin: 'block_content:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
 settings:
-  id: 'block_content:c523d207-9103-48bf-938a-7ec9827ed1d7'
-  label: 'Search - no results'
+  id: 'block_content:6c7b8d4f-73a7-4bfa-8b1e-78697d50ec5f'
+  label: 'All tweets helper'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/search/node*'
+    pages: /tweets
     negate: false
     context_mapping: {  }
