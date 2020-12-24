@@ -14,7 +14,7 @@
 
       a {
         @extend %font-helvetica-neue-77;
-
+        font-style: normal;
         font-weight: bold;
         display: inline-block;
         color: $blue--menu;

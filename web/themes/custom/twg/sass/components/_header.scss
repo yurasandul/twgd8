@@ -213,7 +213,7 @@
 #block-dropdown-language {
   display: inline-block;
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   top: 12px;
   right: 52px;
   @extend %font-helvetica-neue;
