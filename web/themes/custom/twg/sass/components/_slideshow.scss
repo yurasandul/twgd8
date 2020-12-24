@@ -1,5 +1,5 @@
 .optionset-field-slideshow {
-
+  overflow: hidden;
 	background: $blue--slideshow;
 	position: relative;
 	margin-bottom: $base-bottom-margin;
@@ -12,8 +12,6 @@
 	.flex-control-paging {
 		height: 7px;
 		display: inline-block;
-//		float: right;
-		margin: 10px 10px 0;
     margin: 0;
     position: absolute;
     top: 0;
