@@ -1,9 +1,9 @@
 uuid: 452c726f-cdc1-4b9c-af9b-c048fcb2e7bb
-langcode: en
+langcode: pt-pt
 status: true
 dependencies: {  }
 id: pt-pt
-label: 'Portuguese, Portugal'
+label: Português
 direction: ltr
 weight: 9
 locked: false
