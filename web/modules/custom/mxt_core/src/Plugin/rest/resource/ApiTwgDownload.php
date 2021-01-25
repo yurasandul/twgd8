@@ -571,6 +571,9 @@ class ApiTwgDownload extends ResourceBase {
 
         $tweets = [];
         foreach ($node_storage->loadMultiple($nids) as $node) {
+          if (!$node->hasTranslation($langcode)) {
+            continue;
+          }
           $node_translation = $node->getTranslation($langcode);
           $uri = !$node_translation->get('field_image')
             ->isEmpty() ? $node_translation->get('field_image')->entity->getFileUri() : '';
@@ -595,12 +598,15 @@ class ApiTwgDownload extends ResourceBase {
             'title' => $this->twgApiHelper->getPartsFromTitle($node_translation->label())['text'],
             'tweet_text' => $node_translation->get('field_tweetbox')->value,
             'is_daily_hidden' => $this->twgApiHelper->getIsDaylyHidden($node_translation),
-            'wisdom' => $wisdom,
             'church_father' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode)),
             'pope_say' => strip_tags($this->twgApiHelper->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode)),
             'related' => $this->twgApiHelper->getSubjectRelated($node, $nids, $langcode),
           ];
           $tweet += $short_codes_content;
+
+          if (!empty($wisdom)) {
+            $tweet['wisdom'] = $wisdom;
+          }
 
           $tweets[] = $tweet;
         }

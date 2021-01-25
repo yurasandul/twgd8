@@ -277,11 +277,17 @@ class TwgApiHelper {
   public function getFromParagraphs(array $paragraphs, array $fields, $langcode) {
     $return = [];
     foreach ($paragraphs as $paragraph) {
+      if (!$paragraph->hasTranslation($langcode)) {
+        continue;
+      }
       $translation = $paragraph->getTranslation($langcode);
       $paragraph_data = [];
       foreach ($fields as $key => $field_name) {
         if (!$translation->get($field_name)->isEmpty()) {
           $paragraph_data[$key] = preg_replace('|\s+|', ' ', strip_tags(htmlspecialchars_decode($translation->get($field_name)->value)));
+        }
+        else {
+          $paragraph_data[$key] = '';
         }
       }
       if (!empty($paragraph_data)) {
@@ -525,11 +531,15 @@ class TwgApiHelper {
             'is_daily_hidden' => $this->getIsDaylyHidden($node_translation),
             'church_father' => $this->getFieldFromParagraph($node_translation->get('field_references_to_church_fathe'), 'field_reference_body', $langcode),
             'pope_say' => $this->getFieldFromParagraph($node_translation->get('field_references_to_the_popes'), 'field_reference_body', $langcode),
-            'wisdom' => $wisdom,
+            //'wisdom' => $wisdom,
             'related' => $this->getSubjectRelated($node, $nids, $langcode),
           ];
 
           $tweet += $short_codes_content;
+
+          if (!empty($wisdom)) {
+            $tweet['wisdom'] = $wisdom;
+          }
 
           $tweets[] = $tweet;
         }

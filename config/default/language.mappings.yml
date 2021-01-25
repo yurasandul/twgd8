@@ -9,5 +9,9 @@ map:
   zh-cn: zh-hans
   zh-sg: zh-hans
   zh-chs: zh-hans
-_core:
-  default_config_hash: EMWe7Yu4Q5eD-NUfNuQAWGBvYUNZPIinztEtONSmsDc
+  en-gb: en
+  de-at: de
+  nl-be: nl
+  fr-be: nl
+  it-it: it
+  nl-nl: nl

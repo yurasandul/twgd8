@@ -22,7 +22,10 @@ settings:
       label: 'Book 3'
     -
       value: 'Book 4'
-      label: 'Book 4'
+      label: 'Book k 4'
+    -
+      value: 'Book 5'
+      label: 'Book 5'
   allowed_values_function: ''
 module: options
 locked: false

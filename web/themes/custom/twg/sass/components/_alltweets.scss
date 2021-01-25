@@ -117,6 +117,9 @@ summary[aria-controls="edit-advanced"] {
   float: left;
   border: $search-border 1px solid;
   height: 40px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  margin-bottom: 15px;
 }
 
 .content-search-input {

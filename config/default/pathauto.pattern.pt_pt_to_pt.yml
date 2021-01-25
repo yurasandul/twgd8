@@ -8,9 +8,9 @@ dependencies:
 id: pt_pt_to_pt
 label: 'PT-PT to PT'
 type: 'canonical_entities:node'
-pattern: '/pt/content/[node:title]'
+pattern: 'content/[node:title]'
 selection_criteria:
-  67bc54b2-4074-4a9e-a7a0-bc00e98cccad:
+  fac26dc6-109e-4fce-aee0-370028fbfbc2:
     id: node_type
     bundles:
       about: about
@@ -19,15 +19,15 @@ selection_criteria:
     negate: false
     context_mapping:
       node: node
-    uuid: 67bc54b2-4074-4a9e-a7a0-bc00e98cccad
-  94948e52-989d-438d-a149-14e52c6cda07:
+    uuid: fac26dc6-109e-4fce-aee0-370028fbfbc2
+  c12c7f4d-6676-4743-b8b2-7f8d8c2142be:
     id: language
     langcodes:
       pt-pt: pt-pt
     negate: false
     context_mapping:
       language: 'node:langcode:language'
-    uuid: 94948e52-989d-438d-a149-14e52c6cda07
+    uuid: c12c7f4d-6676-4743-b8b2-7f8d8c2142be
 selection_logic: and
 weight: -5
 relationships:
