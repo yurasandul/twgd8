@@ -77,3 +77,46 @@
     }
   }
 }
+
+.sliding-popup-bottom {
+  width: 100%;
+  .eu-cookie-compliance-banner {
+    background: rgba(25,25,25,0.75);
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    .eu-cookie-compliance-content {
+      max-width: 1024px;
+      padding: 0 15px;
+      text-align: center;
+
+      .eu-cookie-compliance-message {
+        max-width: 80%;
+        margin-right: 5px;
+        p {
+          color: #ffffff;
+          margin-bottom: 0;
+          line-height: 32px;
+        }
+      }
+
+      .eu-cookie-compliance-message,
+      .eu-cookie-compliance-buttons {
+        display: inline-block;
+        float: none;
+      }
+
+      button {
+        border-radius: 0;
+        text-transform: uppercase;
+        color: #000000;
+        padding: 3px 5px;
+        font-size: 16px;
+      }
+
+    }
+    .decline-button {
+      display: none;
+    }
+  }
+}

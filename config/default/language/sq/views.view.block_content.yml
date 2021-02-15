@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Rifillo
+      fields:
+        info:
+          label: 'Përshkrimi i bllokut'
+        operations:
+          label: Operacionet
+      filters:
+        info:
+          expose:
+            label: 'Përshkrimi i bllokut'
+  page_1:
+    display_title: Faqe

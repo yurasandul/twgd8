@@ -1,0 +1,61 @@
+label: 'Ухвалювані матеріали'
+description: 'Немає доступного модерованого вмісту. Тут перераховані лише ті, що очікують на розгляд зміст, такі як чернетки.'
+display:
+  default:
+    display_title: Головне
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Фільтр
+          reset_button_label: Скинути
+          exposed_sorts_label: 'Впорядкувати за'
+          sort_asc_label: Зрост
+          sort_desc_label: Спад
+      pager:
+        options:
+          tags:
+            previous: '‹ Попередня'
+            next: 'Наступна ›'
+            first: '« Перша'
+            last: 'Остання »'
+          expose:
+            items_per_page_label: 'Елементів на сторінку'
+            items_per_page_options_all_label: '- Усе -'
+            offset_label: Зміщення
+      fields:
+        title:
+          label: Заголовок
+          separator: ', '
+        type:
+          label: 'Тип матеріалів'
+          separator: ', '
+        name:
+          label: Автор
+          separator: ', '
+        moderation_state:
+          label: 'Стан модерації'
+          separator: ', '
+        changed:
+          label: Оновлено
+          separator: ', '
+        operations:
+          label: Операції
+      filters:
+        title:
+          expose:
+            label: Заголовок
+        type:
+          expose:
+            label: 'Тип матеріалів'
+        moderation_state:
+          expose:
+            label: 'Стан модерації'
+        langcode:
+          expose:
+            label: Мова
+      title: 'Ухвалювані матеріали'
+      empty:
+        area_text_custom:
+          content: 'Модеровані матеріали відсутні. Тут перелічено лише ті версії матеріалів, що очікують на розгляд, наприклад чернетки.'
+  moderated_content:
+    display_title: 'Ухвалювані матеріали'

@@ -6,6 +6,7 @@ settings:
   default_preview_next_button_label: Peržiūrėti
   default_preview_label: Peržiūrėti
   default_draft_button_label: 'Išsaudoti Juodraštį'
+  default_confirmation_back_label: 'Atgal į formą'
   dialog_options:
     normal:
       title: Normalus

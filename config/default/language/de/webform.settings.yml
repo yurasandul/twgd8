@@ -11,6 +11,7 @@ settings:
   default_draft_button_label: 'Als Entwurf speichern'
   default_draft_saved_message: 'Einsendung zwischengespeichert. Sie können später dieses Formular mit den jetzt gesicherten Inhalten wieder aufrufen.'
   default_draft_loaded_message: 'Ein teilweise ausgefülltes Formular wurde gefunden. Bitte füllen Sie die restlichen Teile aus.'
+  default_confirmation_back_label: 'Zurück zum Formular'
   dialog_options:
     normal:
       title: Normal

@@ -1,0 +1,12 @@
+label: 'Komentet e fundit'
+display:
+  default:
+    display_options:
+      title: 'Komentet e fundit'
+      empty:
+        area_text_custom:
+          content: 'Asnjë koment në dispozicion.'
+  block_1:
+    display_title: Bllokuar
+    display_options:
+      block_description: 'Komentet e fundit'

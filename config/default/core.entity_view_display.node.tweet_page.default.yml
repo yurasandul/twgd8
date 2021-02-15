@@ -54,6 +54,7 @@ third_party_settings:
         - field_references_to_church_fathe
         - field_references_to_the_popes
         - 'dynamic_block_field:node-tweet_page_related_pages_'
+        - field_is_dayly_hidden
     fields:
       node_title:
         plugin_id: node_title
@@ -73,6 +74,12 @@ third_party_settings:
         weight: 9
         label: hidden
         formatter: default
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 id: node.tweet_page.default
 targetEntityType: node
 bundle: tweet_page
@@ -110,7 +117,7 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
-    region: content
+    region: ds_content
   field_references_to_church_fathe:
     type: entity_reference_revisions_entity_view
     weight: 7

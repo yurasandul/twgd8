@@ -1,0 +1,16 @@
+settings:
+  default_submit_button_label: Надіслати
+  default_reset_button_label: Скинути
+  default_wizard_start_label: Початок
+  default_wizard_confirmation_label: Завершене
+  default_preview_next_button_label: 'Попередній перегляд'
+  default_preview_label: 'Попередній перегляд'
+  dialog_options:
+    narrow:
+      title: Вузький
+    normal:
+      title: Звичайне
+    wide:
+      title: Широкий
+element:
+  default_more_title: Ще

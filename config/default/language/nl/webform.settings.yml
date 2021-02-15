@@ -9,6 +9,7 @@ settings:
   default_preview_label: Voorbeeldweergave
   default_draft_button_label: 'Conceptversie opslaan'
   default_draft_saved_message: 'Inzending opgeslagen. U kunt op een later tijdstip naar dit formulier terugkeren waarbij de huidige waardes zullen worden hersteld.'
+  default_confirmation_back_label: 'Terug naar het formulier'
   dialog_options:
     normal:
       title: Normaal

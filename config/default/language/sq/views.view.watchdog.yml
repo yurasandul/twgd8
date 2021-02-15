@@ -1,0 +1,34 @@
+label: Watchdog
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtri
+          reset_button_label: Rifillo
+      fields:
+        severity:
+          label: Rendësia
+        type:
+          label: Lloji
+        timestamp:
+          label: Data
+        message:
+          label: Mesazhi
+        name:
+          label: Përdoruesi
+        link:
+          label: Operacionet
+      filters:
+        type:
+          expose:
+            label: Lloji
+        severity:
+          expose:
+            label: Rendësia
+      empty:
+        area:
+          admin_label: 'Asnjë log mesazhesh në dispozicion.'
+          content: 'Asnjë log mesazhesh në dispozicion.'
+  page:
+    display_title: Faqe

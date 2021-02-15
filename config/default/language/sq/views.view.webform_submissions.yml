@@ -1,0 +1,46 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Rifillo
+      fields:
+        created:
+          label: Krijuar
+        view_webform_submission:
+          label: Operacionet
+          text: shfaq
+      arguments:
+        in_draft:
+          exception:
+            title: 'Të gjitha'
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Veprimi
+        created:
+          label: Krijuar
+        operations:
+          label: Operacionet
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Veprimi
+        created:
+          label: Krijuar
+        view_webform_submission:
+          label: Operacionet
+          text: shfaq
+        edit_webform_submission:
+          label: Operacionet
+          text: ndrysho
+  embed_review:
+    display_options:
+      fields:
+        created:
+          label: Krijuar
+        view_webform_submission:
+          label: Operacionet
+          text: shfaq

@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_facebook_comments
     - field.field.node.page.field_slideshow
     - flexslider.optionset.field_slideshow
     - node.type.page
   module:
     - ds
+    - facebook_comments
     - flexslider_fields
     - text
     - user
@@ -34,6 +36,7 @@ third_party_settings:
         - node_title
         - body
         - field_slideshow
+        - field_facebook_comments
     fields:
       node_title:
         plugin_id: node_title
@@ -64,6 +67,45 @@ content:
     region: ds_content
     settings: {  }
     third_party_settings: {  }
+  field_facebook_comments:
+    weight: 3
+    label: above
+    settings:
+      facebook_comments_style: light
+      facebook_comments_width: 620
+      facebook_comments_width_fluid: true
+      facebook_comments_amount: 5
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: facebook_comments_formatter
+    region: ds_content
   field_slideshow:
     type: flexslider_entity
     weight: 2

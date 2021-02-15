@@ -199,9 +199,6 @@
   }
 }
 
-.dropbutton-multiple .dropbutton .secondary-action {
-  display: none;
-}
 .js .dropbutton-widget .dropbutton {
   overflow: hidden;
   margin: 0;
@@ -304,6 +301,19 @@
       &:hover {
         background-color: $blue;
         color: white;
+      }
+    }
+  }
+}
+
+#block-dropdown-language {
+  .dropbutton-wrapper {
+    .dropbutton-widget {
+      display: none
+    }
+    &.dropbutton-multiple {
+      .dropbutton-widget {
+        display: block;
       }
     }
   }

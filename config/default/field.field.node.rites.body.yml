@@ -7,6 +7,10 @@ dependencies:
     - node.type.rites
   module:
     - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: node.rites.body
 field_name: body
 entity_type: node
@@ -14,7 +18,7 @@ bundle: rites
 label: Body
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

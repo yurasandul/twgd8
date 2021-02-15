@@ -84,7 +84,7 @@ class ApiTwgCheckupdate extends ResourceBase {
     $node_type = 'rites';
     $nids = $this->nodeStorage->getQuery()
       ->condition('type', 'rites')
-      ->condition('status', 1)
+//      ->condition('status', 1)
       ->execute();
     if (!empty($nids)) {
       $lang_version = [];

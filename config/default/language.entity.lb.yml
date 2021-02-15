@@ -1,0 +1,9 @@
+uuid: fba024a5-d608-4661-a12f-f032ca629e46
+langcode: en
+status: true
+dependencies: {  }
+id: lb
+label: Luxembourgish
+direction: ltr
+weight: 22
+locked: false

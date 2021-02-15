@@ -10,6 +10,7 @@ settings:
   default_draft_button_label: 'Enregistrer le brouillon'
   default_draft_saved_message: 'Soumissions enregistrées. Vous pourrez revenir sur ce formulaire plus tard, cela restaurera les valeurs actuelles.'
   default_draft_loaded_message: 'Un formulaire partiellement complété a été trouvé. Veuillez compléter les portions restantes.'
+  default_confirmation_back_label: 'Retourner au formulaire'
   dialog_options:
     normal:
       title: Normal

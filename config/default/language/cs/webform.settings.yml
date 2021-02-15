@@ -7,6 +7,7 @@ settings:
   default_preview_label: Náhled
   default_draft_button_label: 'Uložit koncept'
   default_draft_saved_message: 'Odeslání uloženo. K tomuto formuláři se můžete vrátit později, což vám obnoví aktuální hodnoty.'
+  default_confirmation_back_label: 'Návrat do formuláře'
   dialog_options:
     normal:
       title: Normální

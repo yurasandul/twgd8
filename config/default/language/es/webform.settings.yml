@@ -10,6 +10,7 @@ settings:
   default_preview_label: 'Vista previa'
   default_draft_button_label: 'Guardar borrador'
   default_draft_saved_message: 'Envío guardado. Usted puede volver a este formuario luego y recuperará sus valores actuales.'
+  default_confirmation_back_label: 'Volver al formulario'
   dialog_options:
     normal:
       title: Normal

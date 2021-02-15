@@ -1,0 +1,13 @@
+label: 'Përdorues të rinj'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Rifillo
+      title: 'Përdorues të rinj'
+  block_1:
+    display_title: 'Përdorues të rinj'
+    display_options:
+      block_description: 'Përdorues të rinj'
+      block_category: Përdoruesi

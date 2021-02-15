@@ -1,5 +1,7 @@
 title: Contacto
 elements: "name:\n  '#title': Nome\n  '#placeholder': 'Seu nome'\nemail:\n  '#placeholder': 'Seu endereço de e-mail'\nmessage:\n  '#title': Mensagem\n  '#placeholder': 'Escreva aqui o que você gostaria de compartilhar conosco.'\nactions:\n  '#submit__label': Submit\n"
+settings:
+  confirmation_message: "<p>Obrigado pela sua mensagem!</p>\r\nNós faremos o nosso melhor para responder a sua mensagem o mais breve possível. "
 handlers:
   email_confirmation:
     settings:

@@ -1,0 +1,41 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtri
+          reset_button_label: Rifillo
+      fields:
+        name:
+          label: 'Emri i përdoruesit'
+        status:
+          label: Gjendja
+          settings:
+            format_custom_true: Aktiv
+            format_custom_false: Bllokuar
+        roles_target_id:
+          label: Rolet
+        created:
+          label: 'Anëtar që prej'
+        access:
+          label: 'Hyrja e fundit'
+        operations:
+          label: Operacionet
+      filters:
+        status:
+          group_info:
+            label: Gjendja
+            group_items:
+              1:
+                title: Aktiv
+              2:
+                title: Bllokuar
+        permission:
+          expose:
+            label: 'Të drejta'
+      use_more_text: tjetër
+  page_1:
+    display_title: Faqe
+    display_options:
+      menu:
+        title: Lista

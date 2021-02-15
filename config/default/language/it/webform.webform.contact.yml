@@ -1,7 +1,7 @@
 title: Contatto
 elements: "name:\n  '#title': Nome\n  '#placeholder': 'Il tuo nome'\nemail:\n  '#placeholder': 'Il tuo indirizzo e-mail'\nmessage:\n  '#title': Messaggio\n  '#placeholder': 'Dicci che cosa vorresti condividere con noi'\nactions:\n  '#submit__label': Invia\n"
 settings:
-  confirmation_message: 'Il messaggio è stato inviato.'
+  confirmation_message: 'Grazie, la vostra richiesta è stata ricevuta.'
 handlers:
   email_confirmation:
     settings:

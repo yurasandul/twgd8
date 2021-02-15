@@ -1,7 +1,7 @@
 title: Kontakt
 elements: "name:\n  '#title': Imię\n  '#placeholder': 'Prosimy: napisz, jak masz na imię'\nemail:\n  '#title': 'Adres e-mail'\n  '#placeholder': 'Podaj swój adres e-mail'\nmessage:\n  '#title': Wiadomość\n  '#placeholder': 'Czekamy na Twoją wiadomość!'\nactions:\n  '#submit__label': Zachowaj\n"
 settings:
-  confirmation_message: 'Wiadomość została wysłana.'
+  confirmation_message: "<p>Dziękujemy za Twoją wiadomość!<br>\r\nDokładamy wszelkich starań, aby odpowiedzieć bezzwłocznie.</p>\r\n\r\nTweeting z zespołu GOD\r\n"
 handlers:
   email_confirmation:
     settings:

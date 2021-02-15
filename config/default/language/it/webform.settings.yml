@@ -8,6 +8,7 @@ settings:
   default_preview_label: Anteprima
   default_draft_button_label: 'Salva bozza'
   default_draft_saved_message: 'Inserimento salvato. Puoi tornare al form più tardi i valori attualmente inseriti saranno recuperati.'
+  default_confirmation_back_label: 'Torna al form'
   dialog_options:
     normal:
       title: Normale

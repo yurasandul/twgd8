@@ -1,0 +1,17 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Rifillo
+      fields:
+        title:
+          label: Titulli
+        name:
+          label: Autori
+        changed:
+          label: 'Rifreskimi i fundit'
+  attachment_1:
+    display_title: Bashkangjitur
+  page_1:
+    display_title: Faqe

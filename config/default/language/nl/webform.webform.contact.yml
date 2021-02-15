@@ -1,7 +1,7 @@
 title: Contact
 elements: "name:\n  '#title': Naam\n  '#placeholder': 'Hoe heet je?'\nemail:\n  '#placeholder': 'Wat is je e-mailadres?'\nmessage:\n  '#title': Bericht\n  '#placeholder': 'We zijn benieuwd naar je bericht!'\nactions:\n  '#submit__label': Versturen\n"
 settings:
-  confirmation_message: 'Uw bericht is verzonden.'
+  confirmation_message: "<p>We hebben je bericht ontvangen!<br>\r\nWe doen ons best om je zo snel mogelijk te antwoorden.</p>\r\nHet Tweeting with GOD team\r\n"
 handlers:
   email_confirmation:
     settings:

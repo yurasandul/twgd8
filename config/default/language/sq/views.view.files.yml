@@ -1,0 +1,24 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtri
+          reset_button_label: Rifillo
+      fields:
+        filename:
+          label: Emri
+        filesize:
+          label: Madhësia
+        status:
+          label: Gjendja
+      filters:
+        status:
+          expose:
+            label: Gjendja
+  page_2:
+    display_options:
+      arguments:
+        fid:
+          exception:
+            title: 'Të gjitha'

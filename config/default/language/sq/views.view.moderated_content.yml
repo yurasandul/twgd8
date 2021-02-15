@@ -1,0 +1,21 @@
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtri
+          reset_button_label: Rifillo
+      fields:
+        title:
+          label: Titulli
+        name:
+          label: Autori
+        operations:
+          label: Operacionet
+      filters:
+        title:
+          expose:
+            label: Titulli
+        langcode:
+          expose:
+            label: Gjuha

@@ -1,7 +1,7 @@
 title: Kontakt
 elements: "name:\n  '#placeholder': 'Dein Name'\nemail:\n  '#placeholder': 'Deine Email-Adresse'\nmessage:\n  '#title': Nachricht\n  '#placeholder': 'Erzähl uns was du uns mitteilen möchtest'\nactions:\n  '#submit__label': Absenden\n"
 settings:
-  confirmation_message: 'Ihre Nachricht wurde gesendet.'
+  confirmation_message: 'Danke, die Eingabe wurde empfangen.'
 handlers:
   email_confirmation:
     settings:

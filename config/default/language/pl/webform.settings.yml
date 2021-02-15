@@ -7,6 +7,7 @@ settings:
   default_preview_label: Podgląd
   default_draft_button_label: 'Zapisz szkic'
   default_draft_saved_message: 'Zgłoszenie zapisane. Możesz wrócić do tego formularza później, a wpisane wartości zostaną zapamiętane.'
+  default_confirmation_back_label: 'Wróć do formularza'
   dialog_options:
     normal:
       title: Zwykły

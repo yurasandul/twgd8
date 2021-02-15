@@ -1,0 +1,14 @@
+label: 'Përmbajtje e re'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          reset_button_label: Rifillo
+      title: 'Përmbajtje e re'
+      empty:
+        area_text_custom:
+          content: 'Asnjë përmbajtje në dispozicion.'
+      use_more_text: Akoma
+  block_1:
+    display_title: Bllokuar

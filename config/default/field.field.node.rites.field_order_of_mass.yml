@@ -5,6 +5,11 @@ dependencies:
   config:
     - field.storage.node.field_order_of_mass
     - node.type.rites
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
 id: node.rites.field_order_of_mass
 field_name: field_order_of_mass
 entity_type: node
@@ -12,7 +17,7 @@ bundle: rites
 label: 'Order of mass'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

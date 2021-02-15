@@ -1,0 +1,12 @@
+label: Редагування
+type_settings:
+  states:
+    draft:
+      label: Чернетка
+    published:
+      label: Опубліковано
+  transitions:
+    create_new_draft:
+      label: 'Створити нову чернетку'
+    publish:
+      label: Опублікувати

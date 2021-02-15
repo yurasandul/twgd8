@@ -4,6 +4,7 @@ settings:
   default_wizard_confirmation_label: Finalizat
   default_preview_next_button_label: Previzualizare
   default_preview_label: Previzualizare
+  default_confirmation_back_label: 'Înapoi la formular'
   dialog_options:
     normal:
       title: Normal

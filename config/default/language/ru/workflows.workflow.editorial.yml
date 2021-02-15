@@ -1,0 +1,12 @@
+label: 'В редактировании'
+type_settings:
+  states:
+    draft:
+      label: Черновик
+    published:
+      label: Опубликовано
+  transitions:
+    create_new_draft:
+      label: 'Создать новый черновик'
+    publish:
+      label: Опубликовать

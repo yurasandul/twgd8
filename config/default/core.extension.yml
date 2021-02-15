@@ -26,6 +26,12 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  event_log_track: 0
+  event_log_track_menu: 0
+  event_log_track_node: 0
+  event_log_track_taxonomy: 0
+  event_log_track_user: 0
+  event_log_track_workflows: 0
   facebook_comments: 0
   field: 0
   field_group: 0
@@ -107,6 +113,7 @@ module:
   content_translation: 10
   views: 10
   paragraphs: 11
+  allowed_languages: 20
   linked_field: 100
   standard: 1000
   eu_cookie_compliance: 1001

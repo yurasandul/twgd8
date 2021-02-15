@@ -1,7 +1,7 @@
 title: Kontakt
 elements: "name:\n  '#title': Meno\n  '#placeholder': 'Tvoje meno'\nemail:\n  '#placeholder': 'Tvoja e-mailová adresa'\nmessage:\n  '#title': Správa\n  '#placeholder': 'Povedz nám, čo máš na srdci.'\nactions:\n  '#submit__label': Odoslať\n"
 settings:
-  confirmation_message: 'Vaša správa bola odoslaná.'
+  confirmation_message: 'Ďakujeme, vaše odoslanie údajov bolo prijaté.'
 handlers:
   email_confirmation:
     settings:
