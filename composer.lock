@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0af9f0ea42c60239c5a4182312b3917",
+    "content-hash": "df709a069ed25d33309c84edc74f5ccf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2356,6 +2356,75 @@
             }
         },
         {
+            "name": "drupal/allowed_languages",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/allowed_languages.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/allowed_languages-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "aed607907f1ee5de77bcda3270532afe0e109a5e"
+            },
+            "require": {
+                "drupal/core": "^8"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1552913886",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christoffer Palm",
+                    "homepage": "https://www.drupal.org/user/3523162",
+                    "email": "christoffer.palm@oddhill.se",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Leander Lindahl",
+                    "homepage": "https://www.drupal.org/user/112352",
+                    "email": "leander.lindahl@axis.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "leanderl",
+                    "homepage": "https://www.drupal.org/user/519926"
+                },
+                {
+                    "name": "linef",
+                    "homepage": "https://www.drupal.org/user/3523161"
+                },
+                {
+                    "name": "nterbogt",
+                    "homepage": "https://www.drupal.org/user/102218"
+                }
+            ],
+            "description": "Lets you limit the languages a user may use when managing content.",
+            "homepage": "https://www.drupal.org/project/allowed_languages",
+            "keywords": [
+                "Drupal",
+                "Language"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/allowed_languages",
+                "issues": "https://www.drupal.org/project/issues/allowed_languages"
+            }
+        },
+        {
             "name": "drupal/backup_migrate",
             "version": "4.1.0",
             "source": {
@@ -3075,7 +3144,8 @@
                     }
                 },
                 "patches_applied": {
-                    "Admin toolbar should always be rendered in the admin language (if set)": "https://www.drupal.org/files/issues/2020-08-25/2313309-67.patch"
+                    "Admin toolbar should always be rendered in the admin language (if set)": "https://www.drupal.org/files/issues/2020-08-25/2313309-67.patch",
+                    "AccessAwareRouter does not respect HTTP method": "https://www.drupal.org/files/issues/2020-11-18/drupal-n2706241-52.patch"
                 }
             },
             "autoload": {
@@ -3582,6 +3652,54 @@
                 "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
                 "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/events_log_track",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/events_log_track.git",
+                "reference": "8.x-2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/events_log_track-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "cd82be3d8986910764c54cab1686078c8d70ec9f"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "require-dev": {
+                "drupal/event_log_track-event_log_track": "*",
+                "drupal/media": "*",
+                "drupal/workflows-workflows": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0",
+                    "datestamp": "1592476197",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "kumaratulesh",
+                    "homepage": "https://www.drupal.org/user/1840602"
+                }
+            ],
+            "homepage": "https://www.drupal.org/project/events_log_track",
+            "support": {
+                "source": "https://git.drupalcode.org/project/events_log_track"
             }
         },
         {
@@ -8813,12 +8931,12 @@
             "version": "1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
                 "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
                 "shasum": ""
             },
