@@ -97,8 +97,10 @@
           color: #ffffff;
           margin-bottom: 0;
           line-height: 32px;
+          @extend %font-helvetica-neue;
         }
       }
+
 
       .eu-cookie-compliance-message,
       .eu-cookie-compliance-buttons {

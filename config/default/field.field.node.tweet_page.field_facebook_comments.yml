@@ -1,0 +1,27 @@
+uuid: 8118eca4-70c2-4fe7-8448-49266a0fc959
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_facebook_comments
+    - node.type.tweet_page
+  module:
+    - facebook_comments
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.tweet_page.field_facebook_comments
+field_name: field_facebook_comments
+entity_type: node
+bundle: tweet_page
+label: 'Facebook comments'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    is_enabled: 0
+default_value_callback: ''
+settings: {  }
+field_type: facebook_comments

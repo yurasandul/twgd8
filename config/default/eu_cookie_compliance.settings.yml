@@ -10,7 +10,7 @@ exclude_paths: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user
 exclude_admin_theme: false
 langcode: en
 popup_agreed:
-  value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n<p>Теперь вы можете скрыть это сообщение или узнать больше о файлах cookie.</p>\r\n"
+  value: "<h2>Thank you for accepting cookies</h2>\r\n\r\n\r\n"
   format: basic_html
 popup_agree_button_message: Ok
 popup_agreed_enabled: false

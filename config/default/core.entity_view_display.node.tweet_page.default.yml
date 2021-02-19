@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.tweet_page.body
+    - field.field.node.tweet_page.field_facebook_comments
     - field.field.node.tweet_page.field_image
     - field.field.node.tweet_page.field_is_dayly_hidden
     - field.field.node.tweet_page.field_military
@@ -21,6 +22,7 @@ dependencies:
   module:
     - ds
     - entity_reference_revisions
+    - facebook_comments
     - flexslider_fields
     - image
     - text
@@ -53,8 +55,8 @@ third_party_settings:
         - field_references_to_text
         - field_references_to_church_fathe
         - field_references_to_the_popes
+        - field_facebook_comments
         - 'dynamic_block_field:node-tweet_page_related_pages_'
-        - field_is_dayly_hidden
     fields:
       node_title:
         plugin_id: node_title
@@ -71,7 +73,7 @@ third_party_settings:
             lb: ''
       'dynamic_block_field:node-tweet_page_related_pages_':
         plugin_id: 'dynamic_block_field:node-tweet_page_related_pages_'
-        weight: 9
+        weight: 10
         label: hidden
         formatter: default
         ft:
@@ -92,6 +94,45 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: ds_content
+  field_facebook_comments:
+    weight: 9
+    label: above
+    settings:
+      facebook_comments_style: light
+      facebook_comments_width: 620
+      facebook_comments_width_fluid: true
+      facebook_comments_amount: 15
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h2
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
+    type: facebook_comments_formatter
+    region: ds_content
   field_image:
     weight: 0
     label: hidden
@@ -107,16 +148,6 @@ content:
             lb-col: false
             classes: {  }
     type: image
-    region: ds_content
-  field_is_dayly_hidden:
-    weight: 9
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: ds_content
   field_references_to_church_fathe:
     type: entity_reference_revisions_entity_view
@@ -239,6 +270,7 @@ content:
     region: ds_content
 hidden:
   content_moderation_control: true
+  field_is_dayly_hidden: true
   field_military: true
   field_sticky_sort_date: true
   field_video: true

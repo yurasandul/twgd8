@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.tweet_page.body
+    - field.field.node.tweet_page.field_facebook_comments
     - field.field.node.tweet_page.field_image
     - field.field.node.tweet_page.field_is_dayly_hidden
     - field.field.node.tweet_page.field_military
@@ -21,6 +22,7 @@ dependencies:
   module:
     - content_moderation
     - datetime
+    - facebook_comments
     - field_group
     - image_widget_crop
     - paragraphs
@@ -159,6 +161,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_facebook_comments:
+    weight: 101
+    settings:
+      is_enabled: true
+    third_party_settings: {  }
+    type: facebook_comments_widget
+    region: content
   field_image:
     weight: 13
     settings:
