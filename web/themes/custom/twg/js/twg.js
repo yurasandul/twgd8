@@ -12,12 +12,14 @@
       $(".search-opener").once('searchToggler').click(function (e) {
         $('.search-block-form').toggleClass('open');
         $('#block-main-navigation-mobile').removeClass('open');
+        $('.dropdown-language-item').removeClass('open');
         $(".search-opener").toggleClass('open');
       });
 
       $(".mobile-menu-opener").once('mobileMenuOpener').click(function (e) {
         $('#block-main-navigation-mobile').toggleClass('open');
-          $('.search-block-form').removeClass('open');
+        $('.search-block-form').removeClass('open');
+        $('.dropdown-language-item').removeClass('open');
       });
 
       // First level items that have a submenu most be able to open on mobile
@@ -244,5 +246,25 @@
     }
   };
 
+  Drupal.behaviors.language_swich = {
+    attach: function(context, settings) {
+      $(".current-language").once('lang_toggler').click(function (e) {
+        $('.dropdown-language-item').toggleClass('open');
+        $('.search-block-form').removeClass('open');
+        $('#block-main-navigation-mobile').removeClass('open');
+      });
+
+      $(document).once('click_news_page').mouseup(function (e) {
+        var container = $('.dropdown-language-item');
+        if (container.has(e.target).length === 0) {
+          if ($(e.target).hasClass('lang-tgl') === false) {
+            $(context).find('.dropdown-language-item').removeClass('open');
+          }
+        }
+      });
+
+
+    }
+  };
 
 })(jQuery, Drupal);

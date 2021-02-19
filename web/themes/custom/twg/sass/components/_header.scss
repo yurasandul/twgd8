@@ -212,109 +212,123 @@
   position: absolute;
   z-index: 10;
   top: 12px;
-  right: 52px;
-  @extend %font-helvetica-neue;
+  right: 69px;
+  font-family: "Roboto", sans-serif;
 
   @include breakpoint($up-sm) {
     top: 30px;
-    right: 15px;
+    right: 32px;
   }
 
   @include breakpoint($large) {
     top: 2px;
-    right: 3px;
+    right: 20px;
   }
 
-  .contextual {
-    display: none;
-  }
-
-  .active-language {
-    font-size: 13px;
-    color: $blue--menu;
-    cursor: pointer;
-    .name {
-      display: none;
-      @include breakpoint($large) {
-        display: inline;
-      }
-    }
-    .key {
-      text-transform: uppercase;
-      font-size: 17px;
-      @include breakpoint($large) {
-        display: none;
-      }
-    }
-  }
-
-  .dropbutton-arrow {
-    color: $blue--menu;
-  }
-
-  li {
-    margin: 0;
-  }
-
-  .dropbutton-toggle {
-    width: 3em;
-    button {
-      background: none;
-
-      &:hover {
-        background: none;
-      }
-    }
-  }
-
-  .dropbutton-wrapper.open {
+  .dropbutton-widget {
+    position: relative;
 
     .dropdown-language-item {
+      position: absolute;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      outline: none;
+      width: 160px;
       background: white;
-      border: 1px solid #eeeeee;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-    }
+      z-index: 11;
+      border: none;
+      max-height: 0;
+      overflow: hidden;
+      top: 36px;
+      right: -10px;
 
-    .dropbutton-toggle {
-      height: 25px;
-    }
+      @include breakpoint($large) {
+        top: 32px;
+        right: -12px;
+      }
 
-    .language-link {
-      background-color: white;
-      display: block;
-      width: 100%;
-      padding: 0 10px;
-      color: black;
-      font-size: 14px;
-      text-decoration: none;
-      font-family: $helvetica;
+      &.open {
+        transition: max-height 1s ease;
+        max-height: 2000px;
+        padding: 5px 0;
+        border: #d8e0e2 1px solid;
+        overflow: inherit;
+      }
+
+      &:after,
+      &:before {
+        bottom: 100%;
+        right: 0;
+        border: solid transparent;
+        content: " ";
+        height: 0px;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+
+      &:before {
+        border-color: rgba(216,224,226,0);
+        border-bottom-color: #D8E0E2;
+        border-width: 11px;
+        right: 12px;
+      }
+
+      &:after {
+        border-color: rgba(255,255,255,0);
+        border-bottom-color: #fff;
+        border-width: 10px;
+        right: 13px;
+      }
+
+      .language-link {
+        display: block;
+        width: 100%;
+        padding: 2px 5px 2px 19px;
+        color: black;
+        font-size: 14px;
+        text-decoration: none;
+
+        &:hover {
+          background: #009bd8;
+          color: white;
+        }
+      }
+
       .key {
         display: none;
       }
     }
-
-    span.language-link {
-      color: $blue--menu;
-    }
-
-    a.language-link {
-      &:hover {
-        background-color: $blue;
-        color: white;
-      }
-    }
   }
-}
 
-#block-dropdown-language {
-  .dropbutton-wrapper {
-    .dropbutton-widget {
-      display: none
+  .current-language {
+    font-size: 17px;
+    color: #009bd8;
+    cursor: pointer;
+
+    .name {
+      display: none;
     }
-    &.dropbutton-multiple {
-      .dropbutton-widget {
-        display: block;
+    .key {
+      text-transform: uppercase;
+    }
+    @include breakpoint($large) {
+      font-size: 13px;
+      .key {
+        display: none;
       }
+      .name {
+        display: inherit;
+      }
+
+    }
+
+    &:after {
+      content: '\25BC';
+      display: inline-block;
+      margin-left: 2px;
+      font-size: 10px;
     }
   }
 }

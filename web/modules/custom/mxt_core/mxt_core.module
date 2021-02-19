@@ -260,3 +260,21 @@ function mxt_core_preprocess_block__dropdown_language(&$variables) {
   }
   $variables['content']['dropdown-language']['switch-language']['#links'] = $links;
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function mxt_core_preprocess_links__dropbutton__dropdown_language(&$variables) {
+  $active = '';
+  foreach ($variables['links'] as $key => $language) {
+    if (in_array('active-language', $language['link']['#options']['attributes']['class'])) {
+      $active = $key;
+    }
+  }
+  if (empty($active)) {
+    $active = 'en';
+  }
+  $current_language = $variables['links'][$active];
+  $title = '<span class="key lang-tgl">' . $active . '</span><span class="name lang-tgl">' . $current_language['text'] . '</span>';
+  $variables['current_language'] = $title;
+}
